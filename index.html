@@ -50,7 +50,7 @@ footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:cente
 </head>
 <body>
 <div class="wrap">
-  <header><div class="brand">TOM<span>'s OS</span></div><nav><a href="#clock">Clock</a><a href="#now">Do Now</a><a href="#habits">Habits</a><a href="#sprint">90-Day</a><a href="#path">Path to 35</a><a href="#principles">Principles</a><a href="#ai">AI</a></nav></header>
+  <header><div class="brand">TOM<span>'s OS</span></div><nav><a href="#clock">Clock</a><a href="#now">Do Now</a><a href="#habits">Habits</a><a href="#sprint">90-Day</a><a href="#path">Path to 35</a><a href="#principles">Principles</a><a href="#ai">AI</a><a href="#thesis">Thesis</a></nav></header>
 
   <section id="clock">
     <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Life Clock</h2>
@@ -80,6 +80,66 @@ footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:cente
   <section id="path"><h2>Path to 35</h2><div id="pl"></div></section>
   <section id="principles"><h2>Principles</h2><div id="prl"></div></section>
   <section id="ai"><h2>AI Agent</h2><p class="sub">mimo-v2.5 via opencode-go. Tracks conversations and progress.</p><div class="ai"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="aiCmd('analyze')">Analyze</button><button class="btn btn-o" onclick="aiCmd('coach')">Coach</button><button class="btn btn-o" onclick="aiCmd('review')">Review</button><button class="btn btn-o" onclick="aiCmd('progress')">Progress</button></div><div class="ai-log" id="ailog"></div><div class="ai-row"><input id="aiq" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')aiAsk()"><button class="btn" onclick="aiAsk()">→</button></div></div></section>
+
+  <section id="thesis">
+    <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">The Svātantrya Protocol</h2>
+    <p style="font-size:.7rem;color:#999;margin-bottom:16px">Recognition, Imagination, Will — the deliberate construction of a life</p>
+    
+    <div class="card" style="border-left:3px solid #111">
+      <h4 style="font-size:.85rem;margin-bottom:4px">Core Proposition</h4>
+      <p style="font-size:.8rem;color:#666">Consciousness may possess a greater creative participation in reality than the ordinary model allows. The experiment: if it were true, how should a human being actually live?</p>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:.85rem;margin-bottom:8px">The Daily Cycle</h4>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;font-size:.8rem">
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>1. Recognize</strong><br><span style="color:#666">The already-present Self</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>2. Icchā</strong><br><span style="color:#666">Give direction</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>3. Bhāvanā</strong><br><span style="color:#666">Render experientially</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>4. Rasa</strong><br><span style="color:#666">Make it lived</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>5. Jñāna</strong><br><span style="color:#666">Reveal the bridge</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>6. Kriyā</strong><br><span style="color:#666">Incarnate through conditions</span></div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:4px"><strong>7. Feedback</strong><br><span style="color:#666">Record what happened</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:.85rem;margin-bottom:8px">The Practical Criterion</h4>
+      <p style="font-size:.8rem;color:#666">Did the frozen target become the subject's ordinary lived world by the terminal date?</p>
+      <p style="font-size:.85rem;font-weight:600;margin-top:8px">YES or NO.</p>
+      <p style="font-size:.75rem;color:#999;margin-top:4px">Deviation may subsequently be analyzed. It may not redefine the original outcome.</p>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:.85rem;margin-bottom:8px">The Epistemic Registers</h4>
+      <div style="font-size:.8rem;color:#666">
+        <p><strong>A — Tradition:</strong> What sources actually claim. Preserved as claims.</p>
+        <p><strong>B — Working ontology:</strong> The metaphysical model provisionally adopted.</p>
+        <p><strong>C — Phenomenology:</strong> What was actually experienced. Recorded because it happened.</p>
+        <p><strong>D — Outcome:</strong> Externally checkable events. Income, skills, residence, etc.</p>
+      </div>
+      <p style="font-size:.75rem;color:#16a34a;margin-top:8px">These registers are never collapsed. Experience is evidence that an experience occurred.</p>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:.85rem;margin-bottom:8px">Daily Practice</h4>
+      <div style="font-size:.8rem;color:#666">
+        <p><strong>Every night:</strong> Inhabit the frozen target imaginally.</p>
+        <p><strong>Every morning:</strong> Recognize the already-present Self.</p>
+        <p><strong>Every day:</strong> Perform one piece of the target life.</p>
+        <p><strong>Every week:</strong> Interrogate the trajectory.</p>
+        <p><strong>Every quarter:</strong> Measure.</p>
+        <p><strong>Every year:</strong> Judge.</p>
+      </div>
+      <p style="font-size:.75rem;color:#16a34a;margin-top:8px">Then return to the operation.</p>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:.85rem;margin-bottom:8px">The Central Paradox</h4>
+      <p style="font-size:.8rem;color:#666">Intense direction without psychological grasping. Pure Will without lust of result. Act maximally without insisting on outcome.</p>
+      <p style="font-size:.75rem;color:#999;margin-top:4px">This is trained through compulsive prediction checking — the habit of noticing when you're gripping the outcome.</p>
+    </div>
+  </section>
   <footer>Tom's Life OS — aperture theory · compounding habits · local storage</footer>
 </div>
 
