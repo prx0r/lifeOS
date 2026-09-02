@@ -3,292 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Life90 — Tom's Life Operating System</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Tom — Life Operating System</title>
   <style>
-    .countdown-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
-    .countdown-card{background:#fff;border:1px solid #eee;padding:16px;text-align:center}
-    .countdown-card .value{font-size:2rem;font-weight:600;color:#111}
-    .countdown-card .unit{font-size:.6875rem;color:#999;margin-top:4px}
-    .countdown-card .label{font-size:.5625rem;color:#bbb;text-transform:uppercase;letter-spacing:.1em;margin-top:8px}
-    .ticking{font-variant-numeric:tabular-nums}
-    .ai-box{background:#f8f8f8;border:1px solid #eee;padding:16px;margin:20px 0;border-radius:4px}
-    .ai-output{background:#111;color:#a8b1c2;padding:12px;font-size:.75rem;max-height:300px;overflow-y:auto;font-family:'Source Code Pro',monospace;margin-top:12px;display:none;border-radius:4px}
-    .ai-output .line{padding:2px 0}
-    .ai-output .ts{color:#636d83}
-    .ai-output .ok{color:#99c794}
-    .ai-output .err{color:#ec5f67}
-    .ai-output .info{color:#85c7c4}
-    .btn-row{display:flex;gap:8px;flex-wrap:wrap}
-    .btn-sm{font-size:.6875rem;padding:6px 12px}
-    .habits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:12px 0}
-    .habit-card{background:#fff;border:1px solid #eee;padding:12px}
-    .habit-card .name{font-size:.75rem;font-weight:500}
-    .habit-card .dots{display:flex;gap:3px;margin-top:8px}
-    .habit-card .dot{width:20px;height:20px;border:1px solid #ddd;border-radius:3px;cursor:pointer}
-    .habit-card .dot.done{background:#166534;border-color:#166534}
-    .sprint-bar{height:6px;background:#eee;border-radius:3px;overflow:hidden;margin:8px 0}
-    .sprint-fill{height:100%;background:#111;border-radius:3px}
-    .week-check{display:flex;gap:4px;margin:8px 0}
-    .week-day{width:32px;height:32px;border:1px solid #ddd;border-radius:4px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.75rem}
-    .week-day.filled{background:#111;color:#fff;border-color:#111}
-    .path-item{padding:12px;border-left:2px solid #eee;margin:8px 0}
-    .path-item.current{border-left-color:#111}
-    .path-item.past{opacity:.5}
-    .path-item .age{font-weight:600;font-size:.875rem}
-    .path-item .title{font-weight:500;font-size:.75rem;margin:4px 0}
-    .path-item .text{font-size:.6875rem;color:#666}
-    .principle-card{background:#fff;border:1px solid #eee;padding:12px;margin:8px 0}
-    .principle-card h4{font-size:.8125rem;font-weight:500;margin-bottom:4px}
-    .principle-card p{font-size:.6875rem;color:#666}
-    .principle-card .when{font-size:.5625rem;color:#166534;margin-top:4px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fafafa;color:#111;line-height:1.5}
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+    header{border-bottom:1px solid #eee;padding:16px 0;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:1.2rem;font-weight:700}.brand span{color:#666}
+    nav{display:flex;gap:20px;font-size:.8rem}
+    nav a{color:#666;text-decoration:none}.nav a:hover{color:#111}
+    h2{font-size:1rem;font-weight:600;margin:24px 0 8px}
+    .sub{font-size:.75rem;color:#999;margin-bottom:16px}
+    .card{background:#fff;border:1px solid #eee;padding:16px;margin:8px 0;border-radius:4px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+    .stat{text-align:center;padding:16px;background:#fff;border:1px solid #eee;border-radius:4px}
+    .stat .val{font-size:2rem;font-weight:700;font-variant-numeric:tabular-nums}
+    .stat .lbl{font-size:.65rem;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+    .btn{font-size:.75rem;padding:8px 16px;border:1px solid #111;background:#111;color:#fff;cursor:pointer;border-radius:4px}
+    .btn:hover{background:#333}
+    .btn-o{background:#fff;color:#111;border-color:#ddd}
+    .habits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:12px 0}
+    .habit{background:#fff;border:1px solid #eee;padding:12px;border-radius:4px}
+    .habit .nm{font-size:.8rem;font-weight:500}
+    .habit .dots{display:flex;gap:3px;margin-top:8px}
+    .habit .dot{width:20px;height:20px;border:1px solid #ddd;border-radius:3px;cursor:pointer;transition:.15s}
+    .habit .dot.on{background:#16a34a;border-color:#16a34a}
+    .dot:hover{border-color:#111}
+    .sprint{height:6px;background:#eee;border-radius:3px;overflow:hidden;margin:8px 0}
+    .sprint .fill{height:100%;background:#111;border-radius:3px}
+    .path{padding:12px;border-left:2px solid #eee;margin:8px 0}
+    .path.now{border-left-color:#111}
+    .path .age{font-weight:600}.path .desc{font-size:.8rem;color:#666;margin-top:4px}
+    .ai{background:#f5f5f5;border:1px solid #eee;padding:16px;border-radius:4px;margin:16px 0}
+    .ai-log{background:#1a1a2e;color:#a8b1c2;padding:12px;font-size:.75rem;max-height:400px;overflow-y:auto;font-family:'SF Mono',Monaco,monospace;border-radius:4px;margin-top:12px}
+    .ai-log .ln{padding:2px 0}.ai-log .ts{color:#636d83}.ai-log .ok{color:#4ade80}.ai-log .err{color:#f87171}.ai-log .hi{color:#22d3ee}
+    .ai-row{display:flex;gap:8px;margin-top:12px}
+    .ai-row input{flex:1;padding:10px;border:1px solid #ddd;border-radius:4px;font-size:.85rem}
+    .princ{background:#fff;border:1px solid #eee;padding:12px;margin:6px 0;border-radius:4px}
+    .princ h4{font-size:.85rem;margin-bottom:4px}.princ p{font-size:.8rem;color:#666}
+    .princ .w{font-size:.7rem;color:#16a34a;margin-top:4px}
+    footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:center;font-size:.7rem;color:#bbb}
   </style>
 </head>
 <body>
-  <header style="border-bottom:1px solid #ddd;padding:16px 0">
-    <div style="max-width:820px;margin:0 auto;display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <span style="font-size:1.1rem;font-weight:600">Life90</span>
-        <span style="font-size:.625rem;padding:2px 6px;border:1px solid #166534;color:#166534;margin-left:8px">TOM</span>
-      </div>
-      <nav style="display:flex;gap:16px;font-size:.75rem">
-        <a href="#countdown" style="color:#111;text-decoration:none">Clock</a>
-        <a href="#do-now" style="color:#111;text-decoration:none">Do Now</a>
-        <a href="#habits" style="color:#111;text-decoration:none">Habits</a>
-        <a href="#sprint" style="color:#111;text-decoration:none">90-Day</a>
-        <a href="#path" style="color:#111;text-decoration:none">Path to 35</a>
-        <a href="#principles" style="color:#111;text-decoration:none">Principles</a>
-        <a href="#ai" style="color:#111;text-decoration:none">AI</a>
-      </nav>
-    </div>
+<div class="wrap">
+  <header>
+    <div class="brand">TOM<span>'s OS</span></div>
+    <nav>
+      <a href="#clock">Clock</a>
+      <a href="#now">Do Now</a>
+      <a href="#habits">Habits</a>
+      <a href="#sprint">90-Day</a>
+      <a href="#path">Path to 35</a>
+      <a href="#principles">Principles</a>
+      <a href="#ai">AI</a>
+    </nav>
   </header>
 
-  <main style="max-width:820px;margin:0 auto;padding:20px">
+  <section id="clock">
+    <h2>Life Clock</h2>
+    <p class="sub">16 May 1999 → 90 years. Every number is real and ticking.</p>
+    <div class="grid">
+      <div class="stat"><div class="val" id="y90">—</div><div class="lbl">years to 90</div></div>
+      <div class="stat"><div class="val" id="d90">—</div><div class="lbl">days to 90</div></div>
+      <div class="stat"><div class="val" id="h90">—</div><div class="lbl">hours to 90</div></div>
+      <div class="stat"><div class="val" id="y20">—</div><div class="lbl">years left in 20s</div></div>
+      <div class="stat"><div class="val" id="h20">—</div><div class="lbl">hours left in 20s</div></div>
+      <div class="stat"><div class="val" id="h30">—</div><div class="lbl">hours to age 30</div></div>
+    </div>
+  </section>
 
-    <!-- COUNTDOWN -->
-    <section id="countdown">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Life Clock</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:16px">16 May 1999 → 90 years. Every number below is real.</p>
-      <div class="countdown-grid">
-        <div class="countdown-card"><div class="value ticking" id="c-years">--</div><div class="unit">years left</div><div class="label">to age 90</div></div>
-        <div class="countdown-card"><div class="value ticking" id="c-days">--</div><div class="unit">days left</div><div class="label">to age 90</div></div>
-        <div class="countdown-card"><div class="value ticking" id="c-hours">--</div><div class="unit">hours left</div><div class="label">to age 90</div></div>
-        <div class="countdown-card"><div class="value ticking" id="c-decade">--</div><div class="unit">years left</div><div class="label">in your 20s</div></div>
-        <div class="countdown-card"><div class="value ticking" id="c-decade-h">--</div><div class="unit">hours left</div><div class="label">in your 20s</div></div>
-        <div class="countdown-card"><div class="value ticking" id="c-milestone">--</div><div class="unit">hours to next</div><div class="label">milestone (age 30)</div></div>
+  <section id="now">
+    <h2>Do Now — Age 27</h2>
+    <p class="sub">What the literature says matters most right now.</p>
+    <div id="prios"></div>
+  </section>
+
+  <section id="habits">
+    <h2>Weekly Habits</h2>
+    <p class="sub">Compound through consistency. Click to toggle.</p>
+    <div class="habits" id="habits"></div>
+  </section>
+
+  <section id="sprint">
+    <h2>90-Day Sprint</h2>
+    <p class="sub">Goal: BitSec learning loop producing real promotions on ScaBench</p>
+    <div class="sprint"><div class="fill" id="sprint-fill" style="width:0%"></div></div>
+    <p style="font-size:.75rem;color:#999" id="sprint-pct">0% complete</p>
+    <div id="sprint-list"></div>
+  </section>
+
+  <section id="path">
+    <h2>Path to 35</h2>
+    <div id="path-list"></div>
+  </section>
+
+  <section id="principles">
+    <h2>Principles</h2>
+    <div id="princ-list"></div>
+  </section>
+
+  <section id="ai">
+    <h2>AI Agent</h2>
+    <p class="sub">mimo-v2.5 via opencode-go. Tracks your conversations and progress.</p>
+    <div class="ai">
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" onclick="aiCmd('analyze')">Analyze</button>
+        <button class="btn btn-o" onclick="aiCmd('coach')">Coach</button>
+        <button class="btn btn-o" onclick="aiCmd('review')">Review</button>
+        <button class="btn btn-o" onclick="aiCmd('progress')">Progress</button>
       </div>
-    </section>
-
-    <!-- DO NOW -->
-    <section id="do-now" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Do Now — Age 27</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:12px">What the literature says matters most right now.</p>
-      <div id="priorities-list"></div>
-    </section>
-
-    <!-- HABITS -->
-    <section id="habits" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Weekly Habits</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:12px">Compound through consistency. Click to toggle.</p>
-      <div class="habits-grid" id="habits-grid"></div>
-    </section>
-
-    <!-- 90-DAY SPRINT -->
-    <section id="sprint" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">90-Day Sprint</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:8px">Goal: Get BitSec learning loop producing real promotions on ScaBench</p>
-      <div class="sprint-bar"><div class="sprint-fill" id="sprint-bar" style="width:0%"></div></div>
-      <p style="font-size:.6875rem;color:#999" id="sprint-pct">0% complete</p>
-      <div id="sprint-weeks" style="margin-top:12px"></div>
-    </section>
-
-    <!-- PATH TO 35 -->
-    <section id="path" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Path to 35</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:12px">Staged trajectory from here to the life you're building.</p>
-      <div id="path-list"></div>
-    </section>
-
-    <!-- PRINCIPLES -->
-    <section id="principles" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">Principles</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:12px">Repeated hindsight themes from older adults.</p>
-      <div id="principles-list"></div>
-    </section>
-
-    <!-- AI ASSISTANT -->
-    <section id="ai" style="margin-top:24px">
-      <h2 style="font-size:1rem;font-weight:600;margin-bottom:4px">AI Assistant</h2>
-      <p style="font-size:.6875rem;color:#999;margin-bottom:12px">mimo-v2.5 via opencode-go. Tracks your patterns.</p>
-      <div class="ai-box">
-        <div class="btn-row">
-          <button class="btn btn-sm" onclick="aiAnalyze()">Analyze Patterns</button>
-          <button class="btn btn-sm" style="background:#fff;color:#111;border-color:#ddd" onclick="aiCoach()">Get Coaching</button>
-          <button class="btn btn-sm" style="background:#fff;color:#111;border-color:#ddd" onclick="aiReview()">Review Week</button>
-          <button class="btn btn-sm" style="background:#fff;color:#111;border-color:#ddd" onclick="aiQuestion()">Ask Anything</button>
-        </div>
-        <div class="ai-output" id="ai-output">
-          <div class="line"><span class="ts">[system]</span> Ready. Click a button or ask a question.</div>
-        </div>
-        <div style="margin-top:8px">
-          <input type="text" id="ai-input" placeholder="Ask the AI anything about your life..." style="width:100%;padding:8px;border:1px solid #ddd;font-family:'Source Code Pro',monospace;font-size:.75rem;border-radius:4px" onkeypress="if(event.key==='Enter')aiAsk()">
-          <button class="btn btn-sm" style="margin-top:4px" onclick="aiAsk()">Ask</button>
-        </div>
+      <div class="ai-log" id="ailog"></div>
+      <div class="ai-row">
+        <input id="aiq" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')aiAsk()">
+        <button class="btn" onclick="aiAsk()">→</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer style="margin-top:40px;padding-top:16px;border-top:1px solid #eee;font-size:.5625rem;color:#bbb;display:flex;justify-content:space-between">
-      <span>Life90 v3.0 — aperture theory · compounding habits · local storage</span>
-      <span>Tom's Life Operating System</span>
-    </footer>
-  </main>
+  <footer>Tom's Life OS — aperture theory · compounding habits · local storage</footer>
+</div>
 
-  <script src="app.js"></script>
-  <script src="api.js"></script>
-  <script>
-    // ─── HARDCODED CONFIG ─────────────────────────────────────────
-    const AGE = 27;
-    const BIRTH = new Date('1999-05-16');
-    const HORIZON = 90;
-    const NOW = new Date();
-    
-    // ─── COUNTDOWN ────────────────────────────────────────────────
-    function updateCountdown() {
-      const now = new Date();
-      const msToHorizon = (HORIZON - AGE) * 365.25 * 24 * 60 * 60 * 1000 - (now - BIRTH);
-      const hoursLeft = Math.floor(msToHorizon / (1000 * 60 * 60));
-      const daysLeft = Math.floor(hoursLeft / 24);
-      const yearsLeft = (msToHorizon / (365.25 * 24 * 60 * 60 * 1000)).toFixed(1);
-      
-      const decadeEnd = 30;
-      const hoursToDecade = Math.floor((decadeEnd - AGE) * 365.25 * 24 - (now - BIRTH) / (1000 * 60 * 60) % (365.25 * 24));
-      const yearsToDecade = (decadeEnd - AGE - ((now - BIRTH) / (365.25 * 24 * 60 * 60 * 1000) % 1)).toFixed(1);
-      
-      const hoursToMilestone = Math.floor((30 - AGE) * 365.25 * 24);
-      
-      document.getElementById('c-years').textContent = yearsLeft;
-      document.getElementById('c-days').textContent = fmt.format(daysLeft);
-      document.getElementById('c-hours').textContent = fmt.format(hoursLeft);
-      document.getElementById('c-decade').textContent = yearsToDecade;
-      document.getElementById('c-decade-h').textContent = fmt.format(Math.max(0, hoursToDecade));
-      document.getElementById('c-milestone').textContent = fmt.format(hoursToMilestone);
-    }
-    
-    const fmt = new Intl.NumberFormat();
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-    
-    // ─── PRIORITIES ───────────────────────────────────────────────
-    const priorities = [
-      {t:"Create reliable income floor",d:"Build work that survives geography, employers and market shifts.",cat:"Freedom"},
-      {t:"Automate saving and investing",d:"Increase percentage as income rises.",cat:"Money"},
-      {t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",cat:"Body"},
-      {t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",cat:"Language"},
-      {t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",cat:"Reality"},
-      {t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",cat:"Practical"},
-      {t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",cat:"Freedom"},
-      {t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",cat:"Relationships"},
-      {t:"Record family history",d:"Talk to parents now.",cat:"Closing window"},
-      {t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",cat:"Maintenance"},
-      {t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",cat:"Skill"},
-      {t:"Practice enough stillness",d:"Daily contemplative practice.",cat:"Meaning"},
-    ];
-    document.getElementById('priorities-list').innerHTML = priorities.map(p => 
-      '<div class="principle-card"><h4>' + p.t + '</h4><p>' + p.d + '</p><div class="when">' + p.cat + '</div></div>'
-    ).join('');
-    
-    // ─── HABITS ───────────────────────────────────────────────────
-    const habits = ["Exercise 30min","Read 20 pages","Meditate 10min","Hindi practice","Deep work 4hrs","Walk 10k steps","No social media before noon","Journal 5min"];
-    const habitData = JSON.parse(localStorage.getItem('lifeOS_habits') || '{}');
-    
-    function renderHabits() {
-      document.getElementById('habits-grid').innerHTML = habits.map((h, i) => {
-        let dots = '';
-        for (let d = 6; d >= 0; d--) {
-          const date = new Date(); date.setDate(date.getDate() - d);
-          const key = i + '_' + date.toISOString().slice(0,10);
-          const done = habitData[key];
-          dots += '<div class="dot ' + (done ? 'done' : '') + '" onclick="toggleHabit(' + i + ',\'' + date.toISOString().slice(0,10) + '\')"></div>';
-        }
-        return '<div class="habit-card"><div class="name">' + h + '</div><div class="dots">' + dots + '</div></div>';
-      }).join('');
-    }
-    function toggleHabit(i, date) { const key = i + '_' + date; habitData[key] = !habitData[key]; localStorage.setItem('lifeOS_habits', JSON.stringify(habitData)); renderHabits(); }
-    renderHabits();
-    
-    // ─── 90-DAY SPRINT ───────────────────────────────────────────
-    const sprintGoal = "Get BitSec learning loop producing real promotions on ScaBench";
-    const sprintWeeks = [
-      {w:1,f:"Wire CG bridge + ScaBench evaluator",done:true},
-      {w:2,f:"Fix validity problems",done:true},
-      {w:3,f:"Run paired evaluation v0 vs v1",done:true},
-      {w:4,f:">10% DR baseline on ScaBench",done:false},
-      {w:5,f:"Wire CGE failure analysis → mutation",done:false},
-      {w:6,f:"First real promotion (v0 → v1)",done:false},
-      {w:7,f:"Test on BountyBench for near-transfer",done:false},
-      {w:8,f:"Wire RedTeam SN61 for far-transfer",done:false},
-      {w:9,f:"Full integration test",done:false},
-      {w:10,f:"Deploy to production + submit SN60",done:false},
-      {w:11,f:"Monitor results + iterate",done:false},
-      {w:12,f:"Document + handoff",done:false},
-    ];
-    const doneCount = sprintWeeks.filter(w => w.done).length;
-    document.getElementById('sprint-bar').style.width = (doneCount / sprintWeeks.length * 100) + '%';
-    document.getElementById('sprint-pct').textContent = Math.round(doneCount / sprintWeeks.length * 100) + '% complete';
-    document.getElementById('sprint-weeks').innerHTML = sprintWeeks.map(w => 
-      '<div class="path-item ' + (w.done ? 'past' : '') + '"><span class="age">Week ' + w.w + '</span><div class="title">' + w.f + '</div></div>'
-    ).join('');
-    
-    // ─── PATH TO 35 ──────────────────────────────────────────────
-    const pathItems = [
-      {age:"27",title:"Foundation",text:"Stabilize income. Automate saving. Train consistently. Make Hindi daily."},
-      {age:"28-29",title:"Prototype",text:"Spend time in northern India. Test rural routines. Learn gardening, repairs."},
-      {age:"30-31",title:"Location-independent work",text:"Build specialist reputation, recurring clients/products."},
-      {age:"32-33",title:"Select the environment",text:"Trial longer rentals. Learn local realities."},
-      {age:"34-35",title:"Commit without trapping",text:"Establish the place when income and competence make it robust."},
-    ];
-    document.getElementById('path-list').innerHTML = pathItems.map(p => 
-      '<div class="path-item"><span class="age">Age ' + p.age + '</span><div class="title">' + p.title + '</div><div class="text">' + p.text + '</div></div>'
-    ).join('');
-    
-    // ─── PRINCIPLES ───────────────────────────────────────────────
-    const principles = [
-      {t:"Do not wait to feel ready",d:"Confidence is often an output of action, not an entry requirement.",w:"Teens-30s"},
-      {t:"Preserve optionality",d:"Health, savings, portable skills, low fixed costs.",w:"All adulthood"},
-      {t:"Care less about the ambient audience",d:"Take criticism from people with wisdom.",w:"20s onward"},
-      {t:"Do not use the present as a waiting room",d:"Invest in the future without postponing every meaningful experience.",w:"All adulthood"},
-      {t:"Choose what deserves compounding",d:"Sustained investment in a few things that matter.",w:"25-40"},
-      {t:"Train for the 80-year-old version of you",d:"Build capacity to walk, carry, climb, get off the floor.",w:"Start now"},
-      {t:"Make strength a lifelong habit",d:"Muscle and strength are reserve.",w:"20s onward"},
-      {t:"Build meaning that survives status loss",d:"Keep practices that would matter even if nobody was impressed.",w:"All adulthood"},
-    ];
-    document.getElementById('principles-list').innerHTML = principles.map(p => 
-      '<div class="principle-card"><h4>' + p.t + '</h4><p>' + p.d + '</p><div class="when">' + p.w + '</div></div>'
-    ).join('');
-    
-    // ─── AI FUNCTIONS ─────────────────────────────────────────────
-    const API_KEY = 'sk-fv9GAkxq7nRiVTX0l8gLEUoPc79spJGqU9HkSjswVLnoQfTuWz5HY1R8hA44g8ZU';
-    const API_URL = 'https://opencode.ai/zen/go/v1/chat/completions';
-    const MODEL = 'mimo-v2.5';
-    
-    async function aiCall(prompt) {
-      const out = document.getElementById('ai-output');
-      out.style.display = 'block';
-      out.innerHTML += '<div class="line"><span class="ts">[' + new Date().toISOString().slice(11,19) + ']</span> <span class="info">[you]</span> ' + prompt.slice(0,120) + '</div>';
-      try {
-        const r = await fetch(API_URL, {method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},body:JSON.stringify({model:MODEL,messages:[{role:'user',content:prompt}],max_tokens:1200,temperature:0.7})});
-        const d = await r.json();
-        const reply = d.choices?.[0]?.message?.content || 'No response';
-        out.innerHTML += '<div class="line"><span class="ok">[mimo]</span> ' + reply.replace(/\n/g,'<br>') + '</div>';
-        out.scrollTop = out.scrollHeight;
-        return reply;
-      } catch(e) { out.innerHTML += '<div class="line"><span class="err">[error]</span> '+e.message+'</div>'; return ''; }
-    }
-    
-    async function aiAnalyze() { await aiCall('Analyze my life patterns. Age 27. Habits: exercise, read, meditate, Hindi, deep work, walk, journal. Focus: Security Lab + Agent Security Observatory. Sprint: 3/12 weeks done. What patterns do you see? One specific recommendation.'); }
-    async function aiCoach() { await aiCall('Coach me on habit consistency. I track: exercise, read, meditate, Hindi, deep work, walk, no social media before noon, journal. What is the compound effect of 30 days of consistency? Give one actionable tip.'); }
-    async function aiReview() { await aiCall('Weekly review prompt: What did I accomplish this week? What would I do differently? What is the single most important thing for next week? I am building a security research lab and agent security observatory.'); }
-    async function aiAsk() { const q = document.getElementById('ai-input').value.trim(); if(q) { await aiCall(q); document.getElementById('ai-input').value = ''; } }
-  </script>
+<script>
+// ─── CONFIG ──────────────────────────────────────────────────────
+const AGE=27,BIRTH=new Date('1999-05-16'),HORIZON=90;
+const fmt=new Intl.NumberFormat();
+
+// ─── COUNTDOWN (ticks every second) ──────────────────────────────
+function tick(){
+  const now=new Date();
+  const ageMs=now-BIRTH;
+  const ageYears=ageMs/(365.25*24*60*60*1000);
+  const msLeft=(HORIZON-ageYears)*365.25*24*60*60*1000;
+  const hLeft=Math.floor(msLeft/36e5);
+  const dLeft=Math.floor(hLeft/24);
+  const yLeft=(msLeft/(365.25*24*60*60*1000)).toFixed(1);
+  const toDecade=Math.max(0,(30-ageYears)*365.25*24*60*60*1000);
+  const hDecade=Math.floor(toDecade/36e5);
+  const yDecade=(toDecade/(365.25*24*60*60*1000)).toFixed(1);
+  const to30=Math.floor((30-ageYears)*365.25*24);
+  document.getElementById('y90').textContent=yLeft;
+  document.getElementById('d90').textContent=fmt.format(dLeft);
+  document.getElementById('h90').textContent=fmt.format(hLeft);
+  document.getElementById('y20').textContent=yDecade;
+  document.getElementById('h20').textContent=fmt.format(hDecade);
+  document.getElementById('h30').textContent=fmt.format(to30);
+}
+setInterval(tick,1000);tick();
+
+// ─── PRIORITIES ──────────────────────────────────────────────────
+const prios=[
+  {t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},
+  {t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},
+  {t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},
+  {t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",c:"Language"},
+  {t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",c:"Reality"},
+  {t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",c:"Practical"},
+  {t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",c:"Freedom"},
+  {t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",c:"Relationships"},
+  {t:"Record family history",d:"Talk to parents now. Cannot be reconstructed later.",c:"Window"},
+  {t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",c:"Maintenance"},
+  {t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},
+  {t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}
+];
+document.getElementById('prios').innerHTML=prios.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.c+'</div></div>').join('');
+
+// ─── HABITS ──────────────────────────────────────────────────────
+const HAB=["Exercise 30min","Read 20 pages","Meditate 10min","Hindi practice","Deep work 4hrs","Walk 10k steps","No social media before noon","Journal 5min"];
+const HD=JSON.parse(localStorage.getItem('hd')||'{}');
+function renderH(){
+  document.getElementById('habits').innerHTML=HAB.map((h,i)=>{
+    let d='';for(let j=6;j>=0;j--){const dt=new Date();dt.setDate(dt.getDate()-j);const k=i+'_'+dt.toISOString().slice(0,10);d+='<div class="dot '+(HD[k]?'on':'')+'" onclick="tg('+i+',\''+dt.toISOString().slice(0,10)+'\")"></div>';}
+    return '<div class="habit"><div class="nm">'+h+'</div><div class="dots">'+d+'</div></div>';
+  }).join('');
+}
+function tg(i,dt){const k=i+'_'+dt;HD[k]=!HD[k];localStorage.setItem('hd',JSON.stringify(HD));renderH();}
+renderH();
+
+// ─── SPRINT ──────────────────────────────────────────────────────
+const SP=[{w:1,f:"Wire CG bridge + ScaBench evaluator",d:1},{w:2,f:"Fix validity problems",d:1},{w:3,f:"Run paired evaluation v0 vs v1",d:1},{w:4,f:">10% DR baseline",d:0},{w:5,f:"Wire CGE failure analysis",d:0},{w:6,f:"First real promotion",d:0},{w:7,f:"Test BountyBench near-transfer",d:0},{w:8,f:"Wire RedTeam SN61 far-transfer",d:0},{w:9,f:"Full integration test",d:0},{w:10,f:"Deploy + submit SN60",d:0},{w:11,f:"Monitor + iterate",d:0},{w:12,f:"Document + handoff",d:0}];
+const dn=SP.filter(s=>s.d).length;
+document.getElementById('sprint-fill').style.width=(dn/SP.length*100)+'%';
+document.getElementById('sprint-pct').textContent=Math.round(dn/SP.length*100)+'% complete';
+document.getElementById('sprint-list').innerHTML=SP.map(s=>'<div class="path'+(s.d?' past':'')+'"><span class="age">Week '+s.w+'</span> — '+s.f+'</div>').join('');
+
+// ─── PATH TO 35 ──────────────────────────────────────────────────
+const PATH=[{a:"27",t:"Foundation",d:"Stabilize income. Automate saving. Train. Hindi daily."},{a:"28-29",t:"Prototype",d:"Northern India. Rural routines. Gardening, repairs, cooking."},{a:"30-31",t:"Location-independent",d:"Build specialist reputation, recurring clients."},{a:"32-33",t:"Select environment",d:"Trial rentals. Learn local realities."},{a:"34-35",t:"Commit",d:"Establish when income and competence make it robust."}];
+document.getElementById('path-list').innerHTML=PATH.map(p=>'<div class="path"><span class="age">Age '+p.a+'</span> — '+p.t+'<div class="desc">'+p.d+'</div></div>').join('');
+
+// ─── PRINCIPLES ──────────────────────────────────────────────────
+const PR=[{t:"Do not wait to feel ready",d:"Confidence is output of action.",w:"Teens-30s"},{t:"Preserve optionality",d:"Health, savings, portable skills, low fixed costs.",w:"All adulthood"},{t:"Care less about the ambient audience",d:"Take criticism from people with wisdom.",w:"20s+"},{t:"Choose what deserves compounding",d:"Sustained investment in a few things that matter.",w:"25-40"},{t:"Train for the 80-year-old you",d:"Build capacity to walk, carry, climb.",w:"Now"},{t:"Make strength lifelong",d:"Muscle and strength are reserve.",w:"20s+"},{t:"Build meaning that survives status loss",d:"Keep practices that matter even if nobody's impressed.",w:"All adulthood"}];
+document.getElementById('princ-list').innerHTML=PR.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.w+'</div></div>').join('');
+
+// ─── AI AGENT ────────────────────────────────────────────────────
+const K='sk-fv9GAkxq7nRiVTX0l8gLEUoPc79spJGqU9HkSjswVLnoQfTuWz5HY1R8hA44g8ZU';
+const U='https://opencode.ai/zen/go/v1/chat/completions';
+const M='mimo-v2.5';
+const HISTORY=JSON.parse(localStorage.getItem('ai_hist')||'[]');
+
+function log(msg,cls){
+  const l=document.getElementById('ailog');
+  const t=new Date().toISOString().slice(11,19);
+  l.innerHTML+='<div class="ln"><span class="ts">['+t+']</span> <span class="'+cls+'">'+msg+'</span></div>';
+  l.scrollTop=l.scrollHeight;
+}
+
+async function aiSend(prompt){
+  log('[you] '+prompt.slice(0,200),'hi');
+  HISTORY.push({role:'user',content:prompt,ts:new Date().toISOString()});
+  
+  // Build context from history (last 10 messages)
+  const msgs=HISTORY.slice(-10).map(m=>({role:m.role,content:m.content}));
+  
+  try{
+    const r=await fetch(U,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+K},body:JSON.stringify({model:M,messages:msgs,max_tokens:1500,temperature:0.7})});
+    const d=await r.json();
+    const reply=d.choices?.[0]?.message?.content||'No response';
+    HISTORY.push({role:'assistant',content:reply,ts:new Date().toISOString()});
+    localStorage.setItem('ai_hist',JSON.stringify(HISTORY.slice(-50)));
+    log('[mimo] '+reply,'ok');
+    return reply;
+  }catch(e){log('[err] '+e.message,'err');return '';}
+}
+
+function aiCmd(type){
+  const age=AGE;
+  const habits=HAB.join(', ');
+  const sprintDone=SP.filter(s=>s.d).length;
+  const sprintPct=Math.round(sprintDone/SP.length*100);
+  const histLen=HISTORY.length;
+  
+  const prompts={
+    analyze:'Analyze my life at age 27. Habits: '+habits+'. Sprint: '+sprintPct+'% complete. Focus: Security Lab + Agent Security Observatory. Conversations so far: '+histLen+'. What patterns do you notice? One specific recommendation.',
+    coach:'Coach me on habit consistency. I track 8 habits daily. What is the compound effect of 30 days of consistency? Give one actionable tip.',
+    review:'Weekly review: What did I accomplish this week building the Security Lab? What would I do differently? What is the single most important thing for next week?',
+    progress:'Summarize my progress. Sprint: '+sprintPct+'% done. Habits tracked: '+histLen+' conversations. What has compounding? What is stagnating?'
+  };
+  aiSend(prompts[type]||'Tell me about my progress.');
+}
+
+function aiAsk(){const q=document.getElementById('aiq').value.trim();if(q){aiSend(q);document.getElementById('aiq').value='';}}
+</script>
 </body>
 </html>
