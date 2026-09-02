@@ -659,3 +659,78 @@ if (savedBirth) {
   const birth = readBirth();
   if (birth && birth <= new Date()) renderDashboard(birth);
 }
+
+// ─── AI ASSISTANT (opencode-go + mimo-v2.5) ──────────────────────
+const API_KEY = 'sk-fv9GAkxq7nRiVTX0l8gLEUoPc79spJGqU9HkSjswVLnoQfTuWz5HY1R8hA44g8ZU';
+const API_URL = 'https://opencode.ai/zen/go/v1/chat/completions';
+const MODEL = 'mimo-v2.5';
+
+async function aiCall(prompt) {
+    const output = document.getElementById('ai-output');
+    output.style.display = 'block';
+    output.innerHTML += `<div class="log-line"><span class="log-ts">[${new Date().toISOString().slice(11,19)}]</span> <span class="log-info">[thinking]</span> ${prompt.slice(0,100)}...</div>`;
+    
+    try {
+        const resp = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: MODEL,
+                messages: [{role: 'user', content: prompt}],
+                max_tokens: 1500,
+                temperature: 0.7,
+            }),
+        });
+        const data = await resp.json();
+        const reply = data.choices?.[0]?.message?.content || 'No response';
+        output.innerHTML += `<div class="log-line"><span class="log-ok">[mimo-v2.5]</span> ${reply.replace(/\n/g, '<br>')}</div>`;
+        output.scrollTop = output.scrollHeight;
+        return reply;
+    } catch(e) {
+        output.innerHTML += `<div class="log-line"><span class="log-err">[error]</span> ${e.message}</div>`;
+        return '';
+    }
+}
+
+async function aiAnalyze() {
+    const data = JSON.parse(localStorage.getItem('lifeOS') || '{}');
+    const age = data.age || 27;
+    const habits = (data.habits || []).map(h => h.name).join(', ');
+    const focus = data.focusGoal || 'not set';
+    const reviews = Object.values(data.reviews || {}).length;
+    
+    await aiCall(`Analyze my life patterns. Age: ${age}. Habits: ${habits || 'none'}. Focus: ${focus}. Weekly reviews completed: ${reviews}. Give me 3 patterns you notice and 1 specific recommendation for this week. Be concise and actionable.`);
+}
+
+async function aiCoach() {
+    const data = JSON.parse(localStorage.getItem('lifeOS') || '{}');
+    const habits = data.habits || [];
+    if (habits.length === 0) {
+        document.getElementById('ai-output').innerHTML += `<div class="log-line"><span class="log-err">[error]</span> Add some habits first</div>`;
+        return;
+    }
+    
+    const habit = habits[0];
+    const history = Object.entries(data.habitLog || {})
+        .filter(([k]) => k.startsWith(habits.indexOf(habit) + '_'))
+        .map(([k,v]) => v ? '✓' : '✗')
+        .join(' ');
+    
+    await aiCall(`Habit coaching. Habit: ${habit.name}. Last 7 days: ${history || 'no data'}. What pattern do you see? Give one specific suggestion to improve consistency.`);
+}
+
+async function aiReview() {
+    const data = JSON.parse(localStorage.getItem('lifeOS') || '{}');
+    const reviews = Object.values(data.reviews || {});
+    const lastReview = reviews[reviews.length - 1];
+    
+    if (!lastReview) {
+        document.getElementById('ai-output').innerHTML += `<div class="log-line"><span class="log-err">[error]</span> Complete a weekly review first</div>`;
+        return;
+    }
+    
+    await aiCall(`Review my weekly reflection. Wins: ${lastReview.wins || 'none'}. Lessons: ${lastReview.lessons || 'none'}. Focus: ${lastReview.focus || 'none'}. What patterns do you see? What should I focus on next week?`);
+}
