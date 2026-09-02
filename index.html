@@ -57,7 +57,6 @@
       <a href="#path">Path to 35</a>
       <a href="#principles">Principles</a>
       <a href="#ai">AI</a>
-      <a href="#thesis">Thesis</a>
     </nav>
   </header>
 
@@ -65,302 +64,101 @@
     <h2>Life Clock</h2>
     <p class="sub">16 May 1999 → 90 years. Every number is real and ticking.</p>
     <div class="grid">
-      <div class="stat">
-        <div class="val" id="h90">—</div>
-        <div class="lbl">hours to 90</div>
-        <div class="sub-lbl" id="d90-sub">— days</div>
-      </div>
-      <div class="stat">
-        <div class="val" id="d90">—</div>
-        <div class="lbl">days to 90</div>
-        <div class="sub-lbl" id="y90-sub">— years</div>
-      </div>
-      <div class="stat">
-        <div class="val" id="h40">—</div>
-        <div class="lbl">hours to 40</div>
-        <div class="sub-lbl" id="d40-sub">— days</div>
-      </div>
-      <div class="stat">
-        <div class="val" id="d40">—</div>
-        <div class="lbl">days to 40</div>
-        <div class="sub-lbl" id="y40-sub">— years</div>
-      </div>
-      <div class="stat">
-        <div class="val" id="h20">—</div>
-        <div class="lbl">hours in 20s</div>
-        <div class="sub-lbl" id="d20-sub">— days</div>
-      </div>
-      <div class="stat">
-        <div class="val" id="d20">—</div>
-        <div class="lbl">days in 20s</div>
-        <div class="sub-lbl" id="y20-sub">— years</div>
-      </div>
+      <div class="stat"><div class="val" id="h90">—</div><div class="lbl">hours to 90</div><div class="sub-lbl" id="h90s"></div></div>
+      <div class="stat"><div class="val" id="d90">—</div><div class="lbl">days to 90</div><div class="sub-lbl" id="d90s"></div></div>
+      <div class="stat"><div class="val" id="h40">—</div><div class="lbl">hours to 40</div><div class="sub-lbl" id="h40s"></div></div>
+      <div class="stat"><div class="val" id="d40">—</div><div class="lbl">days to 40</div><div class="sub-lbl" id="d40s"></div></div>
+      <div class="stat"><div class="val" id="h20">—</div><div class="lbl">hours in 20s</div><div class="sub-lbl" id="h20s"></div></div>
+      <div class="stat"><div class="val" id="d20">—</div><div class="lbl">days in 20s</div><div class="sub-lbl" id="d20s"></div></div>
     </div>
   </section>
 
-  <section id="now">
-    <h2>Do Now — Age 27</h2>
-    <p class="sub">What the literature says matters most right now.</p>
-    <div id="prios"></div>
-  </section>
-
-  <section id="habits">
-    <h2>Weekly Habits</h2>
-    <p class="sub">Compound through consistency. Click to toggle.</p>
-    <div class="habits" id="habits"></div>
-  </section>
-
-  <section id="sprint">
-    <h2>90-Day Sprint</h2>
-    <p class="sub">Goal: BitSec learning loop producing real promotions on ScaBench</p>
-    <div class="sprint"><div class="fill" id="sprint-fill" style="width:0%"></div></div>
-    <p style="font-size:.75rem;color:#999" id="sprint-pct">0% complete</p>
-    <div id="sprint-list"></div>
-  </section>
-
-  <section id="path">
-    <h2>Path to 35</h2>
-    <div id="path-list"></div>
-  </section>
-
-  <section id="principles">
-    <h2>Principles</h2>
-    <div id="princ-list"></div>
-  </section>
-
-  <section id="ai">
-    <h2>AI Agent</h2>
-    <p class="sub">mimo-v2.5 via opencode-go. Tracks conversations and progress.</p>
-    <div class="ai">
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn" onclick="aiCmd('analyze')">Analyze</button>
-        <button class="btn btn-o" onclick="aiCmd('coach')">Coach</button>
-        <button class="btn btn-o" onclick="aiCmd('review')">Review</button>
-        <button class="btn btn-o" onclick="aiCmd('progress')">Progress</button>
-      </div>
-      <div class="ai-log" id="ailog"></div>
-      <div class="ai-row">
-        <input id="aiq" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')aiAsk()">
-        <button class="btn" onclick="aiAsk()">→</button>
-      </div>
-    </div>
-  </section>
-
+  <section id="now"><h2>Do Now — Age 27</h2><p class="sub">What the literature says matters most right now.</p><div id="prios"></div></section>
+  <section id="habits"><h2>Weekly Habits</h2><p class="sub">Compound through consistency. Click to toggle.</p><div class="habits" id="habits"></div></section>
+  <section id="sprint"><h2>90-Day Sprint</h2><p class="sub">Goal: BitSec learning loop producing real promotions on ScaBench</p><div class="sprint"><div class="fill" id="sf" style="width:0%"></div></div><p style="font-size:.75rem;color:#999" id="sp">0% complete</p><div id="sl"></div></section>
+  <section id="path"><h2>Path to 35</h2><div id="pl"></div></section>
+  <section id="principles"><h2>Principles</h2><div id="prl"></div></section>
+  <section id="ai"><h2>AI Agent</h2><p class="sub">mimo-v2.5 via opencode-go. Tracks conversations and progress.</p><div class="ai"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="aiCmd('analyze')">Analyze</button><button class="btn btn-o" onclick="aiCmd('coach')">Coach</button><button class="btn btn-o" onclick="aiCmd('review')">Review</button><button class="btn btn-o" onclick="aiCmd('progress')">Progress</button></div><div class="ai-log" id="ailog"></div><div class="ai-row"><input id="aiq" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')aiAsk()"><button class="btn" onclick="aiAsk()">→</button></div></div></section>
   <footer>Tom's Life OS — aperture theory · compounding habits · local storage</footer>
 </div>
 
 <script>
-const AGE=27,BIRTH=new Date('1999-05-16'),HORIZON=90;
+// ─── CONSTANTS ───────────────────────────────────────────────────
+const AGE=27,BIRTH=new Date('1999-05-16T12:00:00'),HORIZON=90;
 const fmt=new Intl.NumberFormat();
+const MS_SEC=1000,MS_MIN=60000,MS_HOUR=3600000,MS_DAY=86400000,MS_YEAR=365.25*MS_DAY;
 
-function tick(){
-  const now=new Date();
-  const ageMs=now-BIRTH;
-  const ageY=ageMs/(365.25*24*36e5);
+// ─── COUNTDOWN (anchored to Date.now, no drift) ──────────────────
+function updateClock(){
+  const now=Date.now();
+  const ageMs=now-BIRTH.getTime();
+  const ageY=ageMs/MS_YEAR;
   
   // To 90
-  const ms90=(HORIZON-ageY)*365.25*24*36e5;
-  const h90=Math.floor(ms90/36e5);
-  const d90=Math.floor(h90/24);
-  const y90=(ms90/(365.25*24*36e5)).toFixed(1);
-  document.getElementById('h90').textContent=fmt.format(h90);
-  document.getElementById('d90-sub').textContent=fmt.format(d90)+' days';
-  document.getElementById('d90').textContent=fmt.format(d90);
-  document.getElementById('y90-sub').textContent=y90+' years';
+  const ms90=Math.max(0,(HORIZON-ageY)*MS_YEAR);
+  document.getElementById('h90').textContent=fmt.format(Math.floor(ms90/MS_HOUR));
+  document.getElementById('h90s').textContent=fmt.format(Math.floor(ms90/MS_DAY))+' days';
+  document.getElementById('d90').textContent=fmt.format(Math.floor(ms90/MS_DAY));
+  document.getElementById('d90s').textContent=(ms90/MS_YEAR).toFixed(1)+' years';
   
   // To 40
-  const ms40=Math.max(0,(40-ageY)*365.25*24*36e5);
-  const h40=Math.floor(ms40/36e5);
-  const d40=Math.floor(h40/24);
-  const y40=(ms40/(365.25*24*36e5)).toFixed(1);
-  document.getElementById('h40').textContent=fmt.format(h40);
-  document.getElementById('d40-sub').textContent=fmt.format(d40)+' days';
-  document.getElementById('d40').textContent=fmt.format(d40);
-  document.getElementById('y40-sub').textContent=y40+' years';
+  const ms40=Math.max(0,(40-ageY)*MS_YEAR);
+  document.getElementById('h40').textContent=fmt.format(Math.floor(ms40/MS_HOUR));
+  document.getElementById('h40s').textContent=fmt.format(Math.floor(ms40/MS_DAY))+' days';
+  document.getElementById('d40').textContent=fmt.format(Math.floor(ms40/MS_DAY));
+  document.getElementById('d40s').textContent=(ms40/MS_YEAR).toFixed(1)+' years';
   
   // In 20s (until 30)
-  const ms20=Math.max(0,(30-ageY)*365.25*24*36e5);
-  const h20=Math.floor(ms20/36e5);
-  const d20=Math.floor(h20/24);
-  const y20=(ms20/(365.25*24*36e5)).toFixed(1);
-  document.getElementById('h20').textContent=fmt.format(h20);
-  document.getElementById('d20-sub').textContent=fmt.format(d20)+' days';
-  document.getElementById('d20').textContent=fmt.format(d20);
-  document.getElementById('y20-sub').textContent=y20+' years';
+  const ms20=Math.max(0,(30-ageY)*MS_YEAR);
+  document.getElementById('h20').textContent=fmt.format(Math.floor(ms20/MS_HOUR));
+  document.getElementById('h20s').textContent=fmt.format(Math.floor(ms20/MS_DAY))+' days';
+  document.getElementById('d20').textContent=fmt.format(Math.floor(ms20/MS_DAY));
+  document.getElementById('d20s').textContent=(ms20/MS_YEAR).toFixed(1)+' years';
+  
+  // Schedule next update at exact second boundary (no drift)
+  const nextSec=MS_SEC-(now%MS_SEC);
+  setTimeout(updateClock,nextSec);
 }
+updateClock();
 
-setInterval(tick,1000);
-tick();
+// Handle tab visibility (sync when tab comes back)
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateClock();});
 
-// Priorities
-const P=[
-  {t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},
-  {t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},
-  {t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},
-  {t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",c:"Language"},
-  {t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",c:"Reality"},
-  {t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",c:"Practical"},
-  {t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",c:"Freedom"},
-  {t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",c:"Relationships"},
-  {t:"Record family history",d:"Talk to parents now. Cannot be reconstructed later.",c:"Window"},
-  {t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",c:"Maintenance"},
-  {t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},
-  {t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}
-];
+// ─── PRIORITIES ──────────────────────────────────────────────────
+const P=[{t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},{t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},{t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},{t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",c:"Language"},{t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",c:"Reality"},{t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",c:"Practical"},{t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",c:"Freedom"},{t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",c:"Relationships"},{t:"Record family history",d:"Talk to parents now. Cannot be reconstructed later.",c:"Window"},{t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",c:"Maintenance"},{t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},{t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}];
 document.getElementById('prios').innerHTML=P.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.c+'</div></div>').join('');
 
-// Habits
+// ─── HABITS ──────────────────────────────────────────────────────
 const HAB=["Exercise 30min","Read 20 pages","Meditate 10min","Hindi practice","Deep work 4hrs","Walk 10k steps","No social media before noon","Journal 5min"];
 const HD=JSON.parse(localStorage.getItem('hd')||'{}');
-function renderH(){
-  document.getElementById('habits').innerHTML=HAB.map((h,i)=>{
-    let d='';for(let j=6;j>=0;j--){const dt=new Date();dt.setDate(dt.getDate()-j);const k=i+'_'+dt.toISOString().slice(0,10);d+='<div class="dot '+(HD[k]?'on':'')+'" onclick="tg('+i+',\''+dt.toISOString().slice(0,10)+'\")"></div>';}
-    return '<div class="habit"><div class="nm">'+h+'</div><div class="dots">'+d+'</div></div>';
-  }).join('');
-}
+function renderH(){document.getElementById('habits').innerHTML=HAB.map((h,i)=>{let d='';for(let j=6;j>=0;j--){const dt=new Date();dt.setDate(dt.getDate()-j);const k=i+'_'+dt.toISOString().slice(0,10);d+='<div class="dot '+(HD[k]?'on':'')+'" onclick="tg('+i+',\''+dt.toISOString().slice(0,10)+'\")"></div>';}return '<div class="habit"><div class="nm">'+h+'</div><div class="dots">'+d+'</div></div>';}).join('');}
 function tg(i,dt){const k=i+'_'+dt;HD[k]=!HD[k];localStorage.setItem('hd',JSON.stringify(HD));renderH();}
 renderH();
 
-// Sprint
+// ─── SPRINT ──────────────────────────────────────────────────────
 const SP=[{w:1,f:"Wire CG bridge + ScaBench evaluator",d:1},{w:2,f:"Fix validity problems",d:1},{w:3,f:"Run paired evaluation v0 vs v1",d:1},{w:4,f:">10% DR baseline",d:0},{w:5,f:"Wire CGE failure analysis",d:0},{w:6,f:"First real promotion",d:0},{w:7,f:"Test BountyBench near-transfer",d:0},{w:8,f:"Wire RedTeam SN61 far-transfer",d:0},{w:9,f:"Full integration test",d:0},{w:10,f:"Deploy + submit SN60",d:0},{w:11,f:"Monitor + iterate",d:0},{w:12,f:"Document + handoff",d:0}];
 const dn=SP.filter(s=>s.d).length;
-document.getElementById('sprint-fill').style.width=(dn/SP.length*100)+'%';
-document.getElementById('sprint-pct').textContent=Math.round(dn/SP.length*100)+'% complete';
-document.getElementById('sprint-list').innerHTML=SP.map(s=>'<div class="path'+(s.d?' past':'')+'"><span class="age">Week '+s.w+'</span> — '+s.f+'</div>').join('');
+document.getElementById('sf').style.width=(dn/SP.length*100)+'%';
+document.getElementById('sp').textContent=Math.round(dn/SP.length*100)+'% complete';
+document.getElementById('sl').innerHTML=SP.map(s=>'<div class="path'+(s.d?' past':'')+'"><span class="age">Week '+s.w+'</span> — '+s.f+'</div>').join('');
 
-// Path
+// ─── PATH TO 35 ──────────────────────────────────────────────────
 const PATH=[{a:"27",t:"Foundation",d:"Stabilize income. Automate saving. Train. Hindi daily."},{a:"28-29",t:"Prototype",d:"Northern India. Rural routines. Gardening, repairs, cooking."},{a:"30-31",t:"Location-independent",d:"Build specialist reputation, recurring clients."},{a:"32-33",t:"Select environment",d:"Trial rentals. Learn local realities."},{a:"34-35",t:"Commit",d:"Establish when income and competence make it robust."}];
-document.getElementById('path-list').innerHTML=PATH.map(p=>'<div class="path"><span class="age">Age '+p.a+'</span> — '+p.t+'<div class="desc">'+p.d+'</div></div>').join('');
+document.getElementById('pl').innerHTML=PATH.map(p=>'<div class="path"><span class="age">Age '+p.a+'</span> — '+p.t+'<div class="desc">'+p.d+'</div></div>').join('');
 
-// Principles
+// ─── PRINCIPLES ──────────────────────────────────────────────────
 const PR=[{t:"Do not wait to feel ready",d:"Confidence is output of action.",w:"Teens-30s"},{t:"Preserve optionality",d:"Health, savings, portable skills, low fixed costs.",w:"All adulthood"},{t:"Care less about the ambient audience",d:"Take criticism from people with wisdom.",w:"20s+"},{t:"Choose what deserves compounding",d:"Sustained investment in a few things that matter.",w:"25-40"},{t:"Train for the 80-year-old you",d:"Build capacity to walk, carry, climb.",w:"Now"},{t:"Make strength lifelong",d:"Muscle and strength are reserve.",w:"20s+"},{t:"Build meaning that survives status loss",d:"Keep practices that matter even if nobody's impressed.",w:"All adulthood"}];
-document.getElementById('princ-list').innerHTML=PR.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.w+'</div></div>').join('');
+document.getElementById('prl').innerHTML=PR.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.w+'</div></div>').join('');
 
-// AI
+// ─── AI AGENT ────────────────────────────────────────────────────
 const K='sk-fv9GAkxq7nRiVTX0l8gLEUoPc79spJGqU9HkSjswVLnoQfTuWz5HY1R8hA44g8ZU';
 const U='https://opencode.ai/zen/go/v1/chat/completions';
 const M='mimo-v2.5';
 const HIST=JSON.parse(localStorage.getItem('ai_hist')||'[]');
-
 function log(m,c){const l=document.getElementById('ailog');const t=new Date().toISOString().slice(11,19);l.innerHTML+='<div class="ln"><span class="ts">['+t+']</span> <span class="'+c+'">'+m+'</span></div>';l.scrollTop=l.scrollHeight;}
-
-async function aiSend(p){
-  log('[you] '+p.slice(0,200),'hi');
-  HIST.push({role:'user',content:p,ts:new Date().toISOString()});
-  const msgs=HIST.slice(-10).map(m=>({role:m.role,content:m.content}));
-  try{
-    const r=await fetch(U,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+K},body:JSON.stringify({model:M,messages:msgs,max_tokens:1500,temperature:0.7})});
-    const d=await r.json();
-    const reply=d.choices?.[0]?.message?.content||'No response';
-    HIST.push({role:'assistant',content:reply,ts:new Date().toISOString()});
-    localStorage.setItem('ai_hist',JSON.stringify(HIST.slice(-50)));
-    log('[mimo] '+reply,'ok');
-  }catch(e){log('[err] '+e.message,'err');}
-}
-
-function aiCmd(t){
-  const h=HAB.join(', ');
-  const sp=Math.round(SP.filter(s=>s.d).length/SP.length*100);
-  const n=HIST.length;
-  const prompts={
-    analyze:'Analyze my life at 27. Habits: '+h+'. Sprint: '+sp+'% done. Focus: Security Lab. Conversations: '+n+'. Patterns? One recommendation.',
-    coach:'Coach me on habit consistency. 8 daily habits. What compounds in 30 days? One actionable tip.',
-    review:'Weekly review: Security Lab progress. What to do differently? Most important next week?',
-    progress:'Progress summary. Sprint: '+sp+'%. Habits tracked: '+n+' conversations. What compounds? What stagnates?'
-  };
-  aiSend(prompts[t]);
-}
-
+async function aiSend(p){log('[you] '+p.slice(0,200),'hi');HIST.push({role:'user',content:p,ts:new Date().toISOString()});const msgs=HIST.slice(-10).map(m=>({role:m.role,content:m.content}));try{const r=await fetch(U,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+K},body:JSON.stringify({model:M,messages:msgs,max_tokens:1500,temperature:0.7})});const d=await r.json();const reply=d.choices?.[0]?.message?.content||'No response';HIST.push({role:'assistant',content:reply,ts:new Date().toISOString()});localStorage.setItem('ai_hist',JSON.stringify(HIST.slice(-50)));log('[mimo] '+reply,'ok');}catch(e){log('[err] '+e.message,'err');}}
+function aiCmd(t){const h=HAB.join(', ');const sp=Math.round(SP.filter(s=>s.d).length/SP.length*100);const n=HIST.length;const prompts={analyze:'Analyze my life at 27. Habits: '+h+'. Sprint: '+sp+'% done. Focus: Security Lab. Conversations: '+n+'. Patterns? One recommendation.',coach:'Coach me on habit consistency. 8 daily habits. What compounds in 30 days? One actionable tip.',review:'Weekly review: Security Lab progress. What to do differently? Most important next week?',progress:'Progress summary. Sprint: '+sp+'%. Habits tracked: '+n+' conversations. What compounds? What stagnates?'};aiSend(prompts[t]);}
 function aiAsk(){const q=document.getElementById('aiq').value.trim();if(q){aiSend(q);document.getElementById('aiq').value='';}}
 </script>
 </body>
 </html>
-
-<!-- THESIS SECTION (added before closing script) -->
-<script>
-// Thesis section
-document.addEventListener('DOMContentLoaded', function() {
-  const thesisHTML = `
-  <section id="thesis" style="margin-top:24px">
-    <h2>The Aperture Theory</h2>
-    <p class="sub">Reality is what you measure, track, and act on. This is a live experiment.</p>
-    
-    <div class="card" style="border-left:3px solid #111">
-      <h4 style="font-size:.9rem;margin-bottom:8px">Core Hypothesis</h4>
-      <p style="font-size:.85rem;line-height:1.6">The quality of your life is proportional to the quality of what you choose to measure and track. What you don't measure doesn't improve. What you measure compounds. The AI layer makes continuous measurement possible at near-zero marginal cost.</p>
-    </div>
-
-    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">What Should Be True</h3>
-    <div class="card">
-      <h4 style="font-size:.85rem">C1: Attention determines reality</h4>
-      <p style="font-size:.8rem;color:#666">Kahneman (2011): "We are far too willing to reject the belief that much of what we see is random." What you attend to becomes your experienced world.</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track attention allocation for 30 days. Measure correlation with life satisfaction.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">C2: Measurement compounds</h4>
-      <p style="font-size:.8rem;color:#666">Clear (2018): "You do not rise to the level of your goals. You fall to the level of your systems." Tracking creates feedback loops. Feedback enables optimization. Optimization compounds.</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Compare life metrics before/after tracking. 1% daily = 37x in one year.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">C3: The AI layer enables continuous measurement</h4>
-      <p style="font-size:.8rem;color:#666">Previously, self-tracking required manual effort. An AI agent observes patterns, suggests experiments, maintains continuity. Marginal cost of measurement approaches zero.</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track AI interactions. Measure whether suggestions improve outcomes vs. no AI.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">C4: Life as longitudinal N=1 experiment</h4>
-      <p style="font-size:.8rem;color:#666">Single-subject research is valid in psychology and medicine. Frozen targets, controlled variables, measured outcomes, reproducible methods. This is not self-help — it's science.</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Run 90-day experiments with frozen targets. Measure actual vs. predicted outcomes.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">C5: Measurement creates meaning</h4>
-      <p style="font-size:.8rem;color:#666">Goodhart's Law warns against Goodharting. But for personal development, measuring what matters makes it matter more. The act of measurement focuses attention.</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track which areas improve after measurement starts.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">C6: Compound effects dominate</h4>
-      <p style="font-size:.8rem;color:#666">Daily habits compound. Skills compound. Relationships compound. The question is not "what should I do today?" but "what compounds over 10 years?"</p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Model compound growth. Compare actual trajectory to linear prediction.</p>
-    </div>
-
-    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">Experimental Method</h3>
-    <div class="card">
-      <h4 style="font-size:.85rem">1. Observe</h4>
-      <p style="font-size:.8rem;color:#666">Track what actually happens. Habits, energy, output, mood. The raw data of your life.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">2. Hypothesize</h4>
-      <p style="font-size:.8rem;color:#666">What would improve if you changed X? Form testable claims about causation.</p>
-    </div>
-    <div class="card">
-      <h4 style="font-size:.85rem">3. Experiment</h4>
-      <p style="font-size:.8rem;color:#666">Run the change for a defined period. Keep controls. Measure outcomes. This is not self-help — it's science.</p>
-    </div>
-
-    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">Live Experiment: Security Lab</h3>
-    <div class="card" style="border-left:3px solid #16a34a">
-      <h4 style="font-size:.85rem">Hypothesis</h4>
-      <p style="font-size:.8rem;color:#666">Building an autonomous security research lab produces measurable capability improvements that transfer across domains.</p>
-      <h4 style="font-size:.85rem;margin-top:8px">Method</h4>
-      <p style="font-size:.8rem;color:#666">BitSec → BountyBench → RedTeam SN61 (transfer ladder)</p>
-      <h4 style="font-size:.85rem;margin-top:8px">Results</h4>
-      <p style="font-size:.8rem">Baseline: <strong>7.6%</strong> DR → Best: <strong>25.7%</strong> DR → Promotions: <strong>1</strong></p>
-      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Status: RUNNING since 2026-09-01</p>
-    </div>
-
-    <div class="card" style="margin-top:16px;background:#f0f8ff;border-color:#d0e0f0">
-      <h4 style="font-size:.85rem">Implications</h4>
-      <ul style="font-size:.8rem;color:#334155;padding-left:20px;margin-top:8px">
-        <li>Your life is not a story — it's an experiment to be run</li>
-        <li>Quality of measurements determines quality of decisions</li>
-        <li>AI makes continuous measurement possible at near-zero cost</li>
-        <li>What compounds beats what's intense</li>
-        <li>The aperture you choose determines the reality you experience</li>
-      </ul>
-    </div>
-  </section>`;
-  
-  // Insert before footer
-  const footer = document.querySelector('footer');
-  if (footer) footer.insertAdjacentHTML('beforebegin', thesisHTML);
-});
-</script>
