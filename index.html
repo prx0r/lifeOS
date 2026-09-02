@@ -79,16 +79,12 @@ footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:cente
 var now = new Date();
 
 // To 90 (2089-05-16)
-simplyCountdown('#cd-h90', { year: 2089, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
-simplyCountdown('#cd-d90', { year: 2089, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
-
-// To 40 (2039-05-16)
-simplyCountdown('#cd-h40', { year: 2039, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
-simplyCountdown('#cd-d40', { year: 2039, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
-
-// In 20s (until 30th birthday: 2029-05-16)
-simplyCountdown('#cd-h20', { year: 2029, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
-simplyCountdown('#cd-d20', { year: 2029, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
+simplyCountdown('#cd-h90', { year: 2089, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
+simplyCountdown('#cd-d90', { year: 2089, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
+simplyCountdown('#cd-h40', { year: 2039, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
+simplyCountdown('#cd-d40', { year: 2039, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
+simplyCountdown('#cd-h20', { year: 2029, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
+simplyCountdown('#cd-d20', { year: 2029, month: 5, day: 16, hours: 12, enableUtc: false, inline: true, removeZero: true });
 
 // PRIORITIES
 var P=[{t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},{t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},{t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},{t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",c:"Language"},{t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",c:"Reality"},{t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",c:"Practical"},{t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",c:"Freedom"},{t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",c:"Relationships"},{t:"Record family history",d:"Talk to parents now. Cannot be reconstructed later.",c:"Window"},{t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",c:"Maintenance"},{t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},{t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}];
