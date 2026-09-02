@@ -57,6 +57,7 @@
       <a href="#path">Path to 35</a>
       <a href="#principles">Principles</a>
       <a href="#ai">AI</a>
+      <a href="#thesis">Thesis</a>
     </nav>
   </header>
 
@@ -274,3 +275,92 @@ function aiAsk(){const q=document.getElementById('aiq').value.trim();if(q){aiSen
 </script>
 </body>
 </html>
+
+<!-- THESIS SECTION (added before closing script) -->
+<script>
+// Thesis section
+document.addEventListener('DOMContentLoaded', function() {
+  const thesisHTML = `
+  <section id="thesis" style="margin-top:24px">
+    <h2>The Aperture Theory</h2>
+    <p class="sub">Reality is what you measure, track, and act on. This is a live experiment.</p>
+    
+    <div class="card" style="border-left:3px solid #111">
+      <h4 style="font-size:.9rem;margin-bottom:8px">Core Hypothesis</h4>
+      <p style="font-size:.85rem;line-height:1.6">The quality of your life is proportional to the quality of what you choose to measure and track. What you don't measure doesn't improve. What you measure compounds. The AI layer makes continuous measurement possible at near-zero marginal cost.</p>
+    </div>
+
+    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">What Should Be True</h3>
+    <div class="card">
+      <h4 style="font-size:.85rem">C1: Attention determines reality</h4>
+      <p style="font-size:.8rem;color:#666">Kahneman (2011): "We are far too willing to reject the belief that much of what we see is random." What you attend to becomes your experienced world.</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track attention allocation for 30 days. Measure correlation with life satisfaction.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">C2: Measurement compounds</h4>
+      <p style="font-size:.8rem;color:#666">Clear (2018): "You do not rise to the level of your goals. You fall to the level of your systems." Tracking creates feedback loops. Feedback enables optimization. Optimization compounds.</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Compare life metrics before/after tracking. 1% daily = 37x in one year.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">C3: The AI layer enables continuous measurement</h4>
+      <p style="font-size:.8rem;color:#666">Previously, self-tracking required manual effort. An AI agent observes patterns, suggests experiments, maintains continuity. Marginal cost of measurement approaches zero.</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track AI interactions. Measure whether suggestions improve outcomes vs. no AI.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">C4: Life as longitudinal N=1 experiment</h4>
+      <p style="font-size:.8rem;color:#666">Single-subject research is valid in psychology and medicine. Frozen targets, controlled variables, measured outcomes, reproducible methods. This is not self-help — it's science.</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Run 90-day experiments with frozen targets. Measure actual vs. predicted outcomes.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">C5: Measurement creates meaning</h4>
+      <p style="font-size:.8rem;color:#666">Goodhart's Law warns against Goodharting. But for personal development, measuring what matters makes it matter more. The act of measurement focuses attention.</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Track which areas improve after measurement starts.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">C6: Compound effects dominate</h4>
+      <p style="font-size:.8rem;color:#666">Daily habits compound. Skills compound. Relationships compound. The question is not "what should I do today?" but "what compounds over 10 years?"</p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Testable: Model compound growth. Compare actual trajectory to linear prediction.</p>
+    </div>
+
+    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">Experimental Method</h3>
+    <div class="card">
+      <h4 style="font-size:.85rem">1. Observe</h4>
+      <p style="font-size:.8rem;color:#666">Track what actually happens. Habits, energy, output, mood. The raw data of your life.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">2. Hypothesize</h4>
+      <p style="font-size:.8rem;color:#666">What would improve if you changed X? Form testable claims about causation.</p>
+    </div>
+    <div class="card">
+      <h4 style="font-size:.85rem">3. Experiment</h4>
+      <p style="font-size:.8rem;color:#666">Run the change for a defined period. Keep controls. Measure outcomes. This is not self-help — it's science.</p>
+    </div>
+
+    <h3 style="font-size:.875rem;font-weight:600;margin:20px 0 8px">Live Experiment: Security Lab</h3>
+    <div class="card" style="border-left:3px solid #16a34a">
+      <h4 style="font-size:.85rem">Hypothesis</h4>
+      <p style="font-size:.8rem;color:#666">Building an autonomous security research lab produces measurable capability improvements that transfer across domains.</p>
+      <h4 style="font-size:.85rem;margin-top:8px">Method</h4>
+      <p style="font-size:.8rem;color:#666">BitSec → BountyBench → RedTeam SN61 (transfer ladder)</p>
+      <h4 style="font-size:.85rem;margin-top:8px">Results</h4>
+      <p style="font-size:.8rem">Baseline: <strong>7.6%</strong> DR → Best: <strong>25.7%</strong> DR → Promotions: <strong>1</strong></p>
+      <p style="font-size:.7rem;color:#16a34a;margin-top:4px">Status: RUNNING since 2026-09-01</p>
+    </div>
+
+    <div class="card" style="margin-top:16px;background:#f0f8ff;border-color:#d0e0f0">
+      <h4 style="font-size:.85rem">Implications</h4>
+      <ul style="font-size:.8rem;color:#334155;padding-left:20px;margin-top:8px">
+        <li>Your life is not a story — it's an experiment to be run</li>
+        <li>Quality of measurements determines quality of decisions</li>
+        <li>AI makes continuous measurement possible at near-zero cost</li>
+        <li>What compounds beats what's intense</li>
+        <li>The aperture you choose determines the reality you experience</li>
+      </ul>
+    </div>
+  </section>`;
+  
+  // Insert before footer
+  const footer = document.querySelector('footer');
+  if (footer) footer.insertAdjacentHTML('beforebegin', thesisHTML);
+});
+</script>
