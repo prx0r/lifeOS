@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tom — Life OS</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplycountdown.js@1.6.0/dist/simplyCountdown.min.css">
+<script src="https://cdn.jsdelivr.net/npm/simplycountdown.js@1.6.0/dist/simplyCountdown.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fafafa;color:#111;line-height:1.5}
@@ -15,9 +17,8 @@ h2{font-size:1rem;font-weight:600;margin:24px 0 8px}
 .sub{font-size:.75rem;color:#999;margin-bottom:16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0}
 .stat{text-align:center;padding:14px 8px;background:#fff;border:1px solid #eee;border-radius:4px}
-.stat .val{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat .val{font-size:1.6rem;font-weight:700;line-height:1.2}
 .stat .lbl{font-size:.6rem;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
-.stat .sub-lbl{font-size:.55rem;color:#bbb}
 .card{background:#fff;border:1px solid #eee;padding:14px;margin:8px 0;border-radius:4px}
 .btn{font-size:.75rem;padding:8px 16px;border:1px solid #111;background:#111;color:#fff;cursor:pointer;border-radius:4px}
 .btn:hover{background:#333}
@@ -26,13 +27,12 @@ h2{font-size:1rem;font-weight:600;margin:24px 0 8px}
 .habit{background:#fff;border:1px solid #eee;padding:12px;border-radius:4px}
 .habit .nm{font-size:.8rem;font-weight:500}
 .habit .dots{display:flex;gap:3px;margin-top:8px}
-.dot{width:18px;height:18px;border:1px solid #ddd;border-radius:3px;cursor:pointer;transition:.15s}
+.dot{width:18px;height:18px;border:1px solid #ddd;border-radius:3px;cursor:pointer}
 .dot.on{background:#16a34a;border-color:#16a34a}
 .dot:hover{border-color:#111}
 .sprint{height:6px;background:#eee;border-radius:3px;overflow:hidden;margin:8px 0}
 .sprint .fill{height:100%;background:#111;border-radius:3px}
 .path{padding:12px;border-left:2px solid #eee;margin:8px 0}
-.path.now{border-left-color:#111}
 .path .age{font-weight:600}.path .desc{font-size:.8rem;color:#666;margin-top:4px}
 .ai{background:#f5f5f5;border:1px solid #eee;padding:16px;border-radius:4px;margin:16px 0}
 .ai-log{background:#1a1a2e;color:#a8b1c2;padding:12px;font-size:.75rem;max-height:400px;overflow-y:auto;font-family:'SF Mono',Monaco,monospace;border-radius:4px;margin-top:12px}
@@ -42,6 +42,9 @@ h2{font-size:1rem;font-weight:600;margin:24px 0 8px}
 .princ{background:#fff;border:1px solid #eee;padding:12px;margin:6px 0;border-radius:4px}
 .princ h4{font-size:.85rem;margin-bottom:4px}.princ p{font-size:.8rem;color:#666}
 .princ .w{font-size:.7rem;color:#16a34a;margin-top:4px}
+.countdown-section{text-align:center;margin:20px 0}
+.countdown-section .cd-label{font-size:.7rem;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:8px}
+.countdown-section .cd-sub{font-size:.65rem;color:#bbb;margin-top:2px}
 footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:center;font-size:.7rem;color:#bbb}
 </style>
 </head>
@@ -53,12 +56,12 @@ footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:cente
     <h2>Life Clock</h2>
     <p class="sub">16 May 1999 → 90 years. Every number is real and ticking.</p>
     <div class="grid">
-      <div class="stat"><div class="val" id="h90">—</div><div class="lbl">hours to 90</div><div class="sub-lbl" id="h90s"></div></div>
-      <div class="stat"><div class="val" id="d90">—</div><div class="lbl">days to 90</div><div class="sub-lbl" id="d90s"></div></div>
-      <div class="stat"><div class="val" id="h40">—</div><div class="lbl">hours to 40</div><div class="sub-lbl" id="h40s"></div></div>
-      <div class="stat"><div class="val" id="d40">—</div><div class="lbl">days to 40</div><div class="sub-lbl" id="d40s"></div></div>
-      <div class="stat"><div class="val" id="h20">—</div><div class="lbl">hours in 20s</div><div class="sub-lbl" id="h20s"></div></div>
-      <div class="stat"><div class="val" id="d20">—</div><div class="lbl">days in 20s</div><div class="sub-lbl" id="d20s"></div></div>
+      <div class="countdown-section"><div id="cd-h90"></div><div class="cd-label">hours to 90</div></div>
+      <div class="countdown-section"><div id="cd-d90"></div><div class="cd-label">days to 90</div></div>
+      <div class="countdown-section"><div id="cd-h40"></div><div class="cd-label">hours to 40</div></div>
+      <div class="countdown-section"><div id="cd-d40"></div><div class="cd-label">days to 40</div></div>
+      <div class="countdown-section"><div id="cd-h20"></div><div class="cd-label">hours in 20s</div></div>
+      <div class="countdown-section"><div id="cd-d20"></div><div class="cd-label">days in 20s</div></div>
     </div>
   </section>
 
@@ -72,38 +75,20 @@ footer{border-top:1px solid #eee;margin-top:40px;padding:16px 0;text-align:cente
 </div>
 
 <script>
-(function(){
-var BIRTH=new Date('1999-05-16T12:00:00'),HORIZON=90;
-var fmt=new Intl.NumberFormat();
-var MS_Y=365.25*24*3600000,MS_H=3600000,MS_D=86400000;
+// COUNTDOWNS — using simplyCountdown.js library
+var now = new Date();
 
-function update(){
-  var now=Date.now();
-  var ageY=(now-BIRTH.getTime())/MS_Y;
-  
-  var ms90=Math.max(0,(HORIZON-ageY)*MS_Y);
-  document.getElementById('h90').textContent=fmt.format(Math.floor(ms90/MS_H));
-  document.getElementById('h90s').textContent=fmt.format(Math.floor(ms90/MS_D))+' days';
-  document.getElementById('d90').textContent=fmt.format(Math.floor(ms90/MS_D));
-  document.getElementById('d90s').textContent=(ms90/MS_Y).toFixed(1)+' years';
-  
-  var ms40=Math.max(0,(40-ageY)*MS_Y);
-  document.getElementById('h40').textContent=fmt.format(Math.floor(ms40/MS_H));
-  document.getElementById('h40s').textContent=fmt.format(Math.floor(ms40/MS_D))+' days';
-  document.getElementById('d40').textContent=fmt.format(Math.floor(ms40/MS_D));
-  document.getElementById('d40s').textContent=(ms40/MS_Y).toFixed(1)+' years';
-  
-  var ms20=Math.max(0,(30-ageY)*MS_Y);
-  document.getElementById('h20').textContent=fmt.format(Math.floor(ms20/MS_H));
-  document.getElementById('h20s').textContent=fmt.format(Math.floor(ms20/MS_D))+' days';
-  document.getElementById('d20').textContent=fmt.format(Math.floor(ms20/MS_D));
-  document.getElementById('d20s').textContent=(ms20/MS_Y).toFixed(1)+' years';
-  
-  setTimeout(update,1000-(Date.now()%1000));
-}
-update();
-document.addEventListener('visibilitychange',function(){if(!document.hidden)update();});
-})();
+// To 90 (2089-05-16)
+simplyCountdown('#cd-h90', { year: 2089, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
+simplyCountdown('#cd-d90', { year: 2089, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
+
+// To 40 (2039-05-16)
+simplyCountdown('#cd-h40', { year: 2039, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
+simplyCountdown('#cd-d40', { year: 2039, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
+
+// In 20s (until 30th birthday: 2029-05-16)
+simplyCountdown('#cd-h20', { year: 2029, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { hours: '', minutes: '', seconds: '' } });
+simplyCountdown('#cd-d20', { year: 2029, month: 5, day: 16, hours: 12, minutes: 0, seconds: 0, enableUtc: false, inline: true, words: { days: '', hours: '', minutes: '', seconds: '' } });
 
 // PRIORITIES
 var P=[{t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},{t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},{t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},{t:"Make Hindi daily",d:"A modest daily floor plus real conversations.",c:"Language"},{t:"Prototype the life before buying it",d:"Spend time in the places you think you want.",c:"Reality"},{t:"Accumulate practical rural competence",d:"Gardening, repairs, water systems, animal care.",c:"Practical"},{t:"Keep fixed costs low",d:"Low burn = runway + experimentation.",c:"Freedom"},{t:"Deepen a few relationships",d:"Durable friendships + recurring communities.",c:"Relationships"},{t:"Record family history",d:"Talk to parents now. Cannot be reconstructed later.",c:"Window"},{t:"Protect teeth, sleep, prevention",d:"Make it automatic while nothing is wrong.",c:"Maintenance"},{t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},{t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}];
@@ -140,9 +125,6 @@ function log(m,c){var l=document.getElementById('ailog');var t=new Date().toISOS
 function aiSend(p){log('[you] '+p.slice(0,200),'hi');HIST.push({role:'user',content:p,ts:new Date().toISOString()});var msgs=HIST.slice(-10).map(function(m){return{role:m.role,content:m.content};});fetch(URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+K},body:JSON.stringify({model:MOD,messages:msgs,max_tokens:1500,temperature:0.7})}).then(function(r){return r.json();}).then(function(d){var reply=d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content||'No response';HIST.push({role:'assistant',content:reply,ts:new Date().toISOString()});localStorage.setItem('ai_hist',JSON.stringify(HIST.slice(-50)));log('[mimo] '+reply,'ok');}).catch(function(e){log('[err] '+e.message,'err');});}
 function aiCmd(t){var h=HAB.join(', ');var sp=Math.round(SP.filter(function(s){return s.d;}).length/SP.length*100);var n=HIST.length;var prompts={analyze:'Analyze my life at 27. Habits: '+h+'. Sprint: '+sp+'% done. Focus: Security Lab. Conversations: '+n+'. Patterns? One recommendation.',coach:'Coach me on habit consistency. 8 daily habits. What compounds in 30 days? One actionable tip.',review:'Weekly review: Security Lab progress. What to do differently? Most important next week?',progress:'Progress summary. Sprint: '+sp+'%. Habits tracked: '+n+' conversations. What compounds? What stagnates?'};aiSend(prompts[t]);}
 function aiAsk(){var q=document.getElementById('aiq').value.trim();if(q){aiSend(q);document.getElementById('aiq').value='';}}
-})();
 </script>
 </body>
 </html>
-EOF
-echo "Minimal countdown page created"
