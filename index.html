@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lifeOS — Life Operating System</title>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --surface: #12121a;
+            --border: #1e1e2e;
+            --text: #e0e0e0;
+            --muted: #888;
+            --accent: #ff6b35;
+            --accent2: #00d4aa;
+            --green: #00cc66;
+            --yellow: #ffaa00;
+            --red: #ff4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .logo span { color: var(--accent2); }
+        nav { display: flex; gap: 8px; }
+        nav button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        nav button:hover, nav button.active {
+            color: var(--text);
+            border-color: var(--accent);
+        }
+        .tab { display: none; }
+        .tab.active { display: block; }
+        .tab h2 {
+            font-size: 1.3rem;
+            margin: 24px 0 16px;
+            color: var(--accent);
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .card h3 { margin-bottom: 8px; font-size: 1.1rem; }
+        .card p { color: var(--muted); font-size: 0.9rem; }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat .value { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+        .stat .label { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+        .habit-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin: 12px 0;
+        }
+        .habit-day {
+            aspect-ratio: 1;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .habit-day.done { background: var(--green); color: white; border-color: var(--green); }
+        .habit-day:hover { border-color: var(--accent); }
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+            margin: 16px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 16px;
+            padding: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 16px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        .timeline-item.past { opacity: 0.5; }
+        .timeline-item.current { border-color: var(--accent); }
+        .timeline-item.future { opacity: 0.7; }
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .btn:hover { opacity: 0.8; }
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--surface);
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        textarea.input { min-height: 80px; resize: vertical; }
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .week-day {
+            padding: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .week-day .day-name { font-weight: 600; margin-bottom: 4px; }
+        .week-day .day-score { font-size: 1.5rem; color: var(--accent); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .progress-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+        .window-card {
+            border-left: 3px solid var(--yellow);
+        }
+        .window-card.urgent { border-left-color: var(--red); }
+        .window-card.safe { border-left-color: var(--green); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">life<span>OS</span></div>
+            <nav>
+                <button class="active" onclick="showTab('dashboard')">Dashboard</button>
+                <button onclick="showTab('habits')">Habits</button>
+                <button onclick="showTab('focus')">90-Day Focus</button>
+                <button onclick="showTab('review')">Weekly Review</button>
+                <button onclick="showTab('timeline')">Timeline</button>
+                <button onclick="showTab('windows')">Windows</button>
+            </nav>
+        </header>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="tab active">
+            <h2>Age 27 Priorities</h2>
+            <div class="stat-grid">
+                <div class="stat">
+                    <div class="value" id="days-left">--</div>
+                    <div class="label">Days to 90</div>
+                </div>
+                <div class="stat">
+                    <div class="value" id="decade-left">--</div>
+                    <div class="label">Years in this decade</div>
+                </div>
+                <div class="stat">
+                    <div class="value" id="habit-streak">--</div>
+                    <div class="label">Habit streak</div>
+                </div>
+                <div class="stat">
+                    <div class="value" id="focus-progress">--</div>
+                    <div class="label">90-day progress</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>What Matters Now (Age 27)</h3>
+                <p>Evidence-based priorities for your current life stage:</p>
+                <ul style="margin-top:8px;padding-left:20px;color:var(--muted)">
+                    <li><strong style="color:var(--text)">Build compound skills</strong> — The next 3 years determine the next 30</li>
+                    <li><strong style="color:var(--text)">Establish financial foundation</strong> — Savings rate > income growth</li>
+                    <li><strong style="color:var(--text)">Deepen relationships</strong> — Quality over quantity</li>
+                    <li><strong style="color:var(--text)">Physical health peak</strong> — What you build now lasts decades</li>
+                    <li><strong style="color:var(--text)">Career capital</strong> — Optionality comes from skill, not job titles</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>North Star Goal</h3>
+                <textarea class="input" id="north-star" placeholder="What's your 90-day focus?"></textarea>
+                <button class="btn" onclick="saveNorthStar()">Save</button>
+            </div>
+        </div>
+
+        <!-- Habits -->
+        <div id="habits" class="tab">
+            <h2>Weekly Compounding Habits</h2>
+            <p style="color:var(--muted);margin-bottom:16px">Small daily actions compound over decades. Track consistency, not perfection.</p>
+
+            <div id="habits-list"></div>
+
+            <div class="card">
+                <h3>Add Habit</h3>
+                <input class="input" id="new-habit-name" placeholder="Habit name (e.g., 'Exercise 30min')">
+                <button class="btn" onclick="addHabit()">Add</button>
+            </div>
+        </div>
+
+        <!-- 90-Day Focus -->
+        <div id="focus" class="tab">
+            <h2>90-Day Focus</h2>
+            <div class="card">
+                <h3>Current Focus</h3>
+                <textarea class="input" id="focus-goal" placeholder="What are you building in the next 90 days?"></textarea>
+                <div style="display:flex;gap:8px;margin-top:8px">
+                    <button class="btn" onclick="saveFocus()">Save</button>
+                    <button class="btn" style="background:var(--accent2)" onclick="resetFocus()">Reset Timer</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Weekly Check-in</h3>
+                <div class="week-grid" id="week-grid"></div>
+                <p style="color:var(--muted);font-size:0.8rem;margin-top:8px">Rate each day 1-5: how aligned with your 90-day goal?</p>
+            </div>
+
+            <div class="card">
+                <h3>Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="focus-bar" style="width:0%"></div>
+                </div>
+                <p style="color:var(--muted);font-size:0.8rem" id="focus-status">Start your 90-day sprint</p>
+            </div>
+        </div>
+
+        <!-- Weekly Review -->
+        <div id="review" class="tab">
+            <h2>Weekly Review</h2>
+            <div class="card">
+                <h3>This Week's Wins</h3>
+                <textarea class="input" id="weekly-wins" placeholder="What did you accomplish?"></textarea>
+            </div>
+            <div class="card">
+                <h3>Lessons Learned</h3>
+                <textarea class="input" id="weekly-lessons" placeholder="What would you do differently?"></textarea>
+            </div>
+            <div class="card">
+                <h3>Next Week's Focus</h3>
+                <textarea class="input" id="weekly-focus" placeholder="Top 3 priorities for next week"></textarea>
+            </div>
+            <button class="btn" onclick="saveReview()">Save Review</button>
+        </div>
+
+        <!-- Timeline -->
+        <div id="timeline" class="tab">
+            <h2>Life Timeline</h2>
+            <p style="color:var(--muted);margin-bottom:16px">What becomes valuable at each stage.</p>
+            <div class="timeline" id="timeline-list"></div>
+        </div>
+
+        <!-- Windows -->
+        <div id="windows" class="tab">
+            <h2>Closing Windows</h2>
+            <p style="color:var(--muted);margin-bottom:16px">Some opportunities have expiration dates. Know which windows are closing.</p>
+            <div id="windows-list"></div>
+        </div>
+
+        <footer>
+            <p>lifeOS — Your second brain for life planning.</p>
+            <p>All data stays in your browser. No accounts, no servers.</p>
+        </footer>
+    </div>
+
+    <script>
+        // ─── Data Store (localStorage) ─────────────────────────────
+        const STORE_KEY = 'lifeOS_data';
+        let data = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+
+        function save() {
+            localStorage.setItem(STORE_KEY, JSON.stringify(data));
+        }
+
+        // ─── Dashboard ─────────────────────────────────────────────
+        function updateDashboard() {
+            const now = new Date();
+            const age = data.age || 27;
+            const horizon = data.horizon || 90;
+            const yearsLeft = horizon - age;
+            const daysLeft = yearsLeft * 365;
+            document.getElementById('days-left').textContent = daysLeft.toLocaleString();
+            document.getElementById('decade-left').textContent = (10 - (age % 10));
+
+            // Habit streak
+            const habits = data.habits || [];
+            let streak = 0;
+            if (habits.length > 0) {
+                const today = new Date().toDateString();
+                const lastDone = data.habitLastDone || {};
+                let checkDate = new Date();
+                while (lastDone[checkDate.toDateString()]) {
+                    streak++;
+                    checkDate.setDate(checkDate.getDate() - 1);
+                }
+            }
+            document.getElementById('habit-streak').textContent = streak;
+
+            // Focus progress
+            if (data.focusStart) {
+                const start = new Date(data.focusStart);
+                const elapsed = (now - start) / (1000 * 60 * 60 * 24);
+                const progress = Math.min(100, (elapsed / 90) * 100);
+                document.getElementById('focus-progress').textContent = Math.round(progress) + '%';
+                document.getElementById('focus-bar').style.width = progress + '%';
+            }
+        }
+
+        // ─── Habits ────────────────────────────────────────────────
+        function renderHabits() {
+            const container = document.getElementById('habits-list');
+            const habits = data.habits || [];
+            container.innerHTML = habits.map((h, i) => `
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <h3>${h.name}</h3>
+                        <button onclick="removeHabit(${i})" style="background:none;border:none;color:var(--red);cursor:pointer">✕</button>
+                    </div>
+                    <div class="habit-grid">
+                        ${Array.from({length: 7}, (_, d) => {
+                            const date = new Date();
+                            date.setDate(date.getDate() - (6 - d));
+                            const key = `${i}_${date.toDateString()}`;
+                            const done = (data.habitLog || {})[key];
+                            return `<div class="habit-day ${done ? 'done' : ''}" onclick="toggleHabit(${i}, '${date.toDateString()}')">${date.getDate()}</div>`;
+                        }).join('')}
+                    </div>
+                    <p style="color:var(--muted);font-size:0.8rem">${h.streak || 0} day streak</p>
+                </div>
+            `).join('');
+        }
+
+        function addHabit() {
+            const name = document.getElementById('new-habit-name').value.trim();
+            if (!name) return;
+            data.habits = data.habits || [];
+            data.habits.push({ name, streak: 0 });
+            data.habitLog = data.habitLog || {};
+            save();
+            renderHabits();
+            document.getElementById('new-habit-name').value = '';
+        }
+
+        function removeHabit(i) {
+            data.habits.splice(i, 1);
+            save();
+            renderHabits();
+        }
+
+        function toggleHabit(i, dateStr) {
+            data.habitLog = data.habitLog || {};
+            const key = `${i}_${dateStr}`;
+            data.habitLog[key] = !data.habitLog[key];
+            save();
+            renderHabits();
+            updateDashboard();
+        }
+
+        // ─── 90-Day Focus ──────────────────────────────────────────
+        function saveFocus() {
+            data.focusGoal = document.getElementById('focus-goal').value;
+            save();
+        }
+
+        function resetFocus() {
+            data.focusStart = new Date().toISOString();
+            save();
+            updateDashboard();
+        }
+
+        // ─── Weekly Review ──────────────────────────────────────────
+        function saveReview() {
+            const week = new Date().toISOString().slice(0, 10);
+            data.reviews = data.reviews || {};
+            data.reviews[week] = {
+                wins: document.getElementById('weekly-wins').value,
+                lessons: document.getElementById('weekly-lessons').value,
+                focus: document.getElementById('weekly-focus').value,
+            };
+            save();
+            alert('Review saved!');
+        }
+
+        // ─── Timeline ───────────────────────────────────────────────
+        function renderTimeline() {
+            const events = [
+                { age: 25, title: "Career foundation", desc: "Build deep skills in your domain", status: "past" },
+                { age: 27, title: "Peak physical years", desc: "Establish fitness habits that last", status: "current" },
+                { age: 30, title: "Financial independence track", desc: "Savings rate >50% achievable", status: "future" },
+                { age: 35, title: "Leadership era", desc: "Mentor others, build systems", status: "future" },
+                { age: 40, title: "Peak earning potential", desc: "Compounded skills pay off", status: "future" },
+                { age: 50, title: "Legacy building", desc: "What you've built matters most", status: "future" },
+                { age: 60, title: "Freedom decade", desc: "Options from decades of compounding", status: "future" },
+                { age: 70, title: "Wisdom era", desc: "Share what you've learned", status: "future" },
+                { age: 80, title: "Reflection", desc: "Gratitude for the journey", status: "future" },
+            ];
+            document.getElementById('timeline-list').innerHTML = events.map(e => `
+                <div class="timeline-item ${e.status}">
+                    <strong>Age ${e.age}</strong> — ${e.title}
+                    <p style="color:var(--muted);font-size:0.85rem;margin-top:4px">${e.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        // ─── Windows ────────────────────────────────────────────────
+        function renderWindows() {
+            const windows = [
+                { title: "Peak physical performance", age: "25-35", urgency: "current", desc: "Muscle memory, recovery speed, and metabolic flexibility peak now" },
+                { title: "Career capital accumulation", age: "25-35", urgency: "current", desc: "Skills compound; early moves determine later options" },
+                { title: "Financial foundation", age: "25-35", urgency: "current", desc: "Savings rate matters more than income at this stage" },
+                { title: "Relationship depth", age: "25-40", urgency: "safe", desc: "Deep relationships take decades to mature" },
+                { title: "Learning velocity", age: "25-45", urgency: "safe", desc: "Neuroplasticity still high; learning gets harder after 45" },
+                { title: "Risk tolerance", age: "25-35", urgency: "current", desc: "Can recover from failures; later failures are costlier" },
+                { title: "Network building", age: "25-40", urgency: "safe", desc: "Professional networks compound over time" },
+            ];
+            document.getElementById('windows-list').innerHTML = windows.map(w => `
+                <div class="card window-card ${w.urgency}">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <h3>${w.title}</h3>
+                        <span style="color:var(--${w.urgency === 'current' ? 'red' : 'yellow'});font-size:0.8rem">Age ${w.age}</span>
+                    </div>
+                    <p>${w.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        // ─── Navigation ─────────────────────────────────────────────
+        function showTab(id) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // ─── Init ──────────────────────────────────────────────────
+        function load() {
+            if (data.northStar) document.getElementById('north-star').value = data.northStar;
+            if (data.focusGoal) document.getElementById('focus-goal').value = data.focusGoal;
+            updateDashboard();
+            renderHabits();
+            renderTimeline();
+            renderWindows();
+        }
+
+        load();
+    </script>
+</body>
+</html>
