@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tom — Life Operating System</title>
+  <title>Tom — Life OS</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fafafa;color:#111;line-height:1.5}
     .wrap{max-width:900px;margin:0 auto;padding:24px}
     header{border-bottom:1px solid #eee;padding:16px 0;display:flex;justify-content:space-between;align-items:center}
     .brand{font-size:1.2rem;font-weight:700}.brand span{color:#666}
-    nav{display:flex;gap:20px;font-size:.8rem}
-    nav a{color:#666;text-decoration:none}.nav a:hover{color:#111}
+    nav{display:flex;gap:20px;font-size:.8rem}nav a{color:#666;text-decoration:none}nav a:hover{color:#111}
     h2{font-size:1rem;font-weight:600;margin:24px 0 8px}
     .sub{font-size:.75rem;color:#999;margin-bottom:16px}
-    .card{background:#fff;border:1px solid #eee;padding:16px;margin:8px 0;border-radius:4px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
-    .stat{text-align:center;padding:16px;background:#fff;border:1px solid #eee;border-radius:4px}
-    .stat .val{font-size:2rem;font-weight:700;font-variant-numeric:tabular-nums}
-    .stat .lbl{font-size:.65rem;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:16px 0}
+    .stat{text-align:center;padding:14px 8px;background:#fff;border:1px solid #eee;border-radius:4px}
+    .stat .val{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+    .stat .lbl{font-size:.6rem;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+    .stat .sub-lbl{font-size:.55rem;color:#bbb}
+    .card{background:#fff;border:1px solid #eee;padding:14px;margin:8px 0;border-radius:4px}
     .btn{font-size:.75rem;padding:8px 16px;border:1px solid #111;background:#111;color:#fff;cursor:pointer;border-radius:4px}
     .btn:hover{background:#333}
     .btn-o{background:#fff;color:#111;border-color:#ddd}
@@ -26,8 +26,8 @@
     .habit{background:#fff;border:1px solid #eee;padding:12px;border-radius:4px}
     .habit .nm{font-size:.8rem;font-weight:500}
     .habit .dots{display:flex;gap:3px;margin-top:8px}
-    .habit .dot{width:20px;height:20px;border:1px solid #ddd;border-radius:3px;cursor:pointer;transition:.15s}
-    .habit .dot.on{background:#16a34a;border-color:#16a34a}
+    .dot{width:18px;height:18px;border:1px solid #ddd;border-radius:3px;cursor:pointer;transition:.15s}
+    .dot.on{background:#16a34a;border-color:#16a34a}
     .dot:hover{border-color:#111}
     .sprint{height:6px;background:#eee;border-radius:3px;overflow:hidden;margin:8px 0}
     .sprint .fill{height:100%;background:#111;border-radius:3px}
@@ -64,12 +64,36 @@
     <h2>Life Clock</h2>
     <p class="sub">16 May 1999 → 90 years. Every number is real and ticking.</p>
     <div class="grid">
-      <div class="stat"><div class="val" id="y90">—</div><div class="lbl">years to 90</div></div>
-      <div class="stat"><div class="val" id="d90">—</div><div class="lbl">days to 90</div></div>
-      <div class="stat"><div class="val" id="h90">—</div><div class="lbl">hours to 90</div></div>
-      <div class="stat"><div class="val" id="y20">—</div><div class="lbl">years left in 20s</div></div>
-      <div class="stat"><div class="val" id="h20">—</div><div class="lbl">hours left in 20s</div></div>
-      <div class="stat"><div class="val" id="h30">—</div><div class="lbl">hours to age 30</div></div>
+      <div class="stat">
+        <div class="val" id="h90">—</div>
+        <div class="lbl">hours to 90</div>
+        <div class="sub-lbl" id="d90-sub">— days</div>
+      </div>
+      <div class="stat">
+        <div class="val" id="d90">—</div>
+        <div class="lbl">days to 90</div>
+        <div class="sub-lbl" id="y90-sub">— years</div>
+      </div>
+      <div class="stat">
+        <div class="val" id="h40">—</div>
+        <div class="lbl">hours to 40</div>
+        <div class="sub-lbl" id="d40-sub">— days</div>
+      </div>
+      <div class="stat">
+        <div class="val" id="d40">—</div>
+        <div class="lbl">days to 40</div>
+        <div class="sub-lbl" id="y40-sub">— years</div>
+      </div>
+      <div class="stat">
+        <div class="val" id="h20">—</div>
+        <div class="lbl">hours in 20s</div>
+        <div class="sub-lbl" id="d20-sub">— days</div>
+      </div>
+      <div class="stat">
+        <div class="val" id="d20">—</div>
+        <div class="lbl">days in 20s</div>
+        <div class="sub-lbl" id="y20-sub">— years</div>
+      </div>
     </div>
   </section>
 
@@ -105,7 +129,7 @@
 
   <section id="ai">
     <h2>AI Agent</h2>
-    <p class="sub">mimo-v2.5 via opencode-go. Tracks your conversations and progress.</p>
+    <p class="sub">mimo-v2.5 via opencode-go. Tracks conversations and progress.</p>
     <div class="ai">
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn" onclick="aiCmd('analyze')">Analyze</button>
@@ -125,34 +149,50 @@
 </div>
 
 <script>
-// ─── CONFIG ──────────────────────────────────────────────────────
 const AGE=27,BIRTH=new Date('1999-05-16'),HORIZON=90;
 const fmt=new Intl.NumberFormat();
 
-// ─── COUNTDOWN (ticks every second) ──────────────────────────────
 function tick(){
   const now=new Date();
   const ageMs=now-BIRTH;
-  const ageYears=ageMs/(365.25*24*60*60*1000);
-  const msLeft=(HORIZON-ageYears)*365.25*24*60*60*1000;
-  const hLeft=Math.floor(msLeft/36e5);
-  const dLeft=Math.floor(hLeft/24);
-  const yLeft=(msLeft/(365.25*24*60*60*1000)).toFixed(1);
-  const toDecade=Math.max(0,(30-ageYears)*365.25*24*60*60*1000);
-  const hDecade=Math.floor(toDecade/36e5);
-  const yDecade=(toDecade/(365.25*24*60*60*1000)).toFixed(1);
-  const to30=Math.floor((30-ageYears)*365.25*24);
-  document.getElementById('y90').textContent=yLeft;
-  document.getElementById('d90').textContent=fmt.format(dLeft);
-  document.getElementById('h90').textContent=fmt.format(hLeft);
-  document.getElementById('y20').textContent=yDecade;
-  document.getElementById('h20').textContent=fmt.format(hDecade);
-  document.getElementById('h30').textContent=fmt.format(to30);
+  const ageY=ageMs/(365.25*24*36e5);
+  
+  // To 90
+  const ms90=(HORIZON-ageY)*365.25*24*36e5;
+  const h90=Math.floor(ms90/36e5);
+  const d90=Math.floor(h90/24);
+  const y90=(ms90/(365.25*24*36e5)).toFixed(1);
+  document.getElementById('h90').textContent=fmt.format(h90);
+  document.getElementById('d90-sub').textContent=fmt.format(d90)+' days';
+  document.getElementById('d90').textContent=fmt.format(d90);
+  document.getElementById('y90-sub').textContent=y90+' years';
+  
+  // To 40
+  const ms40=Math.max(0,(40-ageY)*365.25*24*36e5);
+  const h40=Math.floor(ms40/36e5);
+  const d40=Math.floor(h40/24);
+  const y40=(ms40/(365.25*24*36e5)).toFixed(1);
+  document.getElementById('h40').textContent=fmt.format(h40);
+  document.getElementById('d40-sub').textContent=fmt.format(d40)+' days';
+  document.getElementById('d40').textContent=fmt.format(d40);
+  document.getElementById('y40-sub').textContent=y40+' years';
+  
+  // In 20s (until 30)
+  const ms20=Math.max(0,(30-ageY)*365.25*24*36e5);
+  const h20=Math.floor(ms20/36e5);
+  const d20=Math.floor(h20/24);
+  const y20=(ms20/(365.25*24*36e5)).toFixed(1);
+  document.getElementById('h20').textContent=fmt.format(h20);
+  document.getElementById('d20-sub').textContent=fmt.format(d20)+' days';
+  document.getElementById('d20').textContent=fmt.format(d20);
+  document.getElementById('y20-sub').textContent=y20+' years';
 }
-setInterval(tick,1000);tick();
 
-// ─── PRIORITIES ──────────────────────────────────────────────────
-const prios=[
+setInterval(tick,1000);
+tick();
+
+// Priorities
+const P=[
   {t:"Create reliable income floor",d:"Build work that survives geography and market shifts.",c:"Freedom"},
   {t:"Automate saving and investing",d:"Increase percentage as income rises.",c:"Money"},
   {t:"Build physical reserve",d:"2+ strength sessions, 150+ aerobic minutes weekly.",c:"Body"},
@@ -166,9 +206,9 @@ const prios=[
   {t:"Choose one craft worth a decade",d:"Sustained mastery > perpetual sampling.",c:"Skill"},
   {t:"Practice enough stillness",d:"Daily contemplative practice.",c:"Meaning"}
 ];
-document.getElementById('prios').innerHTML=prios.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.c+'</div></div>').join('');
+document.getElementById('prios').innerHTML=P.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.c+'</div></div>').join('');
 
-// ─── HABITS ──────────────────────────────────────────────────────
+// Habits
 const HAB=["Exercise 30min","Read 20 pages","Meditate 10min","Hindi practice","Deep work 4hrs","Walk 10k steps","No social media before noon","Journal 5min"];
 const HD=JSON.parse(localStorage.getItem('hd')||'{}');
 function renderH(){
@@ -180,66 +220,54 @@ function renderH(){
 function tg(i,dt){const k=i+'_'+dt;HD[k]=!HD[k];localStorage.setItem('hd',JSON.stringify(HD));renderH();}
 renderH();
 
-// ─── SPRINT ──────────────────────────────────────────────────────
+// Sprint
 const SP=[{w:1,f:"Wire CG bridge + ScaBench evaluator",d:1},{w:2,f:"Fix validity problems",d:1},{w:3,f:"Run paired evaluation v0 vs v1",d:1},{w:4,f:">10% DR baseline",d:0},{w:5,f:"Wire CGE failure analysis",d:0},{w:6,f:"First real promotion",d:0},{w:7,f:"Test BountyBench near-transfer",d:0},{w:8,f:"Wire RedTeam SN61 far-transfer",d:0},{w:9,f:"Full integration test",d:0},{w:10,f:"Deploy + submit SN60",d:0},{w:11,f:"Monitor + iterate",d:0},{w:12,f:"Document + handoff",d:0}];
 const dn=SP.filter(s=>s.d).length;
 document.getElementById('sprint-fill').style.width=(dn/SP.length*100)+'%';
 document.getElementById('sprint-pct').textContent=Math.round(dn/SP.length*100)+'% complete';
 document.getElementById('sprint-list').innerHTML=SP.map(s=>'<div class="path'+(s.d?' past':'')+'"><span class="age">Week '+s.w+'</span> — '+s.f+'</div>').join('');
 
-// ─── PATH TO 35 ──────────────────────────────────────────────────
+// Path
 const PATH=[{a:"27",t:"Foundation",d:"Stabilize income. Automate saving. Train. Hindi daily."},{a:"28-29",t:"Prototype",d:"Northern India. Rural routines. Gardening, repairs, cooking."},{a:"30-31",t:"Location-independent",d:"Build specialist reputation, recurring clients."},{a:"32-33",t:"Select environment",d:"Trial rentals. Learn local realities."},{a:"34-35",t:"Commit",d:"Establish when income and competence make it robust."}];
 document.getElementById('path-list').innerHTML=PATH.map(p=>'<div class="path"><span class="age">Age '+p.a+'</span> — '+p.t+'<div class="desc">'+p.d+'</div></div>').join('');
 
-// ─── PRINCIPLES ──────────────────────────────────────────────────
+// Principles
 const PR=[{t:"Do not wait to feel ready",d:"Confidence is output of action.",w:"Teens-30s"},{t:"Preserve optionality",d:"Health, savings, portable skills, low fixed costs.",w:"All adulthood"},{t:"Care less about the ambient audience",d:"Take criticism from people with wisdom.",w:"20s+"},{t:"Choose what deserves compounding",d:"Sustained investment in a few things that matter.",w:"25-40"},{t:"Train for the 80-year-old you",d:"Build capacity to walk, carry, climb.",w:"Now"},{t:"Make strength lifelong",d:"Muscle and strength are reserve.",w:"20s+"},{t:"Build meaning that survives status loss",d:"Keep practices that matter even if nobody's impressed.",w:"All adulthood"}];
 document.getElementById('princ-list').innerHTML=PR.map(p=>'<div class="princ"><h4>'+p.t+'</h4><p>'+p.d+'</p><div class="w">'+p.w+'</div></div>').join('');
 
-// ─── AI AGENT ────────────────────────────────────────────────────
+// AI
 const K='sk-fv9GAkxq7nRiVTX0l8gLEUoPc79spJGqU9HkSjswVLnoQfTuWz5HY1R8hA44g8ZU';
 const U='https://opencode.ai/zen/go/v1/chat/completions';
 const M='mimo-v2.5';
-const HISTORY=JSON.parse(localStorage.getItem('ai_hist')||'[]');
+const HIST=JSON.parse(localStorage.getItem('ai_hist')||'[]');
 
-function log(msg,cls){
-  const l=document.getElementById('ailog');
-  const t=new Date().toISOString().slice(11,19);
-  l.innerHTML+='<div class="ln"><span class="ts">['+t+']</span> <span class="'+cls+'">'+msg+'</span></div>';
-  l.scrollTop=l.scrollHeight;
-}
+function log(m,c){const l=document.getElementById('ailog');const t=new Date().toISOString().slice(11,19);l.innerHTML+='<div class="ln"><span class="ts">['+t+']</span> <span class="'+c+'">'+m+'</span></div>';l.scrollTop=l.scrollHeight;}
 
-async function aiSend(prompt){
-  log('[you] '+prompt.slice(0,200),'hi');
-  HISTORY.push({role:'user',content:prompt,ts:new Date().toISOString()});
-  
-  // Build context from history (last 10 messages)
-  const msgs=HISTORY.slice(-10).map(m=>({role:m.role,content:m.content}));
-  
+async function aiSend(p){
+  log('[you] '+p.slice(0,200),'hi');
+  HIST.push({role:'user',content:p,ts:new Date().toISOString()});
+  const msgs=HIST.slice(-10).map(m=>({role:m.role,content:m.content}));
   try{
     const r=await fetch(U,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+K},body:JSON.stringify({model:M,messages:msgs,max_tokens:1500,temperature:0.7})});
     const d=await r.json();
     const reply=d.choices?.[0]?.message?.content||'No response';
-    HISTORY.push({role:'assistant',content:reply,ts:new Date().toISOString()});
-    localStorage.setItem('ai_hist',JSON.stringify(HISTORY.slice(-50)));
+    HIST.push({role:'assistant',content:reply,ts:new Date().toISOString()});
+    localStorage.setItem('ai_hist',JSON.stringify(HIST.slice(-50)));
     log('[mimo] '+reply,'ok');
-    return reply;
-  }catch(e){log('[err] '+e.message,'err');return '';}
+  }catch(e){log('[err] '+e.message,'err');}
 }
 
-function aiCmd(type){
-  const age=AGE;
-  const habits=HAB.join(', ');
-  const sprintDone=SP.filter(s=>s.d).length;
-  const sprintPct=Math.round(sprintDone/SP.length*100);
-  const histLen=HISTORY.length;
-  
+function aiCmd(t){
+  const h=HAB.join(', ');
+  const sp=Math.round(SP.filter(s=>s.d).length/SP.length*100);
+  const n=HIST.length;
   const prompts={
-    analyze:'Analyze my life at age 27. Habits: '+habits+'. Sprint: '+sprintPct+'% complete. Focus: Security Lab + Agent Security Observatory. Conversations so far: '+histLen+'. What patterns do you notice? One specific recommendation.',
-    coach:'Coach me on habit consistency. I track 8 habits daily. What is the compound effect of 30 days of consistency? Give one actionable tip.',
-    review:'Weekly review: What did I accomplish this week building the Security Lab? What would I do differently? What is the single most important thing for next week?',
-    progress:'Summarize my progress. Sprint: '+sprintPct+'% done. Habits tracked: '+histLen+' conversations. What has compounding? What is stagnating?'
+    analyze:'Analyze my life at 27. Habits: '+h+'. Sprint: '+sp+'% done. Focus: Security Lab. Conversations: '+n+'. Patterns? One recommendation.',
+    coach:'Coach me on habit consistency. 8 daily habits. What compounds in 30 days? One actionable tip.',
+    review:'Weekly review: Security Lab progress. What to do differently? Most important next week?',
+    progress:'Progress summary. Sprint: '+sp+'%. Habits tracked: '+n+' conversations. What compounds? What stagnates?'
   };
-  aiSend(prompts[type]||'Tell me about my progress.');
+  aiSend(prompts[t]);
 }
 
 function aiAsk(){const q=document.getElementById('aiq').value.trim();if(q){aiSend(q);document.getElementById('aiq').value='';}}
