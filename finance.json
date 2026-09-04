@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "Track income, expenses, savings \u2014 and how they map to deadlines and points",
+    "axiom": "Points = money SENT to the fund. Track what goes in, not what you have."
+  },
+  "current_state": {
+    "location": "Cambodia \u2192 Varanasi Dec 2026",
+    "savings_gbp": 5000,
+    "savings_note": "This is NOT points. Points = 0 until money is transferred to the fund.",
+    "monthly_expenses": {
+      "cambodia": {
+        "low": 500,
+        "high": 800,
+        "unit": "GBP",
+        "note": "Accommodation, food, transport, visa runs"
+      },
+      "varanasi": {
+        "low": 100,
+        "high": 170,
+        "unit": "GBP",
+        "note": "\u20b98K-14K/mo \u2014 food, transport, misc (if not at BHU yet)"
+      }
+    },
+    "visa_costs": {
+      "tourist_visa_run": {
+        "cost": 100,
+        "note": "Every 6 months \u2014 exit and re-enter. Flight + border fees."
+      },
+      "frequency": "Every 6 months on 5-year tourist visa"
+    }
+  },
+  "income": {
+    "sources": [],
+    "monthly_target": 0,
+    "note": "Add income sources here. Remote work, freelancing, etc. Each \u00a3500 earned = 1 point when saved."
+  },
+  "burn_rate": {
+    "current_monthly_gbp": 650,
+    "current_location": "cambodia",
+    "breakdown": {
+      "accommodation": 200,
+      "food": 150,
+      "transport": 50,
+      "visa_runs": 83,
+      "phone_internet": 20,
+      "misc": 47
+    },
+    "note": "Cambodia is cheap. This drops to \u00a3100-170/mo in Varanasi (BHU hostel covers accommodation)."
+  },
+  "savings_plan": {
+    "method": "Every \u00a3 saved beyond expenses goes to the fund. Fund = points.",
+    "monthly_savings_target": 500,
+    "months_to_deadline": {
+      "aiu_certificate": {
+        "deadline": "NOW",
+        "cost": 5,
+        "can_afford": true
+      },
+      "varanasi_arrival": {
+        "deadline": "Dec 2026",
+        "cost": 200,
+        "can_afford": true
+      },
+      "bhu_tuition_hostel": {
+        "deadline": "Jul 2027",
+        "cost": 1600,
+        "need_by": "Jul 2027",
+        "months_available": 10,
+        "required_monthly_savings": 160
+      },
+      "travel_frro": {
+        "deadline": "Jul 2027",
+        "cost": 300,
+        "need_by": "Jul 2027"
+      },
+      "graduation_visa": {
+        "deadline": "2029",
+        "cost": 500,
+        "need_by": "2029"
+      }
+    }
+  },
+  "runway": {
+    "current_savings": 5000,
+    "monthly_expenses": 650,
+    "runway_months": 7.7,
+    "note": "At current burn rate, savings last 7.7 months. Need income by Mar 2027.",
+    "critical_date": "Mar 2027 \u2014 need income stream established before BHU application",
+    "if_no_income": "Burn through \u00a35,000 by ~Apr 2027. Then dependent on BHU scholarship/loan.",
+    "if_income_1000mo": "Savings grow to \u00a315,000 by Jul 2027. Comfortable.",
+    "if_income_500mo": "Savings grow to \u00a310,000 by Jul 2027. Tight but workable."
+  },
+  "points_timeline": {
+    "description": "How savings translate to points over time",
+    "scenarios": {
+      "no_income": {
+        "savings_at_jul2027": 0,
+        "points_at_jul2027": 0,
+        "verdict": "CANNOT afford BHU. Must leave India or find income."
+      },
+      "500_month": {
+        "savings_at_jul2027": 3500,
+        "points_at_jul2027": 17,
+        "verdict": "Can afford BHU. Tight but workable. \u00a313K saved."
+      },
+      "1000_month": {
+        "savings_at_jul2027": 8500,
+        "points_at_jul2027": 37,
+        "verdict": "Comfortable. \u00a318.5K saved. BHU + estate scouting trips possible."
+      }
+    },
+    "key_metric": "Monthly income > Monthly expenses + \u00a3160 (BHU savings rate)"
+  },
+  "what_you_need_to_track": [
+    "Monthly income (all sources)",
+    "Monthly expenses (broken down)",
+    "Savings rate (income - expenses)",
+    "Fund balance (what's been committed to the vision)",
+    "Runway (months until money runs out at current burn)",
+    "Deadline proximity (how close to each payment deadline)"
+  ]
+}
