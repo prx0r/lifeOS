@@ -1466,6 +1466,219 @@
         "consequence_if_missed": "Must leave India"
       },
       "description": "The pivot point. Student visa ends. Employment Visa must be ready."
+    },
+    {
+      "id": "territory:someshwar",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Someshwar Valley (#1)",
+      "properties": {
+        "rank": 1,
+        "why": "Most fertile mountain valley in Kumaon. Kosi/Sai water system. Broad cultivated terrain. Agriculture already works.",
+        "altitude": "800-1200m",
+        "water": "Kosi + Sai stream \u2014 perennial",
+        "terrain": "Valley floor + surrounding mountains",
+        "downside": "Long leases not heavily advertised online \u2014 need local networks",
+        "search": "Search villages around Someshwar valley, not 'Someshwar property'",
+        "source": "KMVN describes it as most fertile mountain valley in Kumaon"
+      }
+    },
+    {
+      "id": "territory:ranikhet_belt",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Ranikhet\u2013Majkhali\u2013Sitlakhet (#2)",
+      "properties": {
+        "rank": 2,
+        "why": "Best combination: mountain views, forests, farmland, roads, water, services",
+        "altitude": "1500-1890m (search lower than Ranikhet town for warmer microclimate)",
+        "water": "Natural water sources, borewell viable",
+        "terrain": "Mixed \u2014 valleys + slopes. South-facing areas are warmer.",
+        "downside": "Higher/cooler than valley sites",
+        "keySignal": "Listing that says 'suitable for farming/dairy' is stronger than real estate agent ticking boxes",
+        "source": "Ranikhet listing describes site as suitable for farming/dairy with natural water"
+      }
+    },
+    {
+      "id": "territory:satpuli",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Satpuli / Nayar Valley (#3)",
+      "properties": {
+        "rank": 3,
+        "why": "River + forests + warmer valley floor + official recognition as strong farm country",
+        "altitude": "800-1200m",
+        "water": "Nayar River \u2014 principal internal river system of Pauri Garhwal",
+        "terrain": "Valley floor \u2014 much lower altitude = longer growing season",
+        "downside": "Less 'postcard Himalaya' than Kausani",
+        "source": "Pauri district admin says Nayar Valley has capability for best farms in Garhwal"
+      }
+    },
+    {
+      "id": "territory:natadol",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Natadol\u2013Lamgara\u2013Lower Mukteshwar (#4 \u2014 BEST LEAD)",
+      "properties": {
+        "rank": 4,
+        "why": "CURRENT 10-ACRE LEASE LEAD with spring, forest, road, electricity",
+        "altitude": "2250m",
+        "listing": {
+          "size": "10 acres (200 nali)",
+          "price": "Sale or lease \u2014 \u20b950K/nali",
+          "features": [
+            "Own spring water source",
+            "Pine + oak forest",
+            "Metalled road",
+            "Electricity on site",
+            "Second road under construction"
+          ],
+          "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-rent-in-lamgara-almora-in-zabar-green-valley-10-acre-50-k-1029684.htm"
+        },
+        "downside": "2250m altitude \u2014 genuinely cold/high",
+        "action": "CALL THE OWNER. Discover what a 10-acre 5-year hill lease costs. Then search 500-1000m lower."
+      }
+    },
+    {
+      "id": "territory:kotabagh",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Kotabagh / Riyar (#5 \u2014 BEST FOR ROBOTICS)",
+      "properties": {
+        "rank": 5,
+        "why": "70% flat terrain at 1300m. River-side. Road + electricity. Almost ideal machine geometry.",
+        "altitude": "1300m",
+        "water": "River-side listings available",
+        "terrain": "70% flat \u2014 BEST for robot crop lanes",
+        "flatTerrain": "70%",
+        "downside": "Wildlife. Hotter as you descend. Groundwater can be deep.",
+        "idealLayout": "forest ridge \u2192 orchard \u2192 robot crop lanes \u2192 house + AI lab \u2192 cattle/chickens \u2192 stream/river"
+      }
+    },
+    {
+      "id": "territory:doiwala",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Doiwala / Rural Dehradun Fringe (#6)",
+      "properties": {
+        "rank": 6,
+        "why": "Easiest automation, suppliers, hospitals, connectivity, flatter land",
+        "altitude": "400-600m",
+        "downside": "Wet monsoon, development pressure, less isolated"
+      }
+    },
+    {
+      "id": "territory:kausani",
+      "type": "location",
+      "cluster": "territories",
+      "label": "Kausani / Garur (#7)",
+      "properties": {
+        "rank": 7,
+        "why": "Extraordinary landscape and water valleys",
+        "altitude": "1890m",
+        "downside": "Expensive, remote"
+      }
+    },
+    {
+      "id": "robot:xmachines",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "XMachines \u2014 Autonomous Farm Robot",
+      "properties": {
+        "type": "Indian company \u2014 commercial autonomous agricultural robot",
+        "capabilities": "Planting, weed control, pest control",
+        "coverage": "4-12 acres per 8-10 hour session",
+        "url": "https://www.xmachines.ai/"
+      }
+    },
+    {
+      "id": "robot:niqo",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "Niqo Robotics \u2014 AI Weed/Thinning",
+      "properties": {
+        "type": "Indian company \u2014 precision spraying",
+        "roi": "3000+ farmers, India + US field use",
+        "url": "https://niqorobotics.com/"
+      }
+    },
+    {
+      "id": "robot:ardupilot",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "ArduPilot Rover \u2014 Open Source Autonomous Control",
+      "properties": {
+        "type": "Open source \u2014 autonomous ground vehicle control",
+        "use": "Agricultural automation, rover navigation",
+        "url": "https://ardupilot.org/rover/",
+        "note": "The foundation layer. ROS 2 + Nav2 on top for perception."
+      }
+    },
+    {
+      "id": "robot:ros_nav2",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "ROS 2 + Nav2 \u2014 Navigation Stack",
+      "properties": {
+        "type": "Open source \u2014 perception, mapping, route planning",
+        "use": "Higher-level robot intelligence",
+        "url": "https://nav2.org/"
+      }
+    },
+    {
+      "id": "robot:jetson",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "Jetson Orin Nano \u2014 Edge AI Computer",
+      "properties": {
+        "price_inr": "\u20b934K-60K",
+        "use": "Vision models, AI inference on the robot",
+        "note": "Runs vision models locally \u2014 no cloud dependency"
+      }
+    },
+    {
+      "id": "robot:oakd",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "OAK-D Lite \u2014 Stereo Depth Camera",
+      "properties": {
+        "price_inr": "\u20b934K",
+        "use": "Depth sensing, obstacle detection, plant recognition",
+        "url": "https://mgsl.in/products/luxonis-a00483"
+      }
+    },
+    {
+      "id": "robot:rtk_gps",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "u-blox ZED-F9P RTK GPS",
+      "properties": {
+        "price_inr": "\u20b912K",
+        "use": "Centimetre-level positioning for crop rows",
+        "note": "Precise enough for autonomous seeding/weeding lanes"
+      }
+    },
+    {
+      "id": "robot:rplidar",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "RPLIDAR A1 \u2014 360\u00b0 Lidar",
+      "properties": {
+        "price_inr": "\u20b99K",
+        "use": "Obstacle detection, safety",
+        "note": "Safety lidar \u2014 detects animals, people, obstacles"
+      }
+    },
+    {
+      "id": "robot:total",
+      "type": "infra",
+      "cluster": "robotics",
+      "label": "DIY Farm Rover \u2014 Total Component Cost",
+      "properties": {
+        "chassis": "Steel/aluminium + geared wheel motors",
+        "total_cost_inr": "\u20b91-2 lakh (\u00a3775-1,550)",
+        "note": "ArduPilot + ROS 2 + RTK GPS + OAK-D + Jetson. Low-lakh-rupee project, not \u00a320K."
+      }
     }
   ],
   "edges": [
@@ -2447,6 +2660,48 @@
       "target": "masters:bhu_programme",
       "type": "depends_on",
       "label": "AIU required for admission"
+    },
+    {
+      "source": "territory:someshwar",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "nearby \u2014 same Kosi watershed"
+    },
+    {
+      "source": "territory:natadol",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "10-acre lease with spring, forest, road, electricity"
+    },
+    {
+      "source": "territory:kotabagh",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "70% flat terrain \u2014 ideal for robot crop lanes"
+    },
+    {
+      "source": "robot:ardupilot",
+      "target": "robot:ros_nav2",
+      "type": "enables",
+      "label": "ArduPilot handles vehicle control, ROS handles perception"
+    },
+    {
+      "source": "robot:jetson",
+      "target": "robot:oakd",
+      "type": "enables",
+      "label": "Jetson runs vision models from OAK-D camera"
+    },
+    {
+      "source": "robot:rtk_gps",
+      "target": "robot:ardupilot",
+      "type": "enables",
+      "label": "cm-level positioning for crop rows"
+    },
+    {
+      "source": "robot:rplidar",
+      "target": "robot:ardupilot",
+      "type": "enables",
+      "label": "safety obstacle detection"
     }
   ]
 }
