@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "Daily, weekly, monthly practices that bridge current state to the vision. 100% devotion, sacrifice short-term comfort for long-term formation."
+  },
+
+  "dailyMinimum": {
+    "name": "The Floor — never go below this",
+    "duration": "60-90 minutes total",
+    "blocks": [
+      {
+        "block": "Hindi",
+        "time": "30 min",
+        "what": "Duolingo + one other resource (textbook, conversation, listening)",
+        "rule": "Non-negotiable. Even if everything else fails. Hindi is the master key."
+      },
+      {
+        "block": "Income generation",
+        "time": "30-60 min",
+        "what": "Remote work, freelancing, whatever pays. Every £500 earned = 1 point when saved.",
+        "rule": "This is the fuel. Without income, nothing else happens."
+      },
+      {
+        "block": "Graph update",
+        "time": "5 min",
+        "what": "Update snapshot.json with today's state. Record what happened.",
+        "rule": "If it isn't recorded, it didn't happen."
+      }
+    ],
+    "weeklyBonus": {
+      "name": "Weekly — add these when possible",
+      "blocks": [
+        {"block": "Philosophy reading", "time": "2-3 hrs/week", "what": "Abhinavagupta, Utpaladeva, primary texts. Start with translations, work toward Sanskrit."},
+        {"block": "Property research", "time": "1-2 hrs/week", "what": "Scout listings, check constraints, update geography data."},
+        {"block": "AI literacy", "time": "1-2 hrs/week", "what": "Stay current on Astra-class tools. Learn to direct them. Your advantage is willingness to use agents."},
+        {"block": "Exercise", "time": "3-4 hrs/week", "what": "Body is infrastructure. Strength, mobility, cardio. You need to be physically capable for the estate."},
+        {"block": "Sanskrit basics", "time": "1-2 hrs/week", "what": "Start now. Even 15 min/day. This compounds enormously over 2 years at BHU."},
+        {"block": "Financial tracking", "time": "15 min/week", "what": "Update finance.json. Check runway. Adjust spending."}
+      ]
+    },
+    "monthlyCheckpoint": {
+      "name": "Monthly — what to review",
+      "checks": [
+        "Finance: income vs expenses vs savings rate. Runway remaining.",
+        "Hindi: level assessment. Can I do X yet?",
+        "Graph: any new nodes/edges needed? Any constraints changed?",
+        "Property: any new listings? Call any leads?",
+        "Skills: what can I do this month that I couldn't last month?",
+        "Health: weight, sleep, stress. The body is infrastructure."
+      ]
+    }
+  },
+
+  "phaseActions": {
+    "now_cambodia": {
+      "period": "Now – Dec 2026",
+      "priority": "Money + Hindi + AIU certificate",
+      "daily": ["Hindi 30 min", "Remote work 30-60 min", "Save every penny"],
+      "weekly": ["Research BHU application", "Scout properties online", "AI literacy"],
+      "criticalActions": [
+        "APPLY FOR AIU EQUIVALENCY CERTIFICATE (aiu.ac.in) — do this TODAY",
+        "Start saving aggressively — every £500 = 1 point",
+        "Begin Hindi immersion — Duolingo + YouTube + conversation practice"
+      ],
+      "sacrifice": "No discretionary spending. Every pound goes to the fund. Social life is Hindi practice."
+    },
+    "varanasi": {
+      "period": "Dec 2026 – Oct 2027",
+      "priority": "Hindi immersion + BHU application",
+      "daily": ["Hindi 1-2 hrs (immersion in Varanasi)", "Save money", "Study philosophy"],
+      "weekly": ["BHU campus visits", "Meet philosophy students/professors", "Scout properties during breaks"],
+      "criticalActions": [
+        "Apply to BHU FSR portal (Mar 2027)",
+        "Submit before deadline (May-Jul 2027)",
+        "Register company (can do remotely)",
+        "Scout Dehradun/Almora properties in person"
+      ],
+      "sacrifice": "Living on tight budget in Varanasi. Hindi is your entire social world now."
+    },
+    "bhu_year1": {
+      "period": "Oct 2027 – Oct 2028",
+      "priority": "MA studies + Hindi fluency + company building",
+      "daily": ["Academic work", "Hindi (now through classes + life)", "Income generation", "Graph updates"],
+      "weekly": ["Philosophy deep reading", "Property scouting (weekend trips)", "Company admin"],
+      "criticalActions": [
+        "Register Indian company during Year 1",
+        "Begin supplement product development",
+        "Start publishing philosophy content",
+        "Scout estate properties in person"
+      ],
+      "sacrifice": "BHU is the central project. Everything else serves it."
+    },
+    "bhu_year2": {
+      "period": "Oct 2028 – Oct 2029",
+      "priority": "Complete MA + finalise estate + prepare Employment Visa",
+      "daily": ["Thesis writing", "Company operations", "Estate preparation"],
+      "weekly": ["Network with Uttarakhand contacts", "Finalise property lease", "Apply for Employment Visa"],
+      "criticalActions": [
+        "Complete and submit thesis",
+        "Secure estate lease",
+        "Employment Visa application (MUST be approved before graduation)",
+        "Begin supplement production"
+      ],
+      "sacrifice": "Everything converges on graduation + visa. No distractions."
+    },
+    "estate": {
+      "period": "Oct 2029+",
+      "priority": "Run the estate. Grow the business. Deepen the scholarship.",
+      "daily": ["Farm routine", "Scholarship/writing", "Business operations", "Hindi/Sanskrit maintenance"],
+      "weekly": ["AI literacy (direct frontier agents)", "Property improvements", "Publishing"],
+      "criticalActions": [
+        "Establish daily farm rhythm",
+        "Launch supplement products",
+        "Begin serious Śaiva scholarship",
+        "Ask AI to help automate what's tedious"
+      ],
+      "sacrifice": "Short-term comfort for long-term depth. The farm is not a holiday — it's a life."
+    }
+  },
+
+  "habits": {
+    "core": [
+      {"habit": "Hindi practice", "frequency": "Daily, 30+ min", "cost": "Free", "compound": "Conversational in 6 months, fluent in 18 months"},
+      {"habit": "Income generation", "frequency": "Daily, 30-60 min", "cost": "Time", "compound": "Every £500 saved = 1 point toward the vision"},
+      {"habit": "Graph update", "frequency": "Daily, 5 min", "cost": "Free", "compound": "Complete record of progress. Agent can reason over it."},
+      {"habit": "Exercise", "frequency": "3-4x/week", "cost": "Free-₹500/mo", "compound": "Body is infrastructure for the estate"}
+    ],
+    "weekly": [
+      {"habit": "Philosophy reading", "frequency": "2-3 hrs/week", "compound": "Prepares for BHU. Deepens understanding."},
+      {"habit": "Property scouting", "frequency": "1-2 hrs/week", "compound": "By the time you need to choose, you'll know every listing."},
+      {"habit": "AI literacy", "frequency": "1-2 hrs/week", "compound": "Your ability to direct AI compounds. In 2029, this is leverage."},
+      {"habit": "Financial review", "frequency": "15 min/week", "compound": "Never run out of money unknowingly."}
+    ]
+  },
+
+  "sacrifices": {
+    "name": "What you give up for the vision",
+    "principles": [
+      "Short-term comfort is traded for long-term formation",
+      "Every pound saved is a point toward the estate",
+      "Every Hindi session compounds toward fluency",
+      "Every philosophy reading compounds toward scholarship",
+      "Every remote work session compounds toward financial independence"
+    ],
+    "sacrifices": [
+      "Discretionary spending → saved to fund",
+      "Social life in Cambodia → Hindi practice in Varanasi",
+      "Short-term entertainment → philosophy reading + exercise",
+      "Comfortable living → tight budget during Varanasi/BHU years",
+      "Immediate gratification → delayed but complete vision"
+    ],
+    "whatYouDontSacrifice": [
+      "Health — exercise is non-negotiable",
+      "Sleep — 7-8 hours minimum",
+      "Philosophy reading — this IS the vision",
+      "Hindi practice — this IS the vision",
+      "Graph updates — this IS the record"
+    ]
+  }
+}
