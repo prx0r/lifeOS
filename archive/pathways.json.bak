@@ -1,0 +1,449 @@
+{
+  "meta": {
+    "version": "9.0.0",
+    "lastUpdated": "2026-09-04",
+    "model": "Pathways, Blockages, Doorways — dependencies that unlock possibilities"
+  },
+
+  "variables": {
+    "money": {
+      "type": "primary unlock",
+      "why": "Without money, nothing is possible. With money, everything becomes negotiable.",
+      "tiers": {
+        "tier1_0_5k": {"label": "₹0–5K ($0–60)", "unlocks": "Nothing permanent. Research phase. Learn Hindi. Plan."},
+        "tier2_5k_20k": {"label": "₹5K–20K ($60–240)", "unlocks": "Scouting trip. Visit Dehradun/Almora. See properties in person. Meet locals."},
+        "tier3_20k_50k": {"label": "₹20K–50K ($240–600)", "unlocks": "Register Indian company (₹15–50K). Start Employment Visa process."},
+        "tier4_50k_150k": {"label": "₹50K–150K ($600–$1,800)", "unlocks": "Company setup complete. Employment Visa approved. Lease deposit on land. Move to India."},
+        "tier5_150k_500k": {"label": "₹150K–500K ($1,800–$6,000)", "unlocks": "Lease secured. Temporary shelter built. Animals purchased. Farm running."},
+        "tier6_500k_1500k": {"label": "₹500K–1.5M ($6,000–$18,000)", "unlocks": "Full estate operational. Mushroom lab. Supplement production. Publishing setup."},
+        "tier7_1500k_plus": {"label": "₹1.5M+ ($18,000+)", "unlocks": "Permanent build. Full brand. Export capability. The dream realised."}
+      }
+    },
+    "hindi": {
+      "type": "progressive unlock",
+      "why": "You can survive without Hindi. You cannot thrive without it. Every interaction — buying animals, dealing with vets, negotiating leases, running the company — is easier in Hindi.",
+      "levels": {
+        "level1_basics": {"label": "Basic survival Hindi", "unlocks": "Buy things, ask directions, basic negotiation. Tourist visa works."},
+        "level2_conversational": {"label": "Conversational Hindi", "unlocks": "Negotiate leases, deal with vets, talk to farmers, run daily farm operations. Company registration easier."},
+        "level3_fluent": {"label": "Fluent Hindi", "unlocks": "Legal discussions, business negotiations, teaching at BHU (if needed), deep community integration. Full independence."},
+        "level4_literary": {"label": "Literary/Academic Hindi", "unlocks": "Publish Indian philosophy in Hindi. Teach at BHU. Full academic integration. This is where the philosophy dream lives."}
+      },
+      "currentLevel": "Unknown — starting from December 2026 in Varanasi (Hindi heartland)",
+      "pathway": "Varanasi immersion → BHU environment → 2 years of daily Hindi → conversational by graduation"
+    },
+    "time": {
+      "type": "fixed constraint",
+      "why": "You can't speed up time, but you can use it strategically. Parallel tracks matter.",
+      "milestones": {
+        "now": "Cambodia, tourist visa. Research phase.",
+        "dec2026": "Arrive Varanasi. Start Hindi immersion. Scout Dehradun/Almora during breaks.",
+        "sept2027": "BHU masters begins. Student visa. 2 years of study + Hindi + farming research.",
+        "sept2029": "BHU graduation. Student visa expires. Must have company registered + Employment Visa ready.",
+        "2029_2034": "5-year experiment on leased estate. Full ecosystem running. Company growing.",
+        "2034_plus": "Decision: permanent build or new location."
+      }
+    },
+    "legal": {
+      "type": "hard gate",
+      "why": "Some things are illegal, not just difficult. Visa and company status are non-negotiable.",
+      "gates": {
+        "tourist_visa": "180 days/year max. No work. No study. Must exit every 6 months.",
+        "student_visa": "BHU enrollment. No work. Duration = course length. FRRO registration required.",
+        "company_registration": "₹15–50K. 10-15 days. 100% foreign ownership allowed. Enables Employment Visa.",
+        "employment_visa": "Requires company paying you ₹25L+/year. Employer-specific. Enables legal residence + work.",
+        "frro_registration": "Required within 14 days of arrival on long-term visa. Non-negotiable.",
+        "agricultural_land": "CANNOT BUY. Must lease. Structures are temporary unless you own the land.",
+        "cannabis": "Industrial hemp legal with license (Uttarakhand). Recreational cannabis illegal.",
+        "psilocybin": "Gray area — Kerala ruling narrow. Research only.",
+        "dmt": "Fully illegal. No exceptions."
+      }
+    }
+  },
+
+  "pathways": {
+    "mainPath": {
+      "name": "The Estate Path",
+      "description": "Lease land → build estate → company processes products → Employment Visa → permanent life",
+      "blockages": [
+        {
+          "block": "Money for company registration",
+          "threshold": "₹20K–50K ($240–600)",
+          "whenNeeded": "Before Sept 2029 (BHU graduation)",
+          "consequence": "Cannot get Employment Visa without company",
+          "priority": "CRITICAL"
+        },
+        {
+          "block": "Money for visa fees + travel",
+          "threshold": "₹30K–50K ($360–600)",
+          "whenNeeded": "Sept 2029",
+          "consequence": "Cannot stay in India after graduation",
+          "priority": "CRITICAL"
+        },
+        {
+          "block": "Hindi for BHU + daily life",
+          "threshold": "Conversational by Sept 2027",
+          "whenNeeded": "BHU enrollment + Varanasi life",
+          "consequence": "Struggle in classes, can't negotiate anything, isolated",
+          "priority": "HIGH"
+        },
+        {
+          "block": "Money for land lease deposit",
+          "threshold": "₹1–3L ($1,200–3,600)",
+          "whenNeeded": "During or after BHU",
+          "consequence": "Cannot secure the estate",
+          "priority": "HIGH"
+        },
+        {
+          "block": "Money for animals + shelter",
+          "threshold": "₹2–4L ($2,400–4,800)",
+          "whenNeeded": "After lease secured",
+          "consequence": "No farm running",
+          "priority": "HIGH"
+        },
+        {
+          "block": "Remote income",
+          "threshold": "₹25L+/year for Employment Visa ($30K+)",
+          "whenNeeded": "Sept 2029",
+          "consequence": "Company must generate this or you need external income",
+          "priority": "CRITICAL"
+        }
+      ],
+      "doorways": [
+        {
+          "door": "BHU enrollment",
+          "unlocks": "Student visa (2 years), Hindi immersion, academic network, philosophy foundation",
+          "when": "Sept 2027"
+        },
+        {
+          "door": "Company registration",
+          "unlocks": "Employment Visa eligibility, legal business operations, bank account",
+          "when": "During BHU (Year 1-2)"
+        },
+        {
+          "door": "Land lease secured",
+          "unlocks": "Can build temporary structures, keep animals, start farming",
+          "when": "During BHU or after"
+        },
+        {
+          "door": "Employment Visa approved",
+          "unlocks": "Legal residence, can live on estate full-time, FRRO registration",
+          "when": "Sept 2029 (graduation)"
+        },
+        {
+          "door": "First product sold",
+          "unlocks": "Revenue stream, proves business model, funds expansion",
+          "when": "Year 1-2 of estate operation"
+        },
+        {
+          "door": "Starlink available",
+          "unlocks": "Reliable high-speed internet for remote work from estate",
+          "when": "Late 2026 / Early 2027"
+        }
+      ]
+    }
+  },
+
+  "timeline": [
+    {
+      "phase": "NOW",
+      "period": "Sept 2026 – Dec 2026",
+      "where": "Cambodia → Varanasi",
+      "visa": "Tourist visa",
+      "tasks": [
+        "Save money aggressively — every dollar counts",
+        "Start learning Hindi (Duolingo, textbooks, YouTube)",
+        "Research BHU religion/philosophy masters — application deadlines, requirements",
+        "Research Dehradun/Almora properties — bookmark best listings",
+        "Research Indian company registration process",
+        "Build the vision board website (done)"
+      ],
+      "money": "Save as much as possible",
+      "hindi": "Beginner — start daily practice",
+      "blockageIfNoMoney": "Can still plan, research, learn Hindi",
+      "blockageIfNoHindi": "Minor — not critical yet"
+    },
+    {
+      "phase": "VARANASI",
+      "period": "Dec 2026 – Sept 2027",
+      "where": "Varanasi, India",
+      "visa": "Tourist visa (180 days, exit and re-enter)",
+      "tasks": [
+        "Immerse in Hindi — Varanasi is Hindi heartland",
+        "Apply to BHU masters (religion/philosophy)",
+        "Scout Dehradun/Almora during visa breaks",
+        "Visit properties in person — check 4G signal, water, terrain",
+        "Meet local farmers, understand the community",
+        "Start building network — lawyers, accountants, farmers",
+        "Save money",
+        "Begin studying Indian philosophy (prep for BHU)"
+      ],
+      "money": "Save. Budget for BHU fees + living costs.",
+      "hindi": "Beginner → Intermediate — daily immersion in Varanasi",
+      "blockageIfNoMoney": "Cannot pay BHU fees, cannot scout properties",
+      "blockageIfNoHindi": "Struggle in Varanasi, cannot integrate"
+    },
+    {
+      "phase": "BHU_YEAR1",
+      "period": "Sept 2027 – Sept 2028",
+      "where": "Varanasi (BHU campus)",
+      "visa": "Student visa",
+      "tasks": [
+        "Study religion/philosophy at BHU",
+        "Hindi becomes conversational through daily academic life",
+        "Weekend trips to Dehradun/Almora — scout properties",
+        "Register Indian Private Limited company (can do remotely)",
+        "Open company bank account",
+        "Begin GST registration",
+        "Start researching supplement formulations",
+        "Connect with Uttarakhand farmers and suppliers",
+        "Start mushroom growing experiments (small scale, in Varanasi)"
+      ],
+      "money": "BHUI fees + living costs. Company registration ₹15–50K.",
+      "hindi": "Intermediate — academic Hindi + daily life",
+      "blockageIfNoMoney": "Cannot register company, cannot scout properties",
+      "blockageIfNoHindi": "Academic struggle, limited networking"
+    },
+    {
+      "phase": "BHU_YEAR2",
+      "period": "Sept 2028 – Sept 2029",
+      "where": "Varanasi (BHU) + Dehradun/Almora (estate scouting)",
+      "visa": "Student visa",
+      "tasks": [
+        "Complete masters thesis",
+        "Hindi becomes fluent through academic + daily use",
+        "FINALISE property selection — lease terms negotiated",
+        "Apply for Employment Visa through your company",
+        "Begin supplement product development",
+        "Publish first Indian philosophy content (blog/book)",
+        "Network with Uttarakhand supplement/wellness industry",
+        "Starlink should be available — test connectivity at property"
+      ],
+      "money": "Employment Visa application ₹5–10K. Lease deposit ₹1–3L.",
+      "hindi": "Fluent — academic + business + daily life",
+      "blockageIfNoMoney": "Cannot secure lease, cannot apply for Employment Visa",
+      "blockageIfNoHindi": "Cannot negotiate with landowners, limited business capability"
+    },
+    {
+      "phase": "GRADUATION",
+      "period": "Sept 2029",
+      "where": "Varanasi → Dehradun/Almora",
+      "visa": "Student visa expires → Employment Visa (if approved)",
+      "tasks": [
+        "Graduate BHU masters",
+        "Employment Visa must be approved BEFORE student visa expires",
+        "Move to estate",
+        "Set up temporary shelter",
+        "Purchase animals",
+        "Begin full estate operation"
+      ],
+      "money": "Lease deposit + animals + shelter = ₹3–7L ($3,600–$8,400)",
+      "hindi": "Fluent",
+      "blockageIfNoMoney": "CANNOT STAY — must leave India",
+      "blockageIfNoVisa": "CANNOT STAY — must leave India",
+      "criticalDeadline": "Employment Visa must be in hand before student visa expires"
+    },
+    {
+      "phase": "ESTATE_YEAR1",
+      "period": "Oct 2029 – Sept 2030",
+      "where": "Estate near Dehradun/Almora",
+      "visa": "Employment Visa (renewable)",
+      "tasks": [
+        "Full estate running — animals, garden, mushroom lab",
+        "Starlink installed — remote work enabled",
+        "First products: honey, shilajit, mushroom supplements",
+        "Publish Indian philosophy content",
+        "Sell first products locally + online",
+        "Document everything — this is the experiment"
+      ],
+      "money": "Running costs ₹25–40K/mo. Income from products + remote work.",
+      "hindi": "Fluent — full independence"
+    },
+    {
+      "phase": "ESTATE_YEAR2_5",
+      "period": "Oct 2030 – Sept 2034",
+      "where": "Estate near Dehradun/Almora",
+      "visa": "Employment Visa renewed annually",
+      "tasks": [
+        "Ecosystem fully operational",
+        "Mushroom lab producing cordyceps/lion's mane",
+        "Supplement brand established",
+        "Indian philosophy publishing growing",
+        "Decision: permanent build or new location?",
+        "Year 5: lease expires — renew or move"
+      ],
+      "money": "Self-sustaining from estate + company revenue",
+      "hindi": "Fluent — full academic + business capability"
+    }
+  ],
+
+  "unlockOrder": [
+    {
+      "order": 1,
+      "what": "Hindi basics",
+      "cost": "Free (Duolingo, YouTube)",
+      "when": "Now",
+      "dependency": "None",
+      "unlocks": "Everything becomes easier. You can communicate in India."
+    },
+    {
+      "order": 2,
+      "what": "Money for company registration",
+      "cost": "₹20K–50K ($240–600)",
+      "when": "During BHU (2027–2029)",
+      "dependency": "Remote income source",
+      "unlocks": "Employment Visa pathway. Legal business operations."
+    },
+    {
+      "order": 3,
+      "what": "BHU enrollment",
+      "cost": "BHUI fees + living costs",
+      "when": "Sept 2027",
+      "dependency": "Application accepted, money for fees",
+      "unlocks": "Student visa (2 years). Hindi immersion. Academic network."
+    },
+    {
+      "order": 4,
+      "what": "Indian company registered",
+      "cost": "₹15–50K",
+      "when": "Year 1-2 of BHU",
+      "dependency": "Money + Hindi (basic legal discussions)",
+      "unlocks": "Employment Visa eligibility. Bank account. GST. Legal entity."
+    },
+    {
+      "order": 5,
+      "what": "Property scouted in person",
+      "cost": "Travel costs ₹5–15K per trip",
+      "when": "During BHU breaks",
+      "dependency": "Hindi (to talk to landowners), money (for travel)",
+      "unlocks": "Real understanding of terrain, community, 4G signal, water."
+    },
+    {
+      "order": 6,
+      "what": "Lease negotiated and signed",
+      "cost": "₹1–3L deposit + annual rent",
+      "when": "Year 2 of BHU or after graduation",
+      "dependency": "Money + Hindi + property scouted + legal advice",
+      "unlocks": "Can build temporary structures, keep animals, start farming."
+    },
+    {
+      "order": 7,
+      "what": "Employment Visa approved",
+      "cost": "₹5–10K application + ₹25L/yr salary from company",
+      "when": "Sept 2029 (graduation)",
+      "dependency": "Company registered + salary structure + application",
+      "unlocks": "Legal residence. Can live on estate full-time. FRRO registration."
+    },
+    {
+      "order": 8,
+      "what": "Animals purchased + shelter built",
+      "cost": "₹2–4L",
+      "when": "After lease secured + visa approved",
+      "dependency": "Lease + visa + money",
+      "unlocks": "Farm running. Milk, eggs, wool, honey."
+    },
+    {
+      "order": 9,
+      "what": "Starlink installed",
+      "cost": "₹30K hardware + ₹3–8K/mo",
+      "when": "Available (late 2026 / early 2027)",
+      "dependency": "Starlink India launch",
+      "unlocks": "Reliable high-speed internet for remote work from estate."
+    },
+    {
+      "order": 10,
+      "what": "Mushroom lab operational",
+      "cost": "₹3–8L",
+      "when": "Year 1-2 of estate",
+      "dependency": "Estate running + money + training",
+      "unlocks": "Cordyceps/lion's mane production. High-value supplement income."
+    },
+    {
+      "order": 11,
+      "what": "First product sold",
+      "cost": "Marketing + distribution ₹10–50K",
+      "when": "Year 1-2 of estate",
+      "dependency": "Products produced + company registered + Hindi for sales",
+      "unlocks": "Revenue. Proves business model. Funds expansion."
+    },
+    {
+      "order": 12,
+      "what": "Indian philosophy published",
+      "cost": "Writing time + publishing costs ₹10–50K",
+      "when": "During BHU + after",
+      "dependency": "BHU network + Hindi (literary level) + writing",
+      "unlocks": "Brand building. Academic credibility. Teaching opportunities."
+    }
+  ],
+
+  "dependencyMatrix": {
+    "description": "What blocks what. Money is the primary unlock. Hindi is the secondary. Legal is the hard gate.",
+    "matrix": {
+      "money→company": "Need ₹20–50K to register company",
+      "company→visa": "Need company to apply for Employment Visa",
+      "visa→estate": "Need visa to legally live on estate",
+      "hindi→lease": "Need Hindi to negotiate with landowners",
+      "hindi→farm": "Need Hindi to deal with vets, farmers, suppliers",
+      "hindi→business": "Need Hindi to sell products, negotiate deals",
+      "hindi→philosophy": "Need literary Hindi to publish Indian philosophy",
+      "money→animals": "Need ₹2–4L for animals + shelter",
+      "money→lab": "Need ₹3–8L for mushroom lab",
+      "starlink→remote": "Need Starlink for reliable remote work",
+      "bhui→visa": "BHU gives student visa, leads to Employment Visa pathway"
+    },
+    "criticalPath": "Money → Company → Visa → Estate → Animals → Products → Revenue"
+  },
+
+  "risks": [
+    {
+      "risk": "Not enough money saved by Sept 2029",
+      "consequence": "Cannot register company, cannot get Employment Visa, must leave India",
+      "mitigation": "Save aggressively now. Every dollar counts. Remote income is the key.",
+      "severity": "CRITICAL"
+    },
+    {
+      "risk": "Employment Visa denied",
+      "consequence": "Cannot stay in India after BHU graduation",
+      "mitigation": "Start company early, ensure salary structure meets ₹25L threshold, have backup plan (leave and reapply from outside)",
+      "severity": "CRITICAL"
+    },
+    {
+      "risk": "Hindi not good enough by BHU start",
+      "consequence": "Struggle in classes, cannot negotiate leases, isolated",
+      "mitigation": "Start NOW. Varanasi immersion will accelerate. Daily practice non-negotiable.",
+      "severity": "HIGH"
+    },
+    {
+      "risk": "Property doesn't work out (terrain, water, community)",
+      "consequence": "Must find alternative location, delay estate setup",
+      "mitigation": "Scout in person during BHU. Don't commit until you've visited.",
+      "severity": "MEDIUM"
+    },
+    {
+      "risk": "Remote income insufficient for Employment Visa salary",
+      "consequence": "Company must generate ₹25L+/year OR you need external income",
+      "mitigation": "Start building remote income NOW.叠加 multiple streams. Supplement sales can also count.",
+      "severity": "HIGH"
+    },
+    {
+      "risk": "BHU masters doesn't lead anywhere useful",
+      "consequence": "2 years wasted on degree that doesn't help the vision",
+      "mitigation": "BHU gives: student visa (2 years), Hindi immersion, academic network, philosophy foundation, time to plan. The degree itself is secondary to these.",
+      "severity": "LOW"
+    }
+  ],
+
+  "today": {
+    "where": "Cambodia",
+    "visa": "Tourist visa",
+    "nextMove": "Varanasi, December 2026",
+    "whatToDoNow": [
+      "Save money — every dollar matters",
+      "Start Hindi — Duolingo daily, even 15 minutes",
+      "Research BHU masters — application requirements, deadlines",
+      "Keep researching properties — bookmark best listings",
+      "Keep researching company registration process",
+      "The vision board website is done — that's the anchor"
+    ],
+    "firstMilestone": "Arrive Varanasi Dec 2026. Hindi immersion begins. Everything starts."
+  }
+}

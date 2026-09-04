@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "What does a year of food actually look like from the estate? Month-by-month, meal-by-meal, region-specific.",
+    "baseline": "1 person, Ranikhet/Almora, 5 acres, 1 cow, 3 sheep, 3 goats, 25 chickens, 2 bee hives"
+  },
+  "yearOfFood": {
+    "whatYouProduce": {
+      "daily": {
+        "milk": {
+          "amount": "3-5L average (6-7L when cow milking, 0 when dry)",
+          "source": "1 Gir cow + goats"
+        },
+        "eggs": {
+          "amount": "4-15 per day (seasonal)",
+          "source": "25 desi hens"
+        },
+        "honey": {
+          "amount": "100-160g per day (averaged over year)",
+          "source": "2 bee hives, 40-60kg/year"
+        },
+        "ghee": {
+          "amount": "Made from surplus milk \u2014 lasts months",
+          "source": "Cow milk clarified"
+        },
+        "cheese": {
+          "amount": "Goat cheese from surplus goat milk",
+          "source": "3 Beetal goats"
+        }
+      },
+      "seasonal": {
+        "spring": "Fresh peas, radish, spinach, early herbs",
+        "summer": "Tomatoes, beans, cucumber, capsicum, brinjal, bottle gourd",
+        "monsoon": "Ridge gourd, bitter gourd, pumpkin, rajma, greens",
+        "autumn": "Cauliflower, cabbage, carrot, beetroot, turnip, harvest potatoes",
+        "winter": "Spinach, mustard greens, radish, stored root vegetables"
+      },
+      "annual": {
+        "milk_total": "~2,000L (accounting for dry period)",
+        "eggs_total": "~5,000 (seasonal variation)",
+        "honey_total": "40-60kg",
+        "ghee_made": "~50-60L (from surplus milk)",
+        "goat_cheese": "~10-15kg",
+        "wool": "6-9kg from 3 sheep"
+      }
+    },
+    "whatYouBuy": {
+      "staples": [
+        "Rice (\u20b940-60/kg)",
+        "Wheat flour (\u20b930-40/kg)",
+        "Salt (\u20b920/kg)",
+        "Oil (\u20b9150/L)"
+      ],
+      "spices": [
+        "Turmeric (grow your own)",
+        "Chilli (grow your own)",
+        "Cumin, coriander, garam masala",
+        "Tea (\u20b9200-400/kg)"
+      ],
+      "monthlyCost": {
+        "low": 2000,
+        "high": 4000,
+        "unit": "INR",
+        "inr_note": "Rice, wheat, oil, salt, spices, tea"
+      },
+      "monthlyCostGBP": {
+        "low": 16,
+        "high": 31,
+        "unit": "GBP"
+      },
+      "note": "Everything else you grow or produce yourself."
+    },
+    "monthByMonth": {
+      "january": {
+        "milk": "Cow dry (pregnant). Goat milk only. ~1-2L/day.",
+        "eggs": "4-6/day (winter low \u2014 shorter days)",
+        "vegetables": [
+          "Spinach",
+          "Mustard greens",
+          "Radish",
+          "Stored root veg"
+        ],
+        "preserved": [
+          "Ghee from stored milk",
+          "Sun-dried tomatoes",
+          "Pickles",
+          "Stored potatoes"
+        ],
+        "whatYouEat": "Saag (mustard greens) + roti from stored madua/jhangora + eggs + ghee + goat cheese + pickles",
+        "whatYouBuy": "Rice, wheat flour, tea, spices"
+      },
+      "february": {
+        "milk": "Cow still dry. Goat milk ~1-2L/day.",
+        "eggs": "5-7/day (days getting longer)",
+        "vegetables": [
+          "Spinach",
+          "Mustard greens",
+          "Radish",
+          "Start planting spring crops"
+        ],
+        "planting": "Start tomato, pepper seedlings indoors. Plant peas, beans outside.",
+        "whatYouEat": "Same as January. Start getting early greens."
+      },
+      "march": {
+        "milk": "Cow may have calved \u2014 fresh milk! 10-16L/day peak.",
+        "eggs": "8-10/day (spring peak starting)",
+        "vegetables": [
+          "Peas",
+          "Radish",
+          "Spinach",
+          "New plantings going in"
+        ],
+        "whatYouEat": "Fresh milk returns! Peas + eggs + greens. Abundance starting."
+      },
+      "april": {
+        "milk": "Cow peak milk + goat milk",
+        "eggs": "10-12/day",
+        "vegetables": [
+          "Peas",
+          "Beans",
+          "Early tomatoes",
+          "Cucumber"
+        ],
+        "whatYouEat": "Full breakfast: milk tea + 2 eggs + fresh peas. Lunch: vegetables from garden."
+      },
+      "may": {
+        "milk": "Cow peak + goat milk",
+        "eggs": "12-15/day (peak production)",
+        "vegetables": [
+          "Peas",
+          "Beans",
+          "Cucumber",
+          "Early tomatoes",
+          "Brinjal"
+        ],
+        "whatYouEat": "Abundance. Multiple vegetables daily. Fresh eggs. Honey from hives."
+      },
+      "june": {
+        "milk": "Cow + goat",
+        "eggs": "12-15/day",
+        "vegetables": [
+          "Tomatoes",
+          "Beans",
+          "Cucumber",
+          "Capsicum",
+          "Brinjal",
+          "Bottle gourd"
+        ],
+        "whatYouEat": "Peak summer harvest. Tomato + egg curry. Fresh salads. Honey in tea."
+      },
+      "july": {
+        "milk": "Cow + goat",
+        "eggs": "10-13/day (monsoon dip)",
+        "vegetables": [
+          "Ridge gourd",
+          "Bitter gourd",
+          "Pumpkin",
+          "Tomatoes"
+        ],
+        "monsoon": "Heavy rain \u2014 protect crops from waterlogging. Harvest honey.",
+        "whatYouEat": "Monsoon vegetables. Fresh milk. Eggs. Honey harvest."
+      },
+      "august": {
+        "milk": "Cow + goat",
+        "eggs": "10-13/day",
+        "vegetables": [
+          "Full monsoon harvest. Plant autumn crops."
+        ],
+        "harvest": "Honey harvest (peak). Start preserving for winter.",
+        "whatYouEat": "Maximum variety. Multiple vegetables daily."
+      },
+      "september": {
+        "milk": "Cow + goat",
+        "eggs": "10-13/day",
+        "vegetables": [
+          "Tomatoes",
+          "Beans",
+          "Start harvesting root crops"
+        ],
+        "preservation": "Start sun-drying tomatoes. Make pickles. Store root vegetables.",
+        "whatYouEat": "Peak harvest. Preserve abundance for winter."
+      },
+      "october": {
+        "milk": "Cow + goat",
+        "eggs": "8-10/day",
+        "vegetables": [
+          "Cauliflower",
+          "Cabbage",
+          "Carrot",
+          "Beetroot",
+          "Harvest potatoes",
+          "Harvest turmeric"
+        ],
+        "preservation": "Major storage month. Root cellar filling. Dried goods stocked.",
+        "whatYouEat": "Harvest feast. Root vegetables. Stored grains. Preserved food."
+      },
+      "november": {
+        "milk": "Cow declining (late lactation). Goat milk.",
+        "eggs": "6-8/day (shorter days)",
+        "vegetables": [
+          "Root vegetables",
+          "Winter greens starting",
+          "Harvest ginger/turmeric"
+        ],
+        "preservation": "Dry herbs. Process turmeric. Store root crops in cellar.",
+        "whatYouEat": "Stored food increasing. Fresh greens decreasing. Eggs steady."
+      },
+      "december": {
+        "milk": "Cow going dry soon. Goat milk ~1L/day.",
+        "eggs": "4-6/day (winter low)",
+        "vegetables": [
+          "Spinach",
+          "Mustard greens",
+          "Radish"
+        ],
+        "preservation": "Rely on stored food. Ghee, pickles, dried goods, root cellar.",
+        "whatYouEat": "Winter diet: Saag + roti + eggs + stored food + ghee. Simpler but nourishing."
+      }
+    },
+    "nutritionCheck": {
+      "protein": {
+        "sources": [
+          "Eggs (2-4/day)",
+          "Milk (1-2L/day)",
+          "Goat cheese",
+          "Rajma (stored)",
+          "Goat meat (occasional)"
+        ],
+        "dailyIntake": "60-80g \u2014 sufficient for active adult",
+        "status": "COVERED"
+      },
+      "carbohydrates": {
+        "sources": [
+          "Rice (bought)",
+          "Wheat flour (bought)",
+          "Potatoes (grown)",
+          "Madua/jhangora (grown)",
+          "Buckwheat (grown)"
+        ],
+        "dailyIntake": "250-350g \u2014 sufficient",
+        "status": "PARTIALLY \u2014 rice/wheat bought, rest grown"
+      },
+      "fats": {
+        "sources": [
+          "Ghee (from cow milk)",
+          "Goat cheese",
+          "Cooking oil (bought)",
+          "Honey"
+        ],
+        "dailyIntake": "50-70g \u2014 sufficient",
+        "status": "COVERED \u2014 ghee is primary fat source"
+      },
+      "vitamins": {
+        "sources": [
+          "Fresh vegetables year-round",
+          "Eggs",
+          "Milk",
+          "Herbs"
+        ],
+        "dailyIntake": "Variable by season \u2014 summer abundance, winter limited",
+        "status": "COVERED in summer/autumn. Winter is the gap."
+      },
+      "minerals": {
+        "sources": [
+          "Milk (calcium)",
+          "Eggs",
+          "Vegetables",
+          "Shilajit (supplement)"
+        ],
+        "dailyIntake": "Sufficient from varied diet",
+        "status": "COVERED"
+      },
+      "fiber": {
+        "sources": [
+          "Vegetables",
+          "Whole grains (madua, jhangora)",
+          "Fruits"
+        ],
+        "dailyIntake": "Sufficient from varied diet",
+        "status": "COVERED"
+      }
+    },
+    "theHonestGaps": {
+      "winterFoodGap": {
+        "period": "December-February",
+        "whatYouHave": "Stored root vegetables, ghee, eggs (4-6/day), winter greens (spinach, mustard), stored grains, pickles, dried goods",
+        "whatYouLack": "Fresh variety. Limited vegetable diversity. Mostly eating saag + roti + eggs.",
+        "solution": "Cold frame / simple greenhouse (\u20b92K-5K) extends growing season. More root cellar storage. Accept simplicity \u2014 winter is for rest.",
+        "severity": "Medium \u2014 not starving, just less varied"
+      },
+      "carbGap": {
+        "issue": "Rice and wheat are bought, not grown",
+        "solution": "Grow madua (finger millet) and jhangora (barnyard millet) \u2014 traditional Kumaon grains. Can be ground into flour for roti. Reduces rice/wheat purchase by 50%.",
+        "note": "Potatoes are the easiest carb to grow \u2014 high yield at altitude."
+      },
+      "fruitGap": {
+        "issue": "Fruit trees take 3-5 years to produce",
+        "solution": "Plant in year 1. Buy fruit locally until trees mature. Almora market has apples, pears, plums.",
+        "note": "By year 3-5, you have your own fruit."
+      },
+      "teaGap": {
+        "issue": "You'll want tea daily but may not grow it",
+        "solution": "Grow tulsi (holy basil) for herbal tea \u2014 grows year-round, free. Buy black tea locally (\u20b9200-400/kg). Or grow your own if Kausani-style tea gardens work at your elevation.",
+        "note": "Tulsi tea is free and medicinal."
+      }
+    }
+  },
+  "selfSufficiency": {
+    "method": "Calories and nutrients from estate production vs recommended daily intake",
+    "baseline": "1 active adult, 2500 kcal/day",
+    "dailyProduction": {
+      "milk": {
+        "litres": "3-5 avg",
+        "kcal": 660,
+        "protein_g": 33,
+        "fat_g": 20,
+        "note": "When milking. 0 during dry period (2-3 months/yr)"
+      },
+      "eggs": {
+        "count": "4-15 avg",
+        "kcal": 420,
+        "protein_g": 36,
+        "fat_g": 28,
+        "note": "Seasonal. 4-6 winter, 12-15 summer"
+      },
+      "honey": {
+        "grams": "100-160",
+        "kcal": 300,
+        "protein_g": 0,
+        "fat_g": 0,
+        "note": "Seasonal \u2014 harvested Aug-Sept"
+      },
+      "vegetables_summer": {
+        "kcal": 400,
+        "protein_g": 15,
+        "note": "Tomatoes, beans, cucumber, brinjal, greens"
+      },
+      "vegetables_winter": {
+        "kcal": 200,
+        "protein_g": 8,
+        "note": "Spinach, mustard, radish, stored root veg"
+      },
+      "grains_own": {
+        "kcal": 800,
+        "protein_g": 25,
+        "note": "Potatoes, rajma, madua, jhangora (grown)"
+      }
+    },
+    "totalDailyKcal": {
+      "summer": 2580,
+      "winter": 1780,
+      "note": "Summer: adequate. Winter: 700 kcal short \u2014 fill with bought rice/wheat."
+    },
+    "totalDailyProtein": {
+      "summer": 110,
+      "winter": 72,
+      "note": "Both adequate. 60-80g needed for active adult."
+    },
+    "percentSelfSufficient": {
+      "summer": {
+        "kcal": 85,
+        "protein": 100,
+        "note": "Near-complete self-sufficiency"
+      },
+      "winter": {
+        "kcal": 60,
+        "protein": 80,
+        "note": "Gap filled by bought rice/wheat (\u00a315-25/mo)"
+      },
+      "annual_average": {
+        "kcal": 75,
+        "protein": 90,
+        "note": "75% of calories from estate, 90% of protein"
+      }
+    },
+    "boughtItems": {
+      "rice": {
+        "monthly": "10-15 kg",
+        "cost_gbp": 8,
+        "cost_inr": 1000,
+        "canGrow": "Madua/jhangora can replace 50%"
+      },
+      "wheat_flour": {
+        "monthly": "5-8 kg",
+        "cost_gbp": 4,
+        "cost_inr": 500,
+        "canGrow": "Grow your own grain"
+      },
+      "oil": {
+        "monthly": "1-2 L",
+        "cost_gbp": 4,
+        "cost_inr": 500,
+        "canGrow": "Use ghee exclusively (free from cow)"
+      },
+      "salt_spices": {
+        "monthly": "All",
+        "cost_gbp": 2,
+        "cost_inr": 200
+      },
+      "tea": {
+        "monthly": "200g",
+        "cost_gbp": 2,
+        "cost_inr": 200,
+        "canGrow": "Tulsi tea is free and medicinal"
+      },
+      "totalMonthly": {
+        "low": 20,
+        "high": 31,
+        "unit": "GBP",
+        "inr_note": "\u20b92,400-4,000/mo"
+      }
+    },
+    "regionDifferences": {
+      "ranikhet": "Full diet possible. Turmeric, ginger, ashwagandha, all veg, grains, fruit trees.",
+      "peora": "Best diet diversity. Deepest soil = most crops. Orange orchards = fruit.",
+      "kausani": "Limited by shallow soil. Tea possible. Need to buy more vegetables.",
+      "dhanaulti": "Heavy buying needed. Only apples + root crops viable. Short season.",
+      "kasol": "Valley floor crops only. Rice/wheat possible. Turmeric blocked by monsoon."
+    }
+  }
+}

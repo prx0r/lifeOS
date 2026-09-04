@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "version": "2.0.0",
+    "purpose": "Binary constraint system — every region either ALLOWS or BLOCKS each vision component, with explicit reasoning. No vagueness.",
+    "rule": "If you can't explain WHY in one sentence, the constraint isn't real."
+  },
+
+  "regions": {
+
+    "ranikhet-almora": {
+      "id": "ranikhet-almora",
+      "name": "Ranikhet / Almora, Kumaon",
+      "state": "Uttarakhand",
+      "elevation_ft": "5500-6500",
+      "flatAcres_per5": "0.5-1",
+      "annualRainfall_mm": 1860,
+      "winterMin_C": 3,
+      "summerMax_C": 28,
+      "growingSeason_months": 9,
+      "soilFertility": "medium-high",
+      "soilDepth": "moderate (terracing needed)",
+      "forestCover_pct": 35,
+      "nearestTown": "Almora 20km",
+      "nearestAirport": "Pantnagar 90km",
+      "riverAccess": "Kosi (20km)",
+      "borewellViable": true,
+      "stateRestrictions": "none (Uttarakhand)",
+
+      "constraints": {
+        "cow": {"allowed": true, "why": "Flat grazing available (0.5-1 acre). Climate 3-28°C within Gir tolerance. Kosi water accessible."},
+        "sheep": {"allowed": true, "why": "Gaddi sheep are native to this exact region. Built for 5000-10000ft."},
+        "goats": {"allowed": true, "why": "Goats browse brush on slopes — terrain is an asset, not a limitation."},
+        "chickens": {"allowed": true, "why": "Warm coop in winter. Free-range in summer. Standard."},
+        "bees": {"allowed": true, "why": "Himalayan wildflowers Mar-Oct. Monsoon risk Jul-Sep manageable with hive placement."},
+        "largeFarming": {"allowed": true, "why": "0.5-1 acre flat is enough for kitchen garden + fodder crops."},
+        "apples": {"allowed": true, "why": "5500-6500ft is prime apple zone. Proven — Chaubatia Gardens near Ranikhet."},
+        "turmeric": {"allowed": true, "why": "Warm enough in summer (28°C). 9-month growing season sufficient."},
+        "organicFarming": {"allowed": true, "why": "Uttarakhand is India's first organic farming state. Government policy supports it."},
+        "shilajit": {"allowed": true, "why": "Uttarakhand is the source region. Uttarkashi/Chamoli accessible."},
+        "mushroomLab": {"allowed": true, "why": "Climate suitable. Indoor lab不受 weather. Starlink provides internet."}
+      }
+    },
+
+    "peora": {
+      "id": "peora",
+      "name": "Peora, Nainital",
+      "state": "Uttarakhand",
+      "elevation_ft": "6600",
+      "flatAcres_per5": "0.5-1",
+      "annualRainfall_mm": 1500,
+      "winterMin_C": 2,
+      "summerMax_C": 22,
+      "growingSeason_months": 9,
+      "soilFertility": "high",
+      "soilDepth": "deep (best of all options)",
+      "forestCover_pct": 30,
+      "nearestTown": "Mukteshwar 10km",
+      "nearestAirport": "Pantnagar 120km",
+      "riverAccess": "Kosi nearby",
+      "borewellViable": true,
+      "stateRestrictions": "none (Uttarakhand)",
+
+      "constraints": {
+        "cow": {"allowed": true, "why": "Same climate band as Ranikhet. Gentle terrain suits cattle."},
+        "sheep": {"allowed": true, "why": "Gaddi available. Rolling hills ideal."},
+        "goats": {"allowed": true, "why": "Standard."},
+        "chickens": {"allowed": true, "why": "Standard."},
+        "bees": {"allowed": true, "why": "Orange blossoms = excellent forage. Better than most regions."},
+        "largeFarming": {"allowed": true, "why": "Gentlest terrain of all options. 0.5-1 acre flat easily farmed."},
+        "apples": {"allowed": true, "why": "6600ft — prime apple zone."},
+        "oranges": {"allowed": true, "why": "Orange orchards PROVE citrus thrives here. Signature crop."},
+        "turmeric": {"allowed": true, "why": "Deep fertile soil. Warm enough in summer."},
+        "organicFarming": {"allowed": true, "why": "Uttarakhand organic policy."},
+        "mushroomLab": {"allowed": true, "why": "Indoor lab不受 weather."}
+      }
+    },
+
+    "kausani": {
+      "id": "kausani",
+      "name": "Kausani, Bageshwar",
+      "state": "Uttarakhand",
+      "elevation_ft": "6200",
+      "flatAcres_per5": "0.3-0.8",
+      "annualRainfall_mm": 1860,
+      "winterMin_C": 1,
+      "summerMax_C": 25,
+      "growingSeason_months": 9,
+      "soilFertility": "low-medium",
+      "soilDepth": "shallow (major limitation)",
+      "forestCover_pct": 30,
+      "nearestTown": "Bageshwar 40km",
+      "nearestAirport": "Pantnagar 150km",
+      "riverAccess": "Kosi, Gomti, Ramganga in valleys",
+      "borewellViable": true,
+      "stateRestrictions": "none (Uttarakhand)",
+
+      "constraints": {
+        "cow": {"allowed": true, "why": "Slightly colder but manageable with shed. Ridge has enough flat for small herd."},
+        "sheep": {"allowed": true, "why": "Native. Ridge terrain suits them."},
+        "goats": {"allowed": true, "why": "Standard."},
+        "chickens": {"allowed": true, "why": "Warm coop needed Nov-Feb. Otherwise fine."},
+        "bees": {"allowed": true, "why": "Season slightly shorter due to cold but viable."},
+        "largeFarming": {"blocked": true, "why": "Narrow ridge = limited flat land. Can't run 0.5+ acre garden easily."},
+        "apples": {"allowed": true, "why": "6200ft — prime apple zone."},
+        "turmeric": {"allowed": true, "why": "Marginal — cold winters limit it but summer warmth helps."},
+        "organicFarming": {"allowed": true, "why": "Uttarakhand organic policy."},
+        "tea": {"allowed": true, "why": "Kausani tea gardens exist — proof of concept."},
+        "mushroomLab": {"allowed": true, "why": "Indoor lab不受 weather."}
+      }
+    },
+
+    "dhanaulti-kanatal": {
+      "id": "dhanaulti-kanatal",
+      "name": "Dhanaulti / Kanatal",
+      "state": "Uttarakhand",
+      "elevation_ft": "7400-8200",
+      "flatAcres_per5": "0.2-0.5",
+      "annualRainfall_mm": 1800,
+      "winterMin_C": -1,
+      "summerMax_C": 25,
+      "growingSeason_months": 7,
+      "soilFertility": "low",
+      "soilDepth": "thin (steep slopes prevent deep soil)",
+      "forestCover_pct": 60,
+      "nearestTown": "Tehri 40km",
+      "nearestAirport": "Dehradun 82km",
+      "riverAccess": "Bhagirathi system, Tehri Lake",
+      "borewellViable": false,
+      "stateRestrictions": "none (Uttarakhand)",
+
+      "constraints": {
+        "cow": {
+          "allowed": false,
+          "why": "Winter drops to -1°C — too cold for Gir cows without expensive heated shelter. Steep slopes = no flat grazing. Borewell not viable = water access limited."
+        },
+        "sheep": {"allowed": true, "why": "Sheep handle cold and steep terrain. Built for high altitude."},
+        "goats": {"allowed": true, "why": "Goats handle steep. But limited flat browsing area."},
+        "chickens": {
+          "allowed": false,
+          "why": "Winter drops to -1°C with snow. Chickens need heated coop. Snow blocks free-ranging Nov-Feb. Adds significant cost and complexity."
+        },
+        "bees": {
+          "allowed": false,
+          "why": "Snow cover Dec-Feb blocks foraging completely. 7-month growing season too short for meaningful honey production."
+        },
+        "largeFarming": {
+          "allowed": false,
+          "why": "0.2-0.5 acres flat per 5 acres. Steep slopes everywhere. Thin soil. Can't run meaningful crops."
+        },
+        "apples": {"allowed": true, "why": "7400ft — prime apple zone. Tehri Garhwal is apple country."},
+        "turmeric": {
+          "allowed": false,
+          "why": "Winter drops below 0°C. Turmeric rhizomes freeze. 7-month season too short for 8-10 month crop."
+        },
+        "organicFarming": {"allowed": true, "why": "Uttarakhand policy. But limited flat land means limited scale."},
+        "mushroomLab": {"allowed": true, "why": "Indoor lab不受 weather. But power (borewell not viable) makes it harder."}
+      }
+    },
+
+    "kasol-parvati": {
+      "id": "kasol-parvati",
+      "name": "Kasol / Parvati Valley",
+      "state": "Himachal Pradesh",
+      "elevation_ft": "5180",
+      "flatAcres_per5": "0.2-0.5",
+      "annualRainfall_mm": 2500,
+      "winterMin_C": 4,
+      "summerMax_C": 26,
+      "growingSeason_months": 9,
+      "soilFertility": "medium",
+      "soilDepth": "valley floor: deep. Slopes: thin",
+      "forestCover_pct": 50,
+      "nearestTown": "Kullu 36km",
+      "nearestAirport": "Bhuntar 30km",
+      "riverAccess": "Parvati (perennial), Beas (confluence)",
+      "borewellViable": false,
+      "stateRestrictions": "HP Section 118 — outsiders cannot purchase agricultural land",
+
+      "constraints": {
+        "cow": {
+          "allowed": false,
+          "why": "Steep V-shaped valley = 0.2-0.5 acres flat per 5 acres. Cows need 0.5+ acre flat grazing. Not enough space."
+        },
+        "sheep": {"allowed": true, "why": "Gaddi sheep are native to HP. Steep terrain is their natural habitat."},
+        "goats": {"allowed": true, "why": "Goats browse steep slopes. Natural fit."},
+        "chickens": {"allowed": true, "why": "Valley floor has enough flat for coop. But limited free-range space."},
+        "bees": {"allowed": true, "why": "Alpine flowers. Heavy monsoon risk Jul-Sep but manageable."},
+        "largeFarming": {
+          "allowed": false,
+          "why": "0.2-0.5 acres flat per 5 acres. Steep V-valley = can't run crops. Only valley floor farming possible."
+        },
+        "apples": {"allowed": true, "why": "5180ft — apples grow on slopes. Valley floor too low but mid-slopes work."},
+        "turmeric": {
+          "allowed": false,
+          "why": "Heavy monsoon (2500mm) causes waterlogging. Turmeric needs well-drained soil. Slopes drain too fast for consistent moisture."
+        },
+        "mushroomLab": {"allowed": true, "why": "Indoor lab. But borewell not viable — water from river needed."},
+        "propertyPurchase": {
+          "allowed": false,
+          "why": "HP Section 118 — outsiders CANNOT buy agricultural land in Himachal Pradesh. Must lease only."
+        }
+      }
+    }
+  },
+
+  "decisionMatrix": {
+    "description": "For each vision component, which regions are binary ALLOW vs BLOCK",
+    "components": {
+      "cow": {
+        "allow": ["ranikhet-almora", "peora", "kausani"],
+        "block": ["dhanaulti-kanatal", "kasol-parvati"],
+        "blockReason": "dhanaulti: too cold/steep/no water. kasol: too steep (0.2-0.5 acres flat)."
+      },
+      "sheep": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "dhanaulti-kanatal", "kasol-parvati"],
+        "block": [],
+        "blockReason": "Sheep work everywhere — they're hill animals."
+      },
+      "goats": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "kasol-parvati"],
+        "block": ["dhanaulti-kanatal"],
+        "blockReason": "dhanaulti: too steep even for goats, extreme terrain."
+      },
+      "chickens": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "kasol-parvati"],
+        "block": ["dhanaulti-kanatal"],
+        "blockReason": "dhanaulti: -1°C winters, snow blocks free-ranging, heated coop needed."
+      },
+      "bees": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "kasol-parvati"],
+        "block": ["dhanaulti-kanatal"],
+        "blockReason": "dhanaulti: 7-month growing season too short. Snow blocks foraging Dec-Feb."
+      },
+      "largeFarming": {
+        "allow": ["ranikhet-almora", "peora"],
+        "block": ["kausani", "dhanaulti-kanatal", "kasol-parvati"],
+        "blockReason": "kausani: narrow ridge. dhanaulti: steep slopes. kasol: V-valley. All <0.5 acres flat."
+      },
+      "apples": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "dhanaulti-kanatal", "kasol-parvati"],
+        "block": [],
+        "blockReason": "All at right elevation (5000-8200ft)."
+      },
+      "turmeric": {
+        "allow": ["ranikhet-almora", "peora", "kausani"],
+        "block": ["dhanaulti-kanatal", "kasol-parvati"],
+        "blockReason": "dhanaulti: winter below 0°C kills rhizomes. kasol: monsoon waterlogging."
+      },
+      "organicFarming": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "dhanaulti-kanatal"],
+        "block": ["kasol-parvati"],
+        "blockReason": "kasol: HP restrictions + limited flat land."
+      },
+      "mushroomLab": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "dhanaulti-kanatal", "kasol-parvati"],
+        "block": [],
+        "blockReason": "Indoor lab不受 weather. All regions viable."
+      },
+      "propertyPurchase": {
+        "allow": ["ranikhet-almora", "peora", "kausani", "dhanaulti-kanatal"],
+        "block": ["kasol-parvati"],
+        "blockReason": "HP Section 118 — outsiders cannot buy agricultural land."
+      }
+    }
+  }
+}

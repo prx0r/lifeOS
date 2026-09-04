@@ -1,0 +1,75 @@
+{
+  "snapshot_date": "2026-09-04T03:30:46.493663+00:00",
+  "version": "1.0.0",
+  "region": null,
+  "location": "cambodia",
+  "points": {
+    "current": 0,
+    "value_gbp": 0,
+    "note": "No points yet. Fund not started. First action: open a savings account or fund for the vision."
+  },
+  "visa": {
+    "type": "tourist",
+    "validUntil": "2031",
+    "maxStayPerVisit_days": 180,
+    "status": "active"
+  },
+  "skills": {
+    "hindi": {
+      "level": 0,
+      "maxLevel": 4,
+      "hoursPracticed": 0,
+      "note": "Starting Dec 2026 in Varanasi"
+    },
+    "farming": {
+      "level": 0,
+      "maxLevel": 3,
+      "hoursPracticed": 0
+    },
+    "sanskrit": {
+      "level": 0,
+      "maxLevel": 3,
+      "hoursPracticed": 0
+    }
+  },
+  "company": {
+    "registered": false,
+    "name": null,
+    "indianDirector": false,
+    "isbn": false,
+    "fssai": false,
+    "iec": false,
+    "gst": false
+  },
+  "visa_status": {
+    "current": "tourist",
+    "employmentVisa": false,
+    "companyForVisa": false
+  },
+  "land": {
+    "region": null,
+    "leaseSecured": false,
+    "area_acres": 0
+  },
+  "animals": {
+    "cow": 0,
+    "sheep": 0,
+    "goats": 0,
+    "chickens": 0,
+    "dogs": 0,
+    "bees": 0
+  },
+  "plants": {
+    "fruitTrees": 0,
+    "kitchenGarden": false,
+    "fodderCrops": false,
+    "turmeric": false,
+    "mushroomLab": false
+  },
+  "milestones_completed": [],
+  "milestones_next": [
+    "hindi_basics",
+    "company_reg",
+    "bhu_application"
+  ]
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVATANTRYA Graph</title>
+<script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e8e8e8; font-family: 'Inter', system-ui, sans-serif; }
+  #graph { width: 100vw; height: 100vh; }
+
+  #panel {
+    position: fixed; top: 0; right: 0; width: 400px; height: 100vh;
+    background: rgba(14,14,14,0.97); border-left: 1px solid #222;
+    padding: 24px; overflow-y: auto; z-index: 10;
+    transform: translateX(100%); transition: transform 0.3s;
+  }
+  #panel.open { transform: translateX(0); }
+  #panel h2 { font-size: 1.1rem; color: #c9a84c; margin-bottom: 6px; }
+  #panel .tag { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+  #panel .desc { font-size: 0.85rem; color: #bbb; line-height: 1.6; margin-bottom: 12px; }
+  #panel .conn { font-size: 0.8rem; color: #999; padding: 4px 0; border-bottom: 1px solid #1a1a1a; }
+  #panel .conn .lbl { color: #c9a84c; }
+  #panel .close { position: absolute; top: 12px; right: 12px; background: none; border: none; color: #666; font-size: 1.2rem; cursor: pointer; }
+
+  #hud {
+    position: fixed; top: 16px; left: 16px; z-index: 10;
+    background: rgba(14,14,14,0.92); border: 1px solid #222; border-radius: 8px;
+    padding: 14px 18px; font-size: 0.75rem;
+  }
+  #hud .row { display: flex; justify-content: space-between; gap: 20px; padding: 2px 0; color: #999; }
+  #hud .val { color: #c9a84c; font-weight: 600; }
+
+  #legend {
+    position: fixed; bottom: 16px; left: 16px; z-index: 10;
+    background: rgba(14,14,14,0.92); border: 1px solid #222; border-radius: 8px;
+    padding: 12px 16px; font-size: 0.7rem;
+  }
+  #legend h3 { font-size: 0.65rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .leg { display: flex; align-items: center; gap: 6px; padding: 1px 0; color: #bbb; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div id="hud">
+  <div class="row"><span>Points</span><span class="val" id="hud-pts">10 (£5,000)</span></div>
+  <div class="row"><span>Visa</span><span class="val" id="hud-visa">Tourist</span></div>
+  <div class="row"><span>Location</span><span class="val" id="hud-loc">Cambodia</span></div>
+  <div class="row"><span>Nodes</span><span class="val" id="hud-nodes">76</span></div>
+  <div class="row"><span>Edges</span><span class="val" id="hud-edges">127</span></div>
+</div>
+
+<div id="legend">
+  <h3>Clusters</h3>
+  <div class="leg"><div class="dot" style="background:#c9a84c"></div> Milestones</div>
+  <div class="leg"><div class="dot" style="background:#9b59b6"></div> Skills</div>
+  <div class="leg"><div class="dot" style="background:#3498db"></div> Legal</div>
+  <div class="leg"><div class="dot" style="background:#2ecc71"></div> Company</div>
+  <div class="leg"><div class="dot" style="background:#27ae60"></div> Animals</div>
+  <div class="leg"><div class="dot" style="background:#229954"></div> Plants</div>
+  <div class="leg"><div class="dot" style="background:#e67e22"></div> Products</div>
+  <div class="leg"><div class="dot" style="background:#e74c3c"></div> Locations</div>
+  <div class="leg"><div class="dot" style="background:#1abc9c"></div> Infra</div>
+</div>
+
+<div id="panel">
+  <button class="close" onclick="document.getElementById('panel').classList.remove('open')">×</button>
+  <div id="pc"></div>
+</div>
+
+<div id="graph"></div>
+
+<script>
+const C = {
+  milestones:'#c9a84c', skills:'#9b59b6', legal:'#3498db', company:'#2ecc71',
+  animals:'#27ae60', plants:'#229954', products:'#e67e22', locations:'#e74c3c', infra:'#1abc9c'
+};
+const EC = {
+  depends_on:'#e74c3c', unlocks:'#27ae60', blocks:'#e74c3c', produces:'#229954',
+  costs:'#c9a84c', feeds_into:'#e67e22', enables:'#3498db', located_in:'#999',
+  happens_before:'#9b59b6'
+};
+
+async function init() {
+  const resp = await fetch('graph/graph.json');
+  const data = await resp.json();
+
+  document.getElementById('hud-nodes').textContent = data.nodes.length;
+  document.getElementById('hud-edges').textContent = data.edges.length;
+
+  const els = [];
+  data.nodes.forEach(n => els.push({data:{id:n.id, label:n.label, cluster:n.cluster, node_type:n.type, desc:n.description||'', props:n.properties||{}}}));
+  data.edges.forEach(e => els.push({data:{source:e.source, target:e.target, label:e.label||'', edge_type:e.type}}));
+
+  const cy = cytoscape({
+    container: document.getElementById('graph'), elements: els,
+    style: [
+      {selector:'node', style:{
+        'label':'data(label)', 'background-color':(e)=>C[e.data('cluster')]||'#555',
+        'color':'#fff', 'font-size':'9px', 'font-weight':'500', 'text-wrap':'wrap', 'text-max-width':'90px',
+        'text-valign':'bottom', 'text-margin-y':5,
+        'width':(e)=>{const t=e.data('node_type');return t==='milestone'?38:t==='asset'?28:22;},
+        'height':(e)=>{const t=e.data('node_type');return t==='milestone'?38:t==='asset'?28:22;},
+        'border-width':2, 'border-color':(e)=>C[e.data('cluster')]||'#555', 'border-opacity':0.4
+      }},
+      {selector:'node:selected', style:{
+        'border-width':3, 'border-color':'#fff', 'font-weight':'700'
+      }},
+      {selector:'edge', style:{
+        'label':'data(label)', 'font-size':'7px', 'color':'#555', 'text-rotation':'autorotate', 'text-margin-y':-6,
+        'curve-style':'bezier', 'target-arrow-shape':'triangle',
+        'target-arrow-color':(e)=>EC[e.data('edge_type')]||'#444',
+        'line-color':(e)=>EC[e.data('edge_type')]||'#444', 'line-opacity':0.35, 'width':1.5
+      }},
+      {selector:'edge:selected', style={'line-color':'#c9a84c','target-arrow-color':'#c9a84c','line-opacity':1,'width':2.5}}
+    ],
+    layout:{name:'cose',idealEdgeLength:110,nodeOverlap:20,nodeRepulsion:7000,edgeElasticity:100,gravity:0.3,numIter:800,animate:true,animationDuration:800},
+    minZoom:0.15, maxZoom:3, wheelSensitivity:0.2
+  });
+
+  cy.on('tap','node',function(evt){
+    const n=evt.target; const p=document.getElementById('pc');
+    const ine=n.connectedEdges('[target="'+n.id()+'"]');
+    const oute=n.connectedEdges('[source="'+n.id()+'"]');
+    let h='<h2>'+n.data('label')+'</h2><div class="tag">'+n.data('node_type')+' · '+n.data('cluster')+'</div>';
+    if(n.data('desc')) h+='<div class="desc">'+n.data('desc')+'</div>';
+    const props=n.data('props');
+    if(props&&Object.keys(props).length){h+='<div style="margin-bottom:12px">';
+      for(const[k,v]of Object.entries(props)) h+='<div class="conn"><b>'+k+':</b> '+JSON.stringify(v)+'</div>';
+      h+='</div>';}
+    if(ine.length||oute.length){h+='<div style="margin-top:8px;font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:0.1em">Connections</div>';
+      ine.forEach(e=>{const s=e.source();h+='<div class="conn">← <span class="lbl">'+e.data('edge_type')+'</span> '+s.data('label')+'</div>';});
+      oute.forEach(e=>{const t=e.target();h+='<div class="conn">→ <span class="lbl">'+e.data('edge_type')+'</span> '+t.data('label')+'</div>';});
+    }
+    p.innerHTML=h; document.getElementById('panel').classList.add('open');
+    cy.elements().removeClass('hl'); n.connectedEdges().addClass('hl'); n.neighborhood('node').addClass('hl');
+  });
+
+  cy.on('tap',function(evt){if(evt.target===cy){document.getElementById('panel').classList.remove('open');cy.elements().removeClass('hl');}});
+}
+
+init();
+</script>
+</body>
+</html>

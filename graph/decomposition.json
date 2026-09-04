@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "Goal decomposition engine — breaks any far-away goal into binary, actionable near-term steps, traced through the dependency graph"
+  },
+
+  "decomposition": {
+    "description": "Any goal can be decomposed by asking: what does this REQUIRE, and what does each requirement REQUIRE, until you reach something you can do TODAY.",
+
+    "method": "REQUIREMENTS CHAIN",
+    "algorithm": [
+      "1. Start with the target goal",
+      "2. List all requirements (from graph edges: depends_on, costs, enables)",
+      "3. For each requirement, check: is it currently satisfied?",
+      "4. If NO: what does IT require? (recurse)",
+      "5. If YES: check next requirement",
+      "6. Continue until you reach a leaf node that is either (a) currently satisfiable or (b) requires only money/skill you can earn",
+      "7. The leaf nodes = today's actions"
+    ]
+  },
+
+  "example_decomposition": {
+    "goal": "Live on estate with cows, sheep, chickens, dog, mushroom lab",
+    "chain": [
+      {
+        "step": 1,
+        "goal": "Live on estate",
+        "requires": ["visa", "lease", "money_for_animals"],
+        "satisfied": false,
+        "next": "visa"
+      },
+      {
+        "step": 2,
+        "goal": "Visa (Employment Visa E-1)",
+        "requires": ["company_registered", "salary_25lakhs", "application_filed"],
+        "satisfied": false,
+        "next": "company_registered"
+      },
+      {
+        "step": 3,
+        "goal": "Company registered (SVATANTRYA Pvt Ltd)",
+        "requires": ["money_30points", "indian_director", "dsc_din"],
+        "satisfied": false,
+        "next": "money_30points"
+      },
+      {
+        "step": 4,
+        "goal": "Earn 30 points (£15,000)",
+        "requires": ["remote_income_source"],
+        "satisfied": false,
+        "next": "remote_income_source"
+      },
+      {
+        "step": 5,
+        "goal": "Establish remote income",
+        "requires": ["skill_marketable", "internet_connection", "time_to_work"],
+        "satisfied": false,
+        "leaf": true,
+        "action": "Today: identify what remote work you can do. List skills. Check job boards."
+      },
+      {
+        "step": 6,
+        "goal": "Indian director for company",
+        "requires": ["bh_networking", "trust_relationship"],
+        "satisfied": false,
+        "leaf": true,
+        "action": "Today: reach out to BHU professors/contacts about nominee director role"
+      },
+      {
+        "step": 7,
+        "goal": "DSC + DIN",
+        "requires": ["money_2000", "passport", "indian_address"],
+        "satisfied": false,
+        "leaf": true,
+        "action": "When company registration starts — Part of SPICe+ filing, not separate"
+      }
+    ],
+    "todayActions": [
+      "Research remote income opportunities matching your skills",
+      "Reach out to 1 person at BHU about nominee director",
+      "Continue Hindi practice (earns points toward visa readiness)",
+      "Save money (earns points toward company registration)"
+    ]
+  },
+
+  "constraintPropagation": {
+    "description": "When a region is selected, constraints propagate through the dependency graph",
+    "example": {
+      "if_region_is": "kasol-parvati",
+      "propagates_to": {
+        "cow": "BLOCKED — too steep, 0.2-0.5 acres flat",
+        "sheep": "ALLOWED — native breed",
+        "goats": "ALLOWED — browse steep slopes",
+        "chickens": "ALLOWED — valley floor sufficient",
+        "bees": "ALLOWED — alpine flowers",
+        "largeFarming": "BLOCKED — V-valley, <0.5 acres flat",
+        "turmeric": "BLOCKED — monsoon waterlogging",
+        "propertyPurchase": "BLOCKED — HP Section 118",
+        "mushroomLab": "ALLOWED — indoor lab"
+      },
+      "consequence": "If Kasol, vision must be modified: no cow, no turmeric, no large garden. Sheep + goats + chickens + bees + mushroom lab only."
+    }
+  }
+}

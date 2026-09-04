@@ -1,0 +1,130 @@
+{
+  "protocol": "The Svātantrya Protocol",
+  "version": "canonical",
+  "description": "Recognition, Imagination, Will and the Deliberate Construction of a Life — a longitudinal N=1 experiment in consciousness, agency and manifestation.",
+
+  "purpose": "Consciousness may possess a greater creative participation in reality than the ordinary model allows. The experiment: if it were true, how should a human being actually live? Every day.",
+
+  "epistemic_registers": {
+    "A_tradition": "What sources actually claim (preserved as claims)",
+    "B_working_ontology": "The metaphysical model provisionally adopted for practice",
+    "C_phenomenology": "What was actually experienced (recorded because it happened, not because interpretation is known)",
+    "D_outcome": "Externally checkable events (income, skills, property, animals, residence)"
+  },
+
+  "creative_sequence": [
+    {"step": 1, "name": "Recognition", "operation": "I am not merely the contracted self-positioning."},
+    {"step": 2, "name": "Svātantrya", "operation": "Consciousness is intrinsically capable of determination."},
+    {"step": 3, "name": "Icchā (Will)", "operation": "One possibility is positively selected."},
+    {"step": 4, "name": "Bhāvanā", "operation": "The possibility becomes experientially determinate through imaginative cultivation."},
+    {"step": 5, "name": "Rasa", "operation": "The imaginal world becomes affectively inhabited rather than conceptually described."},
+    {"step": 6, "name": "Jñāna", "operation": "Living the state exposes information: what would this person know? What skills are missing?"},
+    {"step": 7, "name": "Kriyā", "operation": "Knowledge becomes physical causation."},
+    {"step": 8, "name": "Feedback", "operation": "Reality answers. Not necessarily by agreeing."},
+    {"step": 9, "name": "Recognition", "operation": "Return to prior identity without psychological dependency on outcome."}
+  ],
+
+  "daily_rule": {
+    "morning_15min": [
+      "Recognition — 3 min",
+      "Read frozen target — 1 min",
+      "Invoke rasa — 3 min",
+      "Select today's kriyā — 3 min",
+      "Identity rehearsal — 3 min",
+      "Release — 2 min"
+    ],
+    "nightly_30min": [
+      "Settle — 3 min",
+      "Recognition — 3 min",
+      "Icchā — 1 min",
+      "End-scene bhāvanā — 10 min",
+      "Rasa — 4 min",
+      "Rowe mode (surprise me) — 5 min",
+      "Jñāna → kriyā — 2 min",
+      "Release — 2 min"
+    ],
+    "kriya_block": "60-90 minutes before recreational internet. Every task maps to a target track.",
+    "concentration": "3x weekly, 10 min. Hold one image. Restore when it collapses.",
+    "dream_incubation": "2 nights/week max. One question. Record immediately on waking.",
+    "micro_recognition": "3-5 times/day. 10 seconds. Notice the field. Return to action."
+  },
+
+  "tracks": [
+    {"id": 1, "name": "Economic autonomy", "domain": "Income, savings, investments, business, portable work"},
+    {"id": 2, "name": "Hindi", "domain": "Vocabulary, listening, speaking, reading"},
+    {"id": 3, "name": "Indian embeddedness", "domain": "Friends, institutions, cultural competence"},
+    {"id": 4, "name": "Uttarakhand intelligence", "domain": "Land, leases, water, climate, villages, veterinary"},
+    {"id": 5, "name": "Land competence", "domain": "Soil, growing, irrigation, trees, tools, repairs"},
+    {"id": 6, "name": "Animals", "domain": "Dogs, cows, veterinary basics, husbandry, feed, fencing"},
+    {"id": 7, "name": "Body", "domain": "Strength, mobility, fitness, sleep, teeth"},
+    {"id": 8, "name": "Scholarship", "domain": "Sanskrit, philosophy, research, writing"},
+    {"id": 9, "name": "Inner discipline", "domain": "Meditation, Recognition, dream practice, imagination"},
+    {"id": 10, "name": "Social architecture", "domain": "People worth keeping for decades"}
+  ],
+
+  "interview_domains": [
+    "Phenomenology — what changed in visualization, recognition, mood, dreams",
+    "Kriyā — what physically happened because you acted",
+    "Avoidance — what important action was repeatedly postponed",
+    "Belief — what belief produced the week's largest behavioral constraint",
+    "Opportunity — what did you notice that earlier versions might have ignored",
+    "Anomaly — did anything genuinely surprising occur",
+    "Alternative explanation — what is the strongest ordinary explanation",
+    "Anticipation — where were you compulsively checking whether it was working",
+    "Will — did your desire for the frozen target remain coherent",
+    "Bridge — what are next week's three highest-leverage physical moves"
+  ],
+
+  "event_classifier": {
+    "C0": "Ordinary background event — no plausible relationship",
+    "C1": "Direct causation — obvious action produced result",
+    "C2": "Salience-mediated opportunity — goal orientation caused you to notice it",
+    "C3": "Coincidence — relevant-looking event, no demonstrated causal relation",
+    "C4": "Pre-registered anomaly — low-base-rate event matching something recorded before",
+    "C5": "Potentially anomalous information — received in dream/scrying, independently verified"
+  },
+
+  "hypotheses": {
+    "H1_psychological": "Imaginal practice → identity → salience → motivation → behavior → changed outcome. No paranormal mechanism required.",
+    "H2_inexternalist": "Intrinsic phenomenal organization and extrinsic world-involving behavior are aspects of one unfolding process. Changing the aperture changes one side of a world-involving dynamic.",
+    "H3_strong": "Intentional configuration of consciousness contributes to probability/outcome selection in ways not exhausted by H1/H2. Requires strongest evidence."
+  },
+
+  "master_formula": [
+    "RECOGNIZE — I am not merely the contracted self-positioning.",
+    "CHOOSE — Specify the world.",
+    "INHABIT — Experience it until it possesses phenomenological depth.",
+    "TASTE — Find its rasa.",
+    "LISTEN — Allow unexpected material to emerge.",
+    "KNOW — Extract information about the bridge.",
+    "ACT — Apply the correct force through the correct medium to the correct object.",
+    "RELEASE — Do not demand the route.",
+    "OBSERVE — Record what reality actually does.",
+    "CORRECT — Change the map, not the evidence.",
+    "REPEAT — For years."
+  ],
+
+  "rasa": {
+    "invariant_qualities": [
+      "rootedness", "autonomy", "quiet competence", "stewardship",
+      "animals", "land", "Indian belonging", "scholarship",
+      "contemplation", "simplicity", "physical capability",
+      "freedom from institutional dependence"
+    ],
+    "daily_instantiations": [
+      "monsoon night", "feeding animals", "writing in the afternoon",
+      "talking locally in Hindi", "fixing something broken",
+      "dealing with a veterinarian", "paying a farm bill",
+      "cold morning", "animal is ill and you respond competently"
+    ]
+  },
+
+  "safety_rules": [
+    "No pacts — no surrender of autonomy to any entity",
+    "No lust of result — maximum engagement, minimum insistence",
+    "Cassiopaea audit — weekly check for desire/evidence/confusion",
+    "Pre-registration — predictions timestamped before events",
+    "Minimum viable day — 3min recognition + 10min bhāvanā + 1 kriyā + 2min logging",
+    "Failed day — never compensate, just record MISSED and resume"
+  ]
+}

@@ -1,0 +1,748 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "Standardised property listings per region — 5 real listings each, as children of geography nodes",
+    "nonNegotiables": ["mountains", "forest", "river"],
+    "schema": "Each listing has: id, region, size, price_gbp, terrain, soil, water, forest, images, listingUrls, constraints (what it allows/blocks from geography.json)"
+  },
+
+  "listings": {
+
+    "ranikhet-almora": [
+      {
+        "id": "ra-01",
+        "region": "ranikhet-almora",
+        "name": "Ranikhet Agricultural Land — 108,000 sq ft",
+        "size": "108,000 sq ft (2.5 acres)",
+        "price_inr": "₹1.5 Cr",
+        "price_gbp": 11628,
+        "pricePerAcre_gbp": 4651,
+        "location": "Majkhali to Govind Puri road, 4km from Majkhali",
+        "terrain": "Flat land — explicitly described as flat",
+        "soil": "Fertile (proven by location near Chaubatia Gardens apple research centre)",
+        "water": "Available on site",
+        "electricity": "Available",
+        "forest": "Pine/deodar nearby",
+        "river": "Kosi 20km",
+        "roadAccess": "Yes — on road",
+        "images": ["https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ranikhet-almora-108000-sq-ft-1-50-cr-1222777.htm"],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ranikhet-almora-108000-sq-ft-1-50-cr-1222777.htm"},
+          {"name": "JK Property Agent", "url": "https://www.realestateindia.com/profile/jk-property-in-bhimtal-nainital-1515800/"}
+        ],
+        "highlights": ["Explicitly flat land", "Water + electricity available", "On road"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ra-02",
+        "region": "ranikhet-almora",
+        "name": "Ranikhet Agricultural Land — 33 Bigha",
+        "size": "33 Bigha (574,992 sq ft / 13.2 acres)",
+        "price_inr": "Call for Price",
+        "price_gbp": null,
+        "pricePerAcre_gbp": null,
+        "location": "Chaukhutia, near Ramganga river",
+        "terrain": "500ft front on national highway, 500ft depth",
+        "soil": "River valley soil — fertile",
+        "water": "Ramganga river adjacent",
+        "electricity": "Available",
+        "forest": "Riverine forest nearby",
+        "river": "Ramganga (on bank)",
+        "roadAccess": "National highway frontage",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ranikhet-almora-33-bigha-767614.htm"}
+        ],
+        "highlights": ["On Ramganga river bank", "National highway frontage", "Large plot"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ra-03",
+        "region": "ranikhet-almora",
+        "name": "Ranikhet Agricultural Land — 1120 Sq Yards",
+        "size": "1120 Sq Yards (10,080 sq ft / 0.23 acres)",
+        "price_inr": "₹1.10 Cr",
+        "price_gbp": 8527,
+        "pricePerAcre_gbp": 37074,
+        "location": "Ranikhet, on road",
+        "terrain": "On road — likely flat or gentle slope",
+        "soil": "Unknown — property listing",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Nearby",
+        "river": "Kosi region",
+        "roadAccess": "Yes — on road",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ranikhet-almora-1120-sq-yards-1-10-cr-959182.htm"}
+        ],
+        "highlights": ["Full Himalaya view", "On road", "Best for farmhouse"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ra-04",
+        "region": "ranikhet-almora",
+        "name": "Ranikhet — 21,000 Sq Ft Himalaya View",
+        "size": "21,000 sq ft (0.48 acres)",
+        "price_inr": "₹10 Lac",
+        "price_gbp": 775,
+        "pricePerAcre_gbp": 1615,
+        "location": "Ranikhet, Almora",
+        "terrain": "Himalaya view — likely slopes",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Nearby",
+        "river": "Kosi region",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ranikhet-almora-in-himalaya-view-21000-sq-ft-10-lac-1036304.htm"}
+        ],
+        "highlights": ["Budget — ₹10 Lac!", "Himalaya view", "Can be used for resort/cottage"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ra-05",
+        "region": "ranikhet-almora",
+        "name": "Himalayan Properties — 33 Bigha Dumlot Estate",
+        "size": "40 Nali (86,400 sq ft / 2 acres)",
+        "price_inr": "₹3.20 Cr",
+        "price_gbp": 24806,
+        "pricePerAcre_gbp": 12403,
+        "location": "Dumlot, Kausani (near Almora)",
+        "terrain": "Hilltop with Himalayan view",
+        "soil": "Natural water source on property",
+        "water": "Natural spring + mountain water",
+        "electricity": "Available",
+        "forest": "Surrounded by forest",
+        "river": "Gomti/Ramganga in valley",
+        "roadAccess": "500m from main road",
+        "images": [],
+        "listingUrls": [
+          {"name": "Mathur True Marketing", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kausani-almora-9600-sq-yards-3-20-cr-961845.htm"}
+        ],
+        "highlights": ["Natural water source", "Excellent Himalayan view", "Seccluded"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      }
+    ],
+
+    "peora": [
+      {
+        "id": "pe-01",
+        "region": "peora",
+        "name": "Mukteshwar Agricultural Land — 4000 Sq Yards",
+        "size": "4000 Sq Yards (36,000 sq ft / 0.83 acres)",
+        "price_inr": "₹3 Lac",
+        "price_gbp": 233,
+        "pricePerAcre_gbp": 281,
+        "location": "Kol Dhanachuli village, Mukteshwar",
+        "terrain": "Apple gardening area — rolling hills",
+        "soil": "Rich (apple orchards prove fertility)",
+        "water": "Available — 10 min from road",
+        "electricity": "Available",
+        "forest": "Apple orchards, mixed forest",
+        "river": "Kosi nearby",
+        "roadAccess": "10 min walk from motorable road",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-mukteshwar-nainital-4000-sq-yards-3-lac-1288178.htm"},
+          {"name": "Apna Pahad Agent", "url": "https://www.realestateindia.com/profile/apna-pahad-in-mukteshwar-nainital-2586764/"}
+        ],
+        "highlights": ["CHEAPEST — ₹3 Lac for 4000 sq yd!", "Apple gardening proven", "Negotiable"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "pe-02",
+        "region": "peora",
+        "name": "Mukteshwar — 960 Sq Yards Himalayan View",
+        "size": "960 Sq Yards (8,640 sq ft / 0.2 acres)",
+        "price_inr": "₹2 Cr",
+        "price_gbp": 15504,
+        "pricePerAcre_gbp": 77520,
+        "location": "Mukteshwar, Nainital",
+        "terrain": "Hillside — Himalayan view",
+        "soil": "Rich, fertile (verified by listing)",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Surrounded by natural beauty",
+        "river": "Nearby",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-mukteshwar-nainital-960-sq-yards-2-cr-1504707.htm"},
+          {"name": "Nainital Properties", "url": "https://www.realestateindia.com/profile/nainital-properties-in-ramgarh-nainital-1219667/"}
+        ],
+        "highlights": ["Premium — Himalayan view", "Rich fertile soil"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "pe-03",
+        "region": "peora",
+        "name": "Mukteshwar — 3120 Sq Yards Himalayan View",
+        "size": "3120 Sq Yards (28,080 sq ft / 0.65 acres)",
+        "price_inr": "₹2.29 Cr",
+        "price_gbp": 17752,
+        "pricePerAcre_gbp": 27311,
+        "location": "Mukteshwar, Nainital",
+        "terrain": "Hillside — Himalayan view",
+        "soil": "Unknown — likely good (Mukteshwar fruit belt)",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Nearby orchards",
+        "river": "Nearby",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-mukteshwar-nainital-3120-sq-yards-2-29-cr-1267501.htm"},
+          {"name": "Rawat Property", "url": "https://www.realestateindia.com/profile/rawat-property-in-ramnagar-nainital-2135040/"}
+        ],
+        "highlights": ["Himalayan view", "Discounted offer"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "pe-04",
+        "region": "peora",
+        "name": "Ramgarh — 129,600 Sq Ft (3 acres)",
+        "size": "129,600 sq ft (3 acres)",
+        "price_inr": "₹6 Cr",
+        "price_gbp": 46512,
+        "pricePerAcre_gbp": 15504,
+        "location": "Ramgarh, Nainital",
+        "terrain": "Apple belt — rolling hills",
+        "soil": "Excellent (Ramgarh is famous apple country)",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Apple orchards, mixed forest",
+        "river": "Nearby",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-ramgarh-nainital-129600-sq-ft-6-cr-1092243.htm"}
+        ],
+        "highlights": ["Ramgarh apple belt — premium location"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "pe-05",
+        "region": "peora",
+        "name": "Dhanachuli — 1920 Sq Yards",
+        "size": "1920 Sq Yards (17,280 sq ft / 0.4 acres)",
+        "price_inr": "₹20 Lac",
+        "price_gbp": 1550,
+        "pricePerAcre_gbp": 3875,
+        "location": "Dhanachuli, Nainital",
+        "terrain": "Hillside — Himalayan view",
+        "soil": "Good (fruit belt)",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Orchards nearby",
+        "river": "Nearby",
+        "roadAccess": "16ft road to property",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-dhanachuli-nainital-1920-sq-yards-20-lac-1064205.htm"}
+        ],
+        "highlights": ["Road to property", "Himalayan view", "Good price"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      }
+    ],
+
+    "kausani": [
+      {
+        "id": "ka-01",
+        "region": "kausani",
+        "name": "Kausani — 1 Nali Himalayan View",
+        "size": "1 Nali (2160 sq ft / 0.05 acres)",
+        "price_inr": "₹16 Lac",
+        "price_gbp": 1240,
+        "pricePerAcre_gbp": 24806,
+        "location": "Kausani, on road",
+        "terrain": "On road — likely ridge-top",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Pine/deodar nearby",
+        "river": "Kosi/Gomti in valley",
+        "roadAccess": "On road",
+        "images": [],
+        "listingUrls": [
+          {"name": "Kausani Real Estate", "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kausani-bageshwar-2160-sq-ft-16-lac-1467486.htm"}
+        ],
+        "highlights": ["On road", "Himalayan view", "Budget — ₹16 Lac per nali"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ka-02",
+        "region": "kausani",
+        "name": "Kausani — 12 Nali Himalayan View",
+        "size": "12 Nali (25,920 sq ft / 0.6 acres)",
+        "price_inr": "₹1.08 Cr",
+        "price_gbp": 8372,
+        "pricePerAcre_gbp": 13953,
+        "location": "Kausani",
+        "terrain": "Hillside — 500m from road",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Surrounded by forest",
+        "river": "Valley below",
+        "roadAccess": "500m from main road",
+        "images": [],
+        "listingUrls": [
+          {"name": "Nainital Properties", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kausani-almora-9600-sq-yards-3-20-cr-961845.htm"}
+        ],
+        "highlights": ["12 Nali — good size", "Himalayan view", "Road access"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ka-03",
+        "region": "kausani",
+        "name": "Kausani — 10000 Sq Ft Residential Plot",
+        "size": "10000 sq ft (0.23 acres)",
+        "price_inr": "₹1.80 Cr",
+        "price_gbp": 13953,
+        "pricePerAcre_gbp": 60652,
+        "location": "Kausani, Almora",
+        "terrain": "Residential plot — likely flat",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Nearby",
+        "river": "Valley below",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Maraj Realty", "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kausani-almora-in-samridh-natures-resort-10000-sq-ft-1-80-cr-1461175.htm"}
+        ],
+        "highlights": ["Ready to build", "Serene location"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ka-04",
+        "region": "kausani",
+        "name": "Kausani — 2.5 BHK House",
+        "size": "1200 sq ft house",
+        "price_inr": "₹1.20 Cr",
+        "price_gbp": 9302,
+        "pricePerAcre_gbp": null,
+        "location": "Kausani, Bageshwar",
+        "terrain": "Top of Kausani — highest point",
+        "soil": "N/A — existing house",
+        "water": "Available",
+        "electricity": "Power backup",
+        "forest": "Surrounded",
+        "river": "Valley below",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Himalayan Dealer", "url": "https://www.realestateindia.com/property-detail/2-5-bkh-individual-houses-for-sale-in-kausani-bageshwar-1200-sq-ft-1-20-cr-1334422.htm"}
+        ],
+        "highlights": ["Existing house — move in ready", "Top of Kausani", "Himalayan view"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "ka-05",
+        "region": "kausani",
+        "name": "Kausani — 300 Sq Yards Snowfall Zone",
+        "size": "300 Sq Yards (2700 sq ft / 0.06 acres)",
+        "price_inr": "₹15 Lac",
+        "price_gbp": 1163,
+        "pricePerAcre_gbp": 19375,
+        "location": "Kausani, near waterfall",
+        "terrain": "Snowfall zone — near waterfall",
+        "soil": "Unknown",
+        "water": "Waterfall nearby + available",
+        "electricity": "Available",
+        "forest": "Near waterfall — dense",
+        "river": "Valley below",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Janardan Farms", "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kausani-bageshwar-300-sq-yards-15-lac-1101619.htm"}
+        ],
+        "highlights": ["Near waterfall!", "Snowfall zone", "Great Himalaya view"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": true, "mushroomLab": true}
+      }
+    ],
+
+    "dhanaulti-kanatal": [
+      {
+        "id": "dk-01",
+        "region": "dhanaulti-kanatal",
+        "name": "Kanatal — 540 Sq Yards Agricultural",
+        "size": "540 Sq Yards (4860 sq ft / 0.11 acres)",
+        "price_inr": "₹81 Lac",
+        "price_gbp": 6279,
+        "pricePerAcre_gbp": 57082,
+        "location": "Kanatal, Tehri Garhwal",
+        "terrain": "Hill station — likely steep",
+        "soil": "Thin (high altitude)",
+        "water": "Unknown",
+        "electricity": "Available",
+        "forest": "Dense deodar/rhododendron",
+        "river": "Bhagirathi system nearby",
+        "roadAccess": "Yes — on Chamba-Mussoorie road",
+        "images": [],
+        "listingUrls": [
+          {"name": "Gentlemen Estates", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kanatal-tehri-garhwal-540-sq-yards-78-71-lac-1216946.htm"}
+        ],
+        "highlights": ["On main road", "Kanatal — premium location"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": false, "bees": false, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true}
+      },
+      {
+        "id": "dk-02",
+        "region": "dhanaulti-kanatal",
+        "name": "Kanatal — 3600 Sq Yards Agricultural",
+        "size": "3600 Sq Yards (32,400 sq ft / 0.75 acres)",
+        "price_inr": "₹2.60 Cr",
+        "price_gbp": 20155,
+        "pricePerAcre_gbp": 26873,
+        "location": "Kanatal, Tehri Garhwal",
+        "terrain": "Hillside",
+        "soil": "Unknown",
+        "water": "Unknown",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Bhagirathi system",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "RealEstateIndia", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kanatal-tehri-garhwal-3600-sq-yards-2-60-cr-1109044.htm"}
+        ],
+        "highlights": ["Good size for Kanatal"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": false, "bees": false, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true}
+      },
+      {
+        "id": "dk-03",
+        "region": "dhanaulti-kanatal",
+        "name": "Kanatal — 1200 Sq Yards",
+        "size": "1200 Sq Yards (10,800 sq ft / 0.25 acres)",
+        "price_inr": "₹1.25 Cr",
+        "price_gbp": 9690,
+        "pricePerAcre_gbp": 38759,
+        "location": "Kanatal, Tehri Garhwal",
+        "terrain": "Hillside",
+        "soil": "Unknown",
+        "water": "Unknown",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Nearby",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Gentlemen Estates", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kanatal-tehri-garhwal-1200-sq-yards-1-25-cr-1211236.htm"}
+        ],
+        "highlights": ["Mid-size option"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": false, "bees": false, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true}
+      },
+      {
+        "id": "dk-04",
+        "region": "dhanaulti-kanatal",
+        "name": "Chamba — 2000 Sq Yards Wide Angle View",
+        "size": "2000 Sq Yards (18,000 sq ft / 0.42 acres)",
+        "price_inr": "₹1.25 Cr",
+        "price_gbp": 9690,
+        "pricePerAcre_gbp": 23071,
+        "location": "Chamba, Tehri Garhwal",
+        "terrain": "Wide angle Himalayan view",
+        "soil": "Unknown",
+        "water": "Unknown",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Bhagirathi",
+        "roadAccess": "66km from Rishikesh",
+        "images": [],
+        "listingUrls": [
+          {"name": "Gentlemen Estates", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-chamba-tehri-garhwal-2000-sq-yards-1-25-cr-1211476.htm"}
+        ],
+        "highlights": ["Wide angle Himalayan view", "50 nali total available"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": false, "bees": false, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true}
+      },
+      {
+        "id": "dk-05",
+        "region": "dhanaulti-kanatal",
+        "name": "Dhanaulti — 3588 Sq Yards",
+        "size": "3588 Sq Yards (32,292 sq ft / 0.74 acres)",
+        "price_inr": "Not listed",
+        "price_gbp": null,
+        "pricePerAcre_gbp": null,
+        "location": "Dhanaulti, New Tehri",
+        "terrain": "Hill station terrain",
+        "soil": "Unknown",
+        "water": "Unknown",
+        "electricity": "Available",
+        "forest": "Dense deodar/oak",
+        "river": "Bhagirathi system",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "99acres", "url": "https://www.99acres.com/agricultural-farm-land-for-sale-in-dhanaulti-new-tehri-3588-sq-yard-spid-F86501770"}
+        ],
+        "highlights": ["Good size", "Freehold"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": false, "bees": false, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true}
+      }
+    ],
+
+    "kasol-parvati": [
+      {
+        "id": "kp-01",
+        "region": "kasol-parvati",
+        "name": "Kasol — 10 Biswa Agricultural",
+        "size": "10 Biswa (13,500 sq ft / 0.31 acres)",
+        "price_inr": "₹1.20 Cr",
+        "price_gbp": 9302,
+        "pricePerAcre_gbp": 30006,
+        "location": "Kasol, Kullu",
+        "terrain": "Valley — river and mountain view",
+        "soil": "Alluvial — fertile",
+        "water": "Parvati river adjacent",
+        "electricity": "Available",
+        "forest": "Dense pine/deodar",
+        "river": "Parvati River (on site)",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Hidimba Realtors", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kasol-kullu-10-biswa-1-20-cr-1342176.htm"},
+          {"name": "Hidimba Manali Realtors", "url": "https://www.hidimbamanalirestate.in/sell/agricultural-farm-land-kasol-kullu_1107745.htm"}
+        ],
+        "highlights": ["River + mountain view", "Fertile alluvial soil"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true, "propertyPurchase": false}
+      },
+      {
+        "id": "kp-02",
+        "region": "kasol-parvati",
+        "name": "Kasol — 10 Biswa (Second Listing)",
+        "size": "10 Biswa (13,500 sq ft / 0.31 acres)",
+        "price_inr": "₹1 Cr",
+        "price_gbp": 7752,
+        "pricePerAcre_gbp": 25005,
+        "location": "Kasol, Kullu",
+        "terrain": "Valley — mountain view",
+        "soil": "Unknown",
+        "water": "Parvati river",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Parvati",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Hidimba Realtors", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kasol-kullu-10-biswa-1-cr-1107745.htm"}
+        ],
+        "highlights": ["Slightly cheaper option"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true, "propertyPurchase": false}
+      },
+      {
+        "id": "kp-03",
+        "region": "kasol-parvati",
+        "name": "Kasol — 1 Bigha Residential Plot",
+        "size": "1 Bigha (17,452 sq ft / 0.4 acres)",
+        "price_inr": "₹70 Lac",
+        "price_gbp": 5426,
+        "pricePerAcre_gbp": 13566,
+        "location": "Kasol, Kullu",
+        "terrain": "Hillside — picturesque",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Surrounded",
+        "river": "Parvati",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Himachal Property", "url": "https://www.realestateindia.com/property-detail/residential-plot-for-sale-in-kasol-kullu-1-bigha-70-lac-1479706.htm"}
+        ],
+        "highlights": ["Residential plot — can build", "Prime Kasol location"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true, "propertyPurchase": false}
+      },
+      {
+        "id": "kp-04",
+        "region": "kasol-parvati",
+        "name": "Kasol — 7 Biswa Agricultural",
+        "size": "7 Biswa (9,450 sq ft / 0.22 acres)",
+        "price_inr": "₹56 Lac",
+        "price_gbp": 4341,
+        "pricePerAcre_gbp": 19732,
+        "location": "Kasol, Kullu",
+        "terrain": "Valley",
+        "soil": "Unknown",
+        "water": "Parvati river",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Parvati",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Hidimba Realtors", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kasol-kullu-7-biswa-56-lac-1157110.htm"}
+        ],
+        "highlights": ["Smaller, more affordable"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true, "propertyPurchase": false}
+      },
+      {
+        "id": "kp-05",
+        "region": "kasol-parvati",
+        "name": "Kasol — 17 Biswa Agricultural",
+        "size": "17 Biswa (22,950 sq ft / 0.53 acres)",
+        "price_inr": "₹1.36 Cr",
+        "price_gbp": 10543,
+        "pricePerAcre_gbp": 19893,
+        "location": "Kasol, Kullu",
+        "terrain": "Valley — mountain view",
+        "soil": "Unknown",
+        "water": "Parvati river",
+        "electricity": "Available",
+        "forest": "Dense",
+        "river": "Parvati",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Hidimba Realtors", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-kasol-kullu-17-biswa-1-36-cr-1157111.htm"}
+        ],
+        "highlights": ["Largest Kasol listing we found"],
+        "constraints": {"cow": false, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": true, "turmeric": false, "mushroomLab": true, "propertyPurchase": false}
+      }
+    ],
+
+    "rishikesh-tehri": [
+      {
+        "id": "rt-01",
+        "region": "rishikesh-tehri",
+        "name": "Narendra Nagar — 2.23 Acre Ganges View",
+        "size": "2.23 Acre (97,138 sq ft)",
+        "price_inr": "₹11.25 Cr",
+        "price_gbp": 87209,
+        "pricePerAcre_gbp": 39107,
+        "location": "Narendra Nagar, Rishikesh",
+        "terrain": "Valley — Ganges view",
+        "soil": "Unknown",
+        "water": "Ganges adjacent",
+        "electricity": "Available",
+        "forest": "Shivalik hills nearby",
+        "river": "Ganges (major)",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Gentlemen Estates", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-narendra-nagar-rishikesh-2-acre-11-25-cr-1482217.htm"}
+        ],
+        "highlights": ["Ganges view", "Premium location"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": false, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "rt-02",
+        "region": "rishikesh-tehri",
+        "name": "Narendra Nagar — 4 Bigha",
+        "size": "4 Bigha (6,960 sq ft / 0.16 acres)",
+        "price_inr": "₹8 Cr",
+        "price_gbp": 62016,
+        "pricePerAcre_gbp": 387596,
+        "location": "Narendra Nagar, Rishikesh",
+        "terrain": "Valley — Ganges view",
+        "soil": "Unknown",
+        "water": "Ganges",
+        "electricity": "Available",
+        "forest": "Shivalik",
+        "river": "Ganges",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Gentlemen Estates", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-narendra-nagar-rishikesh-4-bigha-8-cr-1482203.htm"}
+        ],
+        "highlights": ["Small but premium"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": false, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "rt-03",
+        "region": "rishikesh-tehri",
+        "name": "Neelkanth Road — 10 Acre Agriculture",
+        "size": "10 Acre (435,600 sq ft)",
+        "price_inr": "₹30 Cr",
+        "price_gbp": 232558,
+        "pricePerAcre_gbp": 23256,
+        "location": "Neelkanth Road, Rishikesh",
+        "terrain": "Valley — agriculture + horticulture + apiculture",
+        "soil": "Unknown",
+        "water": "Ganges system",
+        "electricity": "Available",
+        "forest": "Dense Shivalik",
+        "river": "Ganges tributaries",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "Mukesh Owner", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-neelkanth-road-neelkanth-road-rishikesh-10-acre-30-cr-1250658.htm"}
+        ],
+        "highlights": ["10 acres — massive", "Good price per acre", "For horticulture + apiculture"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": false, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "rt-04",
+        "region": "rishikesh-tehri",
+        "name": "Shyampur — 90 Sq Yards South Facing",
+        "size": "90 Sq Yards (810 sq ft)",
+        "price_inr": "₹11 Lac",
+        "price_gbp": 853,
+        "pricePerAcre_gbp": 4264,
+        "location": "Shyampur, Rishikesh",
+        "terrain": "South facing — near temple",
+        "soil": "Unknown",
+        "water": "Available",
+        "electricity": "Available",
+        "forest": "Nearby",
+        "river": "Ganges nearby",
+        "roadAccess": "Near main market",
+        "images": [],
+        "listingUrls": [
+          {"name": "Riya Owner", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-shyampur-rishikesh-90-sq-yards-11-lac-1039349.htm"}
+        ],
+        "highlights": ["Budget — ₹11 Lac", "South facing", "Near temple"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": false, "apples": false, "turmeric": true, "mushroomLab": true}
+      },
+      {
+        "id": "rt-05",
+        "region": "rishikesh-tehri",
+        "name": "Haridwar Road — 2400 Sq Yards Camping Land",
+        "size": "2400 Sq Yards (21,600 sq ft / 0.5 acres)",
+        "price_inr": "₹35 Lac",
+        "price_gbp": 2713,
+        "pricePerAcre_gbp": 6783,
+        "location": "Haridwar Road, Rishikesh",
+        "terrain": "Hill view + river view",
+        "soil": "Unknown",
+        "water": "Ganges system",
+        "electricity": "Available",
+        "forest": "Nearby",
+        "river": "Ganges view",
+        "roadAccess": "Yes",
+        "images": [],
+        "listingUrls": [
+          {"name": "JN Groups", "url": "https://www.realestateindia.com/property-detail/agricultural-farm-land-for-sale-in-haridwar-road-rishikesh-2400-sq-yards-35-l-856473.htm"}
+        ],
+        "highlights": ["Camping/resort potential", "Beautiful view"],
+        "constraints": {"cow": true, "sheep": true, "goats": true, "chickens": true, "bees": true, "largeFarming": true, "apples": false, "turmeric": true, "mushroomLab": true}
+      }
+    ]
+  },
+
+  "missingRegions": {
+    "description": "Regions we should consider that weren't in the original 5",
+    "candidates": [
+      {
+        "name": "Rishikesh/Tehri",
+        "why": "Ganges river + mountains + forest. Best water access. Closest to Dehradun. Spiritual hub.",
+        "added": true,
+        "reason": "Added as 6th region — Ganges is the most significant river in India"
+      },
+      {
+        "name": "Ramgarh (near Mukteshwar)",
+        "why": "Apple belt, mountains, forest, near Nainital. Similar to Peora but more established.",
+        "added": false,
+        "reason": "Subsumed by Peora — same area, overlapping listings"
+      },
+      {
+        "name": "Bhowali (near Nainital)",
+        "why": "Lake nearby, mountains, forest, fruit orchards. Near Nainital for supplies.",
+        "added": false,
+        "reason": "Subsumed by Peora — same microregion, similar listings"
+      }
+    ]
+  }
+}

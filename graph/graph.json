@@ -1,0 +1,2047 @@
+{
+  "version": "3.0.0",
+  "description": "lifeOS planning graph \u2014 points progression, animals, plants, legal, skills, infrastructure. Git-trackable, content-addressed.",
+  "nodes": [
+    {
+      "id": "skill:hindi_basics",
+      "type": "skill",
+      "cluster": "skills",
+      "label": "Basic Hindi",
+      "properties": {
+        "level": 1,
+        "target": 4,
+        "progress": 0
+      },
+      "description": "Survival Hindi. Buy things, ask directions."
+    },
+    {
+      "id": "skill:hindi_fluent",
+      "type": "skill",
+      "cluster": "skills",
+      "label": "Fluent Hindi",
+      "properties": {
+        "level": 3,
+        "target": 4,
+        "progress": 0
+      },
+      "description": "Business, legal, academic. Full independence."
+    },
+    {
+      "id": "skill:hindi_literary",
+      "type": "skill",
+      "cluster": "skills",
+      "label": "Literary Hindi",
+      "properties": {
+        "level": 4,
+        "target": 4,
+        "progress": 0
+      },
+      "description": "Publish philosophy. Teach at BHU."
+    },
+    {
+      "id": "legal:company",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "Register SVATANTRYA Pvt Ltd",
+      "properties": {
+        "cost": 15000,
+        "time": "7-15 days",
+        "status": "not_started",
+        "directors_needed": 2,
+        "indian_director_required": true,
+        "min_capital": "\u20b91 (practically \u20b91L)"
+      },
+      "description": "Private Ltd. 100% foreign ownership allowed. Enables Employment Visa."
+    },
+    {
+      "id": "legal:dsc",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "Digital Signature Certificate",
+      "properties": {
+        "cost": 2000,
+        "time": "1-2 days",
+        "status": "not_started"
+      },
+      "description": "Class 3 DSC for all directors. Required before SPICe+ filing."
+    },
+    {
+      "id": "legal:din",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "Director Identification Number",
+      "properties": {
+        "cost": 0,
+        "time": "1 day",
+        "status": "not_started"
+      },
+      "description": "Auto-allotted with SPICe+ filing."
+    },
+    {
+      "id": "legal:spice",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "SPICe+ Filing",
+      "properties": {
+        "cost": 5000,
+        "time": "3-7 days",
+        "status": "not_started"
+      },
+      "description": "MCA online incorporation. Includes PAN, TAN, GST optional."
+    },
+    {
+      "id": "legal:isbn",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "ISBN Registration",
+      "properties": {
+        "cost": 0,
+        "time": "7-14 days",
+        "status": "not_started",
+        "portal": "isbn.gov.in"
+      },
+      "description": "Free from Raja Rammohun Roy Agency. Required for publishing books."
+    },
+    {
+      "id": "legal:fssai",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "FSSAI License (Supplements)",
+      "properties": {
+        "cost": 5000,
+        "time": "30-60 days",
+        "status": "not_started",
+        "turnover_threshold": 2000000
+      },
+      "description": "Required for selling supplements. Basic if <\u20b912L, State if \u20b912-20L, Central if >\u20b920L."
+    },
+    {
+      "id": "legal:iec",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "IEC Code (Import Export)",
+      "properties": {
+        "cost": 3000,
+        "time": "7-10 days",
+        "status": "not_started"
+      },
+      "description": "Import Export Code. Required for exporting supplements globally."
+    },
+    {
+      "id": "company:svatantrya",
+      "type": "legal",
+      "cluster": "company",
+      "label": "SVATANTRYA Private Limited",
+      "properties": {
+        "type": "private_limited",
+        "sector": "publishing_wellness_exports",
+        "foreign_ownership": "100%",
+        "min_capital": 100000,
+        "directors": 2,
+        "indian_director": "required"
+      },
+      "description": "The company. Publishing, supplements, exports. AI-native. Named after the Shaivist concept of freedom."
+    },
+    {
+      "id": "company:publishing",
+      "type": "product",
+      "cluster": "company",
+      "label": "Publishing Division",
+      "properties": {
+        "products": [
+          "books",
+          "courses",
+          "digital_content"
+        ],
+        "ai_native": true
+      },
+      "description": "Indian philosophy publishing. AI-assisted writing, translation, content creation."
+    },
+    {
+      "id": "company:supplements",
+      "type": "product",
+      "cluster": "company",
+      "label": "Supplements Division",
+      "properties": {
+        "products": [
+          "shilajit",
+          "cordyceps",
+          "mushrooms",
+          "herbal"
+        ],
+        "all_natural": true,
+        "youtube_validated": true
+      },
+      "description": "Natural supplements. Handpicked, validated with YouTube content. Export globally."
+    },
+    {
+      "id": "company:exports",
+      "type": "product",
+      "cluster": "company",
+      "label": "Exports Division",
+      "properties": {
+        "markets": [
+          "usa",
+          "eu",
+          "uk",
+          "japan"
+        ],
+        "products": [
+          "supplements",
+          "books",
+          "digital"
+        ]
+      },
+      "description": "Global exports of supplements and publications."
+    },
+    {
+      "id": "legal:visa",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "Employment Visa (E-1)",
+      "properties": {
+        "salary_requirement": 2500000,
+        "status": "not_started"
+      },
+      "description": "Requires SVATANTRYA paying you \u20b925L+/year. Employer-specific."
+    },
+    {
+      "id": "legal:lease",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "Land Lease (5yr)",
+      "properties": {
+        "deposit": 200000,
+        "annual_rent": 200000,
+        "status": "not_started"
+      },
+      "description": "Agricultural land. Can only lease, not buy."
+    },
+    {
+      "id": "legal:gst",
+      "type": "legal",
+      "cluster": "legal",
+      "label": "GST Registration",
+      "properties": {
+        "cost": 2000,
+        "time": "7 days",
+        "status": "not_started",
+        "threshold": 2000000
+      },
+      "description": "Mandatory if turnover >\u20b920L or doing interstate supply."
+    },
+    {
+      "id": "asset:gir_cow",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Gir Cow",
+      "properties": {
+        "price": 70000,
+        "breed": "Gir",
+        "product": "milk",
+        "yield": "5-10L/day",
+        "status": "SELECTED",
+        "reason": "A2 milk, docile, handles 3-28\u00b0C. One cow is enough for household milk. 2 cows if you want year-round (staggered dry periods).",
+        "conflictsWith": [],
+        "role": "Milk, compost, rhythm to days",
+        "image": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=400"
+    },
+    {
+      "id": "asset:sahiwal_cow",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Sahiwal Cow",
+      "properties": {
+        "price": 80000,
+        "breed": "Sahiwal",
+        "product": "milk",
+        "yield": "8-15L/day",
+        "image": "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=400"
+    },
+    {
+      "id": "asset:gaddi_sheep",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Gaddi Sheep (x3)",
+      "properties": {
+        "price_each": 5000,
+        "count": 3,
+        "breed": "Gaddi",
+        "product": "wool",
+        "status": "SELECTED",
+        "reason": "Native to your exact altitude. Grazing companions for cow. Wool. Meat. They eat what cow doesn't.",
+        "conflictsWith": [],
+        "role": "Flock companion, grazing, wool",
+        "image": "https://images.unsplash.com/photo-1484557985045-edf25e08da73?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1484557985045-edf25e08da73?w=400"
+    },
+    {
+      "id": "asset:beetal_goat",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Beetal Goat (x3)",
+      "properties": {
+        "price_each": 10000,
+        "count": 3,
+        "breed": "Beetal",
+        "product": "milk+cheese",
+        "status": "SELECTED",
+        "reason": "Browse brush and weeds cow ignores. Milk + cheese. Comedic value. Eat everything.",
+        "conflictsWith": [],
+        "role": "Brush control, milk, cheese, comedy",
+        "image": "https://images.unsplash.com/photo-1535338454528-1b18a472e8c3?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1535338454528-1b18a472e8c3?w=400"
+    },
+    {
+      "id": "asset:desi_chickens",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Desi Chickens (x25)",
+      "properties": {
+        "price_each": 75,
+        "count": 25,
+        "product": "eggs",
+        "yield": "4-15/day",
+        "status": "SELECTED",
+        "reason": "Eggs, pest control, compost. Need Bakharwal guardian \u2014 not GSD or Rajapalayam.",
+        "conflictsWith": [],
+        "role": "Eggs, pest control, compost",
+        "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400"
+    },
+    {
+      "id": "asset:bakharwal",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Bakharwal Dog",
+      "properties": {
+        "price": 35000,
+        "breed": "Bakharwal",
+        "role": "Primary guardian. Raised with chickens from puppyhood.",
+        "status": "SELECTED",
+        "reason": "Native livestock guardian. Bred to protect flocks, not kill them. Will guard chickens, sheep, goats. Fierce with predators, gentle with flock.",
+        "conflictsWith": [],
+        "image": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400"
+    },
+    {
+      "id": "asset:gsd",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "German Shepherd",
+      "properties": {
+        "price": 30000,
+        "breed": "GSD",
+        "role": "Thinking partner. Not a farm worker.",
+        "status": "KEPT (companion)",
+        "reason": "Intelligent, loyal, trainable. Not a livestock guardian \u2014 lives with you, not the flock. Needs early chicken socialisation but can learn.",
+        "conflictsWith": [],
+        "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400"
+    },
+    {
+      "id": "asset:bee_hives",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Bee Hives (x2)",
+      "properties": {
+        "price_each": 5000,
+        "count": 2,
+        "breed": "Apis Mellifera",
+        "product": "honey",
+        "status": "SELECTED",
+        "reason": "Honey, pollination, wax. Pollinate your crops. Best ROI of any animal.",
+        "conflictsWith": [],
+        "role": "Honey, pollination, wax",
+        "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop"
+      },
+      "image_url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400"
+    },
+    {
+      "id": "plant:kitchen_garden",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Kitchen Garden (0.5 acre)",
+      "properties": {
+        "area": "0.5 acre",
+        "terraced": true
+      }
+    },
+    {
+      "id": "plant:fodder_crops",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Fodder Crops (0.5 acre)",
+      "properties": {
+        "area": "0.5 acre",
+        "crops": [
+          "jowar",
+          "berseem",
+          "napier"
+        ]
+      }
+    },
+    {
+      "id": "plant:fruit_trees",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Fruit Trees (10-15)",
+      "properties": {
+        "types": [
+          "apple",
+          "pear",
+          "plum",
+          "walnut"
+        ],
+        "years_to_harvest": "3-5"
+      }
+    },
+    {
+      "id": "plant:turmeric",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Turmeric",
+      "properties": {
+        "value_per_kg": 300,
+        "yield": "2-3 tonnes/acre"
+      }
+    },
+    {
+      "id": "plant:ashwagandha",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Ashwagandha",
+      "properties": {
+        "value_per_kg_dried": 1500,
+        "use": "adaptogen supplement"
+      }
+    },
+    {
+      "id": "plant:cordyceps",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Cordyceps Militaris",
+      "properties": {
+        "value_per_kg_dried": 80000,
+        "setup_cost": 500000,
+        "use": "high-value supplement"
+      }
+    },
+    {
+      "id": "product:milk",
+      "type": "product",
+      "cluster": "products",
+      "label": "Fresh A2 Milk",
+      "properties": {
+        "source": "cow+goat",
+        "daily": "6-7L avg"
+      }
+    },
+    {
+      "id": "product:ghee",
+      "type": "product",
+      "cluster": "products",
+      "label": "A2 Ghee",
+      "properties": {
+        "source": "cow milk",
+        "yield": "30L milk = 1L ghee"
+      }
+    },
+    {
+      "id": "product:cheese",
+      "type": "product",
+      "cluster": "products",
+      "label": "Goat Cheese",
+      "properties": {
+        "source": "goat milk"
+      }
+    },
+    {
+      "id": "product:eggs",
+      "type": "product",
+      "cluster": "products",
+      "label": "Fresh Eggs",
+      "properties": {
+        "source": "chickens",
+        "daily": "4-15"
+      }
+    },
+    {
+      "id": "product:honey",
+      "type": "product",
+      "cluster": "products",
+      "label": "Raw Honey",
+      "properties": {
+        "source": "bees",
+        "annual": "40-60kg"
+      }
+    },
+    {
+      "id": "product:wool",
+      "type": "product",
+      "cluster": "products",
+      "label": "Raw Wool",
+      "properties": {
+        "source": "sheep",
+        "annual": "6-9kg"
+      }
+    },
+    {
+      "id": "product:cordyceps",
+      "type": "product",
+      "cluster": "products",
+      "label": "Cordyceps Supplement",
+      "properties": {
+        "source": "mushroom lab",
+        "value": "40-80L/kg"
+      }
+    },
+    {
+      "id": "product:shilajit",
+      "type": "product",
+      "cluster": "products",
+      "label": "Himalayan Shilajit",
+      "properties": {
+        "source": "mountains",
+        "value": "3750-6250/100g"
+      }
+    },
+    {
+      "id": "location:ranikhet",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Ranikhet / Almora",
+      "properties": {
+        "elevation": "5500-6500ft",
+        "state": "Uttarakhand",
+        "nearest_town": "Almora 20km",
+        "region": "ranikhet-almora",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "location:bhu",
+      "type": "location",
+      "cluster": "locations",
+      "label": "BHU, Varanasi",
+      "properties": {
+        "type": "university",
+        "program": "Masters Religion & Philosophy",
+        "region": "varanasi"
+      }
+    },
+    {
+      "id": "location:varanasi",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Varanasi",
+      "properties": {
+        "type": "city",
+        "hindi_immersion": true,
+        "region": "varanasi"
+      }
+    },
+    {
+      "id": "milestone:bhu_start",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "BHU Masters Begins",
+      "properties": {
+        "date": "2027-09",
+        "duration": "2 years"
+      }
+    },
+    {
+      "id": "milestone:bhu_grad",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "BHU Graduation",
+      "properties": {
+        "date": "2029-09",
+        "visa_deadline": true
+      }
+    },
+    {
+      "id": "milestone:company_reg",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "Company Registered",
+      "properties": {
+        "when": "during BHU",
+        "cost_points": 30,
+        "cost_gbp": 15000
+      }
+    },
+    {
+      "id": "milestone:visa_approved",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "Employment Visa Approved",
+      "properties": {
+        "deadline": "2029-09",
+        "cost_points": 78,
+        "cost_gbp": 39000
+      }
+    },
+    {
+      "id": "milestone:estate_movein",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "Move to Estate",
+      "properties": {
+        "when": "after visa",
+        "cost_points": 165,
+        "cost_gbp": 82500
+      }
+    },
+    {
+      "id": "milestone:first_product",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "First Product Sold",
+      "properties": {
+        "when": "year 1-2 of estate",
+        "cost_points": 260,
+        "cost_gbp": 130000
+      }
+    },
+    {
+      "id": "infra:cowshed",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Cowshed",
+      "properties": {
+        "cost": 300000,
+        "difficulty": "medium"
+      }
+    },
+    {
+      "id": "infra:coop",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Chicken Coop",
+      "properties": {
+        "cost": 25000,
+        "difficulty": "easy"
+      }
+    },
+    {
+      "id": "infra:mushroom_lab",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Mushroom Lab",
+      "properties": {
+        "cost": 500000,
+        "difficulty": "medium"
+      }
+    },
+    {
+      "id": "infra:starlink",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Starlink Internet",
+      "properties": {
+        "hardware": 30000,
+        "monthly": 5000,
+        "speed": "50-220Mbps"
+      }
+    },
+    {
+      "id": "infra:solar",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Solar Panels (2kW)",
+      "properties": {
+        "cost": 200000
+      }
+    },
+    {
+      "id": "infra:borewell",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Borewell + Pump",
+      "properties": {
+        "cost": 250000
+      }
+    },
+    {
+      "id": "infra:fencing",
+      "type": "infra",
+      "cluster": "infra",
+      "label": "Fencing (5 acres)",
+      "properties": {
+        "cost": 400000
+      }
+    },
+    {
+      "id": "points:current",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "10 pts \u2014 \u00a35,000 SAVED",
+      "properties": {
+        "points": 10,
+        "gbp": 5000
+      },
+      "description": "Where you are right now. 10 points in the bank."
+    },
+    {
+      "id": "points:40",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "40 pts \u2014 COMPANY",
+      "properties": {
+        "points": 40,
+        "gbp": 20000
+      },
+      "description": "Register SVATANTRYA. Hire Indian director. Open bank account."
+    },
+    {
+      "id": "points:78",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "78 pts \u2014 VISA",
+      "properties": {
+        "points": 78,
+        "gbp": 39000
+      },
+      "description": "Employment Visa approved. Can legally live in India."
+    },
+    {
+      "id": "points:165",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "165 pts \u2014 FARM",
+      "properties": {
+        "points": 165,
+        "gbp": 82500
+      },
+      "description": "Lease secured. Shelter built. Animals purchased. Living on the land."
+    },
+    {
+      "id": "points:260",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "260 pts \u2014 BUSINESS",
+      "properties": {
+        "points": 260,
+        "gbp": 130000
+      },
+      "description": "Mushroom lab running. First supplement. First book published."
+    },
+    {
+      "id": "points:400",
+      "type": "milestone",
+      "cluster": "milestones",
+      "label": "400 pts \u2014 THE DREAM",
+      "properties": {
+        "points": 400,
+        "gbp": 200000
+      },
+      "description": "Full ecosystem. Global exports. Permanent build if wanted."
+    },
+    {
+      "id": "location:peora",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Peora, Nainital",
+      "properties": {
+        "elevation": "6600ft",
+        "state": "Uttarakhand",
+        "region": "peora",
+        "cheapest": true,
+        "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "location:kausani",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Kausani, Bageshwar",
+      "properties": {
+        "elevation": "6200ft",
+        "state": "Uttarakhand",
+        "region": "kausani",
+        "bestView": true,
+        "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "location:dhanaulti",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Dhanaulti / Kanatal",
+      "properties": {
+        "elevation": "7400ft",
+        "state": "Uttarakhand",
+        "region": "dhanaulti-kanatal",
+        "mostDramatic": true,
+        "image": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "location:kasol",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Kasol, Parvati Valley",
+      "properties": {
+        "elevation": "5180ft",
+        "state": "Himachal Pradesh",
+        "region": "kasol-parvati",
+        "section118": true,
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "location:rishikesh",
+      "type": "location",
+      "cluster": "locations",
+      "label": "Rishikesh / Tehri",
+      "properties": {
+        "elevation": "1200-3000ft",
+        "state": "Uttarakhand",
+        "region": "rishikesh-tehri",
+        "ganges": true,
+        "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop"
+      }
+    },
+    {
+      "id": "plant:potato",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Potatoes",
+      "properties": {
+        "yield": "8-12 tonnes/acre",
+        "season": "Mar-Oct"
+      },
+      "description": "Staple carb. Native to Himalayas. High yield at altitude."
+    },
+    {
+      "id": "plant:rajma",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Rajma (Kidney Beans)",
+      "properties": {
+        "yield": "500g-1kg per 10sqft",
+        "season": "Monsoon"
+      },
+      "description": "Protein staple. Grow in monsoon, dry and store for year-round use."
+    },
+    {
+      "id": "plant:madua",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Madua (Finger Millet)",
+      "properties": {
+        "yield": "1-2 tonnes/acre",
+        "season": "Monsoon"
+      },
+      "description": "Ancient Kumaon grain. Roti, porridge. Highly nutritious."
+    },
+    {
+      "id": "plant:jhangora",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Jhangora (Barnyard Millet)",
+      "properties": {
+        "yield": "1-1.5 tonnes/acre",
+        "season": "Monsoon"
+      },
+      "description": "Traditional grain. Porridge, pulao. Light, easy to digest."
+    },
+    {
+      "id": "plant:orange",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Orange Trees",
+      "properties": {
+        "yearsToHarvest": "3-5",
+        "season": "Perennial"
+      },
+      "description": "Subtropical citrus. Proven in Peora."
+    },
+    {
+      "id": "plant:ginger",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Ginger",
+      "properties": {
+        "yield": "1-2 tonnes/acre",
+        "season": "May-Jun plant, Nov-Dec harvest"
+      },
+      "description": "Needs shade. High value crop."
+    },
+    {
+      "id": "plant:peas",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Peas",
+      "properties": {
+        "yield": "1-2kg per 10sqft",
+        "season": "Spring + Winter"
+      },
+      "description": "Cool-season. Fast growing."
+    },
+    {
+      "id": "plant:beans",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Beans",
+      "properties": {
+        "yield": "1-2kg per 10sqft",
+        "season": "Spring + Summer"
+      },
+      "description": "Bush or pole varieties."
+    },
+    {
+      "id": "plant:tomato",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Tomatoes",
+      "properties": {
+        "yield": "5-10kg per plant",
+        "season": "Summer"
+      },
+      "description": "Major producer. Sun-dry for winter."
+    },
+    {
+      "id": "plant:cauliflower",
+      "type": "plant",
+      "cluster": "plants",
+      "label": "Cauliflower",
+      "properties": {
+        "yield": "1-2 heads per plant",
+        "season": "Autumn"
+      },
+      "description": "Cool-season crop."
+    },
+    {
+      "id": "asset:rajapalayam",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Rajapalayam (REJECTED)",
+      "properties": {
+        "status": "REJECTED",
+        "price": "\u20b935K-1.5L",
+        "reason": "Sighthound \u2014 WILL kill chickens. High prey drive.",
+        "conflictsWith": "chickens",
+        "keptInstead": "Bakharwal",
+        "image": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&h=400&fit=crop"
+      },
+      "description": "Indian Ghost Hound. Fierce, silent, loyal. But a sighthound that kills anything that runs \u2014 including your chickens."
+    },
+    {
+      "id": "asset:border_collie",
+      "type": "asset",
+      "cluster": "animals",
+      "label": "Border Collie (REJECTED)",
+      "properties": {
+        "status": "REJECTED",
+        "price": "\u20b92.4L-7L",
+        "reason": "Herding instinct = chasing. Will herd chickens obsessively. 2-3x more expensive.",
+        "conflictsWith": "chickens",
+        "keptInstead": "GSD for companionship",
+        "image": "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?w=600&h=400&fit=crop"
+      },
+      "description": "Most intelligent breed. But intelligence + herding instinct = chicken stress. Not suitable for mixed farm."
+    },
+    {
+      "id": "company:life",
+      "type": "product",
+      "cluster": "company",
+      "label": "SVATANTRYA \u2014 Life",
+      "properties": {
+        "axiom": "One consciousness, many forms. You can do whatever you like."
+      },
+      "description": "The personal side. The hermitage, the animals, the experiments, the living."
+    },
+    {
+      "id": "company:business",
+      "type": "product",
+      "cluster": "company",
+      "label": "SVATANTRYA \u2014 Business",
+      "properties": {
+        "axiom": "One consciousness, many forms. The business is an expression of the same will."
+      },
+      "description": "The commercial arm. Supplements, publishing, research, retreats."
+    },
+    {
+      "id": "company:supplements_div",
+      "type": "product",
+      "cluster": "company",
+      "label": "Supplements \u2014 Hand-Picked, Live-Streamed",
+      "properties": {
+        "products": [
+          "shilajit",
+          "cordyceps",
+          "lions mane",
+          "reishi"
+        ],
+        "format": "hand-picked, process live-streamed, biological aliveness"
+      },
+      "description": "All natural. Process live-streamed so people see the aliveness. YouTube validates. Shilajit from Uttarakhand source. Cordyceps from lab. Every product traced."
+    },
+    {
+      "id": "company:publishing_div",
+      "type": "product",
+      "cluster": "company",
+      "label": "Publishing \u2014 Research, Funding, Speakers",
+      "properties": {
+        "activities": [
+          "publish research",
+          "fund projects",
+          "host speakers",
+          "host retreats"
+        ],
+        "focus": "Indian philosophy, consciousness, supplements, biology"
+      },
+      "description": "Publish research I think is cool. Fund projects I think are cool. Host speakers and retreats I think are cool. AI-native content. Not mass market \u2014 curatorial."
+    },
+    {
+      "id": "company:experiments_div",
+      "type": "product",
+      "cluster": "company",
+      "label": "Experiments \u2014 Biological Life \u00d7 AI",
+      "properties": {
+        "activities": [
+          "EEG meditation",
+          "rasa research",
+          "biological life experiments",
+          "electrode work"
+        ],
+        "format": "open, documented, shared"
+      },
+      "description": "Experiment with biological life and AI. EEG during meditation. Rasa states. Electrode work. The lab on the estate is where this happens. Document everything."
+    },
+    {
+      "id": "axiom:consciousness",
+      "type": "milestone",
+      "cluster": "company",
+      "label": "Axiom: One Consciousness, Many Forms",
+      "properties": {
+        "source": "Shaivism / Svatantrya",
+        "meaning": "The consciousness appearing here is not ontologically external to the power through which appearing itself occurs."
+      },
+      "description": "The foundation. Not a business slogan \u2014 a metaphysical proposition you organize a life around."
+    },
+    {
+      "id": "masters:bhu_programme",
+      "type": "milestone",
+      "cluster": "masters",
+      "label": "MA Indian Philosophy & Religion \u2014 BHU",
+      "properties": {
+        "institution": "Banaras Hindu University, Varanasi",
+        "department": "Department of Philosophy & Religion, Faculty of Arts",
+        "duration": "2 years (4 semesters)",
+        "fees_total": "\u20b96,000 (\u20b91,500/semester) regular seat",
+        "fees_paid": "\u20b960,000/year if paid seat",
+        "hostel": "~\u20b95,375/year",
+        "seats": "Separate from MA Philosophy (96 seats)",
+        "admission": "CUET-PG score based",
+        "eligibility": "BA with 50% marks, philosophy/religious studies as subject",
+        "age": "28-30 during programme",
+        "start": "October 2027",
+        "end": "2029"
+      },
+      "description": "Two years immersed in Indian philosophical traditions \u2014 Vedanta, Nyaya, Sankhya, religious thought. BHU is the centre of this. The department integrates Indian and Western philosophy."
+    },
+    {
+      "id": "masters:cuet_pg",
+      "type": "milestone",
+      "cluster": "masters",
+      "label": "CUET-PG Entrance Exam",
+      "properties": {
+        "exam": "CUET-PG (Common University Entrance Test for Postgraduate)",
+        "conducted_by": "NTA (National Testing Agency)",
+        "typical_dates": "March-April each year",
+        "results": "May",
+        "bhu_admission": "May-September (multiple rounds)",
+        "registration_deadline": "December-January (for next year's exam)",
+        "paper": "Philosophy paper",
+        "cutoff_2025": "General: 155 marks (Round 1), 109 (Mop-Up)"
+      },
+      "description": "The entrance exam. Register Dec-Jan, take exam Mar-Apr, results May, admission Jul-Sep, start Oct."
+    },
+    {
+      "id": "masters:syllabus",
+      "type": "milestone",
+      "cluster": "masters",
+      "label": "Course Content",
+      "properties": {
+        "semester1": [
+          "Nature of Philosophy in the West vs Science/Religion",
+          "Methods of Philosophy: Speculative vs Critical",
+          "Indian philosophical systems (Vedanta, Nyaya, Sankhya, Yoga)",
+          "Upanishadic thought"
+        ],
+        "semester2": [
+          "Classical Indian philosophy deep dive",
+          "Buddhist and Jain philosophy",
+          "Philosophy of religion",
+          "Comparative Indian-Western thought"
+        ],
+        "semester3": [
+          "Advanced Indian philosophy",
+          "Tantric and Shaiva traditions",
+          "Contemporary Indian philosophy",
+          "Research methodology"
+        ],
+        "semester4": [
+          "Dissertation/thesis",
+          "Advanced seminars",
+          "Independent study"
+        ]
+      },
+      "description": "The syllabus covers Vedanta, Nyaya, Sankhya, Yoga, Buddhist philosophy, Jain philosophy, religious thought, and comparative Indian-Western philosophy."
+    },
+    {
+      "id": "masters:hindi_immersion",
+      "type": "skill",
+      "cluster": "masters",
+      "label": "2 Years Hindi Immersion",
+      "properties": {
+        "context": "BHU campus in Varanasi \u2014 Hindi heartland",
+        "daily_exposure": "Classes, classmates, local life, street vendors, rickshaw drivers",
+        "expected_outcome": "Conversational by end of Year 1, fluent by Year 2",
+        "academic_hindi": "Sanskrit terms, philosophical vocabulary, academic writing"
+      },
+      "description": "Two years living in Varanasi = two years of daily Hindi immersion. The university, the city, the ashrams \u2014 everything is Hindi."
+    },
+    {
+      "id": "masters:varanasi",
+      "type": "location",
+      "cluster": "masters",
+      "label": "Varanasi \u2014 2 Years",
+      "properties": {
+        "city": "Varanasi (Kashi), Uttar Pradesh",
+        "significance": "Oldest living city. Spiritual capital. Ganges. Sarnath.",
+        "network": "BHU alumni, philosophy community, ashram connections, Sanskrit scholars",
+        "daily_life": "Ganges ghats, BHU campus, markets, temples, Sadhus, philosophy discussions"
+      },
+      "description": "Two years in the spiritual heart of India. The city itself is a teacher."
+    },
+    {
+      "id": "skill:hindi_conversational",
+      "type": "skill",
+      "cluster": "skills",
+      "label": "Hindi \u2014 Conversational",
+      "properties": {
+        "level": 2,
+        "maxLevel": 4,
+        "achieved_by": "Year 1 at BHU",
+        "description": "Can negotiate leases, deal with vets, run daily farm operations. Level needed for estate management."
+      },
+      "description": "Conversational Hindi \u2014 enough to live independently, negotiate, deal with officials. Achieved through 1 year of BHU immersion."
+    }
+  ],
+  "edges": [
+    {
+      "source": "points:78",
+      "target": "legal:company",
+      "type": "costs",
+      "label": "registration fee"
+    },
+    {
+      "source": "legal:dsc",
+      "target": "legal:spice",
+      "type": "depends_on",
+      "label": "required before filing"
+    },
+    {
+      "source": "legal:spice",
+      "target": "legal:company",
+      "type": "enables",
+      "label": "incorporation"
+    },
+    {
+      "source": "legal:company",
+      "target": "company:svatantrya",
+      "type": "enables",
+      "label": "company exists"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "company:publishing",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "company:supplements",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "company:exports",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "legal:isbn",
+      "type": "enables",
+      "label": "publishing needs ISBN"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "legal:fssai",
+      "type": "enables",
+      "label": "supplements need FSSAI"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "legal:iec",
+      "type": "enables",
+      "label": "exports need IEC"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "legal:gst",
+      "type": "enables",
+      "label": "sales need GST"
+    },
+    {
+      "source": "company:svatantrya",
+      "target": "legal:visa",
+      "type": "enables",
+      "label": "company sponsors Employment Visa"
+    },
+    {
+      "source": "legal:visa",
+      "target": "milestone:visa_approved",
+      "type": "enables",
+      "label": "enables legal residence"
+    },
+    {
+      "source": "company:publishing",
+      "target": "product:shilajit",
+      "type": "feeds_into",
+      "label": "publish shilajit guides"
+    },
+    {
+      "source": "company:supplements",
+      "target": "plant:cordyceps",
+      "type": "feeds_into",
+      "label": "cordyceps supplements"
+    },
+    {
+      "source": "company:supplements",
+      "target": "plant:ashwagandha",
+      "type": "feeds_into",
+      "label": "herbal supplements"
+    },
+    {
+      "source": "company:supplements",
+      "target": "product:shilajit",
+      "type": "feeds_into",
+      "label": "shilajit supplements"
+    },
+    {
+      "source": "company:exports",
+      "target": "product:cordyceps",
+      "type": "feeds_into",
+      "label": "export cordyceps"
+    },
+    {
+      "source": "company:exports",
+      "target": "product:honey",
+      "type": "feeds_into",
+      "label": "export honey"
+    },
+    {
+      "source": "skill:hindi_fluent",
+      "target": "company:publishing",
+      "type": "enables",
+      "label": "publish in Hindi"
+    },
+    {
+      "source": "skill:hindi_literary",
+      "target": "company:publishing",
+      "type": "enables",
+      "label": "Indian philosophy content"
+    },
+    {
+      "source": "points:78",
+      "target": "legal:company",
+      "type": "costs",
+      "label": "registration fee"
+    },
+    {
+      "source": "legal:company",
+      "target": "legal:visa",
+      "type": "depends_on",
+      "label": "required for visa"
+    },
+    {
+      "source": "legal:visa",
+      "target": "milestone:visa_approved",
+      "type": "enables",
+      "label": "enables legal residence"
+    },
+    {
+      "source": "points:165",
+      "target": "legal:lease",
+      "type": "costs",
+      "label": "deposit + first year"
+    },
+    {
+      "source": "legal:lease",
+      "target": "milestone:estate_movein",
+      "type": "enables",
+      "label": "can live on estate"
+    },
+    {
+      "source": "skill:hindi_basics",
+      "target": "legal:lease",
+      "type": "enables",
+      "label": "negotiate with landowners"
+    },
+    {
+      "source": "skill:hindi_fluent",
+      "target": "legal:company",
+      "type": "enables",
+      "label": "legal discussions"
+    },
+    {
+      "source": "location:varanasi",
+      "target": "skill:hindi_basics",
+      "type": "enables",
+      "label": "immersion"
+    },
+    {
+      "source": "location:bhu",
+      "target": "milestone:bhu_start",
+      "type": "located_in",
+      "label": "BHU campus"
+    },
+    {
+      "source": "milestone:bhu_start",
+      "target": "milestone:bhu_grad",
+      "type": "happens_before",
+      "label": "2 years"
+    },
+    {
+      "source": "milestone:bhu_grad",
+      "target": "milestone:visa_approved",
+      "type": "depends_on",
+      "label": "must be approved before graduation"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:gir_cow",
+      "type": "costs",
+      "label": "purchase + shelter"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:gaddi_sheep",
+      "type": "costs",
+      "label": "3 sheep"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:beetal_goat",
+      "type": "costs",
+      "label": "3 goats"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:desi_chickens",
+      "type": "costs",
+      "label": "25 chickens + coop"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:bakharwal",
+      "type": "costs",
+      "label": "guardian dog"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:gsd",
+      "type": "costs",
+      "label": "companion dog"
+    },
+    {
+      "source": "points:260",
+      "target": "asset:bee_hives",
+      "type": "costs",
+      "label": "2 hives with colonies"
+    },
+    {
+      "source": "points:400",
+      "target": "plant:cordyceps",
+      "type": "costs",
+      "label": "mushroom lab setup"
+    },
+    {
+      "source": "asset:gir_cow",
+      "target": "product:milk",
+      "type": "produces",
+      "label": "5-10L/day"
+    },
+    {
+      "source": "asset:gir_cow",
+      "target": "product:ghee",
+      "type": "produces",
+      "label": "30L milk = 1L ghee"
+    },
+    {
+      "source": "asset:beetal_goat",
+      "target": "product:milk",
+      "type": "produces",
+      "label": "1-2L/day each"
+    },
+    {
+      "source": "asset:beetal_goat",
+      "target": "product:cheese",
+      "type": "produces",
+      "label": "goat cheese"
+    },
+    {
+      "source": "asset:desi_chickens",
+      "target": "product:eggs",
+      "type": "produces",
+      "label": "4-15/day"
+    },
+    {
+      "source": "asset:bee_hives",
+      "target": "product:honey",
+      "type": "produces",
+      "label": "40-60kg/yr"
+    },
+    {
+      "source": "asset:gaddi_sheep",
+      "target": "product:wool",
+      "type": "produces",
+      "label": "6-9kg/yr"
+    },
+    {
+      "source": "plant:cordyceps",
+      "target": "product:cordyceps",
+      "type": "produces",
+      "label": "40-80L/kg dried"
+    },
+    {
+      "source": "plant:kitchen_garden",
+      "target": "product:eggs",
+      "type": "feeds_into",
+      "label": "garden scraps feed chickens"
+    },
+    {
+      "source": "plant:fodder_crops",
+      "target": "asset:gir_cow",
+      "type": "feeds_into",
+      "label": "jowar, berseem, napier"
+    },
+    {
+      "source": "plant:fodder_crops",
+      "target": "asset:gaddi_sheep",
+      "type": "feeds_into",
+      "label": "grazing + hay"
+    },
+    {
+      "source": "asset:gir_cow",
+      "target": "plant:kitchen_garden",
+      "type": "feeds_into",
+      "label": "cow dung compost"
+    },
+    {
+      "source": "asset:desi_chickens",
+      "target": "plant:kitchen_garden",
+      "type": "feeds_into",
+      "label": "chicken compost"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "legal:lease",
+      "type": "located_in",
+      "label": "estate location"
+    },
+    {
+      "source": "location:varanasi",
+      "target": "location:bhu",
+      "type": "located_in",
+      "label": "BHU is in Varanasi"
+    },
+    {
+      "source": "milestone:bhu_start",
+      "target": "skill:hindi_basics",
+      "type": "enables",
+      "label": "academic immersion"
+    },
+    {
+      "source": "milestone:bhu_start",
+      "target": "milestone:company_reg",
+      "type": "happens_before",
+      "label": "register during studies"
+    },
+    {
+      "source": "milestone:company_reg",
+      "target": "legal:visa",
+      "type": "depends_on",
+      "label": "company enables visa"
+    },
+    {
+      "source": "milestone:visa_approved",
+      "target": "milestone:estate_movein",
+      "type": "enables",
+      "label": "legal residence on estate"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "asset:gir_cow",
+      "type": "enables",
+      "label": "can now keep animals"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "can now farm"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "plant:cordyceps",
+      "type": "enables",
+      "label": "can now grow mushrooms"
+    },
+    {
+      "source": "points:78",
+      "target": "legal:company",
+      "type": "costs",
+      "label": "registration fee"
+    },
+    {
+      "source": "points:165",
+      "target": "legal:visa",
+      "type": "costs",
+      "label": "visa fees + travel"
+    },
+    {
+      "source": "product:milk",
+      "target": "product:ghee",
+      "type": "feeds_into",
+      "label": "milk \u2192 ghee"
+    },
+    {
+      "source": "product:milk",
+      "target": "product:cheese",
+      "type": "feeds_into",
+      "label": "milk \u2192 cheese"
+    },
+    {
+      "source": "skill:hindi_literary",
+      "target": "product:shilajit",
+      "type": "enables",
+      "label": "publish Ayurvedic content"
+    },
+    {
+      "source": "infra:mushroom_lab",
+      "target": "plant:cordyceps",
+      "type": "enables",
+      "label": "lab enables cultivation"
+    },
+    {
+      "source": "infra:starlink",
+      "target": "legal:visa",
+      "type": "enables",
+      "label": "remote work for salary requirement"
+    },
+    {
+      "source": "infra:borewell",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "water for irrigation"
+    },
+    {
+      "source": "infra:borewell",
+      "target": "asset:gir_cow",
+      "type": "enables",
+      "label": "water for livestock"
+    },
+    {
+      "source": "infra:solar",
+      "target": "infra:mushroom_lab",
+      "type": "enables",
+      "label": "power for lab equipment"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "product:shilajit",
+      "type": "produces",
+      "label": "Uttarakhand is source region"
+    },
+    {
+      "source": "points:78",
+      "target": "infra:starlink",
+      "type": "costs",
+      "label": "hardware purchase"
+    },
+    {
+      "source": "points:current",
+      "target": "points:40",
+      "type": "unlocks",
+      "label": "earn 50 pts to reach tier 1"
+    },
+    {
+      "source": "points:40",
+      "target": "points:78",
+      "type": "unlocks",
+      "label": "earn 100 more pts to reach tier 2"
+    },
+    {
+      "source": "points:78",
+      "target": "points:165",
+      "type": "unlocks",
+      "label": "earn 150 more pts to reach tier 3"
+    },
+    {
+      "source": "points:165",
+      "target": "points:260",
+      "type": "unlocks",
+      "label": "earn 200 more pts to reach tier 4"
+    },
+    {
+      "source": "points:260",
+      "target": "points:400",
+      "type": "unlocks",
+      "label": "earn 250 more pts to reach tier 5"
+    },
+    {
+      "source": "points:400",
+      "target": "points:400",
+      "type": "unlocks",
+      "label": "earn 250 more pts \u2014 the dream"
+    },
+    {
+      "source": "points:current",
+      "target": "points:40",
+      "type": "unlocks",
+      "label": "earn 30 more pts"
+    },
+    {
+      "source": "points:40",
+      "target": "points:78",
+      "type": "unlocks",
+      "label": "earn 38 more pts"
+    },
+    {
+      "source": "points:78",
+      "target": "points:165",
+      "type": "unlocks",
+      "label": "earn 87 more pts"
+    },
+    {
+      "source": "points:165",
+      "target": "points:260",
+      "type": "unlocks",
+      "label": "earn 95 more pts"
+    },
+    {
+      "source": "points:260",
+      "target": "points:400",
+      "type": "unlocks",
+      "label": "earn 140 more pts"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 all 11 components allowed"
+    },
+    {
+      "source": "location:peora",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 all 11 components allowed, cheapest"
+    },
+    {
+      "source": "location:kausani",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 10/11 allowed (large farming blocked)"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 5/11 allowed (cow, chickens, bees, turmeric, large farming blocked)"
+    },
+    {
+      "source": "location:kasol",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 6/11 allowed (cow, large farming, turmeric, property purchase blocked)"
+    },
+    {
+      "source": "location:rishikesh",
+      "target": "points:165",
+      "type": "enables",
+      "label": "farm region \u2014 warm climate, tropical crops possible"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "pH 5.3-6.98 (ideal 5.5-7), 9-month season, sandy loam 70-82% sand"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:fodder_crops",
+      "type": "enables",
+      "label": "jowar, berseem, napier thrive"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:fruit_trees",
+      "type": "enables",
+      "label": "apple, pear, plum, walnut"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:turmeric",
+      "type": "enables",
+      "label": "warm enough in summer"
+    },
+    {
+      "source": "location:peora",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "Deep rich forest soil, proven by orange orchards, gentle terrain"
+    },
+    {
+      "source": "location:peora",
+      "target": "plant:fruit_trees",
+      "type": "enables",
+      "label": "orange, lychee, apple \u2014 PROVEN"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:gir_cow",
+      "type": "enables",
+      "label": "0.5-1 acre flat, 3-28C within Gir tolerance"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:gaddi_sheep",
+      "type": "enables",
+      "label": "Gaddi breed native to this exact altitude. Bred for Kumaon hills."
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:bee_hives",
+      "type": "enables",
+      "label": "Wildflower calendar Apr-Oct. 20-30kg honey/hive"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "asset:gir_cow",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 winter -1C, steep slopes, no borewell"
+    },
+    {
+      "source": "location:kasol",
+      "target": "asset:gir_cow",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 V-valley 0.2-0.5 acres flat"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:potato",
+      "type": "enables",
+      "label": "Sandy loam ideal for root crops, 15-20C growing temp, proven Kumaon crop"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:rajma",
+      "type": "enables",
+      "label": "Traditional Kumaon crop, monsoon growing"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:madua",
+      "type": "enables",
+      "label": "Ancient grain, grows in monsoon"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:jhangora",
+      "type": "enables",
+      "label": "Traditional grain, wet conditions"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:ginger",
+      "type": "enables",
+      "label": "Needs shade, grow under trees"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:peas",
+      "type": "enables",
+      "label": "Cool-season, spring + winter"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:tomato",
+      "type": "enables",
+      "label": "28C summer max, 9-month season, warm south-facing slopes"
+    },
+    {
+      "source": "location:peora",
+      "target": "plant:orange",
+      "type": "enables",
+      "label": "PROVEN \u2014 orange orchards are the signature crop."
+    },
+    {
+      "source": "location:peora",
+      "target": "plant:potato",
+      "type": "enables",
+      "label": "Deep fertile soil"
+    },
+    {
+      "source": "location:kausani",
+      "target": "plant:potato",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 shallow acidic soil pH 4.5-5.5"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "plant:potato",
+      "type": "enables",
+      "label": "Potato is major crop in Tehri Garhwal"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "plant:tomato",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 winter -1C, 7-month season too short"
+    },
+    {
+      "source": "location:kasol",
+      "target": "asset:gir_cow",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 V-valley 0.2-0.5 acres flat"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "asset:gir_cow",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 winter -1C, steep slopes, no borewell"
+    },
+    {
+      "source": "location:kasol",
+      "target": "legal:lease",
+      "type": "blocks",
+      "label": "HP Section 118 \u2014 outsiders cannot buy. Lease only."
+    },
+    {
+      "source": "location:kausani",
+      "target": "plant:kitchen_garden",
+      "type": "blocks",
+      "label": "Narrow ridge, <0.5 acres flat, shallow acidic soil"
+    },
+    {
+      "source": "location:dhanaulti",
+      "target": "plant:turmeric",
+      "type": "blocks",
+      "label": "Winter below 0\u00b0C kills rhizomes, 7-month season too short"
+    },
+    {
+      "source": "location:kasol",
+      "target": "plant:turmeric",
+      "type": "blocks",
+      "label": "BLOCKED \u2014 2500mm monsoon waterlogging"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "pH 5.3-6.98 (ideal 5.5-7), 9-month season, sandy loam 70-82% sand"
+    },
+    {
+      "source": "location:peora",
+      "target": "plant:kitchen_garden",
+      "type": "enables",
+      "label": "Deep rich forest soil, proven by orange orchards, gentle terrain"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:bee_hives",
+      "type": "enables",
+      "label": "Wildflower calendar Apr-Oct. 20-30kg honey/hive"
+    },
+    {
+      "source": "location:peora",
+      "target": "asset:bee_hives",
+      "type": "enables",
+      "label": "Orange blossom forage Feb-Apr = best bee forage. 25-35kg/hive"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:gaddi_sheep",
+      "type": "enables",
+      "label": "Gaddi breed native to this exact altitude. Bred for Kumaon hills."
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "asset:gir_cow",
+      "type": "enables",
+      "label": "0.5-1 acre flat, 3-28C within Gir tolerance"
+    },
+    {
+      "source": "location:peora",
+      "target": "asset:gir_cow",
+      "type": "enables",
+      "label": "Gentle terrain, proven fertility"
+    },
+    {
+      "source": "asset:rajapalayam",
+      "target": "asset:desi_chickens",
+      "type": "blocks",
+      "label": "REJECTED: sighthound WILL kill chickens. High prey drive."
+    },
+    {
+      "source": "asset:border_collie",
+      "target": "asset:desi_chickens",
+      "type": "blocks",
+      "label": "REJECTED: herding instinct chases chickens obsessively."
+    },
+    {
+      "source": "axiom:consciousness",
+      "target": "company:life",
+      "type": "enables",
+      "label": "foundation axiom"
+    },
+    {
+      "source": "axiom:consciousness",
+      "target": "company:business",
+      "type": "enables",
+      "label": "same will, different expression"
+    },
+    {
+      "source": "company:business",
+      "target": "company:supplements_div",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:business",
+      "target": "company:publishing_div",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:business",
+      "target": "company:experiments_div",
+      "type": "produces",
+      "label": "division"
+    },
+    {
+      "source": "company:life",
+      "target": "company:experiments_div",
+      "type": "feeds_into",
+      "label": "estate lab enables experiments"
+    },
+    {
+      "source": "company:supplements_div",
+      "target": "plant:cordyceps",
+      "type": "feeds_into",
+      "label": "cordyceps supplements"
+    },
+    {
+      "source": "company:supplements_div",
+      "target": "plant:ashwagandha",
+      "type": "feeds_into",
+      "label": "herbal supplements"
+    },
+    {
+      "source": "company:supplements_div",
+      "target": "product:shilajit",
+      "type": "feeds_into",
+      "label": "shilajit supplements"
+    },
+    {
+      "source": "company:publishing_div",
+      "target": "skill:hindi_literary",
+      "type": "depends_on",
+      "label": "publish in Hindi + English"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:cuet_pg",
+      "type": "depends_on",
+      "label": "must pass entrance"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:syllabus",
+      "type": "produces",
+      "label": "course content"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:hindi_immersion",
+      "type": "enables",
+      "label": "2 years in Varanasi = Hindi immersion"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:varanasi",
+      "type": "located_in",
+      "label": "BHU campus in Varanasi"
+    },
+    {
+      "source": "masters:hindi_immersion",
+      "target": "skill:hindi_conversational",
+      "type": "enables",
+      "label": "Year 1: conversational Hindi"
+    },
+    {
+      "source": "masters:hindi_immersion",
+      "target": "skill:hindi_fluent",
+      "type": "enables",
+      "label": "Year 2: fluent"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "milestone:bhu_start",
+      "type": "produces",
+      "label": "programme begins"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "milestone:bhu_grad",
+      "type": "produces",
+      "label": "programme ends"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "company:svatantrya",
+      "type": "enables",
+      "label": "time to register company during studies"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "company:publishing_div",
+      "type": "enables",
+      "label": "philosophy knowledge feeds publishing"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "axiom:consciousness",
+      "type": "feeds_into",
+      "label": "academic study of consciousness traditions"
+    }
+  ]
+}

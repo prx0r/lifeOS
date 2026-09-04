@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "version": "8.0.0",
+    "location": "Ranikhet / Almora, Kumaon, Uttarakhand — 5500-6500ft",
+    "land": "5 acres agricultural lease • Hilly terrain • Existing forest cover on portions • Kosi river nearby",
+    "climate": "Winter 0-10°C (frost Nov-Feb), Summer 15-25°C, Monsoon Jul-Sep",
+    "structure": "Animals produce food. Plants produce food. Food is downstream from both."
+  },
+
+  "land": {
+    "totalAcres": 5,
+    "realisticBreakdown": {
+      "flatCultivable": "1-1.5 acres — this is your garden + fodder crops",
+      "gentleSlope": "1-1.5 acres — grazing for cow/sheep/goats + scattered fruit trees",
+      "steepForest": "1-1.5 acres — existing pine/deodar forest, leave as is",
+      "infrastructure": "0.5 acre — house, cowshed, coop, paths, water tanks",
+      "bufferPaths": "0.5 acre — access paths between zones"
+    },
+    "honestTerrain": "It's hilly. Not flat farmland. You'll need to terrace parts of the garden. The good news: terracing is traditional in Kumaon, locals know how, and terraced gardens actually drain better than flat ones.",
+    "soil": "Kumaon soil is rocky but fertile. Amend heavily with cow dung compost (you'll have plenty). Rocky bits can be cleared and used for walls/terracing.",
+    "waterSource": "Borewell (200-400ft) + Kosi river nearby + monsoon rain collection"
+  },
+
+  "animals": {
+    "summary": "7 animals, each with a role. Food is a downstream product of keeping them happy.",
+    "ecosystem": {
+      "cow": {
+        "product": "Milk",
+        "seasonality": "10-11 months milking, 2-3 months dry (when cow is pregnant)",
+        "dailyYield": "5-10L/day peak, 3-5L/day average across year",
+        "annualYield": "~1,800L/year",
+        "whatYouMake": ["Fresh drinking milk", "Tea/coffee", "Paneer (cheese)", "Ghee (clarified butter — lasts 6-12 months)", "Curd/yoghurt", "Butter"],
+        "gheeProduction": "30L milk = 1L ghee. You'll make 50-60L ghee/year. Lasts months without refrigeration.",
+        "dungUse": "Compost for garden, fuel for chulha (wood stove), biogas potential"
+      },
+      "sheep": {
+        "product": "Wool + Meat (occasional)",
+        "seasonality": "Year-round grazing, shearing once/year (March-April)",
+        "annualYield": "2-3kg wool per sheep per shearing = 6-9kg total",
+        "whatYouMake": ["Raw wool (sell or spin your own yarn)", "Occasional mutton (when old sheep are retired)", "Grazing — they keep grass down so cow doesn't have to eat everything"],
+        "grazingRole": "Eat broadleaf weeds and short grass the cow ignores. Clean the pasture naturally."
+      },
+      "goats": {
+        "product": "Milk + Cheese + Meat (occasional)",
+        "seasonality": "6 months milking per doe, staggered so at least one milking",
+        "dailyYield": "1-2L per doe milking",
+        "annualYield": "~450-600L/year from 3 does",
+        "whatYouMake": ["Goat milk (richer than cow)", "Goat cheese (chhena, paneer)", "Occasional kid meat", "Brush control — they eat invasive weeds"],
+        "grazingRole": "Browse brush, shrubs, tree leaves — things cow and sheep won't touch. Fire risk reduction."
+      },
+      "chickens": {
+        "product": "Eggs + Pest Control + Compost",
+        "seasonality": "Year-round, peaks spring/summer, dips winter",
+        "dailyYield": "4-5 eggs/day winter, 10-15 eggs/day summer (from 25 hens)",
+        "annualYield": "~5,000-6,250 eggs/year",
+        "whatYouMake": ["Fresh eggs (boiled, omelette, baking)", "Compost from droppings", "Pest control — eat ticks, insects, snakes"],
+        "note": "Desi hens lay 250 eggs/year each. Winter short days drop production 20-40%."
+      },
+      "bees": {
+        "product": "Honey + Pollination + Wax",
+        "seasonality": "Active Mar-Oct, dormant Nov-Feb",
+        "annualYield": "20-30kg honey per hive = 40-60kg from 2 hives",
+        "whatYouMake": ["Honey (raw, comb, or extracted)", "Beeswax (candles, cosmetics)", "Pollination for your garden crops"],
+        "note": "Bees pollinate your tomatoes, beans, squash, fruit trees. Without them, yields drop 30-50%."
+      },
+      "dogs": {
+        "product": "Protection + Companionship",
+        "foodProduct": "None — dogs are not food. They protect the food producers.",
+        "role": "Bakharwal guards chickens/sheep/goats. GSD is your thinking partner."
+      }
+    }
+  },
+
+  "plants": {
+    "summary": "The land produces food in seasons. With 1-1.5 acres of cultivable ground, you can grow most of what you eat.",
+    "gardenLayout": {
+      "zone1_kitchenGarden": {
+        "size": "0.25-0.5 acre",
+        "location": "Near the house, flat or gently sloped",
+        "purpose": "Daily vegetables, herbs, greens",
+        "terracing": "Yes — 2-3 terrace levels on hillside. Stone walls from cleared rocks."
+      },
+      "zone2_fodderCrops": {
+        "size": "0.5 acre",
+        "location": "Near cowshed + grazing area",
+        "purpose": "Grow animal feed — jowar, berseem, napier grass",
+        "terracing": "Yes — these fields feed the animals that feed you"
+      },
+      "zone3_fruitTrees": {
+        "size": "0.25-0.5 acre scattered across slopes",
+        "location": "On gentle slopes, around garden perimeter",
+        "purpose": "Apple, pear, plum, walnut — long-term fruit production",
+        "terracing": "Individual tree pits on slopes"
+      },
+      "zone4_medicinalHerbs": {
+        "size": "0.1 acre",
+        "location": "Shaded area near forest edge",
+        "purpose": "Ashwagandha, brahmi, tulsi, turmeric, ginger",
+        "terracing": "Raised beds"
+      },
+      "zone5_wildForage": {
+        "size": "1-1.5 acres existing forest",
+        "location": "Steep forested slopes",
+        "purpose": "Leave as is — wild mushrooms, herbs, firewood, shade for animals"
+      }
+    },
+
+    "seasons": {
+      "spring": {
+        "name": "Spring (March–May)",
+        "months": "Mar Apr May",
+        "soilTemp": "Rising — 10-20°C. Last frost April.",
+        "whatGrows": [
+          "Potatoes — plant seed potatoes, harvest in 90 days. Staple carb.",
+          "Peas — cool-season, plant early, harvest in 60 days",
+          "Beans — bush beans, succession plant every 3 weeks",
+          "Radish — 30 days from seed to harvest, fastest crop",
+          "Spinach — continuous harvest if cut-and-come-again",
+          "Onion sets — Ranikhet red, plant in rows",
+          "Garlic — already planted in autumn, growing now",
+          "Herbs — coriander, mint, methi, tulsi"
+        ],
+        "labour": "Heavy — this is planting season. Prepare beds, sow seeds, transplant seedlings started indoors in Feb."
+      },
+      "summer": {
+        "name": "Summer (June–August)",
+        "months": "Jun Jul Aug",
+        "soilTemp": "Warm — 20-30°C. Monsoon rain from July.",
+        "whatGrows": [
+          "Tomatoes — the big producer. 5-10kg per plant. Start from seedlings.",
+          "Brinjal / eggplant — heat-loving, productive all summer",
+          "Cucumber — on trellis, 10-15 per vine",
+          "Bottle gourd / ridge gourd — vine crops, monsoon peak",
+          "Pumpkin — spreads on ground, stores whole for months",
+          "Chilli — perennial, plant once, harvest for years",
+          "Capsicum / Shimla mirch — named after altitude for a reason",
+          "Rajma (kidney beans) — plant in monsoon, harvest Sep"
+        ],
+        "labour": "Medium — plants are growing, mainly watering and pest management."
+      },
+      "monsoon": {
+        "name": "Monsoon (July–September)",
+        "months": "Jul Aug Sep",
+        "soilTemp": "Warm + wet. Heavy rain.",
+        "whatGrows": [
+          "Rajma — monsoon is perfect for beans",
+          "Madua (finger millet) — traditional Kumaon grain",
+          "Jhangora (barnyard millet) — grows in wet conditions",
+          "Turmeric — plant now, harvest in Dec",
+          "Ginger — plant under shade, harvest Nov",
+          "Buckwheat — fast catch crop, 60-80 days"
+        ],
+        "risks": ["Waterlogging can kill plants — terrace drainage critical", "Fungal diseases from humidity — organic spray needed", "Heavy rain can flatten unprotected crops"],
+        "labour": "Low — rain does the watering. Main job: drainage, pest control, weeding."
+      },
+      "autumn": {
+        "name": "Autumn (October–November)",
+        "months": "Oct Nov",
+        "soilTemp": "Cooling — 10-20°C. Frost starting.",
+        "whatGrows": [
+          "Cauliflower — plant Jul, harvest now",
+          "Cabbage — cold-hardy, stays in ground through light frost",
+          "Carrot — frost makes them sweeter, leave in ground",
+          "Beetroot — cold-hardy, stores in sand for months",
+          "Turnip — grows in frost",
+          "Spinach — autumn planting for winter harvest",
+          "Mustard greens — THE winter crop, plant now"
+        ],
+        "labour": "Heavy — harvest summer crops, plant winter crops, preserve food."
+      },
+      "winter": {
+        "name": "Winter (December–February)",
+        "months": "Dec Jan Feb",
+        "soilTemp": "Cold — 0-10°C. Frost regular. Snow possible.",
+        "whatGrows": [
+          "Spinach — frost makes it sweeter",
+          "Mustard greens — grows when nothing else does",
+          "Radish — cold-hardy",
+          "Peas — winter variety",
+          "Lettuce — under simple plastic cover",
+          "Coriander — best time to grow (bolts in heat)"
+        ],
+        "whatDoesntGrow": "Tomatoes, beans, cucumbers, peppers, gourds — too cold. These are summer crops.",
+        "labour": "Low — mainly harvesting winter greens. Good time to plan next season, repair tools, process stored food."
+      }
+    },
+
+    "perennials": {
+      "fruitTrees": [
+        {"tree": "Apple", "plantWhen": "Feb-Mar", "harvestIn": "3-5 years", "yield": "50-200kg/tree", "notes": "Plant 3-5 trees. Local Kumaon varieties."},
+        {"tree": "Pear", "plantWhen": "Feb-Mar", "harvestIn": "3-5 years", "yield": "30-100kg/tree", "notes": "Hardier than apple."},
+        {"tree": "Plum (Alu Bukhara)", "plantWhen": "Feb-Mar", "harvestIn": "2-4 years", "yield": "20-50kg/tree", "notes": "Very productive. Self-fertile."},
+        {"tree": "Walnut", "plantWhen": "Feb-Mar", "harvestIn": "5-8 years", "yield": "50-100kg/tree", "notes": "Long-term. Kumaon walnuts famous."}
+      ],
+      "medicinalPlants": [
+        {"plant": "Turmeric", "plantWhen": "Jun-Jul", "harvestIn": "8-10 months then perennial", "yield": "2-3 tonnes/acre", "value": "₹200-400/kg fresh"},
+        {"plant": "Ginger", "plantWhen": "May-Jun", "harvestIn": "8-10 months then perennial", "yield": "1-2 tonnes/acre", "value": "₹100-200/kg fresh"},
+        {"plant": "Ashwagandha", "plantWhen": "Feb-Mar", "harvestIn": "8-9 months", "yield": "Root harvest", "value": "₹1,000-2,000/kg dried root"},
+        {"plant": "Tulsi", "plantWhen": "Year-round", "harvestIn": "Continuous", "yield": "Leaves", "value": "₹300-800/kg dried"},
+        {"plant": "Lemongrass", "plantWhen": "Feb-Mar", "harvestIn": "Continuous after establishment", "yield": "Clumps", "value": "₹200-500/kg fresh"}
+      ],
+      "fodderCrops": [
+        {"crop": "Jowar (Sorghum)", "plantWhen": "Apr-May", "cutWhen": "Jul-Sep, 2-3 cuts", "yield": "8-12 tonnes/acre", "notes": "THE fodder crop. Drought-tolerant."},
+        {"crop": "Berseem (Egyptian Clover)", "plantWhen": "Sep-Oct, Feb-Mar", "cutWhen": "Every 25-30 days", "yield": "15-20 tonnes/acre/year", "notes": "Perennial. Nitrogen-fixer. Best dairy fodder."},
+        {"crop": "Napier Grass", "plantWhen": "Feb-Mar", "cutWhen": "Year-round after establishment", "yield": "20-40 tonnes/acre", "notes": "Perennial. Tall grass. Plant once, cut for years."}
+      ]
+    },
+
+    "preservation": {
+      "methods": [
+        {"method": "Sun Drying", "items": "Tomatoes, chillies, herbs, turmeric, ginger", "cost": "Free", "notes": "Himalayan sun is intense — perfect for drying"},
+        {"method": "Pickling (Achar)", "items": "Chilli, carrot, lime, mixed veg", "cost": "₹100-200/batch", "notes": "Lasts 6-12 months"},
+        {"method": "Root Cellar", "items": "Potatoes, carrot, beetroot, turnip, garlic, onion", "cost": "Free — cool dark space", "notes": "Store 3-6 months in sand"},
+        {"method": "Ghee Making", "items": "From cow milk", "cost": "Free (milk is free)", "notes": "30L milk = 1L ghee. Lasts 6-12 months without fridge"},
+        {"method": "Freezing", "items": "Peas, beans, greens, herbs", "cost": "₹10K-15K chest freezer", "notes": "Best quality preservation"}
+      ]
+    }
+  },
+
+  "food": {
+    "summary": "Food comes from animals AND plants together. Neither alone gives you a complete diet.",
+    "yearRoundHonestAnswer": {
+      "verdict": "YES, you can eat from your land year-round — but not everything every day. It's seasonal, rhythmic, and requires planning.",
+      "gaps": [
+        "Winter (Dec-Feb): Fresh vegetables limited to cold-hardy greens. Root storage helps but runs out by Feb. You'll eat more eggs, ghee, and stored grains.",
+        "Carbohydrates: You can grow potatoes, rajma, madua, jhangora — but rice/wheat you'll likely still buy. Growing enough grain for one person on 1 acre is labor-intensive.",
+        "Fruit: Trees take 3-5 years. First 2-3 years you buy fruit.",
+        "Protein: Eggs + milk + goat cheese covers most. Occasional mutton if you breed goats."
+      ],
+      "whatYouCanProduce": {
+        "daily": "Milk (6-7L average), eggs (6-12/day average), fresh greens, herbs, honey",
+        "weekly": "Paneer, ghee, cheese, fresh vegetables, salads",
+        "monthly": "Root vegetables from storage, dried herbs, pickles, preserved tomatoes",
+        "seasonally": "Fruit (apple, pear, plum), turmeric, ginger, grains (rajma, madua)"
+      },
+      "whatYouStillBuy": [
+        "Rice and wheat (unless you grow grain — possible but labor-intensive)",
+        "Salt, oil, spices (cheap locally)",
+        "Tea (unless you grow it — possible at altitude)",
+        "Clothing",
+        "Medical supplies",
+        "Internet/phone",
+        "Tools and equipment"
+      ],
+      "selfSufficiencyPercentage": "~70-80% of food from your land. ~20-30% purchased locally."
+    },
+
+    "risks": [
+      {
+        "risk": "Frost kills crops",
+        "likelihood": "Medium — frost Nov-Feb is regular at your altitude",
+        "mitigation": "Cold frames (₹2K-5K), plastic row covers, grow frost-hardy varieties in winter"
+      },
+      {
+        "risk": "Monsoon waterlogging",
+        "likelihood": "High — Jul-Sep heavy rain",
+        "mitigation": "Terracing, drainage channels, raised beds. Already factored into garden design."
+      },
+      {
+        "risk": "Borewell runs dry",
+        "likelihood": "Low — Kumaon has good groundwater, but possible in severe drought",
+        "mitigation": "Rainwater harvesting (already in budget), river access as backup"
+      },
+      {
+        "risk": "Pest/disease outbreak",
+        "likelihood": "Medium — especially in monsoon (fungal)",
+        "mitigation": "Organic neem spray, crop rotation, diverse planting, chickens eat pests"
+      },
+      {
+        "risk": "Cow goes dry when you need milk most",
+        "likelihood": "Certain — 2-3 months/year dry period",
+        "mitigation": "Stagger goat breeding so at least 1-2 goats always milking. Store ghee."
+      },
+      {
+        "risk": "Winter food gap (Dec-Feb)",
+        "likelihood": "Certain — limited fresh vegetables",
+        "mitigation": "Root cellar storage, preserved food, cold frames, winter greens (spinach, mustard)"
+      },
+      {
+        "risk": "Wild animals raid crops",
+        "likelihood": "Medium — monkeys, boar, deer common in Kumaon",
+        "mitigation": "Fencing around garden, noise deterrents, guard dog helps"
+      },
+      {
+        "risk": "Too much rain destroys harvest",
+        "likelihood": "Low-Medium — monsoon can be intense",
+        "mitigation": "Terracing, drainage, diverse crops so total loss unlikely"
+      }
+    ],
+
+    "whatWouldMakeItBetter": [
+      {
+        "improvement": "Simple greenhouse / polytunnel",
+        "cost": "₹20,000-50,000 (£155-387)",
+        "benefit": "Extends growing season by 2-3 months on each end. Grow tomatoes into November, start seedlings in February. Game-changer for year-round food.",
+        "priority": "HIGH"
+      },
+      {
+        "improvement": "Drip irrigation system",
+        "cost": "₹15,000-30,000 (£116-232) for 0.5 acre",
+        "benefit": "Water efficiency 60-70%. Saves labour. Monsoon backup. Consistent moisture = better yields.",
+        "priority": "HIGH"
+      },
+      {
+        "improvement": "Chest freezer",
+        "cost": "₹10,000-15,000 (£78-116)",
+        "benefit": "Freeze summer abundance — peas, beans, greens, herbs. Eat summer in winter.",
+        "priority": "MEDIUM"
+      },
+      {
+        "improvement": "Compost system",
+        "cost": "₹2,000-5,000 (£16-39)",
+        "benefit": "Cow dung + chicken waste + kitchen scraps = free fertiliser. Closed loop.",
+        "priority": "HIGH"
+      },
+      {
+        "improvement": "Seed saving",
+        "cost": "Free",
+        "benefit": "Save seeds from best plants each year. Adapt to your specific microclimate over time.",
+        "priority": "MEDIUM"
+      },
+      {
+        "improvement": "More fruit trees",
+        "cost": "₹500-2,000 per tree",
+        "benefit": "Plant 10-15 trees in year 1. By year 5, you have fruit for decades.",
+        "priority": "HIGH — long-term"
+      },
+      {
+        "improvement": "Donkey or horse",
+        "cost": "₹15,000-40,000 for donkey",
+        "benefit": "Trail transport, carrying harvests, riding through hills. Reduces labour.",
+        "priority": "LOW — nice to have"
+      }
+    ]
+  }
+}

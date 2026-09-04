@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "version": "6.0.0",
+    "currency": "GBP",
+    "exchangeRate": 129,
+    "lastUpdated": "2026-09-04",
+    "location": "Ranikhet / Almora, Kumaon, Uttarakhand — 5500-6500ft",
+    "climate": "Winter 0-10°C, Summer 15-25°C, Monsoon July-Sept",
+    "ecosystem": "Multi-species grazing — cow + sheep + goats graze together, each eating different plants. Bakharwal protects everything. Chickens eat pests. Bees pollinate. Closed loop."
+  },
+
+  "ecosystem": {
+    "name": "The Core Seven",
+    "description": "One cow, three sheep, three goats, two dogs, twenty-five chickens, two bee hives. Every animal has a role. Nothing is decorative.",
+    "howItWorks": {
+      "grazing": "Cow eats grass. Sheep eat broadleaf weeds. Goats eat brush and woody plants. They clean the pasture together — no herbicide needed.",
+      "parasites": "Cow parasites can't survive in sheep. Sheep parasites can't survive in cow. Grazing together breaks parasite cycles naturally.",
+      "protection": "Bakharwal lives with the flock — protects chickens, sheep, goats from foxes, stray dogs, leopards. GSD is your thinking companion.",
+      "pestControl": "Chickens eat ticks, insects, snakes. Bees pollinate your crops. Goats eat invasive brush.",
+      "closedLoop": "Cow dung → compost → garden → kitchen scraps → chickens → more compost. Cow milk → drink. Sheep wool → spin. Goat milk → cheese. Bee honey → medicine."
+    },
+    "spaceOn5Acres": {
+      "used": "1.5-2 acres",
+      "remaining": "3-3.5 acres for house, kitchen garden, mushroom lab, crops, forest, trails"
+    }
+  },
+
+  "animals": {
+
+    "cow": {
+      "name": "1 Gir Cow",
+      "icon": "🐄",
+      "role": "Milk, compost, rhythm to your days",
+      "price": {"low": 545, "high": 620, "unit": "GBP", "inr": "₹70K-80K"},
+      "whatMakesItHappy": {
+        "companion": "The 3 sheep + 3 goats serve as companions. A single cow with other species nearby will graze near them, sleep near them, feel safe. You don't need a second cow.",
+        "space": "0.5-1 acre of grazing. Rotational — move to fresh section every 2-3 weeks.",
+        "food": "10-15kg green fodder + 2-3kg hay daily. Grow jowar, berseem, Napier grass on your land. Buy hay in winter ₹10-15/kg.",
+        "water": "40-60L/day. Trough connected to borewell. Clean water always available.",
+        "shelter": "3-sided stone/brick shed, 200-400 sq ft. Open side away from wind. Straw bedding.",
+        "routine": "Milk twice daily (morning + evening), same times. Feed morning and evening. Check water. This IS your morning and evening ritual.",
+        "vet": "FMD + HS vaccines twice yearly ₹200-500/shot. Tick treatment monthly in monsoon. Deworming every 3 months."
+      },
+      "infrastructure": {
+        "cowshed": {"cost": {"low": 1550, "high": 3875, "unit": "GBP", "inr": "₹2L-5L"}, "difficulty": "Medium — stone masonry, hire local masons. 2-3 weeks build.", "materials": "Local stone, wood beams, corrugated tin or slate roof, concrete floor with drainage slope"},
+        "milkingMachine": {"cost": {"low": 232, "high": 310, "unit": "GBP", "inr": "₹30K-40K"}, "difficulty": "Easy — buy and set up. Or learn hand milking (free)."},
+        "waterTrough": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Easy — concrete trough or plastic, connected to borewell pipe."},
+        "fodderStorage": {"cost": {"low": 78, "high": 155, "unit": "GBP", "inr": "₹10K-20K"}, "difficulty": "Easy — covered shed to store hay and dry fodder. 100 sq ft enough."}
+      },
+      "totalInfraCost": {"low": 1899, "high": 4218, "unit": "GBP", "inr": "₹2.45L-5.44L"},
+      "monthlyRunning": {"low": 23, "high": 39, "unit": "GBP", "inr": "₹3K-5K/mo"},
+      "listingUrl": "https://www.pashushala.com/page/category/category?breed=Gir&category=Cow"
+    },
+
+    "sheep": {
+      "name": "3 Gaddi Sheep",
+      "icon": "🐑",
+      "role": "Grazing companions for cow, wool, meat, weed control",
+      "price": {"low": 23, "high": 62, "unit": "GBP per sheep", "inr": "₹3K-8K per sheep"},
+      "totalPrice": {"low": 69, "high": 186, "unit": "GBP", "inr": "₹9K-24K for 3"},
+      "whatMakesItHappy": {
+        "companion": "Sheep NEED flock. 3 is minimum. They feel safe together, graze together, sleep huddled. 3 is perfect — enough for flock dynamics without overstocking.",
+        "space": "0.1-0.2 acre. Graze with the cow — they eat different plants so no competition.",
+        "food": "Mostly grazing. Hay in winter. Minimal supplementary feed — ₹200-500/mo for 3 sheep.",
+        "water": "5-10L per sheep per day. Trough shared with cow area.",
+        "shelter": "3-sided shelter, smaller than cowshed. 100-150 sq ft for 3 sheep. Straw bedding.",
+        "shearing": "Once per year, March-April. ₹200-500/sheep for local shearer. Keep the wool.",
+        "routine": "Release to graze in morning, check water, bring in at dusk. Minimal daily work."
+      },
+      "infrastructure": {
+        "shelter": {"cost": {"low": 78, "high": 155, "unit": "GBP", "inr": "₹10K-20K"}, "difficulty": "Easy — simple 3-sided wooden/stone structure. Can build in a weekend.", "materials": "Wood frame, corrugated roof, straw bedding. No need for walls on 3 sides."},
+        "fencing": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Easy — sheep need less fencing than goats. 4ft height sufficient.", "note": "Share fencing with cow/goat area."}
+      },
+      "totalInfraCost": {"low": 117, "high": 233, "unit": "GBP", "inr": "₹15K-30K"},
+      "monthlyRunning": {"low": 16, "high": 31, "unit": "GBP for 3 sheep", "inr": "₹2K-4K/mo"},
+      "listingUrl": "https://www.pashushala.com/page/category/category?category=Sheep&breed=Gaddi"
+    },
+
+    "goats": {
+      "name": "3 Beetal Goats",
+      "icon": "🐐",
+      "role": "Milk, cheese, brush control, comedy, weed eating",
+      "price": {"low": 39, "high": 116, "unit": "GBP per goat", "inr": "₹5K-15K per goat"},
+      "totalPrice": {"low": 117, "high": 348, "unit": "GBP", "inr": "₹15K-45K for 3"},
+      "whatMakesItHappy": {
+        "companion": "Goats need herd. 3 is minimum. They're social, playful, and get depressed alone. 3 goats will play, headbutt, climb things together.",
+        "space": "0.1-0.2 acre. Browse brush, weeds, tree leaves — they eat what cow and sheep ignore.",
+        "food": "Browse is primary — they eat everything. Kitchen scraps, weeds, brush, tree leaves. ₹300-600/mo for 3 goats.",
+        "water": "5-10L per goat per day.",
+        "shelter": "Raised platform shelter. MUST be dry — goats hate wet feet. 100-150 sq ft for 3 goats.",
+        "breeding": "Gestation 150 days. 1-2 kids per doe. Kids sell for ₹3K-8K at 6 months.",
+        "routine": "Release to browse, check water, minimal daily work. Goats are independent."
+      },
+      "infrastructure": {
+        "shelter": {"cost": {"low": 78, "high": 155, "unit": "GBP", "inr": "₹10K-20K"}, "difficulty": "Easy — raised wooden platform with roof. Must be elevated off ground.", "materials": "Wood/bamboo frame, raised floor, corrugated roof. Simple construction."},
+        "fencing": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Medium — goats are escape artists. Need 5-6ft fencing. Strong wire mesh.", "note": "Higher than sheep fencing. Goats climb and jump."}
+      },
+      "totalInfraCost": {"low": 156, "high": 233, "unit": "GBP", "inr": "₹20K-30K"},
+      "monthlyRunning": {"low": 16, "high": 31, "unit": "GBP for 3 goats", "inr": "₹2K-4K/mo"},
+      "listingUrl": "https://www.pashushala.com/page/category/category?category=Goat&breed=Beetal"
+    },
+
+    "dogs": {
+      "name": "2 Dogs — 1 Guardian + 1 Companion",
+      "icon": "🐕",
+      "role": "Bakharwal protects the flock. GSD is your thinking partner.",
+      "bakharwal": {
+        "price": {"low": 16, "high": 543, "unit": "GBP", "inr": "₹2K-70K"},
+        "whatMakesItHappy": {
+          "job": "Gives it a JOB — guard the chickens, sheep, goats. A working dog is a happy dog.",
+          "companion": "The flock IS its companion. It sleeps near them, patrols with them, protects them.",
+          "space": "Patrols the whole 5 acres. Lives near the chicken coop + sheep/goat shelter.",
+          "food": "Rice + dal + meat scraps, or dog food. ₹3K-6K/mo.",
+          "training": "CRITICAL: Introduce to chickens FROM PUPPYHOOD. A Bakharwal raised with chickens will protect them. Socialise with strangers early.",
+          "routine": "Patrols during day, sleeps with flock at night. Independent — doesn't need constant attention."
+        },
+        "infrastructure": {
+          "shelter": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Easy — outdoor straw shelter near the flock. Or just a covered area."},
+          "totalInfraCost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}
+        },
+        "listingUrl": "https://www.petzlover.com/in/sale/dogs/bakharwal-dog"
+      },
+      "gsd": {
+        "price": {"low": 140, "high": 310, "unit": "GBP", "inr": "₹18K-40K"},
+        "whatMakesItHappy": {
+          "job": "Give it tasks — training, puzzle toys, walks. A bored GSD destroys things.",
+          "companion": "YOU are its person. It wants to be near you, work with you, learn from you.",
+          "space": "Can live indoors or in outdoor kennel. Needs 1-2 hours exercise daily.",
+          "food": "Dog food + meat + rice. ₹4K-8K/mo.",
+          "training": "Obedience training essential. Needs mental stimulation — teach commands, do agility, give puzzles.",
+          "routine": "Morning walk, afternoon play, evening training. Sleeps inside or in shelter."
+        },
+        "infrastructure": {
+          "kennel": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Easy — wooden kennel or indoor space."},
+          "totalInfraCost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}
+        },
+        "listingUrl": "https://premiumpethouse.com/dog-price-list"
+      },
+      "totalInfraCost": {"low": 78, "high": 156, "unit": "GBP", "inr": "₹10K-20K for both"},
+      "totalMonthlyRunning": {"low": 47, "high": 93, "unit": "GBP for both dogs", "inr": "₹6K-12K/mo"}
+    },
+
+    "chickens": {
+      "name": "25 Desi Chickens",
+      "icon": "🐔",
+      "role": "Eggs, pest control, compost, sound of life",
+      "price": {"low": 0.47, "high": 0.70, "unit": "GBP per chick", "inr": "₹60-90/chick"},
+      "totalPrice": {"low": 12, "high": 18, "unit": "GBP for 25 chicks", "inr": "₹1.5K-2.25K"},
+      "whatMakesItHappy": {
+        "companion": "Chickens are flock animals. 25 is a good number — enough for social dynamics, not so many you're overwhelmed.",
+        "space": "100 sq ft coop + 250 sq ft run. Free-range during day on your land.",
+        "food": "Layer pellets + foraging. They eat 40-50% of their diet free on your land. ₹2K-3K/mo for 25.",
+        "water": "500ml per bird per day. Drinker in coop + one in run.",
+        "shelter": "Predator-proof wooden coop. Hardware cloth (NOT chicken wire). Nesting boxes, roosting bars, ventilation.",
+        "routine": "Let out at dawn, collect eggs midday, close coop at dusk. 15 minutes morning, 10 minutes evening.",
+        "eggs": "3-4 eggs/day at peak. 250 eggs/year per bird. 6,250 eggs/year for 25 birds."
+      },
+      "infrastructure": {
+        "coop": {"cost": {"low": 155, "high": 232, "unit": "GBP", "inr": "₹20K-30K"}, "difficulty": "Easy-Medium — DIY project. Wood frame, wire mesh, nesting boxes, roof. Weekend build.", "materials": "Wood frame, hardware cloth, corrugated roof, 8-9 nesting boxes ₹100-200 each, roosting bars."},
+        "fencing": {"cost": {"low": 39, "high": 78, "unit": "GBP", "inr": "₹5K-10K"}, "difficulty": "Easy — 4ft wire mesh around run area. Hardware cloth for predator proofing."},
+        "winterPrep": {"cost": {"low": 16, "high": 31, "unit": "GBP", "inr": "₹2K-4K"}, "difficulty": "Easy — deep litter method. Straw bedding generates heat naturally. No electricity needed at 0-10°C."}
+      },
+      "totalInfraCost": {"low": 210, "high": 341, "unit": "GBP", "inr": "₹27K-44K"},
+      "monthlyRunning": {"low": 16, "high": 23, "unit": "GBP", "inr": "₹2K-3K/mo"},
+      "annualIncome": {"low": 465, "high": 581, "unit": "GBP from eggs", "inr": "₹60K-75K/yr"},
+      "listingUrl": "Local hatcheries near Almora/Ranikhet"
+    },
+
+    "bees": {
+      "name": "2 Bee Hives (Apis Mellifera)",
+      "icon": "🐝",
+      "role": "Honey, pollination, wax — the invisible workforce",
+      "price": {"low": 360, "high": 434, "unit": "GBP per hive with colony", "inr": "₹4,650-5,600"},
+      "totalPrice": {"low": 720, "high": 868, "unit": "GBP for 2 hives", "inr": "₹9.3K-11.2K"},
+      "whatMakesItHappy": {
+        "companion": "A hive IS a colony — 20,000-60,000 bees working together. They don't need outside companions.",
+        "space": "Tiny footprint. 2 hives need 10 sq ft of ground. Place in sunny, wind-protected corner away from animal paths.",
+        "food": "Bees forage 3km radius. Himalayan wildflowers are ideal. They don't need feeding IF they have enough stored honey for winter.",
+        "water": "Small shallow dish with pebbles (so bees don't drown). Near the hives.",
+        "shelter": "The hive IS the shelter. Wooden box with frames. Just needs a dry, wind-protected location.",
+        "routine": "Inspection every 2 weeks in spring/summer. Harvest honey Aug-Sept. DO NOT open hive Nov-Feb (winter cluster).",
+        "yield": "20-30kg honey per hive per year. 2 hives = 40-60kg. At ₹300-500/kg = ₹12K-30K/yr income."
+      },
+      "infrastructure": {
+        "hivePlacement": {"cost": {"low": 0, "high": 0, "unit": "GBP"}, "difficulty": "Easy — sunny spot, wind-protected, away from foot traffic. No construction needed."},
+        "extractionEquipment": {"cost": {"low": 78, "high": 155, "unit": "GBP", "inr": "₹10K-20K"}, "difficulty": "Easy — honey extractor, jars, filters. Buy once, use forever.", "note": "Or sell comb honey unprocessed — zero equipment needed."},
+        "protectiveGear": {"cost": {"low": 16, "high": 31, "unit": "GBP", "inr": "₹2K-4K"}, "difficulty": "Easy — bee suit, gloves, smoker."}
+      },
+      "totalInfraCost": {"low": 94, "high": 186, "unit": "GBP", "inr": "₹12K-24K"},
+      "monthlyRunning": {"low": 0, "high": 4, "unit": "GBP", "inr": "₹0-500/mo — bees are mostly self-sufficient"},
+      "annualIncome": {"low": 310, "high": 620, "unit": "GBP from honey + wax", "inr": "₹40K-80K/yr"},
+      "listingUrls": [
+        {"name": "Shahadwale — Bee Hives", "url": "https://www.shahadwale.co.in/bee-hives-for-sale.html"},
+        {"name": "ShazamFarms — Apis Mellifera", "url": "https://shazamfarms.com/apis-mellifera-beehive-brood-box-with-bees-colony"},
+        {"name": "GujBee — ₹4,650", "url": "https://gujbee.com/product/apis-mellifera-bee-hive/"},
+        {"name": "IndiaMART — ₹1,500", "url": "https://www.indiamart.com/proddetail/italian-bee-hive-20635695791.html"}
+      ]
+    }
+  },
+
+  "totals": {
+    "animalPurchase": {
+      "label": "Animal Purchase Cost",
+      "items": {
+        "1 Gir Cow": {"low": 545, "high": 620, "unit": "GBP"},
+        "3 Gaddi Sheep": {"low": 69, "high": 186, "unit": "GBP"},
+        "3 Beetal Goats": {"low": 117, "high": 348, "unit": "GBP"},
+        "1 Bakharwal Dog": {"low": 16, "high": 543, "unit": "GBP"},
+        "1 GSD": {"low": 140, "high": 310, "unit": "GBP"},
+        "25 Desi Chickens": {"low": 12, "high": 18, "unit": "GBP"},
+        "2 Bee Hives with colonies": {"low": 720, "high": 868, "unit": "GBP"}
+      },
+      "totalGBP": {"low": 1619, "high": 2893, "unit": "GBP"},
+      "note": "£1,255-2,242 for all animals"
+    },
+    "infrastructure": {
+      "label": "Infrastructure Build Cost",
+      "items": {
+        "Cowshed (stone/brick)": {"low": 1550, "high": 3875, "unit": "GBP", "difficulty": "Medium — hire local masons, 2-3 weeks"},
+        "Sheep shelter (3-sided)": {"low": 78, "high": 155, "unit": "GBP", "difficulty": "Easy — DIY weekend build"},
+        "Goat shelter (raised platform)": {"low": 78, "high": 155, "unit": "GBP", "difficulty": "Easy — raised wood/bamboo"},
+        "Chicken coop + run": {"low": 194, "high": 310, "unit": "GBP", "difficulty": "Easy-Medium — DIY, weekend build"},
+        "Bee hives (2) + extraction gear": {"low": 110, "high": 217, "unit": "GBP", "difficulty": "Easy — buy complete"},
+        "Dog shelter (Bakharwal)": {"low": 39, "high": 78, "unit": "GBP", "difficulty": "Easy — straw shelter"},
+        "Dog kennel (GSD)": {"low": 39, "high": 78, "unit": "GBP", "difficulty": "Easy — wooden kennel"},
+        "Fencing (5 acres perimeter)": {"low": 1938, "high": 4845, "unit": "GBP", "difficulty": "Medium — professional recommended for predator-proofing"},
+        "Water troughs + plumbing": {"low": 116, "high": 233, "unit": "GBP", "difficulty": "Easy — concrete troughs, pipe from borewell"},
+        "Milking machine": {"low": 232, "high": 310, "unit": "GBP", "difficulty": "Easy — buy and set up"}
+      },
+      "totalGBP": {"low": 4374, "high": 10256, "unit": "GBP"},
+      "note": "£3,390-7,950 for all infrastructure"
+    },
+    "totalMoveIn": {
+      "label": "Total Move-In Cost (animals + infrastructure)",
+      "totalGBP": {"low": 5993, "high": 13149, "unit": "GBP"},
+      "note": "£4,645-10,193. Range is wide because Bakharwal price varies and fencing is the biggest variable."
+    },
+    "annualRunning": {
+      "label": "Annual Running Costs",
+      "items": {
+        "Cow feed + vet": {"low": 316, "high": 546, "unit": "GBP"},
+        "Sheep (3) feed": {"low": 192, "high": 372, "unit": "GBP"},
+        "Goats (3) feed": {"low": 192, "high": 372, "unit": "GBP"},
+        "Dogs (2) food": {"low": 564, "high": 1116, "unit": "GBP"},
+        "Chickens (25) feed": {"low": 192, "high": 276, "unit": "GBP"},
+        "Bees maintenance": {"low": 0, "high": 47, "unit": "GBP"},
+        "Fencing repairs + misc": {"low": 155, "high": 310, "unit": "GBP"}
+      },
+      "totalGBP": {"low": 1611, "high": 3139, "unit": "GBP"},
+      "note": "£124-243/month to keep everything alive and healthy"
+    },
+    "annualIncome": {
+      "label": "Annual Income from Animals",
+      "items": {
+        "Cow milk (surplus)": {"low": 465, "high": 930, "unit": "GBP", "note": "Milk you don't drink — sell locally ₹60/L"},
+        "Eggs (surplus)": {"low": 310, "high": 465, "unit": "GBP", "note": "Eggs beyond household use — sell at ₹12-15 each"},
+        "Honey (2 hives)": {"low": 310, "high": 620, "unit": "GBP", "note": "40-60kg at ₹300-500/kg"},
+        "Goat kids (if bred)": {"low": 78, "high": 155, "unit": "GBP", "note": "1-2 kids/yr sellable at ₹3K-8K each"},
+        "Sheep wool": {"low": 23, "high": 47, "unit": "GBP", "note": "Raw wool sale or spin your own"}
+      },
+      "totalGBP": {"low": 1186, "high": 2217, "unit": "GBP"},
+      "note": "£92-172/month income from surplus. Covers ~60-70% of running costs."
+    },
+    "netAnnual": {
+      "label": "Net Annual Cost (after income)",
+      "totalGBP": {"low": 425, "high": 922, "unit": "GBP"},
+      "note": "£33-71/month actual out-of-pocket after selling surplus. The farm nearly pays for itself."
+    }
+  },
+
+  "infrastructureSummary": {
+    "buildDifficulty": {
+      "easy": ["Sheep shelter", "Goat shelter", "Dog shelters", "Bee hives", "Water troughs", "Chicken coop (DIY)"],
+      "medium": ["Cowshed (hire masons)", "Fencing (professional recommended)", "Milking machine setup"],
+      "hard": ["None — all infrastructure is simple rural construction"]
+    },
+    "buildTimeline": {
+      "week1": "Fencing perimeter, borewell connection, water troughs",
+      "week2": "Cowshed construction (masons)",
+      "week3": "Sheep + goat shelters, chicken coop",
+      "week4": "Bee hives placed, dog shelters, milking machine, settle animals in",
+      "totalTime": "4 weeks to have all infrastructure ready"
+    },
+    "whatYouCanBuildYourself": "Everything except the cowshed masonry. Sheep shelter, goat shelter, chicken coop, dog shelters, bee hive placement — all DIY weekend projects.",
+    "whatNeedsProfessional": "Cowshed (masonry), fencing (quality matters for predator-proofing), borewell drilling (specialist equipment)"
+  }
+}

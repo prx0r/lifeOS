@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "purpose": "Scientific ecological analysis of each region — soil, climate, mushroom ecology, pollinator habitat, crop suitability, microclimates",
+    "sources": [
+      "Dhouni et al. 2024 - Physicochemical properties of Kumaon hill soils",
+      "Pande et al. - Soil Nutrient Evaluation in Almora District",
+      "Kumar & Ravi 2025 - Wild mushroom diversity from mid-Himalayas",
+      "Burnett et al. 2008 - Slope aspect impacts on soil temperature",
+      "Singh 2018 - Aspect impacts in trans-Himalayan valley"
+    ]
+  },
+
+  "regions": {
+
+    "ranikhet-almora": {
+      "soil": {
+        "type": "Red and yellow sandy loam (Kumaon classification)",
+        "texture": "70-82% sand, 10-20% silt, 8-10% clay",
+        "ph": {"range": "5.3-6.98", "classification": "Moderately acidic to slightly acidic"},
+        "phSuitability": "IDEAL — most crops need 5.5-7.0. This range is perfect.",
+        "ec": "0.08-0.31 dSm⁻¹ (low — not saline, good for plants)",
+        "cec": "16.8-23.0 meq/100g (good to very good fertility)",
+        "organicCarbon": "Medium — needs compost amendment",
+        "nitrogen": "Low to medium — compost essential",
+        "phosphorus": "Medium — available in most areas",
+        "potassium": "Medium — generally sufficient",
+        "depth": "Moderate — rocky in places, needs terracing",
+        "drainage": "Good on slopes, needs management in valley bottoms",
+        "erosionRisk": "Medium — terracing reduces it significantly",
+        "amendmentNeeded": "Cow dung compost (you'll have plenty), green manure from berseem"
+      },
+      "microclimate": {
+        "southFacing": "Warmer (+2-3°C), drier, more sun. Better for: tomatoes, peppers, warm-season crops. More evapotranspiration.",
+        "northFacing": "Cooler, moister, more vegetation. Better for: leafy greens, mushrooms, shade-loving plants.",
+        "ridgeTop": "Windy, exposed. Good for: windbreak trees, bee hives (less wind than valley).",
+        "valleyBottom": "Warmer, more humid, flood risk in monsoon. Good for: water-loving crops, rice paddies if irrigated.",
+        "practicalImpact": "On your 5 acres, south-facing slopes = warm-season garden. North-facing = mushroom log placement + shade crops."
+      },
+      "mushroomEcology": {
+        "wildSpecies": "60+ species documented in Kumaon Hills (Kumar & Ravi 2025). Peak fruiting Jul-Nov during monsoon.",
+        "substrate": "Dead logs, leaf litter, hardwood — abundant in pine/deodar forest",
+        "optimalConditions": {
+          "oysterMushroom": {"temp": "13-24°C", "humidity": "80-90%", "substrate": "straw, coffee grounds, hardwood sawdust"},
+          "shiitake": {"temp": "10-16°C", "humidity": "85-95%", "substrate": "hardwood logs or sawdust blocks"},
+          "lionsMane": {"temp": "15-22°C", "humidity": "85-95%", "substrate": "supplemented hardwood sawdust"},
+          "reishi": {"temp": "20-30°C", "humidity": "85-95%", "substrate": "supplemented hardwood sawdust"}
+        },
+        "cordyceps": {"temp": "20-25°C", "humidity": "75-85%", "substrate": "grain-based (indoor lab)", "note": "Needs controlled indoor environment, not outdoor ecology"},
+        "naturalForage": "Wild mushrooms fruit Jul-Nov in forests around Almora. Shaggy mane, oyster, and medicinal species documented.",
+        "verdict": "EXCELLENT — altitude, humidity, substrate abundance, and existing wild mushroom diversity all favor cultivation."
+      },
+      "pollinators": {
+        "managedSpecies": "Apis mellifera (Italian bee) — suitable for your 2 hives",
+        "wildSpecies": "Apis cerana (Indian hive bee), various bumblebees, butterflies, hoverflies",
+        "floweringSeason": "April-June (peak), with rhododendrons Feb-Apr, wildflowers May-Oct",
+        "forageQuality": "HIGH — Himalayan wildflowers, rhododendrons, apple blossoms, berberis, wild herbs",
+        "beeForagePlants": ["Rhododendron", "Berberis", "Wild sage", "Mustard", "Apple blossoms", "Peach blossoms", "Forest herbs"],
+        "honeyPotential": "20-30kg/hive/year — premium Himalayan honey commands ₹300-500/kg",
+        "verdict": "EXCELLENT — diverse wildflower calendar, long foraging season (Apr-Oct)"
+      },
+      "cropSuitability": {
+        "apples": {"suitability": "EXCELLENT", "tempRange": "10-25°C growing, -5 to 5°C dormant chill", "notes": "5500-6500ft is prime. Chaubatia Gardens nearby proves it."},
+        "turmeric": {"suitability": "GOOD", "tempRange": "20-35°C growing, >15°C soil temp", "notes": "Needs 280-300 days. Warm enough in summer but marginal at 6500ft. Better at lower elevation sites."},
+        "ginger": {"suitability": "GOOD", "tempRange": "20-30°C, needs shade", "notes": "Grow under trees or shade cloth. Needs consistent moisture."},
+        "potatoes": {"suitability": "EXCELLENT", "tempRange": "15-20°C for growth", "notes": "Native crop. Kumaon is potato country."},
+        "rajma": {"suitability": "EXCELLENT", "tempRange": "20-30°C growing season", "notes": "Traditional Kumaon crop. Plant in monsoon, harvest Sep-Oct."},
+        "leafyGreens": {"suitability": "EXCELLENT", "tempRange": "5-20°C", "notes": "Spinach, mustard greens, kale — grow almost year-round."},
+        "ashwagandha": {"suitability": "GOOD", "tempRange": "20-35°C growing", "notes": "Needs warm soil. Feb-Mar plant, Nov-Dec harvest."},
+        "tea": {"suitability": "MARGINAL", "tempRange": "10-30°C, high rainfall", "notes": "Kausani has tea gardens but Almora is borderline. Possible with irrigation."}
+      }
+    },
+
+    "peora": {
+      "soil": {
+        "type": "Deep rich forest soil (proven by orange orchards)",
+        "texture": "Sandy loam to loam, deep profile",
+        "ph": "5.5-6.5 (estimated — same belt as Almora but deeper soil)",
+        "cec": "Good to very good (orange orchards prove sustained fertility)",
+        "organicCarbon": "High — deep forest soil with leaf litter accumulation",
+        "depth": "DEEP — best of all options. Orange roots need deep soil.",
+        "drainage": "Excellent — rolling hills drain naturally",
+        "erosionRisk": "Low — gentle slopes, good vegetation cover",
+        "verdict": "BEST SOIL of all regions. Deep, fertile, proven by decades of orange production."
+      },
+      "microclimate": {
+        "southFacing": "Warmer, drier. Orange orchards typically on south-facing slopes for sun.",
+        "northFacing": "Cooler, moister. Good for shade crops, mushroom logs.",
+        "valleyFloor": "Warmer, more humid. Good for vegetables.",
+        "note": "Rolling terrain = more aspect variety = more microclimates = more crop niches."
+      },
+      "mushroomEcology": {
+        "wildSpecies": "Similar to Almora — same altitude band. Monsoon fruiting Jul-Nov.",
+        "substrate": "Orange orchards provide pruned wood — free substrate for shiitake logs",
+        "verdict": "GOOD — orange orchards provide pruning waste as mushroom substrate. Seasonal, not year-round outdoor."
+      },
+      "pollinators": {
+        "forageQuality": "EXCELLENT — orange blossoms (spring) + wildflowers + forest herbs",
+        "orangeBlossoms": "Major spring forage — Feb-Apr. Strong nectar flow.",
+        "honeyPotential": "25-35kg/hive/year — orange blossom honey is premium",
+        "verdict": "EXCELLENT — orange orchards = best bee forage of any region"
+      },
+      "cropSuitability": {
+        "oranges": {"suitability": "EXCELLENT", "notes": "PROVEN — orange orchards are the signature. Climate and soil perfect."},
+        "apples": {"suitability": "EXCELLENT", "tempRange": "5500-8000ft zone"},
+        "lychee": {"suitability": "GOOD", "notes": "Possible at this altitude with warm microclimate."},
+        "allTemperateVeg": {"suitability": "EXCELLENT", "notes": "Deep soil supports everything."}
+      }
+    },
+
+    "kausani": {
+      "soil": {
+        "type": "Sandy loam, shallow (Bageshwar district data)",
+        "texture": "Sandy loam, shallow to moderately shallow",
+        "ph": "4.5-5.5 (acidic — below optimal for most crops)",
+        "cec": "Low to moderate — needs significant amendment",
+        "organicCarbon": "Low — ridge top, leaching",
+        "depth": "SHALLOW — major limitation for root crops",
+        "drainage": "Excellent — ridge drains fast (too fast for some crops)",
+        "erosionRisk": "High — ridge position, steep sides",
+        "amendmentNeeded": "Heavy composting needed. Lime to raise pH. Green manure crops.",
+        "verdict": "WEAKEST SOIL — shallow, acidic, needs work. But tea gardens prove it CAN support crops with management."
+      },
+      "microclimate": {
+        "ridgeTop": "Most of Kausani is ridge. Wind-exposed, fast-draining. Good airflow for mushroom logs.",
+        "southSlope": "Warmer, drier. Better for warm-season crops.",
+        "northSlope": "Cooler, moister. Better for cool-season crops.",
+        "note": "Narrow ridge = limited flat land but dramatic microclimate diversity within short distances."
+      },
+      "mushroomEcology": {
+        "verdict": "GOOD — ridge position provides excellent air circulation for mushroom logs. Pine forest provides substrate. But shallow soil limits outdoor cultivation beds."
+      },
+      "pollinators": {
+        "forageQuality": "GOOD — wildflowers, forest herbs, tea garden blooms",
+        "honeyPotential": "15-25kg/hive/year — less diverse than Peora/Ranikhet",
+        "verdict": "GOOD — not as rich as Peora's orange blossoms but sufficient."
+      },
+      "cropSuitability": {
+        "tea": {"suitability": "EXCELLENT", "notes": "PROVEN — Kausani tea gardens exist. Ridge position + rainfall = ideal for tea."},
+        "apples": {"suitability": "GOOD", "tempRange": "6200ft — prime zone"},
+        "potatoes": {"suitability": "MARGINAL", "notes": "Shallow soil limits yield. Better for above-ground crops."},
+        "leafyGreens": {"suitability": "GOOD", "notes": "Cool climate suits them. Shallow soil is less of an issue for shallow-rooted greens."}
+      }
+    },
+
+    "dhanaulti-kanatal": {
+      "soil": {
+        "type": "Mollisols/inceptisols, young, thin (Garhwal Himalaya research)",
+        "texture": "Silty loam to loam, dark brown",
+        "ph": "5.0-6.0 (acidic)",
+        "cec": "Moderate",
+        "organicCarbon": "Moderate — forest litter contributes",
+        "depth": "THIN — steep slopes prevent deep soil accumulation",
+        "drainage": "Excellent — steep slopes",
+        "erosionRisk": "HIGH — steep terrain, monsoon rainfall",
+        "verdict": "WEAKEST FOR FARMING — thin soil on steep slopes. Better left as forest."
+      },
+      "microclimate": {
+        "note": "At 7400ft, significantly colder than other options. South-facing slopes still receive good sun but steepness limits cultivation.",
+        "snowCover": "Dec-Feb, regular snowfall. Shortens growing season to 7 months."
+      },
+      "mushroomEcology": {
+        "verdict": "POOR for outdoor — thin soil, steep slopes. INDOOR lab possible but power access limited (no borewell)."
+      },
+      "cropSuitability": {
+        "apples": {"suitability": "EXCELLENT", "notes": "7400ft = prime apple zone. Tehri Garhwal is apple country."},
+        "mostCrops": {"suitability": "POOR", "notes": "Too steep, too cold, thin soil. Only apples and hardy root crops viable."}
+      }
+    },
+
+    "kasol-parvati": {
+      "soil": {
+        "type": "Alluvial valley floor, metamorphic on slopes",
+        "ph": "5.5-6.5",
+        "fertility": "Medium — river alluvium fertile but limited area",
+        "depth": "Valley floor: deep. Slopes: very thin.",
+        "drainage": "Valley: can waterlog. Slopes: too fast.",
+        "verdict": "MIXED — valley floor is fertile but small. Slopes are too steep for most farming."
+      },
+      "microclimate": {
+        "valleyFloor": "Warmer, more humid. Rice and wheat possible.",
+        "slopes": "Steep, forested. Limited farming. Better for orchards.",
+        "note": "V-shaped valley creates dramatic microclimate differences over short distances."
+      },
+      "mushroomEcology": {
+        "verdict": "EXCELLENT for wild — Parvati Valley has rich fungal diversity. Monsoon humidity ideal. Indoor lab possible.",
+        "wildSpecies": "Rich diversity documented in Kullu district surveys."
+      },
+      "pollinators": {
+        "forageQuality": "GOOD — alpine flowers, forest herbs, apple blossoms",
+        "verdict": "GOOD — shorter season than Kumaon due to steeper terrain."
+      },
+      "cropSuitability": {
+        "riceWheat": {"suitability": "GOOD on valley floor", "notes": "Traditional cultivation in lower valley."},
+        "apples": {"suitability": "GOOD on mid-slopes", "notes": "5180ft — apples grow on slopes."},
+        "mostCrops": {"suitability": "POOR", "notes": "Steep V-valley = limited flat land. Only valley floor farming possible."}
+      }
+    },
+
+    "rishikesh-tehri": {
+      "soil": {
+        "type": "Alluvial near Ganges, residual on hills",
+        "ph": "5.5-7.0",
+        "fertility": "Good near river, variable on hills",
+        "depth": "River terraces: deep. Hills: moderate.",
+        "verdict": "GOOD near river. Variable on hills."
+      },
+      "climate": {
+        "note": "Lower elevation (1200-3000ft) = warmer. Longer growing season. More subtropical crops possible."
+      },
+      "microclimate": {
+        "riverTerrace": "Fertile, irrigated, warm. Best farming land.",
+        "hillsides": "Drier, thinner soil. Better for orchards."
+      },
+      "mushroomEcology": {
+        "verdict": "GOOD — warmer than Kausani, more humidity from Ganges. But higher temps may favor different species."
+      },
+      "cropSuitability": {
+        "tropicalFruits": {"suitability": "EXCELLENT", "notes": "Lower elevation = mango, litchi possible"},
+        "riceWheat": {"suitability": "EXCELLENT", "notes": "Ganges irrigation, warm climate"},
+        "turmeric": {"suitability": "EXCELLENT", "notes": "Warm enough, long season"},
+        "apples": {"suitability": "POOR", "notes": "Too low elevation for apples"}
+      }
+    }
+  }
+}

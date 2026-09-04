@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a0a0a">
+<title>SVATANTRYA</title>
+<script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+:root{--bg:#0a0a0a;--card:#141414;--border:#222;--accent:#c9a84c;--accent-dim:#a08030;--text:#e8e8e8;--dim:#777;--green:#4caf50;--red:#e74c3c;--blue:#3498db}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:#000}
+
+.tabs{position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1;min-width:56px;padding:10px 4px;text-align:center;font-size:0.6rem;font-weight:500;color:var(--dim);letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;transition:color 0.2s;white-space:nowrap}
+.tab.active{color:var(--accent)}
+.tab .icon{font-size:1.1rem;display:block;margin-bottom:2px}
+
+.page{display:none;padding:16px 16px 80px;min-height:100vh}
+.page.active{display:block}
+
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem 1rem;background:linear-gradient(180deg,rgba(10,10,10,0.3),rgba(10,10,10,0.8)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop') center/cover}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,8vw,4rem);font-weight:900;color:var(--accent);margin-bottom:0.5rem}
+.hero .sub{font-size:0.85rem;color:var(--dim);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:2rem}
+.hero .vision{max-width:500px;font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.7}
+.hero .vision em{color:var(--accent);font-style:normal;font-weight:500}
+
+.hud{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:16px}
+.hud-row{display:flex;justify-content:space-between;padding:3px 0;font-size:0.8rem}
+.hud-label{color:var(--dim)} .hud-val{color:var(--accent);font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:12px}
+.card-tag{display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:6px}
+.tag-budget{background:rgba(76,175,80,0.15);color:var(--green)}
+.tag-mid{background:rgba(52,152,219,0.15);color:var(--blue)}
+.tag-premium{background:rgba(201,168,76,0.15);color:var(--accent)}
+.tag-rejected{background:rgba(231,76,60,0.15);color:var(--red)}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:4px}
+.card .loc{font-size:0.8rem;color:var(--dim);margin-bottom:6px}
+.card .price{font-size:1.3rem;font-weight:700;color:var(--accent);margin-bottom:4px}
+.card .price-note{font-size:0.75rem;color:var(--dim);margin-bottom:8px}
+.specs{display:flex;flex-wrap:wrap;gap:4px}
+.spec{font-size:0.65rem;padding:3px 6px;background:rgba(255,255,255,0.04);border-radius:3px;color:var(--dim)}
+.card-link{display:inline-block;margin-top:8px;font-size:0.75rem;color:var(--accent);text-decoration:none}
+
+.sec-hdr{margin-bottom:16px}
+.sec-hdr h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--accent);margin-bottom:4px}
+.sec-hdr p{font-size:0.85rem;color:var(--dim)}
+
+.notes{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px}
+.notes h3{font-size:0.9rem;font-weight:600;color:var(--accent);margin-bottom:8px}
+.notes li{font-size:0.8rem;color:var(--dim);padding:3px 0;padding-left:1rem;position:relative;list-style:none}
+.notes li::before{content:'→';position:absolute;left:0;color:var(--accent-dim)}
+
+.progress-bar{background:#1a1a1a;border-radius:6px;height:8px;margin:8px 0;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:6px;transition:width 0.5s}
+
+#graph-container{width:100%;height:65vh;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px}
+
+.chat-input{display:flex;gap:8px;margin-top:12px}
+.chat-input input{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-size:0.85rem;outline:none}
+.chat-input input:focus{border-color:var(--accent)}
+.chat-input button{background:var(--accent);border:none;border-radius:8px;padding:10px 16px;color:#000;font-weight:600;cursor:pointer}
+.chat-msg{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:0.85rem;line-height:1.5}
+.chat-msg.agent{border-left:3px solid var(--accent)}
+.chat-msg.user{border-left:3px solid var(--blue)}
+
+@media(min-width:768px){.page{max-width:600px;margin:0 auto;padding:24px 24px 80px}.tab{min-width:80px;padding:12px 16px}}
+</style>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tab active" data-page="home"><span class="icon">🏠</span>Home</div>
+  <div class="tab" data-page="graph"><span class="icon">🕸</span>Graph</div>
+  <div class="tab" data-page="locations"><span class="icon">📍</span>Regions</div>
+  <div class="tab" data-page="animals"><span class="icon">🐄</span>Animals</div>
+  <div class="tab" data-page="capture"><span class="icon">📱</span>Capture</div>
+  <div class="tab" data-page="agent"><span class="icon">💬</span>Agent</div>
+</div>
+
+<div class="page active" id="home">
+  <div class="hero">
+    <h1>LifeOS</h1>
+    <div class="sub">The Endgame Vision</div>
+    <div class="vision">A hermitage near the <em>Himalayas</em>. Land to grow, animals to tend, a lab for <em>experiments</em>. Forest, river, dirtbikes at dawn. <em>Lock the vision. Work backwards.</em></div>
+  </div>
+  <div class="hud">
+    <div class="hud-row"><span class="hud-label">Points</span><span class="hud-val">0 (£0)</span></div>
+    <div class="hud-row"><span class="hud-label">Fund</span><span class="hud-val" style="color:var(--red)">Not started</span></div>
+    <div class="hud-row"><span class="hud-label">Graph</span><span class="hud-val" id="g-count">loading...</span></div>
+    <div class="hud-row"><span class="hud-label">Next</span><span class="hud-val">Hindi → Company → BHU</span></div>
+  </div>
+  <div id="home-cards"></div>
+</div>
+
+<div class="page" id="graph">
+  <div class="sec-hdr"><h2>Knowledge Graph</h2><p>Everything connected. Click nodes to explore.</p></div>
+  <div id="graph-container"></div>
+  <div class="notes">
+    <h3>How this works</h3>
+    <ul>
+      <li>The graph is the source of truth. The site just renders it.</li>
+      <li>Every change to the graph = a git commit. The site on any day = the graph at that commit.</li>
+      <li>Nodes are things (animals, crops, money, legal). Edges are dependencies.</li>
+      <li>Red edges = blocks/conflicts. Green edges = enables. Gold edges = costs.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page" id="locations">
+  <div class="sec-hdr"><h2>Regions</h2><p>Binary constraints — what each allows and blocks</p></div>
+  <div id="location-cards"></div>
+  <div class="notes" style="margin-top:12px">
+    <h3>Constraint Matrix</h3>
+    <div style="overflow-x:auto"><table style="width:100%;font-size:0.7rem;border-collapse:collapse">
+      <tr style="color:var(--dim)"><th style="text-align:left;padding:4px">Component</th><th style="padding:4px">Ranikhet</th><th style="padding:4px">Peora</th><th style="padding:4px">Kausani</th><th style="padding:4px">Dhanaulti</th><th style="padding:4px">Kasol</th></tr>
+      <tr><td style="padding:4px">Cow</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">❌</td><td style="text-align:center">❌</td></tr>
+      <tr><td style="padding:4px">Sheep</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td></tr>
+      <tr><td style="padding:4px">Goats</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+      <tr><td style="padding:4px">Chickens</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+      <tr><td style="padding:4px">Bees</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">❌</td><td style="text-align:center">✅</td></tr>
+      <tr><td style="padding:4px">Large Farming</td><td style="text-align:center">✅</td><td style="text-align:center">✅</td><td style="text-align:center">❌</td><td style="text-align:center">❌</td><td style="text-align:center">❌</td></tr>
+      <tr style="font-weight:600"><td style="padding:4px">Total</td><td style="text-align:center">11/11</td><td style="text-align:center">11/11</td><td style="text-align:center">10/11</td><td style="text-align:center">5/11</td><td style="text-align:center">6/11</td></tr>
+    </table></div>
+  </div>
+</div>
+
+<div class="page" id="animals">
+  <div class="sec-hdr"><h2>Animals</h2><p>Selected, rejected, and why — the distillation of the vision</p></div>
+  <div class="notes" style="border-color:var(--accent-dim)"><h3>The Conflicts Found</h3><ul>
+    <li><strong>Rajapalayam → REJECTED:</strong> Sighthound instinct kills anything that runs. Chickens would not survive.</li>
+    <li><strong>Border Collie → REJECTED:</strong> Herding instinct obsessively chases chickens. 2-3x more expensive.</li>
+    <li><strong>Bakharwal → SELECTED:</strong> Same fierce loyalty, but guardian instinct protects rather than kills.</li>
+    <li><strong>Principle:</strong> Every animal must coexist. The farm is an ecosystem, not independent units.</li>
+  </ul></div>
+  <div id="animal-cards"></div>
+</div>
+
+<div class="page" id="capture">
+  <div class="sec-hdr"><h2>Capture</h2><p>Upload video, voice, photos → R2</p></div>
+  <div class="card" style="border:2px dashed var(--border);text-align:center;padding:2rem">
+    <div style="font-size:2rem;margin-bottom:8px">📱</div>
+    <h3>Upload from Camera Roll</h3>
+    <p style="font-size:0.8rem;color:var(--dim);margin:8px 0">Video, voice, or photo → directly to R2</p>
+    <input type="file" id="fileInput" accept="video/*,audio/*,image/*" multiple style="display:none" onchange="handleFiles(this.files)">
+    <button onclick="document.getElementById('fileInput').click()" style="background:var(--accent);border:none;border-radius:8px;padding:10px 24px;color:#000;font-weight:600;cursor:pointer;margin-top:8px">Choose Files</button>
+  </div>
+  <div id="upload-list" style="margin-top:16px"></div>
+  <div class="notes" style="margin-top:16px"><h3>How it works</h3><ul>
+    <li>Select files → presigned URL generated → upload directly to R2</li>
+    <li>Original file preserved — never compressed. Raw is ground truth.</li>
+    <li>Or: iOS Shortcut — Record → Share → "Save to lifeOS" → done.</li>
+  </ul></div>
+</div>
+
+<div class="page" id="agent">
+  <div class="sec-hdr"><h2>Agent</h2><p>Talk to lifeOS — it knows your graph, your state, your constraints</p></div>
+  <div id="chat">
+    <div class="chat-msg agent"><strong>lifeOS:</strong> I know your current state: 0 points, tourist visa, Cambodia. I can see the full graph — every dependency, every constraint, every rejected option. What do you want to know?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Ask about the vision..." onkeypress="if(event.key==='Enter')sendChat()">
+    <button onclick="sendChat()">→</button>
+  </div>
+</div>
+
+<script>
+// ── Load graph and render ──
+let GRAPH = null;
+
+async function loadGraph() {
+  const resp = await fetch('graph/graph.json');
+  GRAPH = await resp.json();
+  document.getElementById('g-count').textContent = GRAPH.nodes.length + ' nodes, ' + GRAPH.edges.length + ' edges';
+  renderHomeCards();
+  renderLocationCards();
+  renderAnimalCards();
+  initGraph();
+}
+
+// ── Render functions (all from graph data, nothing hardcoded) ──
+function renderHomeCards() {
+  const el = document.getElementById('home-cards');
+  const locations = GRAPH.nodes.filter(n => n.cluster === 'locations' && n.properties.region);
+  const featured = locations.slice(0, 3);
+  el.innerHTML = featured.map(n => `
+    <div class="card">
+      <div class="card-body">
+        <span class="card-tag tag-premium">${n.label}</span>
+        <h3>${n.label}</h3>
+        <div class="loc">${n.properties.elevation || ''} • ${n.properties.state || ''}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderLocationCards() {
+  const el = document.getElementById('location-cards');
+  const regions = ['ranikhet-almora','peora','kausani','dhanaulti-kanatal','kasol-parvati','rishikesh-tehri'];
+  // Load constraint data
+  fetch('geography.json').then(r=>r.json()).then(geo => {
+    el.innerHTML = regions.map(r => {
+      const data = geo.regions[r] || {};
+      const name = data.name || r;
+      const elev = data.elevation_ft || '';
+      const constraints = data.constraints || {};
+      const allowed = Object.values(constraints).filter(c => c.allowed).length;
+      const blocked = Object.values(constraints).filter(c => !c.allowed).length;
+      return `<div class="card"><div class="card-body">
+        <span class="card-tag ${blocked===0?'tag-budget':blocked<=2?'tag-mid':'tag-rejected'}">${allowed}/${allowed+blocked} allowed</span>
+        <h3>${name}</h3>
+        <div class="loc">${elev}ft • ${data.state || ''}</div>
+        <div class="specs">${Object.entries(constraints).map(([k,v])=>`<span class="spec" style="${v.allowed?'':'background:rgba(231,76,60,0.15);color:var(--red)'}">${v.allowed?'✅':'❌'} ${k}</span>`).join('')}</div>
+      </div></div>`;
+    }).join('');
+  });
+}
+
+function renderAnimalCards() {
+  const el = document.getElementById('animal-cards');
+  const animals = GRAPH.nodes.filter(n => n.cluster === 'animals');
+  el.innerHTML = animals.map(n => {
+    const p = n.properties || {};
+    const status = p.status || '';
+    const isRejected = status.includes('REJECTED');
+    return `<div class="card" ${isRejected?'style="border-color:var(--red);opacity:0.6"':''}>
+      <div class="card-body">
+        <span class="card-tag ${isRejected?'tag-rejected':'tag-budget'}">${status || '—'}</span>
+        <h3>${n.label}</h3>
+        <div style="font-size:0.8rem;color:var(--dim);margin:4px 0">${n.description || ''}</div>
+        ${p.reason ? `<div style="font-size:0.75rem;color:${isRejected?'var(--red)':'var(--accent)'};margin-top:4px">→ ${p.reason}</div>` : ''}
+        ${p.price ? `<div style="font-size:0.85rem;font-weight:600;color:var(--accent);margin-top:4px">${p.price}</div>` : ''}
+      </div></div>`;
+  }).join('');
+}
+
+// ── Graph visualization ──
+function initGraph() {
+  if (!GRAPH) return;
+  const C = {milestones:'#c9a84c',skills:'#9b59b6',legal:'#3498db',company:'#2ecc71',animals:'#27ae60',plants:'#229954',products:'#e67e22',locations:'#e74c3c',infra:'#1abc9c'};
+  const EC = {depends_on:'#e74c3c',unlocks:'#27ae60',blocks:'#e74c3c',produces:'#229954',costs:'#c9a84c',feeds_into:'#e67e22',enables:'#3498db',located_in:'#999',happens_before:'#9b59b6'};
+
+  const els = [];
+  GRAPH.nodes.forEach(n => els.push({data:{id:n.id,label:n.label,cluster:n.cluster,node_type:n.type,desc:n.description||'',props:n.properties||{}}}));
+  GRAPH.edges.forEach(e => els.push({data:{source:e.source,target:e.target,label:e.label||'',edge_type:e.type}}));
+
+  const cy = cytoscape({
+    container: document.getElementById('graph-container'), elements: els,
+    style: [
+      {selector:'node', style:{'label':'data(label)','background-color':(e)=>C[e.data('cluster')]||'#555','color':'#fff','font-size':'9px','font-weight':'500','text-wrap':'wrap','text-max-width':'90px','text-valign':'bottom','text-margin-y':5,'width':(e)=>{const t=e.data('node_type');return t==='milestone'?38:t==='asset'?28:22},'height':(e)=>{const t=e.data('node_type');return t==='milestone'?38:t==='asset'?28:22},'border-width':2,'border-color':(e)=>C[e.data('cluster')]||'#555','border-opacity':0.4}},
+      {selector:'node:selected', style:{'border-width':3,'border-color':'#fff','font-weight':'700'}},
+      {selector:'edge', style:{'label':'data(label)','font-size':'7px','color':'#555','text-rotation':'autorotate','text-margin-y':-6,'curve-style':'bezier','target-arrow-shape':'triangle','target-arrow-color':(e)=>EC[e.data('edge_type')]||'#444','line-color':(e)=>EC[e.data('edge_type')]||'#444','line-opacity':0.35,'width':1.5}},
+      {selector:'edge:selected', style:{'line-color':'#c9a84c','target-arrow-color':'#c9a84c','line-opacity':1,'width':2.5}}
+    ],
+    layout:{name:'cose',idealEdgeLength:110,nodeOverlap:20,nodeRepulsion:7000,edgeElasticity:100,gravity:0.3,numIter:800,animate:true,animationDuration:800},
+    minZoom:0.15,maxZoom:3,wheelSensitivity:0.2
+  });
+
+  cy.on('tap','node',function(evt){
+    const n=evt.target;
+    const ine=n.connectedEdges('[target="'+n.id()+'"]');
+    const oute=n.connectedEdges('[source="'+n.id()+'"]');
+    let h='<h2>'+n.data('label')+'</h2><div class="tag">'+n.data('node_type')+' · '+n.data('cluster')+'</div>';
+    if(n.data('desc'))h+='<div class="desc" style="font-size:0.85rem;color:#bbb;line-height:1.5;margin-bottom:12px">'+n.data('desc')+'</div>';
+    const props=n.data('props');
+    if(props&&Object.keys(props).length){h+='<div style="margin-bottom:12px">';
+      for(const[k,v]of Object.entries(props))h+='<div style="font-size:0.8rem;color:#999;padding:3px 0;border-bottom:1px solid #1a1a1a"><b style="color:#ccc">'+k+':</b> '+JSON.stringify(v)+'</div>';
+      h+='</div>';}
+    if(ine.length||oute.length){h+='<div style="margin-top:8px;font-size:0.65rem;color:#555;text-transform:uppercase;letter-spacing:0.1em">Connections</div>';
+      ine.forEach(e=>{const s=e.source();h+='<div style="font-size:0.8rem;color:#999;padding:3px 0">← <span style="color:#c9a84c">'+e.data('edge_type')+'</span> '+s.data('label')+'</div>';});
+      oute.forEach(e=>{const t=e.target();h+='<div style="font-size:0.8rem;color:#999;padding:3px 0">→ <span style="color:#c9a84c">'+e.data('edge_type')+'</span> '+t.data('label')+'</div>';}
+    }
+    document.getElementById('panel-content').innerHTML=h;
+    document.getElementById('panel').classList.add('open');
+    cy.elements().removeClass('hl');n.connectedEdges().addClass('hl');n.neighborhood('node').addClass('hl');
+  });
+  cy.on('tap',function(evt){if(evt.target===cy){document.getElementById('panel').classList.remove('open');cy.elements().removeClass('hl');}});
+}
+
+// ── Upload handler ──
+async function handleFiles(files){
+  const list=document.getElementById('upload-list');
+  for(const file of files){
+    const id=Date.now()+'_'+Math.random().toString(36).slice(2,8);
+    const mb=(file.size/1024/1024).toFixed(1);
+    list.innerHTML+=`<div class="card" id="u-${id}"><div class="card-body"><div style="display:flex;justify-content:space-between"><div><h3 style="font-size:0.9rem">${file.name}</h3><div style="font-size:0.75rem;color:var(--dim)">${mb} MB</div></div><div style="font-size:0.75rem;color:var(--accent)" id="s-${id}">Queued</div></div><div class="progress-bar"><div class="progress-fill" id="p-${id}" style="width:0%"></div></div></div></div>`;
+    try{
+      document.getElementById('s-'+id).textContent='Requesting URL...';
+      const r=await fetch('https://lifeos-worker.tradesprior.workers.dev/api/media/init',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({filename:file.name,size:file.size,mimeType:file.type,capturedAt:new Date().toISOString()})});
+      const{assetId,uploadUrl}=await r.json();
+      document.getElementById('s-'+id).textContent='Uploading...';
+      document.getElementById('p-'+id).style.width='50%';
+      const up=await fetch(uploadUrl,{method:'PUT',body:file,headers:{'Content-Type':file.type}});
+      if(up.ok){document.getElementById('p-'+id).style.width='90%';await fetch('https://lifeos-worker.tradesprior.workers.dev/api/media/complete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({assetId})});document.getElementById('p-'+id).style.width='100%';document.getElementById('s-'+id).textContent='✓ Done';document.getElementById('s-'+id).style.color='#4caf50';}
+    }catch(e){document.getElementById('s-'+id).textContent='✗ Failed';document.getElementById('s-'+id).style.color='#e74c3c';}
+  }
+}
+
+// ── Chat placeholder ──
+function sendChat(){
+  const input=document.getElementById('chatInput');const msg=input.value.trim();if(!msg)return;
+  const chat=document.getElementById('chat');
+  chat.innerHTML+=`<div class="chat-msg user"><strong>You:</strong> ${msg}</div>`;
+  input.value='';
+  setTimeout(()=>{chat.innerHTML+=`<div class="chat-msg agent"><strong>lifeOS:</strong> I'm a prototype. The real agent will read graph.json, check constraints, trace dependencies, and give you a concrete answer based on your current state. Coming soon.</div>`;chat.scrollTop=chat.scrollHeight;},500);
+}
+
+// ── Tabs ──
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.page).classList.add('active');
+    window.scrollTo(0,0);
+  });
+});
+
+// ── Init ──
+loadGraph();
+</script>
+</body>
+</html>

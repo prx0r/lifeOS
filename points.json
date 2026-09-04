@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "version": "2.0.0",
+    "system": "SVATANTRYA Points",
+    "rule": "1 point = \u00a3500. Points are money. Nothing else.",
+    "exchangeRate": {
+      "1_point": "\u00a3500",
+      "1_point_inr": "\u20b951,600"
+    },
+    "philosophy": "Points are money SENT to the fund. Not money saved. Not money earned. Money that has been committed to the vision. Until you transfer it, it is not a point."
+  },
+  "wallet": {
+    "current": 0,
+    "unit": "points",
+    "value_gbp": 0,
+    "note": "0 points until money is actually sent to the fund. Having \u00a35,000 in your pocket is not the same as having 10 points."
+  },
+  "costs": {
+    "company_registration": {
+      "points": 30,
+      "gbp": 15000,
+      "what": "SVATANTRYA Pvt Ltd + DSC + DIN + SPICe+"
+    },
+    "scouting_trip": {
+      "points": 10,
+      "gbp": 5000,
+      "what": "Visit Dehradun/Almora, see properties in person"
+    },
+    "visa_fees": {
+      "points": 8,
+      "gbp": 4000,
+      "what": "Employment Visa application + travel to embassy"
+    },
+    "frro_registration": {
+      "points": 2,
+      "gbp": 1000,
+      "what": "Foreigners registration after arrival"
+    },
+    "lease_deposit": {
+      "points": 40,
+      "gbp": 20000,
+      "what": "5-year agricultural land lease deposit"
+    },
+    "temporary_shelter": {
+      "points": 20,
+      "gbp": 10000,
+      "what": "Prefab/cottage on leased land"
+    },
+    "basic_fencing": {
+      "points": 15,
+      "gbp": 7500,
+      "what": "Perimeter fencing for animals"
+    },
+    "borewell": {
+      "points": 25,
+      "gbp": 12500,
+      "what": "300ft borewell + pump + plumbing"
+    },
+    "gir_cow": {
+      "points": 15,
+      "gbp": 7500,
+      "what": "1 Gir cow + shed + milking"
+    },
+    "chickens_25": {
+      "points": 5,
+      "gbp": 2500,
+      "what": "25 desi chicks + coop"
+    },
+    "bakharwal_dog": {
+      "points": 10,
+      "gbp": 5000,
+      "what": "Livestock guardian dog"
+    },
+    "sheep_3": {
+      "points": 10,
+      "gbp": 5000,
+      "what": "3 Gaddi sheep"
+    },
+    "goats_3": {
+      "points": 15,
+      "gbp": 7500,
+      "what": "3 Beetal goats"
+    },
+    "mushroom_lab": {
+      "points": 80,
+      "gbp": 40000,
+      "what": "Clean room + laminar flow + autoclave"
+    },
+    "starlink": {
+      "points": 3,
+      "gbp": 1500,
+      "what": "Hardware + first 3 months"
+    },
+    "solar_2kw": {
+      "points": 20,
+      "gbp": 10000,
+      "what": "Panels + batteries + inverter"
+    },
+    "first_book": {
+      "points": 15,
+      "gbp": 7500,
+      "what": "Publishing + distribution"
+    },
+    "supplement_launch": {
+      "points": 25,
+      "gbp": 12500,
+      "what": "FSSAI + packaging + first batch"
+    }
+  },
+  "progression": {
+    "current": {
+      "points": 10,
+      "label": "Saved \u00a35,000"
+    },
+    "tier1": {
+      "points": 40,
+      "label": "Company registered",
+      "needs": "30 more points (\u00a315K)"
+    },
+    "tier2": {
+      "points": 78,
+      "label": "Visa secured",
+      "needs": "38 more points (\u00a319K)"
+    },
+    "tier3": {
+      "points": 165,
+      "label": "Farm running",
+      "needs": "87 more points (\u00a343.5K)"
+    },
+    "tier4": {
+      "points": 260,
+      "label": "Business producing",
+      "needs": "95 more points (\u00a347.5K)"
+    },
+    "tier5": {
+      "points": 400,
+      "label": "Full ecosystem",
+      "needs": "140 more points (\u00a370K)"
+    }
+  }
+}

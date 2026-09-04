@@ -1,0 +1,63 @@
+{
+  "name": "Save to lifeOS",
+  "description": "Share video/photo/audio from Camera Roll → upload to lifeOS R2 storage",
+  "shortcut": {
+    "actions": [
+      {
+        "type": "receive-files",
+        "name": "Receive input",
+        "input": "Shortcut Input"
+      },
+      {
+        "type": "get-details-of-files",
+        "name": "Get file details",
+        "input": "Shortcut Input",
+        "detail-type": "Name"
+      },
+      {
+        "type": "get-details-of-files",
+        "name": "Get file size",
+        "input": "Shortcut Input",
+        "detail-type": "File Size"
+      },
+      {
+        "type": "get-details-of-files",
+        "name": "Get file type",
+        "input": "Shortcut Input",
+        "detail-type": "Type"
+      },
+      {
+        "type": "url",
+        "name": "API URL",
+        "url": "https://lifeos-worker.tom-egoic.workers.dev/api/media/init"
+      },
+      {
+        "type": "get-contents-of-url",
+        "name": "Request presigned URL",
+        "method": "POST",
+        "url": "https://lifeos-worker.tom-egoic.workers.dev/api/media/init",
+        "headers": {"Content-Type": "application/json"},
+        "body": "{\"filename\":\"{{File Name}}\",\"size\":{{File Size}}.\"mimeType\":\"{{File Type}}\",\"capturedAt\":\"{{Current Date}}\"}"
+      },
+      {
+        "type": "get-dictionary-value",
+        "name": "Get upload URL",
+        "dictionary": "Contents of URL",
+        "key": "uploadUrl"
+      },
+      {
+        "type": "upload-file",
+        "name": "Upload to R2",
+        "file": "Shortcut Input",
+        "url": "{{Upload URL}}"
+      },
+      {
+        "type": "notification",
+        "name": "Done",
+        "title": "lifeOS",
+        "body": "Saved to lifeOS ✓"
+      }
+    ]
+  },
+  "note": "Import this shortcut on iPhone. Then: Record video → Share → Save to lifeOS. Two taps."
+}

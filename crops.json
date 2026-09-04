@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "version": "7.0.0",
+    "currency": "GBP",
+    "exchangeRate": 129,
+    "lastUpdated": "2026-09-04",
+    "location": "Ranikhet / Almora, Kumaon, Uttarakhand — 5500-6500ft",
+    "climate": "Winter 0-10°C, Summer 15-25°C, Monsoon July-Sept, Frost Nov-Feb",
+    "growingSeason": "March-November (8-9 months). With protection: February-December."
+  },
+
+  "crops": {
+
+    "overview": {
+      "totalFoodSelfSufficiency": "~70-80%. You grow milk, eggs, vegetables, grains, fruit, honey. You buy rice, salt, oil, spices, tea.",
+      "gardenSize": "0.5-1 acre kitchen garden + 0.5 acre fodder crops for animals",
+      "keyPrinciple": "Grow what the altitude gives you. Don't fight the climate — work with it.",
+      "soil": "Kumaon soil is fertile but rocky. Amend with cow dung compost. Terracing may be needed on slopes."
+    },
+
+    "yearRound": {
+      "name": "Year-Round Crops (grow in any season with basic protection)",
+      "crops": [
+        {
+          "crop": "Spinach (Palak)",
+          "season": "Year-round (best Oct-Mar, tolerates frost)",
+          "yield": "500g-1kg per 10 sq ft harvest",
+          "use": "Saag, saag paneer, salads, smoothies, cooking green",
+          "notes": "Frost actually makes it sweeter. Plant in succession every 2 weeks for continuous harvest."
+        },
+        {
+          "crop": "Mustard Greens (Rai / Sarson)",
+          "season": "Year-round (best Oct-Mar, frost-hardy)",
+          "yield": "1-2kg per 10 sq ft",
+          "use": "Saag, pickled greens, oil from seeds",
+          "notes": "THE winter vegetable of Kumaon. Grows when nothing else does. Seeds produce mustard oil too."
+        },
+        {
+          "crop": "Radish (Muli)",
+          "season": "Year-round (best in cool weather)",
+          "yield": "10-15 radishes per 2 sq ft",
+          "use": "Salads, paratha filling, pickles, cooking",
+          "notes": "30 days from seed to harvest. Fastest crop you can grow. Plant every 2 weeks."
+        },
+        {
+          "crop": "Green Onions / Spring Onions",
+          "season": "Year-round",
+          "yield": "Bunch per sq ft",
+          "use": "Cooking, salads, garnish",
+          "notes": "Can grow from kitchen scraps — put root end in water, then soil."
+        },
+        {
+          "crop": "Herbs (Methi/Fenugreek, Dhania/Coriander, Pudina/Mint)",
+          "season": "Year-round (best in cool weather)",
+          "yield": "Continuous harvest if cut-and-come-again",
+          "use": "Cooking, teas, medicinal",
+          "notes": "Methi grows in 21 days. Coriander bolts in heat — grow in shade in summer."
+        }
+      ]
+    },
+
+    "spring": {
+      "name": "Spring (March-May) — Planting Season",
+      "description": "Soil warms up. Last frost in March-April. Time to plant everything.",
+      "crops": [
+        {
+          "crop": "Potatoes (Aloo)",
+          "months": "Plant Feb-Mar, harvest Jun-Jul",
+          "yield": "8-12 tonnes/acre",
+          "use": "Staple carb. Aloo gobi, paratha, chips, everything.",
+          "notes": "Native to Himalayas. Perfect for your altitude. Plant seed potatoes 4 inches deep, 12 inches apart."
+        },
+        {
+          "crop": "Peas (Matar)",
+          "months": "Plant Feb-Mar, harvest Apr-Jun",
+          "yield": "1-2kg per 10 sq ft",
+          "use": "Fresh eating, matar paneer, frozen for later",
+          "notes": "Cool-season crop. Plant early. Vines need staking."
+        },
+        {
+          "crop": "Beans (Phaliyan)",
+          "months": "Plant Mar-Apr, harvest May-Jul",
+          "yield": "1-2kg per 10 sq ft",
+          "use": "Sabzi, salads, dried beans for storage",
+          "notes": "Bush beans are easier than pole beans. Succession plant every 3 weeks."
+        },
+        {
+          "crop": "Rajma (Kidney Beans)",
+          "months": "Plant Apr-May, harvest Aug-Sep",
+          "yield": "500g-1kg per 10 sq ft",
+          "use": "Rajma-chawal — the Kumaon staple. Protein source.",
+          "notes": "Traditional Kumaon crop. Grows in monsoon. Dry and store for year-round use."
+        },
+        {
+          "crop": "Cucumber (Kheera)",
+          "months": "Plant Mar-Apr, harvest May-Jul",
+          "yield": "10-15 cucumbers per plant",
+          "use": "Salads, raita, pickles",
+          "notes": "Needs warm soil. Can grow on trellis to save space."
+        },
+        {
+          "crop": "Bottle Gourd (Lauki)",
+          "months": "Plant Mar-Apr, harvest Jun-Sep",
+          "yield": "5-10 gourds per vine",
+          "use": "Sabzi, dal, juice",
+          "notes": "Vine — needs trellis or fence. Very productive."
+        },
+        {
+          "crop": "Pumpkin (Kaddu)",
+          "months": "Plant Mar-Apr, harvest Jul-Oct",
+          "yield": "2-5 pumpkins per vine",
+          "use": "Sabzi, soup, sweets (kaddu ki kheer)",
+          "notes": "Vine — spreads on ground. Store whole for months."
+        }
+      ]
+    },
+
+    "summer": {
+      "name": "Summer (June-August) — Peak Growing + Monsoon",
+      "description": "Warmest months. Monsoon rain from July. Abundant growth.",
+      "crops": [
+        {
+          "crop": "Tomatoes (Tamatar)",
+          "months": "Plant Feb-Mar (seedlings), harvest Jun-Sep",
+          "yield": "5-10kg per plant",
+          "use": "Everything — curry, sauce, salad, chutney",
+          "notes": "Start seedlings indoors in Feb, transplant after last frost. Stake plants. Indeterminate varieties keep producing."
+        },
+        {
+          "crop": "Brinjal / Eggplant (Baingan)",
+          "months": "Plant Mar-Apr, harvest Jun-Oct",
+          "yield": "10-20 per plant",
+          "use": "Bhartha, baingan bharta, sabzi",
+          "notes": "Heat-loving. Productive all summer."
+        },
+        {
+          "crop": "Bottle Gourd / Ridge Gourd / Bitter Gourd",
+          "months": "Plant Apr-May, harvest Jul-Oct",
+          "yield": "Continuous harvest",
+          "use": "Sabzi, juices",
+          "notes": "Vine crops. Monsoon is peak season. Trellis needed."
+        },
+        {
+          "crop": "Chilli (Mirch)",
+          "months": "Plant Feb-Mar, harvest May-Dec",
+          "yield": "50-100 chillies per plant",
+          "use": "Cooking, pickles, drying for spice",
+          "notes": "Perennial in your climate — can survive winter if protected. Plant once, harvest for years."
+        },
+        {
+          "crop": "Capsicum / Bell Pepper (Shimla Mirch)",
+          "months": "Plant Mar-Apr, harvest Jun-Sep",
+          "yield": "10-15 per plant",
+          "use": "Salads, sabzi, stuffing",
+          "notes": "Named after Shimla for a reason — grows well at altitude."
+        }
+      ]
+    },
+
+    "monsoon": {
+      "name": "Monsoon (July-September) — Rain-Fed Crops",
+      "description": "Heavy rain. Plant water-loving crops. Protect existing plants from waterlogging.",
+      "crops": [
+        {
+          "crop": "Rajma (Kidney Beans)",
+          "months": "Plant Jun-Jul, harvest Sep-Oct",
+          "yield": "500g-1kg per 10 sq ft",
+          "use": "Rajma-chawal, dried beans for year-round",
+          "notes": "Monsoon is perfect for rajma. Dry the beans and store — they last all year."
+        },
+        {
+          "crop": "Madua (Finger Millet / Ragi)",
+          "months": "Plant Jun-Jul, harvest Oct-Nov",
+          "yield": "1-2 tonnes/acre",
+          "use": "Roti, porridge, malt drink. Highly nutritious.",
+          "notes": "Ancient Kumaon grain. Drought-tolerant once established. Traditional staple."
+        },
+        {
+          "crop": "Jhangora (Barnyard Millet)",
+          "months": "Plant Jun-Jul, harvest Sep-Oct",
+          "yield": "1-1.5 tonnes/acre",
+          "use": "Porridge, pulao, kheer. Light, easy to digest.",
+          "notes": "Traditional Kumaon grain. Grows in wet conditions. Stores well."
+        },
+        {
+          "crop": "Buckwheat (Singhara)",
+          "months": "Plant Jul-Aug, harvest Sep-Oct",
+          "yield": "500kg-1 tonne/acre",
+          "use": "Flour for roti, porridge. Gluten-free.",
+          "notes": "Fast-growing — 60-80 days. Good catch crop."
+        },
+        {
+          "crop": "Turmeric (Haldi)",
+          "months": "Plant Jun-Jul, harvest Dec-Jan",
+          "yield": "2-3 tonnes/acre fresh",
+          "use": "Fresh turmeric, dried powder, medicinal",
+          "notes": "Perennial. Plant once, harvest for years. Takes 8-10 months to mature. High value."
+        },
+        {
+          "crop": "Ginger (Adrak)",
+          "months": "Plant May-Jun, harvest Nov-Dec",
+          "yield": "1-2 tonnes/acre",
+          "use": "Fresh ginger, dried powder, tea, medicinal",
+          "notes": "Grows in shade. Plant under trees or shade cloth. High value crop."
+        }
+      ]
+    },
+
+    "autumn": {
+      "name": "Autumn (September-November) — Harvest + Plant Winter Crops",
+      "description": "Main harvest season. Also time to plant winter crops. Preserve food for winter.",
+      "crops": [
+        {
+          "crop": "Cauliflower (Phool Gobi)",
+          "months": "Plant Jul-Aug, harvest Oct-Dec",
+          "yield": "1-2 heads per plant",
+          "use": "Gobi paratha, aloo gobi, gobi manchurian",
+          "notes": "Cool-season crop. Cover with leaves if frost comes early."
+        },
+        {
+          "crop": "Cabbage (Patta Gobi)",
+          "months": "Plant Jul-Sep, harvest Oct-Feb",
+          "yield": "1-2 heads per plant",
+          "use": "Salads, sabzi, pickles, kimchi",
+          "notes": "Very cold-hardy. Can stay in ground through light frost."
+        },
+        {
+          "crop": "Carrot (Gajar)",
+          "months": "Plant Aug-Sep, harvest Nov-Jan",
+          "yield": "10-15 per sq ft",
+          "use": "Salads, gajar ka halwa, cooking, juice",
+          "notes": "Sweet in cold weather. Leave in ground — frost makes them sweeter."
+        },
+        {
+          "crop": "Beetroot (Chukandar)",
+          "months": "Plant Aug-Sep, harvest Nov-Jan",
+          "yield": "8-12 per sq ft",
+          "use": "Salads, juice, cooking, pickles",
+          "notes": "Cold-hardy. Stores well in sand for months."
+        },
+        {
+          "crop": "Turnip (Shalgam)",
+          "months": "Plant Aug-Sep, harvest Nov-Feb",
+          "yield": "10-15 per sq ft",
+          "use": "Sabzi, paratha, salads",
+          "notes": "Very cold-hardy. Grows in frost."
+        },
+        {
+          "crop": "Garlic (Lehsun)",
+          "months": "Plant Sep-Oct, harvest Apr-May",
+          "yield": "50-100g per plant",
+          "use": "Cooking, pickles, medicinal",
+          "notes": "Plant in autumn, harvest in spring. Stores for months after harvest."
+        },
+        {
+          "crop": "Onion (Pyaz) — Ranikhet Red",
+          "months": "Plant Sep-Oct, harvest Mar-May",
+          "yield": "15-20 per sq ft",
+          "use": "Cooking staple. Ranikhet red onion is famous.",
+          "notes": "Traditional Kumaon variety. Plant sets (small bulbs) in autumn."
+        }
+      ]
+    },
+
+    "winter": {
+      "name": "Winter (November-February) — Cold-Hardy Crops + Preservation",
+      "description": "Frost from November. Snow possible at your altitude. Grow cold-hardy greens. Preserve summer harvest.",
+      "crops": [
+        {
+          "crop": "Spinach (Palak)",
+          "months": "Plant Oct-Nov, harvest Dec-Mar",
+          "yield": "Continuous cut-and-come-again",
+          "use": "Saag, palak paneer, soup, smoothies",
+          "notes": "Frost makes it sweeter. THE winter green. Can grow under simple plastic cover."
+        },
+        {
+          "crop": "Mustard Greens (Rai)",
+          "months": "Plant Oct-Nov, harvest Dec-Mar",
+          "yield": "1-2kg per 10 sq ft",
+          "use": "Sarson ka saag, pickles, oil from seeds",
+          "notes": "Grows when nothing else does. Frost-tolerant. THE Kumaon winter crop."
+        },
+        {
+          "crop": "Peas (Matar) — Winter variety",
+          "months": "Plant Oct-Nov, harvest Jan-Mar",
+          "yield": "1-2kg per 10 sq ft",
+          "use": "Fresh eating, matar paneer",
+          "notes": "Winter peas are sweeter than summer peas. Grow under shade cloth."
+        },
+        {
+          "crop": "Lettuce / Salad Leaves",
+          "months": "Plant Oct-Dec, harvest Dec-Mar",
+          "yield": "Continuous harvest",
+          "use": "Salads, sandwiches",
+          "notes": "Cold-hardy varieties. Can grow in pots on windowsill too."
+        },
+        {
+          "crop": "Coriander (Dhania)",
+          "months": "Plant Oct-Nov, harvest Dec-Feb",
+          "yield": "Continuous if cut-and-come-again",
+          "use": "Fresh garnish, chutney, cooking",
+          "notes": "Bolts in heat — winter is the best time to grow it."
+        }
+      ]
+    },
+
+    "fodderCrops": {
+      "name": "Fodder Crops (Feed Your Animals)",
+      "description": "Grow your own animal feed. Reduces cost, keeps animals healthy.",
+      "crops": [
+        {
+          "crop": "Jowar (Sorghum)",
+          "season": "Plant Apr-May, harvest Jul-Sep",
+          "yield": "8-12 tonnes/acre",
+          "use": "Primary green fodder for cow and sheep",
+          "notes": "Drought-tolerant. Cut 2-3 times per season. THE fodder crop."
+        },
+        {
+          "crop": "Berseem (Egyptian Clover)",
+          "season": "Plant Sep-Oct and Feb-Mar, harvest year-round",
+          "yield": "15-20 tonnes/acre/year (multiple cuts)",
+          "use": "High-protein green fodder. Best for dairy cows.",
+          "notes": "Perennial. Cut every 25-30 days. Nitrogen-fixer — improves soil."
+        },
+        {
+          "crop": "Napier Grass",
+          "season": "Plant Feb-Mar, cut year-round after establishment",
+          "yield": "20-40 tonnes/acre/year",
+          "use": "Tall grass fodder for cows and sheep",
+          "notes": "Perennial. Plant once, cut for years. Very high yielding."
+        },
+        {
+          "crop": "Bajra (Pearl Millet)",
+          "season": "Plant Jun-Jul, harvest Sep-Oct",
+          "yield": "8-10 tonnes/acre",
+          "use": "Fodder + grain for you and animals",
+          "notes": "Dual purpose — humans eat the grain, animals eat the stalk."
+        }
+      ]
+    },
+
+    "perennialPlants": {
+      "name": "Perennial Plants (Plant Once, Harvest for Years)",
+      "description": "Long-term investments. Plant in year 1, harvest from year 3-5 onwards.",
+      "plants": [
+        {
+          "plant": "Apple Trees",
+          "whenToPlant": "Feb-Mar (bare root) or Jul-Aug (monsoon)",
+          "timeToHarvest": "3-5 years",
+          "yield": "50-200kg per mature tree",
+          "use": "Fresh eating, juice, cider, drying, preserves",
+          "notes": "Kumaon is famous for apples. Plant 3-5 trees. Choose local varieties (Red Delicious, Royal Delicious, Golden)."
+        },
+        {
+          "plant": "Pear Trees",
+          "whenToPlant": "Feb-Mar",
+          "timeToHarvest": "3-5 years",
+          "yield": "30-100kg per tree",
+          "use": "Fresh eating, preserves, cider",
+          "notes": "Hardier than apples. Less maintenance."
+        },
+        {
+          "plant": "Plum Trees (Alu Bukhara)",
+          "whenToPlant": "Feb-Mar",
+          "timeToHarvest": "2-4 years",
+          "yield": "20-50kg per tree",
+          "use": "Fresh eating, jam, chutney, drying",
+          "notes": "Very productive. Self-fertile varieties available."
+        },
+        {
+          "plant": "Walnut Trees (Akhrot)",
+          "whenToPlant": "Feb-Mar",
+          "timeToHarvest": "5-8 years",
+          "yield": "50-100kg per mature tree",
+          "use": "Nuts, oil, wood",
+          "notes": "Long-term investment. Kumaon walnuts are famous. Take years but produce for decades."
+        },
+        {
+          "plant": "Turmeric (Haldi)",
+          "whenToPlant": "Jun-Jul",
+          "timeToHarvest": "8-10 months, then perennial",
+          "yield": "2-3 tonnes/acre",
+          "use": "Fresh turmeric, powder, medicinal",
+          "notes": "Plant once, harvest rhizomes, replant some for next year. High value."
+        },
+        {
+          "plant": "Ginger (Adrak)",
+          "whenToPlant": "May-Jun",
+          "timeToHarvest": "8-10 months, then perennial",
+          "yield": "1-2 tonnes/acre",
+          "use": "Fresh ginger, powder, tea",
+          "notes": "Needs shade. Grow under trees. High value."
+        }
+      ]
+    },
+
+    "medicinalHerbs": {
+      "name": "Medicinal Herbs (Himalayan Speciality)",
+      "description": "Grow your own supplements. The Himalayas are the pharmacy.",
+      "herbs": [
+        {
+          "herb": "Ashwagandha",
+          "use": "Adaptogen — stress, energy, sleep, testosterone",
+          "price": "₹1,000-2,000/kg dried root",
+          "growing": "Plant Feb-Mar, harvest Nov-Dec. Root is the medicine.",
+          "notes": "Easy to grow. Drought-tolerant. Dry the roots, powder them. Premium supplement crop."
+        },
+        {
+          "herb": "Brahmi (Bacopa)",
+          "use": "Brain tonic — memory, focus, anxiety",
+          "price": "₹500-1,500/kg dried",
+          "growing": "Plant year-round in moist soil. Perennial ground cover.",
+          "notes": "Grows near water. Good ground cover for moist areas."
+        },
+        {
+          "herb": "Tulsi (Holy Basil)",
+          "use": "Immunity, respiratory, adaptogen",
+          "price": "₹300-800/kg dried leaves",
+          "growing": "Plant year-round. Perennial in your climate.",
+          "notes": "Grows like a weed. Dry leaves for tea. Sacred plant — you'll have it everywhere."
+        },
+        {
+          "herb": "Stevia",
+          "use": "Natural sweetener — zero calories",
+          "price": "₹2,000-4,000/kg dried leaves",
+          "growing": "Plant Mar-Apr. Perennial in frost-free areas.",
+          "notes": "300x sweeter than sugar. Dry leaves, crush, use as sweetener. High value crop."
+        },
+        {
+          "herb": "Lemongrass",
+          "use": "Tea, cooking, mosquito repellent, oil",
+          "price": "₹200-500/kg fresh",
+          "growing": "Plant Feb-Mar. Perennial clumps.",
+          "notes": "Grows fast, spreads. Cut-and-come-again. Makes excellent tea."
+        }
+      ]
+    },
+
+    "preservation": {
+      "name": "Food Preservation (Eat Year-Round)",
+      "methods": [
+        {
+          "method": "Sun Drying",
+          "what": "Tomatoes, chillies, herbs, turmeric, ginger, fruits",
+          "cost": "Free — just sunshine and clean trays",
+          "notes": "Himalayan sun is intense at altitude — perfect for drying. Make sun-dried tomatoes, dried herbs, dried chillies."
+        },
+        {
+          "method": "Pickling (Achar)",
+          "what": "Mango, lime, chilli, carrot, mixed vegetables",
+          "cost": "₹100-200 per batch — oil, salt, spices",
+          "notes": "Indian pickles last 6-12 months. Make in summer, eat all year."
+        },
+        {
+          "method": "Root Cellar Storage",
+          "what": "Potatoes, carrots, beetroot, turnip, garlic, onion",
+          "cost": "Free — just a cool, dark, dry space",
+          "notes": "Dig a pit or use an under-stair storage. Root vegetables store 3-6 months in sand."
+        },
+        {
+          "method": "Freezing",
+          "what": "Peas, beans, greens, herbs (in oil or water)",
+          "cost": "₹10,000-15,000 for chest freezer + electricity",
+          "notes": "Best quality preservation. Freeze summer abundance for winter."
+        },
+        {
+          "method": "Fermentation",
+          "what": "Ghee, curd, cheese, pickles, kimchi",
+          "cost": "Minimal — milk/salt/time",
+          "notes": "Ghee from cow milk lasts 6-12 months without refrigeration. Curd and cheese are daily."
+        }
+      ]
+    },
+
+    "yearRoundFoodCalendar": {
+      "name": "Your Daily Food — Year-Round Source",
+      "calendar": {
+        "january": {
+          "milk": "Cow (if milking) + goat cheese",
+          "eggs": "4-6/day (winter low)",
+          "vegetables": "Spinach, mustard greens, radish, peas (winter crops)",
+          "grains": "Stored rajma, madua, jhangora from autumn harvest",
+          "preserved": "Sun-dried tomatoes, pickles, ghee"
+        },
+        "february": {
+          "milk": "Cow (late lactation) + goat cheese",
+          "eggs": "5-7/day (days getting longer)",
+          "vegetables": "Spinach, mustard, radish, start planting spring crops",
+          "grains": "Stored grains",
+          "note": "Start seedlings indoors for March transplant"
+        },
+        "march": {
+          "milk": "Cow (fresh milk if just calved) + goat",
+          "eggs": "8-10/day (spring peak starting)",
+          "vegetables": "Spring planting begins. Peas, beans, potatoes going in.",
+          "note": "Busy planting month"
+        },
+        "april": {
+          "milk": "Cow peak + goat",
+          "eggs": "10-12/day",
+          "vegetables": "Peas, radish, spinach, herbs. Plant tomatoes, peppers.",
+          "note": "Spring harvest + new plantings"
+        },
+        "may": {
+          "milk": "Cow peak + goat",
+          "eggs": "12-15/day (peak)",
+          "vegetables": "Peas, beans, cucumber, early tomatoes",
+          "note": "Abundance begins"
+        },
+        "june": {
+          "milk": "Cow + goat",
+          "eggs": "12-15/day",
+          "vegetables": "Tomatoes, beans, cucumber, brinjal, chillies",
+          "note": "Summer harvest in full swing"
+        },
+        "july": {
+          "milk": "Cow + goat",
+          "eggs": "10-13/day (monsoon dip)",
+          "vegetables": "Ridge gourd, bitter gourd, pumpkin, tomatoes",
+          "note": "Monsoon — protect from waterlogging"
+        },
+        "august": {
+          "milk": "Cow + goat",
+          "eggs": "10-13/day",
+          "vegetables": "Full monsoon harvest. Plant autumn crops.",
+          "note": "Honey harvest from bees"
+        },
+        "september": {
+          "milk": "Cow + goat",
+          "eggs": "10-13/day",
+          "vegetables": "Tomatoes, beans, gourds. Plant winter crops.",
+          "note": "Start preserving — dry tomatoes, make pickles"
+        },
+        "october": {
+          "milk": "Cow + goat",
+          "eggs": "8-10/day",
+          "vegetables": "Cauliflower, cabbage, carrot, beetroot. Harvest potatoes.",
+          "note": "Main harvest. Preserve for winter."
+        },
+        "november": {
+          "milk": "Cow (late lactation) + goat cheese",
+          "eggs": "6-8/day (shorter days)",
+          "vegetables": "Root vegetables. Harvest turmeric, ginger.",
+          "note": "Store root vegetables in cellar. Dry herbs."
+        },
+        "december": {
+          "milk": "Cow (dry soon) + goat",
+          "eggs": "4-6/day (winter low)",
+          "vegetables": "Spinach, mustard greens, radish",
+          "note": "Winter greens + stored food. Rest and plan."
+        }
+      }
+    }
+  }
+}
