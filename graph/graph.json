@@ -1039,17 +1039,130 @@
       "label": "MA Indian Philosophy & Religion \u2014 BHU",
       "properties": {
         "institution": "Banaras Hindu University, Varanasi",
-        "department": "Department of Philosophy & Religion, Faculty of Arts",
+        "department": "Department of Philosophy and Religion, Faculty of Arts",
         "duration": "2 years (4 semesters)",
         "fees_total": "\u20b96,000 (\u20b91,500/semester) regular seat",
         "fees_paid": "\u20b960,000/year if paid seat",
         "hostel": "~\u20b95,375/year",
-        "seats": "Separate from MA Philosophy (96 seats)",
+        "seats": {
+          "ma_indian_philosophy_religion": "Separate department, specific seat count",
+          "ma_philosophy": "96 seats (separate programme)",
+          "note": "Two different MAs \u2014 one focused on Indian traditions, one broader"
+        },
         "admission": "CUET-PG score based",
-        "eligibility": "BA with 50% marks, philosophy/religious studies as subject",
+        "eligibility": {
+          "entrance_exam": "NOT REQUIRED (Foreign National exemption)",
+          "evaluation": "Merit-based on Leeds transcripts + AIU Equivalency Certificate",
+          "aiu_equivalency": "Must obtain from Association of Indian Universities (aiu.ac.in) \u2014 certifies UK degree matches Indian standard",
+          "minimum_marks": "Your First-Class Honours exceeds 50% threshold easily"
+        },
         "age": "28-30 during programme",
         "start": "October 2027",
-        "end": "2029"
+        "end": "2029",
+        "fees": {
+          "international_tuition": "$1,000-1,200/year (~\u00a3800-960)",
+          "international_registration": "One-time processing fee",
+          "hostel_international": "\u20b960,000-80,000/year (~\u00a3480-640)",
+          "food_utilities": "\u20b95,000-8,000/month (~\u00a340-64/month)",
+          "total_2yr_estimate": "\u00a33,000-5,000 all-in"
+        },
+        "admission_process": [
+          "Register for CUET-PG (NTA exam)",
+          "Select Philosophy paper",
+          "Appear for exam (Mar-Apr)",
+          "Results announced (May)",
+          "Register on BHU admission portal (bhucuetpg.samarth.edu.in)",
+          "Fill course preferences",
+          "Seat allotment in multiple rounds (Jul-Sep)",
+          "Pay admission fee online",
+          "Physical reporting at Department of Philosophy, BHU with original documents"
+        ],
+        "cutoff_2025": {
+          "round1_general": "155 marks",
+          "mopup_general": "109 marks",
+          "note": "Cutoff varies by year, category, and seat type"
+        },
+        "timeline_2027": {
+          "cuet_registration": "Dec 2026 \u2013 Jan 2027",
+          "cuet_exam": "Mar \u2013 Apr 2027",
+          "cuet_results": "May 2027",
+          "bhu_portal_opens": "May \u2013 Jun 2027",
+          "round1_allotment": "Jul 2027",
+          "fee_payment_round1": "Jul 2027",
+          "physical_reporting": "Jul \u2013 Aug 2027",
+          "round2_3_allotment": "Aug 2027",
+          "mopup_round": "Sep 2027",
+          "batch_starts": "Oct 2027"
+        },
+        "scholarships": [
+          {
+            "name": "UP Post-Matric Scholarship",
+            "amount": "\u20b96,000 Year 1 + \u20b95,000 Year 2",
+            "eligibility": "UP domicile, family income <\u20b92L"
+          },
+          {
+            "name": "NSP (National Scholarship Portal)",
+            "amount": "Varies",
+            "eligibility": "scholarships.gov.in"
+          },
+          {
+            "name": "BHU Merit Scholarships",
+            "amount": "Varies",
+            "eligibility": "Merit-based"
+          }
+        ],
+        "university": "Banaras Hindu University (BHU), Varanasi",
+        "established": 1916,
+        "naac_grade": "A",
+        "special strengths": [
+          "Integration of Indian and Western philosophical traditions",
+          "Sanskrit scholarship hub",
+          "Strong in Vedanta, Nyaya, Sankhya, Buddhist philosophy",
+          "Largest library system in Asia",
+          "Ganges-side campus"
+        ],
+        "admission_pathway": "FOREIGN NATIONAL \u2014 No CUET-PG required",
+        "why": "UK passport = Foreign National. BHU waives entrance exams for international students. Evaluated on degree merit alone.",
+        "your_degree": "First-Class Honours, BSc Accounting & Finance, University of Leeds",
+        "application": {
+          "portal": "https://bhufsradm.samarth.edu.in/",
+          "type": "BHU Foreign Students' Registry (FSR)",
+          "timeline_2027": {
+            "portal_opens": "March 2027",
+            "application_deadline": "May-July 2027",
+            "reporting": "July-September 2027",
+            "batch_starts": "October 2027"
+          },
+          "documents_needed": [
+            "UK passport (valid)",
+            "Leeds degree certificate + transcripts",
+            "AIU Equivalency Certificate (from aiu.ac.in)",
+            "Passport photos",
+            "Medical fitness certificate",
+            "Police clearance"
+          ]
+        },
+        "which_track": {
+          "programme": "M.A. Indian Philosophy and Religion (Non-IPR Graduates)",
+          "paper_code": "HUQP16 (if exam were required \u2014 but you're exempt)",
+          "reason": "Your degree is Accounting & Finance, not philosophy. The Non-IPR track specifically accommodates outside disciplines."
+        },
+        "timeline_to_apply": {
+          "now": "Start AIU Equivalency Certificate process (aiu.ac.in)",
+          "dec_2026": "Have AIU certificate ready",
+          "mar_2027": "BHU FSR portal opens \u2014 apply immediately",
+          "may_jul_2027": "Application deadline",
+          "jul_sep_2027": "Admission + reporting",
+          "oct_2027": "Programme begins"
+        },
+        "what_this_unlocks": [
+          "Student visa (2 years) \u2014 no exit needed",
+          "Hindi immersion in Varanasi",
+          "Academic network in Indian philosophy",
+          "Time to scout properties on weekends",
+          "Company registration during studies",
+          "Employment Visa pathway after graduation"
+        ]
       },
       "description": "Two years immersed in Indian philosophical traditions \u2014 Vedanta, Nyaya, Sankhya, religious thought. BHU is the centre of this. The department integrates Indian and Western philosophy."
     },
@@ -1065,8 +1178,18 @@
         "results": "May",
         "bhu_admission": "May-September (multiple rounds)",
         "registration_deadline": "December-January (for next year's exam)",
-        "paper": "Philosophy paper",
-        "cutoff_2025": "General: 155 marks (Round 1), 109 (Mop-Up)"
+        "paper": "Philosophy",
+        "cutoff_2025": "General: 155 marks (Round 1), 109 (Mop-Up)",
+        "exam_body": "NTA (National Testing Agency)",
+        "portal": "bhucuetpg.samarth.edu.in",
+        "registration_window": "Dec \u2013 Jan (for next year's exam)",
+        "exam_window": "Mar \u2013 Apr",
+        "typical_cutoff": "109-155 marks (General category)",
+        "preparation": "Indian philosophy, Western philosophy, logic, ethics, epistemology",
+        "your_deadline": "Register by Jan 2027 for Oct 2027 start",
+        "status": "NOT REQUIRED for this applicant",
+        "reason": "UK passport = Foreign National. BHU waives entrance exams for international students.",
+        "note": "This node exists for reference only. The FSR pathway bypasses CUET-PG entirely."
       },
       "description": "The entrance exam. Register Dec-Jan, take exam Mar-Apr, results May, admission Jul-Sep, start Oct."
     },
@@ -1108,7 +1231,7 @@
       "cluster": "masters",
       "label": "2 Years Hindi Immersion",
       "properties": {
-        "context": "BHU campus in Varanasi \u2014 Hindi heartland",
+        "context": "Varanasi is Hindi heartland. BHU campus, city life, ashrams \u2014 all Hindi. Two years of daily immersion.",
         "daily_exposure": "Classes, classmates, local life, street vendors, rickshaw drivers",
         "expected_outcome": "Conversational by end of Year 1, fluent by Year 2",
         "academic_hindi": "Sanskrit terms, philosophical vocabulary, academic writing"
@@ -1140,6 +1263,48 @@
         "description": "Can negotiate leases, deal with vets, run daily farm operations. Level needed for estate management."
       },
       "description": "Conversational Hindi \u2014 enough to live independently, negotiate, deal with officials. Achieved through 1 year of BHU immersion."
+    },
+    {
+      "id": "masters:aiu_equivalency",
+      "type": "milestone",
+      "cluster": "masters",
+      "label": "AIU Equivalency Certificate",
+      "properties": {
+        "what": "Association of Indian Universities certifies your UK degree matches Indian standard",
+        "portal": "https://aiu.ac.in/",
+        "why_needed": "BHU requires foreign degrees to be validated by AIU before admission",
+        "your_degree": "BSc Accounting & Finance, University of Leeds, First-Class Honours",
+        "timeline": "Apply ASAP \u2014 processing can take weeks",
+        "cost": "Nominal processing fee"
+      },
+      "description": "Without this, your Leeds degree is not recognised by BHU. Apply through aiu.ac.in. This is the FIRST thing to do."
+    },
+    {
+      "id": "masters:accommodation",
+      "type": "milestone",
+      "cluster": "masters",
+      "label": "BHU International Student Hostel",
+      "properties": {
+        "hostel_name": "Siddharth Vihar International Boys Hostel",
+        "location": "Near Lanka gate, BHU campus",
+        "type": "International student housing \u2014 NOT domestic dorms",
+        "room": "Private single-occupancy room (domestic students get shared rooms)",
+        "amenities": [
+          "Air-conditioned rooms",
+          "Attached/semi-private modern bathrooms",
+          "High-speed Wi-Fi",
+          "Common lounge with TVs",
+          "Dedicated computer labs",
+          "Laundry services",
+          "Mini common kitchens with fridge + induction cooktop",
+          "24/7 CCTV + university proctors"
+        ],
+        "cost_annual": "\u20b960,000-80,000/year (~\u00a3480-640 GBP)",
+        "cost_monthly": "\u20b95,000-6,600/month (~\u00a340-51 GBP)",
+        "vs_offcampus": "Off-campus 1BHK in Lanka: \u20b97,000-12,000/month + electricity + Wi-Fi + commute through Varanasi traffic",
+        "verdict": "On campus. Better, safer, cheaper, includes Wi-Fi. No commute. No landlord headaches."
+      },
+      "description": "BHU provides dedicated international hostels with private rooms, AC, Wi-Fi, kitchens. Vastly better than domestic dorms. A financial and lifestyle bargain."
     }
   ],
   "edges": [
@@ -1981,7 +2146,8 @@
       "source": "masters:bhu_programme",
       "target": "masters:cuet_pg",
       "type": "depends_on",
-      "label": "must pass entrance"
+      "label": "NOT REQUIRED \u2014 Foreign National exemption. FSR portal instead.",
+      "edge_type": "bypassed"
     },
     {
       "source": "masters:bhu_programme",
@@ -2042,6 +2208,24 @@
       "target": "axiom:consciousness",
       "type": "feeds_into",
       "label": "academic study of consciousness traditions"
+    },
+    {
+      "source": "masters:aiu_equivalency",
+      "target": "masters:bhu_programme",
+      "type": "depends_on",
+      "label": "BHU requires AIU certificate for foreign degrees"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:aiu_equivalency",
+      "type": "depends_on",
+      "label": "must have AIU certificate before applying"
+    },
+    {
+      "source": "masters:bhu_programme",
+      "target": "masters:accommodation",
+      "type": "enables",
+      "label": "enrolled students get international hostel access"
     }
   ]
 }
