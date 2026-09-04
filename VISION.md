@@ -1,199 +1,140 @@
-# lifeOS — Vision
+# SVATANTRYA — Vision
 
-## What this is
+*The condensed vision. What you're building toward and why.*
 
-A git-native personal operating system that tracks the dependencies between money, skills, legal status, animals, plants, infrastructure, and milestones — and connects them to an AI agent that helps you navigate the path to the endgame.
+---
 
-## The endgame
+## The core insight
 
-An AI agent you speak to that:
-- Knows your current state (money, Hindi level, visa status, animals, income)
-- Knows the target state (the estate, the life, the vision)
-- Computes what to do next based on what's actually possible right now
-- Tracks what you've done, what worked, what didn't
-- Integrates with moltwork/workerkit patterns for autonomous operation
+The economic scarcity of being good at manipulating information on a computer is collapsing. Astra can review 41 financial documents in minutes. Coding, spreadsheets, research, reports, admin — all becoming cheap.
 
-## Architecture (future)
+**Don't become a roboticist because robotics is hot. Don't become a programmer because programming pays. Become exceptionally knowledgeable about the thing you actually care about, and use increasingly ridiculous machines to remove everything peripheral.**
 
-```
-You
-  ↕
-lifeOS Agent (Letta — persistent, stateful)
-  ├── reads graph.json (current state + dependencies)
-  ├── reads protocol.json (daily/weekly cycle)
-  ├── reads media (videos, notes, transcriptions)
-  ├── tracks money (income, expenses, runway)
-  ├── tracks skills (Hindi level, farming knowledge)
-  ├── tracks legal status (visa, company, lease)
-  ├── tracks animals (health, products, costs)
-  ├── tracks plants (growing season, yields)
-  └── suggests next actions based on what's unlocked
-```
+## What you actually want
 
-## Data structures needed
+Not:
+> SaaS founder → bigger SaaS founder → rich SaaS founder
 
-### Layer 1: The Graph (built)
+More like:
+> scholar + builder + rural laboratory + animals + mountains + experiments + enough capital not to compromise it
 
-Nodes + edges. What exists, what depends on what, what unlocks what.
+Software/Bittensor/security/hackathons are excellent **capital-generation machinery**. But they don't have to be the endpoint. Astra makes that distinction obvious. If a 2029 agent can build a CRUD app in fifteen minutes, don't optimise yourself into a CRUD-app-producing organism.
 
-```
-graph/
-  schema.py      — Pydantic models (LifeNode, LifeEdge, LifeGraph)
-  graph.json     — 51 nodes, 53 edges
-  index.html     — Cytoscape.js visualization
-```
+## The three-year plan
 
-### Layer 2: State Tracking (next)
+### 2026–27: Money + Hindi + Sanskrit
 
-The graph is static — it shows what's POSSIBLE. State tracking shows what's REAL.
+Use the AI transition rather than fighting it. Generate runway while there's still an arbitrage. Your advantage: you're already unusually willing to use agents to do actual work.
 
-```json
-{
-  "snapshot_date": "2026-09-04",
-  "money": {
-    "current": 0,
-    "monthly_income": 0,
-    "monthly_expenses": 0,
-    "runway_months": 0,
-    "target_for_next_unlock": 50000
-  },
-  "skills": {
-    "hindi": {"level": 0, "hours_practiced": 0, "last_session": null},
-    "farming": {"level": 0, "hours_practiced": 0},
-    "sanskrit": {"level": 0}
-  },
-  "legal": {
-    "visa_type": "tourist",
-    "visa_expiry": "2031",
-    "company_registered": false,
-    "employment_visa": false
-  },
-  "animals": {},
-  "plants": {},
-  "location": "cambodia",
-  "milestones_completed": [],
-  "milestones_next": ["hindi_basics", "bhu_application"]
-}
-```
+### 2027–29: BHU MA + Hindi + Sanskrit + Śaivism
 
-### Layer 3: Action Log (next)
+This is the central project. Use AI as research infrastructure but don't outsource the actual formation of your understanding.
 
-What you actually did each day. Append-only. Git-trackable.
+By the end, you're not someone who has "read about Kashmir Śaivism." You're becoming a scholar of it.
 
-```json
-{
-  "date": "2026-09-04",
-  "actions": [
-    {"type": "hindi", "duration_min": 15, "detail": "Duolingo lesson 3"},
-    {"type": "research", "duration_min": 60, "detail": "BHU application requirements"},
-    {"type": "income", "amount": 0, "detail": "No work today"}
-  ],
-  "graph_mutations": [
-    {"type": "node_updated", "id": "skill:hindi_basics", "field": "progress", "value": 0.01}
-  ]
-}
-```
+### 2029: Lease the farm
 
-### Layer 4: Agent Context (future)
-
-What the Letta agent needs to know to help you.
-
-```json
-{
-  "agent_id": "lifeos-tom",
-  "memory_blocks": {
-    "current_state": "snapshot of graph + state",
-    "target_state": "the frozen endgame vision",
-    "recent_actions": "last 7 days of action log",
-    "obstacles": "what's blocking progress",
-    "insights": "what the AI has learned about your patterns"
-  },
-  "tools": [
-    "read_graph — get current graph state",
-    "update_state — record a state change",
-    "log_action — append to action log",
-    "check_unlocks — what money/skill level enables next",
-    "suggest_action — what to do today based on current state"
-  ]
-}
-```
-
-### Layer 5: Protocol Integration (later)
-
-The daily/weekly cycle from the Svātantrya Protocol.
-
-```json
-{
-  "daily_practice": {
-    "morning": ["recognition", "read_target", "invoke_rasa", "select_kriya", "identity_rehearsal"],
-    "kriya_block": {"track": null, "duration_min": 0, "completed": false},
-    "nightly": ["recognition", "bhavana", "rasa", "rowe_mode", "jnaana_to_kriya"],
-    "micro_recognition": {"target": 5, "actual": 0}
-  },
-  "weekly_review": {
-    "domains": ["phenomenology", "kriya", "avoidance", "belief", "opportunity", "anomaly"],
-    "ai_interview_completed": false
-  }
-}
-```
-
-### Layer 6: Media Ingestion (ENDGAME.md)
-
-Raw capture → R2 → D1 → processors → timeline.
+Don't build a futuristic farm upfront. Get:
 
 ```
-POST /api/media/init → presigned URL → R2 → /api/media/complete
-    ↓
-Whisper transcript
-MediaPipe face features
-Audio prosody
-Embeddings
-    ↓
-Timeline
-    ↓
-Model of self
-    ↓
-AI Interviewer (prediction error tracking)
+land
+water
+house
+internet
+solar
+animals
+garden
+workshop
 ```
 
-## The separation
+Then ask the 2029 equivalent of Astra what to automate. You don't need to predict that now.
 
-**Outer track** (what we're building now):
-- Graph nodes and edges
-- Money thresholds and unlocks
-- Animal/plant data
-- Legal status
-- Milestones and timeline
-- Visualization
+## The AI makes an obscure scholarly life more viable
 
-**Inner track** (later):
-- Svātantrya Protocol
-- Daily recognition practice
-- Bhavana / rasa cultivation
-- Dream incubation
-- Concentration training
-- The 10 kriyā tracks
+Historically, Sanskrit/Śaivism scholarship meant accepting you weren't going to have world-class software infrastructure, research assistance, media production, administration, translation tools, business automation.
 
-**The bridge:**
-The inner track drives the outer track. Recognition → Will → Action → Outcome. But the data structures are separate. The graph doesn't need to know about Śiva to function. The protocol doesn't need to know about cows. They meet in you.
+Now you can be:
 
-## What to build next
+```
+              YOU
+               │
+     ŚAIVISM / PHILOSOPHY
+               │
+        original work
+               │
+    ┌───────────┼───────────┐
+    ↓           ↓           ↓
+  AI RA       AI dev      AI admin
+    ↓           ↓           ↓
+bibliography  websites   finances
+translations  datasets   applications
+text search   tools      publishing
+```
 
-1. **State snapshot system** — capture current state of graph at any point
-2. **Action logging** — append-only daily log
-3. **Unlock checker** — given current state, what's the next unlockable thing
-4. **Git integration** — every state change is a commit
-5. **Letta agent skeleton** — persistent agent with graph context
-6. **Telegram notification** — "what should I do today?"
-7. **Progress visualization** — nodes light up as milestones are hit
+One scholar living cheaply in Uttarakhand can have the effective digital support that previously required an institution. That's insane leverage.
 
-## The meta-principle
+## The valuable scholar in the Astra era isn't "a human search engine"
 
-Every piece of data in this system should be:
-- **Git-trackable** (content-addressed, versioned)
-- **Portable** (JSON, no vendor lock-in)
-- **Queryable** (graph traversal, not just file reading)
-- **Visual** (Cytoscape.js for exploration)
-- **Agent-readable** (Letta can consume it)
+AI will become extraordinarily good at Sanskrit parsing, translation, textual comparison, bibliography search, manuscript transcription and philosophical argument reconstruction too.
 
-The graph is the truth. The agent is the guide. Git is the memory. You are the operator.
+But become the person who can:
+
+- **Read the primary texts** — Sanskrit seriously enough to work with *Tantrāloka*, *Īśvarapratyabhijñākārikā*, commentaries
+- **Understand the intellectual tradition internally** — Nyāya, Buddhist epistemology, Mīmāṃsā, Sāṃkhya, Vedānta
+- **Speak Hindi** — Varanasi and North India become epistemic resources, not scenery
+- **Know actual scholars/practitioners** — teachers, pandits, manuscript collections
+- **Work with unpublished material** — manuscripts, oral interpretations, obscure commentaries
+- **Develop an identifiable interpretation** — people ask "What does Prior think?" not "What does Abhinavagupta say?"
+
+## The deep research direction
+
+Śaiva philosophy + frontier AI cognition in the same life:
+
+- *pratyabhijñā*, agency, reflexive awareness
+- Construction of subjectivity
+- Whether recognition can be operationalised in artificial agents
+- Dharmakīrti's momentary cognition versus transformer context
+- Artificial memory and continuity
+
+**The farm is where you conduct it.**
+
+## The physical life starts mattering more
+
+Pattern emerging: you don't want SaaS success as the endpoint. You want:
+
+> scholar + builder + rural laboratory + animals + mountains + experiments + enough capital not to compromise it
+
+AI makes that distinction more obvious. If a 2029 agent builds a CRUD app in fifteen minutes, don't look back and realise you spent three years optimising yourself into a CRUD-app-producing organism.
+
+Instead have:
+
+- excellent Hindi
+- real Sanskrit
+- an MA in Indian Philosophy
+- deep knowledge of Śaivism
+- relationships in Varanasi
+- several years of serious reading
+- enough money to lease the land
+- a body of original writing/research
+- the ability to direct incredibly powerful AI systems
+
+Then the machines can build your dashboards.
+
+## The SVATANTRYA company
+
+One consciousness, many forms.
+
+- **Life** — the estate, the animals, the experiments, the living
+- **Business** — supplements (hand-picked, live-streamed), publishing (research, funding, speakers), experiments (biological life × AI, EEG, rasa)
+
+The company is not separate from the life. It's the same will expressed differently.
+
+## The farm as deployable research station
+
+Not a permanent off-grid homestead. A deployable research station. Everything expensive unbots, unplugs, moves with you at lease end.
+
+Budget: £14K-22K for the tech layer (solar, water, sensors, AI, polyhouse, rover). Don't build it now — buy/build automation only when it removes an actual chore. In 2029, ask whatever frontier agent exists to help.
+
+**Don't become a roboticist because robotics is hot. Don't become a programmer because programming pays. Become exceptionally knowledgeable about the thing you actually care about, and use increasingly ridiculous machines to remove everything peripheral.**
+
+Astra makes that strategy more rational, not less.

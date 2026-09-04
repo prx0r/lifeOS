@@ -1,80 +1,131 @@
-# Life90 v3 — Life Operating System + Manifestation Research Lab
+# SVATANTRYA
 
-A dependency-free browser app for making a finite life legible and running a longitudinal N=1 experiment on future-self visualization, Recognition practice, behavior, and stronger manifestation hypotheses.
+*A git-native personal operating system for building a life.*
 
-## Run
+---
 
-Unzip the folder and open `index.html` in a modern browser. For the AI interview, some providers may block API calls from a `file://` page. If that happens, run a tiny local server from this folder:
+## What this is
 
-```bash
-python3 -m http.server 8080
+SVATANTRYA is a knowledge graph + dependency tracker + web app for a single person's life vision. It models the path from "0 points, tourist visa, Cambodia" to "Himalayan estate with animals, supplements business, and Indian philosophy scholarship."
+
+Everything is **git-native**: the graph is content-addressed, every change is a commit, the website renders directly from the graph, and a new agent can understand the entire system by reading three files.
+
+## Quick Start (for new agents)
+
+**Read these in order:**
+
+1. **`AGENTS.md`** — 27 axioms. How to reason over this system. Non-negotiable.
+2. **`VISION.md`** — What we're building toward. The frozen target.
+3. **`graph/graph.json`** — The knowledge graph. 128 nodes, 256 edges. This is the source of truth.
+
+**Then understand:**
+
+4. **`graph/schema.py`** — Pydantic models for all graph structures.
+5. **`graph/snapshot.json`** — Current state (0 points, tourist visa, Cambodia).
+6. **`finance.json`** — Income, expenses, savings, runway.
+7. **`geography.json`** — Region constraints (binary ALLOW/BLOCK).
+8. **`ecology.json`** — Soil, mushrooms, pollinators, microclimates.
+9. **`points.json`** — 1 point = £500. The scoring system.
+10. **`ENDGAME.md`** — The endgame architecture (raw capture → model of self).
+
+## File Structure
+
+```
+SVATANTRYA/
+├── AGENTS.md              # Agent axioms — READ THIS FIRST
+├── VISION.md              # The frozen vision
+├── ENDGAME.md             # Endgame architecture
+├── TODO.md                # 10 to-dos (all completed)
+│
+├── graph/
+│   ├── graph.json         # THE GRAPH — 128 nodes, 256 edges
+│   ├── schema.py          # Pydantic models (workerkit-compatible)
+│   ├── snapshot.json      # Current state snapshot
+│   ├── protocol.json      # Svātantrya Protocol (the why)
+│   ├── decomposition.json # Goal → dependency chain → today's action
+│   └── index.html         # Cytoscape.js visualization
+│
+├── geography.json         # 6 regions, binary constraints
+├── ecology.json           # Soil, mushrooms, pollinators
+├── listings.json          # 32 real properties with URLs
+├── crops.json             # 16 plant types, seasonal data
+├── food.json              # Year-round food analysis
+├── points.json            # 1pt = £500, progression
+├── finance.json           # Income, expenses, runway
+│
+├── app.html               # Mobile PWA (renders from graph)
+├── index.html             # Redirects to app.html
+├── worker/
+│   ├── index.js           # Cloudflare Worker (R2 uploads)
+│   └── wrangler.toml      # Worker config
+├── ios-shortcut.json      # iOS Shortcut for capture
+├── svatantrya             # Protocol doc (from R2)
+│
+├── archive/               # Superseded files
+└── .gitignore             # Ignores __pycache__, .wrangler
 ```
 
-Then open `http://localhost:8080`.
+## The Graph
 
-No build step, database, account, npm install, or backend is required.
+The graph (`graph/graph.json`) is the single source of truth. The website renders from it. Every change to the graph is a git commit. The website at any point in time = the graph at that commit.
 
-## Main tabs
+**14 clusters:**
 
-- **Clock** — remaining hours/days to a chosen planning horizon, decade clock, milestones, year map.
-- **Do now** — age-adaptive brain/body/mind guidance, ranked leverage points, weekly habits, 90-day focus.
-- **Life timeline** — what becomes more valuable, what to protect, and closing windows by life stage.
-- **Principles** — repeated hindsight themes from older adults, separated from scientific claims.
-- **Path to 35** — staged autonomy trajectory.
-- **Experiment** — frozen target, nightly visualization/Recognition protocol, daily Rule of Life, weekly AI interview, hypotheses, prospective predictions, observations, method atlas, export/import.
-- **Science** — cautious evidence summary and primary references.
+| Cluster | Nodes | What |
+|---------|-------|------|
+| animals | 10 | Cow, sheep, goats, chickens, dogs, bees (+ rejections) |
+| plants | 16 | Potato, tomato, turmeric, orange, peas, beans, etc. |
+| products | 8 | Milk, ghee, cheese, eggs, honey, wool, supplements |
+| locations | 8 | Ranikhet, Peora, Kausani, Dhanaulti, Kasol, Rishikesh, BHU, Varanasi |
+| territories | 7 | Someshwar, Ranikhet belt, Satpuli, Natadol, Kotabagh, Doiwala, Kausani |
+| legal | 10 | Company, DSC, DIN, SPICe+, visa, lease, ISBN, FSSAI, IEC, GST |
+| company | 10 | SVATANTRYA Life + Business, supplements, publishing, experiments |
+| skills | 4 | Hindi basics → conversational → fluent → literary |
+| masters | 7 | BHU programme, CUET, syllabus, Hindi immersion, Varanasi, accommodation |
+| deadlines | 10 | AIU certificate, BHU application, tuition, travel, graduation |
+| milestones | 12 | Points thresholds (40→78→165→260→400) |
+| infra | 7 | Cowshed, coop, fencing, mushroom lab, solar, borewell |
+| farm | 10 | Deployable station, solar, water, sensors, AI, polyhouse, biogas, rover |
+| robotics | 9 | ArduPilot, ROS 2, Jetson, OAK-D, RTK GPS, RPLIDAR, commercial bots |
 
-## Experiment design
+## How to Update
 
-### Frozen target
+1. Edit `graph/graph.json` (add/remove/update nodes and edges)
+2. `git add graph/graph.json && git commit -m "description"`
+3. `wrangler pages deploy . --project-name=lifeos --branch=main` (deploys to Cloudflare)
 
-The destination can be specified in externally scorable terms and frozen as a versioned target with a timestamp and SHA-256 fingerprint. Later edits create a new version instead of rewriting the old target. The terminal outcome is deliberately binary (YES/NO against the frozen target); differences are recorded separately.
+**The site auto-updates** — it loads `graph.json` at runtime. No hardcoded content.
 
-### Nightly protocol
+## Deployment
 
-1. **Recognize** — use the Aperture / Process Inexternalism lens without treating it as an empirical conclusion.
-2. **Release** — reduce urgency and the need to prove anything tonight.
-3. **Enter** — inhabit one ordinary, first-person future scene.
-4. **Listen** — allow active-imagination / future-self material to surprise rather than fully script it.
-5. **Contrast** — name the real obstacle between the present and the scene.
-6. **Bridge** — choose one observable action and bind it to an if→then cue.
+- **Cloudflare Pages:** https://main.lifeos-7mb.pages.dev
+- **Worker API:** https://lifeos-worker.tradesprior.workers.dev
+- **R2 Bucket:** svatantrya (for raw media capture)
 
-The next session asks whether the previous bridge action was done, partial, or missed.
+```bash
+# Deploy site
+export CLOUDFLARE_API_TOKEN="..."
+wrangler pages deploy . --project-name=lifeos --branch=main
 
-### Daily Rule of Life
+# Deploy worker
+cd worker && wrangler deploy
+```
 
-Tracks Recognition/stillness, future-scene practice, bridge completion, economic deep work, Hindi, physical reserve, practical competence, attention protection, sleep, and an optional user-chosen sexual-attention discipline.
+## The Dependency Chain
 
-Sexual restraint is explicitly labeled as an optional self-regulation experiment. Traditional brahmacarya/vīrya and Daoist jing interpretations are included as historical/contemplative lenses; the app does **not** claim that semen retention has a proven mystical-energy, testosterone, or general performance benefit.
+```
+NOW (0 pts)
+  → AIU Certificate (£5)
+    → Hindi start (Varanasi)
+      → BHU application
+        → Tuition + Hostel (£1,600)
+          → Travel + FRRO (£300)
+            → Programme Oct 2027
+              → Graduation 2029 (£500 visa)
+                → Estate move-in
+                  → Animals + Farm
+                    → Tech layer (solar, water, sensors)
+                      → THE DREAM (400 pts)
+```
 
-### Weekly AI interview
-
-The user supplies:
-
-- an OpenAI-compatible API endpoint;
-- a model ID supported by that provider;
-- an API key.
-
-The interviewer receives the current stored dataset and conducts an adaptive one-question-at-a-time review. Its system instructions require separation of observation, inference, and metaphysical interpretation; attention to misses and ordinary causal explanations; checking sleep/activation/functioning; and ending with a concrete seven-day experiment and bridge action.
-
-The client supports both OpenAI Responses-style endpoints ending in `/responses` and Chat Completions-style OpenAI-compatible endpoints.
-
-### Research layers
-
-- **Empirical:** does the practice change behavior, attention, future-self continuity, wellbeing, and objective progress?
-- **Inexternalist/interpretive:** can intrinsic state and extrinsic trajectory be understood as aspects of one evolving concrete process rather than two independent domains?
-- **Strong metaphysical:** do prospectively specified external outcomes show evidence not exhausted by ordinary behavioral, social, attentional, or chance explanations?
-
-Positive results at one layer are not automatically counted as evidence for a stronger layer.
-
-## Privacy and storage
-
-Life90 stores entries in browser `localStorage`. API keys are kept in `sessionStorage` by default; the optional “remember key” toggle stores the key in local storage on that browser. JSON exports intentionally exclude API keys.
-
-Use **Experiment → Data → Export JSON** regularly if the record matters to you.
-
-## Important epistemic rule
-
-The app is designed to let a strong metaphysical hypothesis be practiced seriously without making the log unfalsifiable. It preserves alternative explanations, prospective predictions, misses, objective metrics, and target versions. Unusual experiences are recorded as phenomenological data before they are interpreted.
-
-Life90 is not medical advice, a longevity prediction, or proof of any metaphysical system.
+**Every node has a cost. Every edge has a reason. The graph is the truth.**
