@@ -2903,10 +2903,70 @@
       "label": "drip irrigation"
     },
     {
-      "source": "farm:water_system",
-      "target": "asset:gir_cow",
+      "source": "farm:biogas",
+      "target": "farm:solar_10kw",
       "type": "feeds_into",
-      "label": "animal water troughs"
+      "label": "biogas for cooking + hot water (reduces solar load)"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:solar_10kw",
+      "type": "enables",
+      "label": "need land to install solar"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:water_system",
+      "type": "enables",
+      "label": "need land for water infrastructure"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:sensors",
+      "type": "enables",
+      "label": "need land to instrument"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:polyhouse",
+      "type": "enables",
+      "label": "need land for polyhouse"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:biogas",
+      "type": "enables",
+      "label": "need cows \u2192 need land"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:rover",
+      "type": "enables",
+      "label": "need land for rover to patrol"
+    },
+    {
+      "source": "points:165",
+      "target": "farm:solar_10kw",
+      "type": "costs",
+      "label": "\u00a33,900-5,900 for solar system"
+    },
+    {
+      "source": "points:165",
+      "target": "farm:water_system",
+      "type": "costs",
+      "label": "\u00a31,200-2,350 for water layer"
+    },
+    {
+      "source": "points:165",
+      "target": "farm:polyhouse",
+      "type": "costs",
+      "label": "\u00a31,550-3,500 for polyhouse"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:sensors",
+      "type": "enables",
+      "label": "instrument the farm after it exists"
     },
     {
       "source": "farm:sensors",
@@ -2915,40 +2975,406 @@
       "label": "sensor data streams into farm world model"
     },
     {
+      "source": "milestone:estate_movein",
+      "target": "farm:ai_brain",
+      "type": "enables",
+      "label": "farm must exist before AI brain"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:rover",
+      "type": "enables",
+      "label": "farm must exist for rover to patrol"
+    },
+    {
       "source": "farm:ai_brain",
       "target": "farm:rover",
       "type": "enables",
       "label": "AI plans rover tasks"
     },
     {
-      "source": "farm:ai_brain",
-      "target": "farm:water_system",
-      "type": "enables",
-      "label": "AI controls irrigation"
+      "source": "farm:water_system",
+      "target": "farm:polyhouse",
+      "type": "feeds_into",
+      "label": "drip irrigation for polyhouse"
     },
     {
-      "source": "farm:ai_brain",
+      "source": "farm:solar_10kw",
       "target": "farm:polyhouse",
       "type": "enables",
-      "label": "AI controls greenhouse climate"
+      "label": "power for climate control"
     },
     {
-      "source": "farm:polyhouse",
-      "target": "product:cordyceps",
-      "type": "enables",
-      "label": "mushroom cultivation in controlled environment"
-    },
-    {
-      "source": "farm:biogas",
-      "target": "asset:gir_cow",
+      "source": "asset:gir_cow",
+      "target": "farm:biogas",
       "type": "feeds_into",
       "label": "cow dung \u2192 biogas digester"
     },
     {
-      "source": "farm:biogas",
+      "source": "milestone:estate_movein",
+      "target": "farm:deployable_station",
+      "type": "enables",
+      "label": "the farm IS the research station"
+    },
+    {
+      "source": "legal:dsc",
+      "target": "legal:spice",
+      "type": "depends_on",
+      "label": "DSC required before SPICe+ filing"
+    },
+    {
+      "source": "legal:spice",
+      "target": "legal:company",
+      "type": "enables",
+      "label": "SPICe+ incorporation"
+    },
+    {
+      "source": "legal:company",
+      "target": "legal:fssai",
+      "type": "enables",
+      "label": "company needs FSSAI for supplements"
+    },
+    {
+      "source": "legal:company",
+      "target": "legal:iec",
+      "type": "enables",
+      "label": "company needs IEC for exports"
+    },
+    {
+      "source": "legal:company",
+      "target": "legal:gst",
+      "type": "enables",
+      "label": "company needs GST for sales"
+    },
+    {
+      "source": "legal:company",
+      "target": "legal:din",
+      "type": "enables",
+      "label": "directors need DIN"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "asset:sahiwal_cow",
+      "type": "enables",
+      "label": "OPTIONAL: second cow for year-round milk"
+    },
+    {
+      "source": "asset:sahiwal_cow",
+      "target": "product:milk",
+      "type": "produces",
+      "label": "stagger with Gir for no milk gaps"
+    },
+    {
+      "source": "milestone:company_reg",
+      "target": "milestone:visa_approved",
+      "type": "enables",
+      "label": "company sponsors Employment Visa"
+    },
+    {
+      "source": "milestone:visa_approved",
+      "target": "milestone:estate_movein",
+      "type": "enables",
+      "label": "visa enables legal residence on estate"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "milestone:first_product",
+      "type": "enables",
+      "label": "estate produces first product"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:cowshed",
+      "type": "enables",
+      "label": "need land for cowshed"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:coop",
+      "type": "enables",
+      "label": "need land for chicken coop"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:fencing",
+      "type": "enables",
+      "label": "need land to fence"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:mushroom_lab",
+      "type": "enables",
+      "label": "need land for lab"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:solar",
+      "type": "enables",
+      "label": "need land for solar"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:borewell",
+      "type": "enables",
+      "label": "need land for borewell"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:beans",
+      "type": "enables",
+      "label": "spring/summer crop, grows at 5500ft"
+    },
+    {
+      "source": "location:ranikhet",
+      "target": "plant:cauliflower",
+      "type": "enables",
+      "label": "autumn crop, cool-season"
+    },
+    {
+      "source": "territory:ranikhet_belt",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "search area around Ranikhet"
+    },
+    {
+      "source": "deadline:hindi_start",
+      "target": "skill:hindi_basics",
+      "type": "enables",
+      "label": "Varanasi immersion starts Hindi learning"
+    },
+    {
+      "source": "deadline:aiu_now",
+      "target": "masters:bhu_programme",
+      "type": "depends_on",
+      "label": "AIU certificate required before application"
+    },
+    {
+      "source": "points:current",
+      "target": "deadline:aiu_now",
+      "type": "costs",
+      "label": "\u00a35 \u2014 apply NOW"
+    },
+    {
+      "source": "deadline:aiu_now",
+      "target": "deadline:hindi_start",
+      "type": "happens_before",
+      "label": "AIU first, then Varanasi"
+    },
+    {
+      "source": "deadline:hindi_start",
+      "target": "deadline:bhu_application",
+      "type": "happens_before",
+      "label": "Hindi starts, then apply"
+    },
+    {
+      "source": "deadline:bhu_application",
+      "target": "deadline:bhu_deadline",
+      "type": "happens_before",
+      "label": "apply before deadline"
+    },
+    {
+      "source": "deadline:bhu_deadline",
+      "target": "deadline:bhu_fee",
+      "type": "happens_before",
+      "label": "admission \u2192 fee"
+    },
+    {
+      "source": "deadline:bhu_fee",
+      "target": "deadline:hostel_fee",
+      "type": "happens_before",
+      "label": "tuition + hostel together"
+    },
+    {
+      "source": "deadline:hostel_fee",
+      "target": "deadline:travel_india",
+      "type": "happens_before",
+      "label": "accommodation sorted \u2192 travel"
+    },
+    {
+      "source": "deadline:travel_india",
+      "target": "deadline:programme_start",
+      "type": "happens_before",
+      "label": "in India before start"
+    },
+    {
+      "source": "deadline:programme_start",
+      "target": "deadline:hostel_yr2",
+      "type": "happens_before",
+      "label": "year 2 payment"
+    },
+    {
+      "source": "deadline:hostel_yr2",
+      "target": "deadline:graduation",
+      "type": "happens_before",
+      "label": "then graduate"
+    },
+    {
+      "source": "points:current",
+      "target": "legal:dsc",
+      "type": "costs",
+      "label": "\u20b92K for DSC"
+    },
+    {
+      "source": "legal:dsc",
+      "target": "legal:spice",
+      "type": "depends_on",
+      "label": "DSC needed for SPICe+"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:borewell",
+      "type": "costs",
+      "label": "\u20b92.5L for borewell + pump"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:fencing",
+      "type": "costs",
+      "label": "\u20b94L for 5-acre fencing"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:solar",
+      "type": "costs",
+      "label": "\u20b95-7.5L for 10kW solar"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:mushroom_lab",
+      "type": "costs",
+      "label": "\u20b95L for cordyceps lab"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:cowshed",
+      "type": "costs",
+      "label": "\u20b93L for cowshed"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "infra:coop",
+      "type": "costs",
+      "label": "\u20b925K for chicken coop"
+    },
+    {
+      "source": "milestone:estate_movein",
       "target": "farm:solar_10kw",
+      "type": "costs",
+      "label": "\u20b95-7.5L for solar system"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:water_system",
+      "type": "costs",
+      "label": "\u20b91.5-3L for water layer"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:polyhouse",
+      "type": "costs",
+      "label": "\u20b92-4.5L for polyhouse"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:sensors",
+      "type": "costs",
+      "label": "\u20b975K-1.5L for sensor network"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:ai_brain",
+      "type": "costs",
+      "label": "\u20b91.5-3L for local AI"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:rover",
+      "type": "costs",
+      "label": "\u20b92-4L for DIY rover"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "farm:biogas",
+      "type": "costs",
+      "label": "\u20b915-45K for biogas"
+    },
+    {
+      "source": "asset:rajapalayam",
+      "target": "asset:desi_chickens",
+      "type": "blocks",
+      "label": "REJECTED: sighthound kills chickens"
+    },
+    {
+      "source": "asset:border_collie",
+      "target": "asset:desi_chickens",
+      "type": "blocks",
+      "label": "REJECTED: herding instinct chases chickens"
+    },
+    {
+      "source": "territory:someshwar",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "neighbouring valley \u2014 same Kosi watershed"
+    },
+    {
+      "source": "territory:natadol",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "10-acre lease lead with spring, forest, road"
+    },
+    {
+      "source": "territory:kotabagh",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "70% flat terrain \u2014 best for farming/robots"
+    },
+    {
+      "source": "territory:satpuli",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "alternative scouting area \u2014 warmer valley, river, forests"
+    },
+    {
+      "source": "territory:kausani",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "backup option \u2014 extraordinary views but expensive/remote"
+    },
+    {
+      "source": "territory:doiwala",
+      "target": "location:ranikhet",
+      "type": "enables",
+      "label": "easiest connectivity \u2014 near Dehradun, flat, suppliers nearby"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:solar_budget",
+      "type": "enables",
+      "label": "solar strategy: use energy, don't export it"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "robot:xmachines",
+      "type": "enables",
+      "label": "OPTIONAL: commercial robot rental if needed"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "robot:niqo",
+      "type": "enables",
+      "label": "OPTIONAL: precision spraying service"
+    },
+    {
+      "source": "milestone:estate_movein",
+      "target": "robot:total",
+      "type": "enables",
+      "label": "DIY rover as alternative to commercial"
+    },
+    {
+      "source": "robot:total",
+      "target": "robot:ardupilot",
       "type": "feeds_into",
-      "label": "biogas for cooking + hot water (reduces solar load)"
+      "label": "DIY rover uses ArduPilot stack"
     }
   ]
 }
