@@ -1679,6 +1679,163 @@
         "total_cost_inr": "\u20b91-2 lakh (\u00a3775-1,550)",
         "note": "ArduPilot + ROS 2 + RTK GPS + OAK-D + Jetson. Low-lakh-rupee project, not \u00a320K."
       }
+    },
+    {
+      "id": "farm:deployable_station",
+      "type": "milestone",
+      "cluster": "farm",
+      "label": "Deployable Research Station (not permanent homestead)",
+      "properties": {
+        "concept": "Everything expensive unbots, unplugs, moves with you at lease end",
+        "budget_gbp": "\u00a314K-22K",
+        "budget_inr": "\u20b918-27.5L"
+      },
+      "description": "Build like a deployable research station, not a permanent off-grid homestead. Nearly everything expensive should unbolt and move with you."
+    },
+    {
+      "id": "farm:solar_10kw",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "10-12 kWp Solar + Hybrid Inverter",
+      "properties": {
+        "cost_inr": "\u20b95-7.5L",
+        "cost_gbp": "\u00a33,900-5,900",
+        "output_kwh_year": 14000,
+        "strategy": "Don't buy big battery. Do high-energy work during sunlight. 10kWh LFP overnight backup only."
+      },
+      "description": "Grid-connected but producing nearly all own electricity. Pump water at midday, charge rover at midday, run compute during solar surplus."
+    },
+    {
+      "id": "farm:battery_10kwh",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "10 kWh LFP Battery",
+      "properties": {
+        "cost_inr": "\u20b92-4.5L",
+        "cost_gbp": "\u00a31,550-3,500",
+        "note": "Overnight backup for routers, fridge, lights, sensors. NOT for running everything off-grid."
+      },
+      "description": "Don't buy 30-50kWh just to brag about off-grid. 10kWh carries overnight essentials. Grid handles the rest."
+    },
+    {
+      "id": "farm:water_system",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "Water System (Spring \u2192 Tank \u2192 Drip)",
+      "properties": {
+        "cost_inr": "\u20b91.5-3L",
+        "cost_gbp": "\u00a31,200-2,350",
+        "components": [
+          "20-50kL buffer tank",
+          "Variable-speed pump",
+          "Drip irrigation",
+          "Electric valves",
+          "Flow meters",
+          "Soil sensors"
+        ],
+        "priority": "HIGHER THAN ROBOTICS \u2014 water first"
+      },
+      "description": "Water is more important than energy. Spring-fed gravity is cheapest robot. Budget \u20b91.5-3L for complete portable water layer."
+    },
+    {
+      "id": "farm:sensors",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "DIY Sensor Network (20 points)",
+      "properties": {
+        "cost_inr": "\u20b975K-1.5L",
+        "cost_gbp": "\u00a3600-1,200",
+        "components": [
+          "Soil moisture/temp/pH",
+          "Weather station",
+          "Tank levels",
+          "Irrigation flow",
+          "Solar output",
+          "Greenhouse climate",
+          "Cameras"
+        ],
+        "note": "ESP32 + LoRa + rugged probes. 20 good measurement points > 100 IoT sensors."
+      },
+      "description": "Instrument everything. Soil, weather, water, energy, animals, cameras. 20 measurement points with history are more valuable than buying IoT crap everywhere."
+    },
+    {
+      "id": "farm:ai_brain",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "Local AI Lab (Farm World Model)",
+      "properties": {
+        "cost_inr": "\u20b91.5-3L",
+        "cost_gbp": "\u00a31,200-2,350",
+        "components": [
+          "MQTT broker",
+          "Time-series DB",
+          "farmOS",
+          "Home Assistant",
+          "ROS 2"
+        ],
+        "note": "Reasons about YOUR particular ecology, not generic farm advice."
+      },
+      "description": "Every farm entity gets a history. The AI reasons about your specific ecology: 'Water use on tomato zone 3 rose 18% \u2014 inspect for leak.'"
+    },
+    {
+      "id": "farm:polyhouse",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "300-500m\u00b2 Modular Polyhouse",
+      "properties": {
+        "cost_inr": "\u20b92-4.5L",
+        "cost_gbp": "\u00a31,550-3,500",
+        "area_sqm": "300-500",
+        "note": "NHB cost: \u20b9500-750/m\u00b2 + 15% hilly uplift. Off-season vegetables, mushrooms, seedlings."
+      },
+      "description": "Best money machine on the farm. Sensor-controlled polyhouse growing high-value off-season vegetables. ICAR: \u20b960-67K net from 180m\u00b2."
+    },
+    {
+      "id": "farm:biogas",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "Small Biogas Digester",
+      "properties": {
+        "cost_inr": "\u20b915K-45K",
+        "cost_gbp": "\u00a3120-350",
+        "capacity": "2-4 m\u00b3/day",
+        "mnre_assistance": "\u20b922,000 for 2-4 m\u00b3 unit",
+        "fuel_for": "Cooking + hot water"
+      },
+      "description": "Cow dung + food waste \u2192 biogas for cooking + digestate for soil. Portable/flexi-bag system can leave with you at lease end."
+    },
+    {
+      "id": "farm:rover",
+      "type": "infra",
+      "cluster": "farm",
+      "label": "DIY Farm Rover (UGV)",
+      "properties": {
+        "cost_inr": "\u20b92-4L",
+        "cost_gbp": "\u00a31,550-3,100",
+        "tasks": [
+          "patrol",
+          "photograph",
+          "identify anomaly",
+          "carry stuff",
+          "tow cart",
+          "mow",
+          "weed"
+        ],
+        "stack": "ArduPilot + ROS 2 + Jetson + OAK-D + RTK GPS + RPLIDAR"
+      },
+      "description": "Start boring: patrol, photograph, carry stuff. Eventually: weed, spray, seed. Own the rover because you'll continuously hack it."
+    },
+    {
+      "id": "farm:solar_budget",
+      "type": "milestone",
+      "cluster": "farm",
+      "label": "Solar Strategy: Don't Export, Use",
+      "properties": {
+        "principle": "Turn each kWh into mushrooms, vegetables, cold storage, irrigation, compute \u2014 not raw exported electricity",
+        "exportValue": "\u20b928K/yr at \u20b92/kWh = peanuts",
+        "useValue": "Much higher \u2014 avoids purchases, enables production"
+      },
+      "description": "Don't try to sell electricity. Use every solar kWh to produce expensive outputs: mushrooms, vegetables, irrigation, compute, milk, seedlings."
     }
   ],
   "edges": [
@@ -2702,6 +2859,96 @@
       "target": "robot:ardupilot",
       "type": "enables",
       "label": "safety obstacle detection"
+    },
+    {
+      "source": "farm:deployable_station",
+      "target": "farm:solar_10kw",
+      "type": "enables",
+      "label": "energy for the station"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:battery_10kwh",
+      "type": "feeds_into",
+      "label": "excess solar charges battery"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:water_system",
+      "type": "enables",
+      "label": "pump water at midday"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:ai_brain",
+      "type": "enables",
+      "label": "run compute during solar surplus"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:rover",
+      "type": "enables",
+      "label": "charge rover at midday"
+    },
+    {
+      "source": "farm:solar_10kw",
+      "target": "farm:polyhouse",
+      "type": "enables",
+      "label": "climate control + grow lights"
+    },
+    {
+      "source": "farm:water_system",
+      "target": "farm:polyhouse",
+      "type": "feeds_into",
+      "label": "drip irrigation"
+    },
+    {
+      "source": "farm:water_system",
+      "target": "asset:gir_cow",
+      "type": "feeds_into",
+      "label": "animal water troughs"
+    },
+    {
+      "source": "farm:sensors",
+      "target": "farm:ai_brain",
+      "type": "feeds_into",
+      "label": "sensor data streams into farm world model"
+    },
+    {
+      "source": "farm:ai_brain",
+      "target": "farm:rover",
+      "type": "enables",
+      "label": "AI plans rover tasks"
+    },
+    {
+      "source": "farm:ai_brain",
+      "target": "farm:water_system",
+      "type": "enables",
+      "label": "AI controls irrigation"
+    },
+    {
+      "source": "farm:ai_brain",
+      "target": "farm:polyhouse",
+      "type": "enables",
+      "label": "AI controls greenhouse climate"
+    },
+    {
+      "source": "farm:polyhouse",
+      "target": "product:cordyceps",
+      "type": "enables",
+      "label": "mushroom cultivation in controlled environment"
+    },
+    {
+      "source": "farm:biogas",
+      "target": "asset:gir_cow",
+      "type": "feeds_into",
+      "label": "cow dung \u2192 biogas digester"
+    },
+    {
+      "source": "farm:biogas",
+      "target": "farm:solar_10kw",
+      "type": "feeds_into",
+      "label": "biogas for cooking + hot water (reduces solar load)"
     }
   ]
 }
