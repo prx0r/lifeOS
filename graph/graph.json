@@ -1305,6 +1305,167 @@
         "verdict": "On campus. Better, safer, cheaper, includes Wi-Fi. No commute. No landlord headaches."
       },
       "description": "BHU provides dedicated international hostels with private rooms, AC, Wi-Fi, kitchens. Vastly better than domestic dorms. A financial and lifestyle bargain."
+    },
+    {
+      "id": "deadline:aiu_now",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "NOW \u2014 Apply for AIU Equivalency",
+      "properties": {
+        "deadline": "NOW \u2014 processing takes weeks",
+        "what": "Apply at aiu.ac.in for UK degree equivalency certificate",
+        "cost_gbp": 5,
+        "cost_inr": 500,
+        "points": 1,
+        "consequence_if_missed": "Cannot apply to BHU without this"
+      },
+      "description": "Apply NOW. Processing takes weeks. Without this, your Leeds degree is not recognised."
+    },
+    {
+      "id": "deadline:hindi_start",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Dec 2026 \u2014 Arrive Varanasi, Start Hindi",
+      "properties": {
+        "deadline": "December 2026",
+        "what": "Arrive Varanasi. Begin daily Hindi immersion. Continue AIU processing.",
+        "cost_gbp": 200,
+        "cost_inr": 25000,
+        "points": 1,
+        "travel_cost_gbp": 150,
+        "months_before_start": 10
+      },
+      "description": "Fly to Varanasi. Start living in Hindi. BHU campus nearby for language practice."
+    },
+    {
+      "id": "deadline:bhu_application",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Mar 2027 \u2014 BHU FSR Portal Opens",
+      "properties": {
+        "deadline": "March 2027",
+        "what": "Apply via bhufsradm.samarth.edu.in (Foreign Students' Registry)",
+        "cost_gbp": 50,
+        "cost_inr": 6000,
+        "points": 1,
+        "requirements": [
+          "AIU Equivalency Certificate",
+          "Leeds transcripts",
+          "Passport",
+          "Photos"
+        ],
+        "months_before_start": 7
+      },
+      "description": "Application opens. Submit everything. Your First-Class Honours degree is your qualification."
+    },
+    {
+      "id": "deadline:bhu_deadline",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "May-Jul 2027 \u2014 Application Deadline",
+      "properties": {
+        "deadline": "May-July 2027",
+        "what": "Last date to submit BHU international application",
+        "cost_gbp": 0,
+        "cost_inr": 0,
+        "points": 0,
+        "consequence_if_missed": "Must wait another year"
+      },
+      "description": "Don't miss this. Application window closes. If not submitted, you wait until 2028."
+    },
+    {
+      "id": "deadline:bhu_fee",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Jul 2027 \u2014 BHU Tuition Fee",
+      "properties": {
+        "deadline": "July 2027 (on admission)",
+        "what": "Pay international tuition ~$1,000-1,200",
+        "cost_gbp": 960,
+        "cost_inr": 120000,
+        "points": 2,
+        "consequence_if_missed": "Admission cancelled"
+      },
+      "description": "First payment. International tuition for Year 1."
+    },
+    {
+      "id": "deadline:hostel_fee",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Jul 2027 \u2014 Hostel Fee (Year 1)",
+      "properties": {
+        "deadline": "July 2027 (on admission)",
+        "what": "Pay international hostel \u20b960,000-80,000",
+        "cost_gbp": 640,
+        "cost_inr": 80000,
+        "points": 1,
+        "consequence_if_missed": "No room \u2014 must find off-campus"
+      },
+      "description": "International hostel. Private room, AC, Wi-Fi, kitchen. Much better than off-campus."
+    },
+    {
+      "id": "deadline:travel_india",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Jul-Aug 2027 \u2014 Fly to India + FRRO",
+      "properties": {
+        "deadline": "July-August 2027",
+        "what": "Fly to India. Register with FRRO within 14 days. Report to BHU.",
+        "cost_gbp": 300,
+        "cost_inr": 38000,
+        "points": 1,
+        "items": [
+          "Flight UK\u2192Varanasi",
+          "FRRO registration",
+          "BHU physical reporting"
+        ],
+        "months_before_start": 2
+      },
+      "description": "The move. Fly in. Register. Report to department. Begin."
+    },
+    {
+      "id": "deadline:programme_start",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Oct 2027 \u2014 Programme Begins",
+      "properties": {
+        "deadline": "October 2027",
+        "what": "MA Indian Philosophy and Religion begins. 2 years in Varanasi.",
+        "cost_gbp": 0,
+        "cost_inr": 0,
+        "points": 0
+      },
+      "description": "Day one. The experiment begins."
+    },
+    {
+      "id": "deadline:hostel_yr2",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "Oct 2028 \u2014 Hostel Fee (Year 2)",
+      "properties": {
+        "deadline": "October 2028",
+        "what": "Pay hostel Year 2 \u20b960,000-80,000",
+        "cost_gbp": 640,
+        "cost_inr": 80000,
+        "points": 1
+      },
+      "description": "Second year hostel."
+    },
+    {
+      "id": "deadline:graduation",
+      "type": "milestone",
+      "cluster": "deadlines",
+      "label": "2029 \u2014 Graduation + Employment Visa",
+      "properties": {
+        "deadline": "2029",
+        "what": "Graduate. Student visa expires. Apply for Employment Visa through SVATANTRYA.",
+        "cost_gbp": 500,
+        "cost_inr": 60000,
+        "points": 2,
+        "critical": true,
+        "consequence_if_missed": "Must leave India"
+      },
+      "description": "The pivot point. Student visa ends. Employment Visa must be ready."
     }
   ],
   "edges": [
@@ -2226,6 +2387,66 @@
       "target": "masters:accommodation",
       "type": "enables",
       "label": "enrolled students get international hostel access"
+    },
+    {
+      "source": "deadline:aiu_now",
+      "target": "deadline:bhu_application",
+      "type": "depends_on",
+      "label": "AIU certificate required for application"
+    },
+    {
+      "source": "deadline:bhu_application",
+      "target": "deadline:bhu_deadline",
+      "type": "happens_before",
+      "label": "apply before deadline"
+    },
+    {
+      "source": "deadline:bhu_deadline",
+      "target": "deadline:bhu_fee",
+      "type": "happens_before",
+      "label": "admission \u2192 payment"
+    },
+    {
+      "source": "deadline:bhu_fee",
+      "target": "deadline:hostel_fee",
+      "type": "happens_before",
+      "label": "pay together on admission"
+    },
+    {
+      "source": "deadline:hostel_fee",
+      "target": "deadline:travel_india",
+      "type": "happens_before",
+      "label": "secure accommodation before travel"
+    },
+    {
+      "source": "deadline:travel_india",
+      "target": "deadline:programme_start",
+      "type": "happens_before",
+      "label": "must be in India before start"
+    },
+    {
+      "source": "deadline:programme_start",
+      "target": "deadline:hostel_yr2",
+      "type": "happens_before",
+      "label": "year 2 payment"
+    },
+    {
+      "source": "deadline:hostel_yr2",
+      "target": "deadline:graduation",
+      "type": "happens_before",
+      "label": "then graduate"
+    },
+    {
+      "source": "deadline:graduation",
+      "target": "milestone:visa_approved",
+      "type": "enables",
+      "label": "graduation \u2192 Employment Visa"
+    },
+    {
+      "source": "deadline:aiu_now",
+      "target": "masters:bhu_programme",
+      "type": "depends_on",
+      "label": "AIU required for admission"
     }
   ]
 }
